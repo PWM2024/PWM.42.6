@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Merriweather:ital,wght@1,700&family=Raleway:wght@500&family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: #ff8520;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons alt {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-main h1 {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 55px;
+}
+
+.decorative-line {
+  position: relative;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
