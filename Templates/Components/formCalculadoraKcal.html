@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Componente de Selección de Alimentos</title>
-</head>
-<body>
-
-<form class="formulario-alimentos">
-    <select id="alimentos" name="alimentos">
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/formCalculadoraKcal.css" />
+  </head>
+  <body>
+    <form class="formulario-alimentos">
+      <select id="alimentos" name="alimentos">
         <option value="alimento1">Alimento1</option>
         <option value="alimento2">Alimento2</option>
-    </select>
-    <br>
+      </select>
+      <br />
 
-    <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required>
-    <span>gr</span>
+      <div class="input-container">
+        <input
+          type="number"
+          id="cantidad"
+          name="cantidad"
+          placeholder="Cantidad"
+          required
+        />
+        <span>gr</span>
+      </div>
 
-    <br>
-    <button type="submit">Añadir</button>
-</form>
+      <br />
+      <button type="submit">Añadir</button>
+    </form>
 
-</body>
+    <div class="tabla-alimentos">
+      <ul>
+        <li>
+          <span>Lorem Ipsum</span>
+          <span>XXX Kcal</span>
+          <button>Eliminar</button>
+        </li>
+        <li>
+          <span>Lorem Ipsum</span>
+          <span>XXX Kcal</span>
+          <button>Eliminar</button>
+        </li>
+        <li>
+          <span>Lorem Ipsum</span>
+          <span>XXX Kcal</span>
+          <button>Eliminar</button>
+        </li>
+        <li>
+          <span>Lorem Ipsum</span>
+          <span>XXX Kcal</span>
+          <button>Eliminar</button>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
