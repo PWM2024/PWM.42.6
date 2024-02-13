@@ -4,38 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Header sin CSS</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../../Components/styles/components.css">
+        <link rel="stylesheet" type="text/css" href="../headers.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     </head>
     <body>
         <header>
-            <img src="tu_imagen.png" alt="Logo" />
-            <nav>
-                <form>
-                    <input type="text" placeholder="Buscar..." />
-                    <button type="submit">Buscar</button>
-                </form>
-                <button>Botón</button>
-                <select>
+            <section class="up-header">
+                <img src="tu_imagen.png" class="logo2" />
+                <input type="text" class="search-input" placeholder="Buscar..." />
+                <button class="submit"><i class="fas fa-search fa-sm"></i></button>
+
+                <select class="account">
                     <option value="opcion1">Perfil</option>
                     <option value="opcion2">Mi cesta</option>
                     <option value="opcion3">Cerrar Sesión</option>
                 </select>
-            </nav>
+            </section>
+
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-store"></i> Tienda</a></li>
                     <li>
-                        <a href="#">Calculadoras</a>
+                        <a href="#"><i class="fas fa-calculator"></i> Calculadoras</a>
                         <ul>
                             <li><a href="#">Calculadora 1</a></li>
                             <li><a href="#">Calculadora 2</a></li>
                             <li><a href="#">Calculadora 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Dieta</a></li>
-                    <li><a href="#">Rutinas</a></li>
+                    <li><a href="#"><i class="fas fa-utensils"></i> Dieta</a></li>
+                    <li><a href="#"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
                 </ul>
             </nav>
         </header>
