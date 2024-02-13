@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selector de Precio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css">
-</head>
-<body>
-
-<section class="filtro-precio">
-    <h2>Seleccionar Rango de Precio:</h2>
-    <div id="precio-slider">
-        <input type="range">
-    </div>
-    <span>De: €<span id="precio-minimo">0</span></span>
-    <span>A: €<span id="precio-maximo">1000</span></span>
-</section>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selector de Precio</title>
+        <link rel="stylesheet" href="../estilos/filtroPrecio.css">
+    </head>
+    <body>
+        <section class="filtro-precio">
+            <h2>Filtar por precio</h2>
+            <div id="precio-slider">
+                <input type="range">
+            </div>
+            <span>
+                De: 0
+                <span id="precio-minimo">
+                    €
+                </span>
+            </span>
+            <span>
+                A: 1000
+                <span id="precio-maximo">
+                    €
+                </span>
+            </span>
+        </section>
+    </body>
 </html>
