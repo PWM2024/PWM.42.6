@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.botones-container{
+    width: 135px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.botones-container button{
+    color: white;
+    background-color: #FB7201;
+    font-size: 16px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.botones-container #boton-finalizarCompra{
+    margin-top: 20px;
+    width: 150px;
+}
+
+.botones-container button:active{
+    background-color: #D15800;
+}

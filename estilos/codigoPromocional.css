@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.promo-container{
+    width: 375px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.promo-container h1{
+    width: 390px;
+}
+
+.promo-container p{
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.promo-container button{
+    color: white;
+    background-color: #FB7201;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.promo-container button:active{
+    background-color: #D15800;
+}
