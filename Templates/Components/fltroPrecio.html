@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Selector de Precio</title>
-        <link rel="stylesheet" href="../Assets/Styles/filtroPrecio.css">
-    </head>
-    <body>
-        <section class="filtro-precio">
-            <h2>Filtar Por Precio</h2>
-            <div id="precio-slider">
-                <input type="range">
-            </div>
-            <span>
-                De: 0
-                <span id="precio-minimo">
-                    €
-                </span>
-            </span>
-            <span>
-                A: 1000
-                <span id="precio-maximo">
-                    €
-                </span>
-            </span>
-        </section>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Assets/Styles/filtroPrecio.css">
+  <title>Price Range Slider</title>
+</head>
+<body>
+  <div class="card">
+    <h4>Rango de precio:</h4>
+
+    <div class="range-slider">
+      <div class="range-fill"></div>
+
+      <input
+        type="range"
+        class="min-price"
+        value="100"
+        min="0"
+        max="500"
+        step="5"
+      />
+      <input
+        type="range"
+        class="max-price"
+        value="250"
+        min="0"
+        max="500"
+        step="5"
+      />
+      
+      <div id="min-value-display" class="value-display"></div>
+      <div id="max-value-display" class="value-display"></div>
+    </div>
+  </div>
+
+  <script src="../Assets/Scripts/filtroPrecio.js"></script>
+</body>
 </html>
