@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../Assets/Styles/filtroOpciones.css">
-        <title>Componente de Filtro</title>
-    </head>
-    <body>
-        <section class="filtro">
-            <h2>Filtros</h2>
-            <label>
-                <input type="checkbox" name="opcion1"> Opción 
-            </label><br>
-            <label>
-                <input type="checkbox" name="opcion2"> Opción 
-            </label><br>
-            <label>
-                <input type="checkbox" name="opcion3"> Opción 
-            </label>
-        </section>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Assets/Styles/filtroOpciones.css">
+  <!-- Corrected script tag with src attribute -->
+  <script src="../Assets/Scripts/filtroOpciones.js"></script>
+  <title>Componente de Filtro</title>
+</head>
+<body>
+  <section class="filtro">
+    <h2>Filtros</h2>
+    
+    <template id="checkbox-template">
+      <label>
+        <div class="checkbox-wrapper-65">
+          <label for=""></label>
+          <input type="checkbox" id="">
+          <span class="cbx">
+            <svg width="12px" height="11px" viewBox="0 0 12 11">
+              <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+            </svg>
+          </span>
+          <span>Checkbox</span>
+        </div>
+      </label><br>
+    </template>
+  </section>
+</body>
 </html>
