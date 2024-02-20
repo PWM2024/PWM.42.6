@@ -3,8 +3,12 @@ body {
 }
 
 .tabla-alimentos {
+  text-align: center;
+}
+.tabla-alimentos ul {
   border: 1px solid rgb(233, 120, 28);
 }
+
 ul {
   padding: 0;
 }
@@ -21,4 +25,16 @@ span {
 
 input {
   width: 70px;
+  height: 20px;
+}
+
+form {
+  text-align: center;
+  margin: 20px;
+}
+.input-container span {
+  padding: 0;
+}
+.input-container{
+  margin-top: 10px;
 }
