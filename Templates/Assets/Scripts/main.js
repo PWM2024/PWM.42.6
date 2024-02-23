@@ -41,20 +41,35 @@ function fetchComponenteconJSPropio(url, containerId){
         });
 }
 
-//Header Sin Login ni Register
-fetchComponente('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'header');
+fetchComponente('/Templates/Components/tarjetaProducto1.html', 'tarjetaProducto1');
+fetchComponente('/Templates/Components/tarjetaGeneral.html', 'tarjetaGeneral');
+fetchComponente('/Templates/Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
+fetchComponente('/Templates/Components/alturaForm.html', 'alturaForm');
+fetchComponente('/Templates/Components/tarjetaProductoListaDeseos.html', 'tarjetaProductoListaDeseos');
+fetchComponente('/Templates/Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
+fetchComponente('/Templates/Components/codigoPromocional.html', 'codigoPromocional');
+fetchComponente('/Templates/Components/resumenCompra.html', 'resumenCompra');
+fetchComponente('/Templates/Components/descripcion.html', 'descripcion');
+fetchComponente('/Templates/Components/botonesCesta.html', 'botonesCesta');
+fetchComponente('/Templates/Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
+fetchComponente('/Templates/Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
+fetchComponente('/Templates/Components/kcalForm.html', 'kcalForm');
+fetchComponente('/Templates/Components/listaKcal.html', 'listaKcal');
+fetchComponente('/Templates/Components/miPerfilDetalles.html', 'miPerfilDetalles');
+fetchComponente('/Templates/Components/ordenarPorDesplegable.html', 'ordenarPorDesplegable');
+fetchComponente('/Templates/Components/formPassword.html', 'formPassword');
+fetchComponente('/Templates/Components/pesoForm.html', 'pesoForm');
+fetchComponente('/Templates/Components/nickNameForm.html', 'nickNameForm');
+fetchComponente('/Templates/Components/statsForm.html', 'statsForm');
+fetchComponente('/Templates/Components/footer.html', 'footer');
+fetchComponenteconJSPropio('/Components/filtroOpciones.html', 'filtroOpciones');
+fetchComponenteconJSPropio('/Components/filtroPrecio.html', 'filtroPrecio');
 
-//Página Cesta
-fetchComponente('../../Components/tarjetaProducto1.html', 'tarjetaProducto1');
-fetchComponente('../../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
-fetchComponente('../../Components/resumenCompra.html', 'resumenCompra');
-fetchComponente('../../Components/botonesCesta.html', 'botonesCesta');
 
-//Página Calculadora IMC
-fetchComponente('../Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
+fetchComponente("/Templates/Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
+fetchComponente("/Templates/Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
+fetchComponente('/Templates/Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
+fetchComponente("/Templates/Header/HeaderSinLoginRegister/header.html", 'header');
 
-//Página Calculadora Kcal
-fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
-
-//Footer
-fetchComponente('../Components/footer.html', 'footer');
+fetchComponente("/Templates/Forms/iniciarSesion.html", 'iniciarSesion');
+fetchComponente("/Templates/Forms/registrarUsuario.html", 'registrarUsuario');
