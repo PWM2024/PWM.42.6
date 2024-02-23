@@ -2,12 +2,19 @@ function fetchComponente(url, containerId) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Error al cargar el recurso: ' + response.status);
+                //console.warn('Error al cargar el recurso: ' + response.status);
+                return; 
             }
             return response.text();
         })
         .then(data => {
-            document.getElementById(containerId).innerHTML = data;
+            const container = document.getElementById(containerId);
+            if(container) {
+                container.innerHTML = data;
+            } else {
+                return;
+                //console.warn(`Container con ID '${containerId}' no encontrado.`);
+            }
         })
         .catch(error => console.error(`Error al cargar html -> ${error}`));
 }
@@ -37,9 +44,12 @@ function fetchComponenteconJSPropio(url, containerId){
             }
         })
         .catch(error => {
-            console.error(`Error loading HTML: ${error}`);
+            return;
+            //console.error(`Error loading HTML: ${error}`);
         });
 }
+
+
 
 fetchComponente('/Templates/Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('/Templates/Components/tarjetaGeneral.html', 'tarjetaGeneral');
@@ -62,8 +72,8 @@ fetchComponente('/Templates/Components/pesoForm.html', 'pesoForm');
 fetchComponente('/Templates/Components/nickNameForm.html', 'nickNameForm');
 fetchComponente('/Templates/Components/statsForm.html', 'statsForm');
 fetchComponente('/Templates/Components/footer.html', 'footer');
-fetchComponenteconJSPropio('/Components/filtroOpciones.html', 'filtroOpciones');
-fetchComponenteconJSPropio('/Components/filtroPrecio.html', 'filtroPrecio');
+fetchComponenteconJSPropio('/Templates/Components/filtroOpciones.html', 'filtroOpciones');
+fetchComponenteconJSPropio('/Templates/Components/filtroPrecio.html', 'filtroPrecio');
 
 
 fetchComponente("/Templates/Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
