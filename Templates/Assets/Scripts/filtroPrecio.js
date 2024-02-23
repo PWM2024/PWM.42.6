@@ -46,6 +46,5 @@ inputElements.forEach((element) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  validateRange();
-});
+
+validateRange();
