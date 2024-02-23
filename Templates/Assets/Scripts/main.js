@@ -12,6 +12,8 @@ function fetchComponente(url, containerId) {
         .catch(error => console.error(`Error al cargar html -> ${error}`));
 }
 
+
+//Header Sin Login ni Register
 fetchComponente('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'header');
 
 //Página Cesta
@@ -20,6 +22,11 @@ fetchComponente('../../Components/aplicarCodigoPromocionalForm.html', 'aplicarCo
 fetchComponente('../../Components/resumenCompra.html', 'resumenCompra');
 fetchComponente('../../Components/botonesCesta.html', 'botonesCesta');
 
-//Página Cesta
+//Página Calculadora IMC
 fetchComponente('../Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
+
+//Página Calculadora Kcal
+fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
+
+//Footer
 fetchComponente('../Components/footer.html', 'footer');
