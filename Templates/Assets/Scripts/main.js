@@ -49,8 +49,6 @@ function fetchComponenteconJSPropio(url, containerId){
         });
 }
 
-
-
 fetchComponente('/Templates/Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('/Templates/Components/tarjetaGeneral.html', 'tarjetaGeneral');
 fetchComponente('/Templates/Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
@@ -74,7 +72,6 @@ fetchComponente('/Templates/Components/statsForm.html', 'statsForm');
 fetchComponente('/Templates/Components/footer.html', 'footer');
 fetchComponenteconJSPropio('/Templates/Components/filtroOpciones.html', 'filtroOpciones');
 fetchComponenteconJSPropio('/Templates/Components/filtroPrecio.html', 'filtroPrecio');
-
 
 fetchComponente("/Templates/Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
 fetchComponente("/Templates/Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
