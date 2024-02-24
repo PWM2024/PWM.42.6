@@ -1,0 +1,41 @@
+
+h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size:xx-large;
+}
+
+.productos-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tarjetaProducto1 {
+    width: fit-content;
+    margin: 50px;
+}
+
+.rutinas-container {
+    width: 1400px;
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 12.5%;
+}
+
+.tarjetaGeneral .tarjeta {
+    border: 1px solid #FB7201;
+    border-radius: 5px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    background-color: #ffffff;
+    
+}
+
+.footer{
+    margin-top: 10%;
+}
