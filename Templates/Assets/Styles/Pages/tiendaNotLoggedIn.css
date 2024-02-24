@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size:xx-large;
+}
+
+.promociones-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tarjetaProducto2 {
+    width: fit-content;
+    margin: 40px;
+}
+
+.novedades-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.promociones-container{
+    display: flex;
+
+}
+.tarjetaProducto2 .producto-card{
+    width: 500px;
+}
+
+.tarjetaProducto2 .producto-card .producto-details p{
+    width: 200px;
+}
+
+.footer{
+    margin-top: 10%;
+}
