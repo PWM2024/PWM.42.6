@@ -1,4 +1,4 @@
-function fetchComponente(url, containerId) {
+function fetchComponente(url, containerClass) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -8,18 +8,21 @@ function fetchComponente(url, containerId) {
             return response.text();
         })
         .then(data => {
-            const container = document.getElementById(containerId);
-            if(container) {
-                container.innerHTML = data;
+            const containers = document.getElementsByClassName(containerClass);
+            if (containers.length > 0) {
+                Array.from(containers).forEach(container => {
+                    container.innerHTML = data;
+                });
             } else {
                 return;
-                //console.warn(`Container con ID '${containerId}' no encontrado.`);
+                //console.warn(`Contenedor con clase '${containerClass}' no encontrado.`);
             }
         })
         .catch(error => console.error(`Error al cargar html -> ${error}`));
 }
 
-function fetchComponenteconJSPropio(url, containerId){
+
+function fetchComponenteconJSPropio(url, containerClass) {
     fetch(url)
         .then(response => {
             if (!response.ok){
@@ -28,19 +31,27 @@ function fetchComponenteconJSPropio(url, containerId){
             return response.text();
         })
         .then(html => {
-            document.getElementById(containerId).innerHTML = html;
+            const containers = document.getElementsByClassName(containerClass);
+            if (containers.length > 0) {
+                Array.from(containers).forEach(container => {
+                    container.innerHTML = html;
 
-            const scripts = document.getElementById(containerId).getElementsByTagName('script');
-            for (let script of scripts){
-                if (script.src){
-                    fetch(script.src)
-                    .then(response => response.text())
-                    .then(scriptText => eval(scriptText))
-                    .catch(error => console.error(`Error loading script: ${error}`));
-                }
-                else{
-                    eval(script.innerText);
-                }
+                    const scripts = container.getElementsByTagName('script');
+                    for (let script of scripts){
+                        if (script.src){
+                            fetch(script.src)
+                            .then(response => response.text())
+                            .then(scriptText => eval(scriptText))
+                            .catch(error => console.error(`Error loading script: ${error}`));
+                        }
+                        else{
+                            eval(script.innerText);
+                        }
+                    }
+                });
+            } else {
+                return;
+                //console.error(`No containers found with class '${containerClass}'.`);
             }
         })
         .catch(error => {

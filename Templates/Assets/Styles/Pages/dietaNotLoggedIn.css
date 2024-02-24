@@ -1,0 +1,22 @@
+body {
+    background-color: white ;
+}
+
+
+.filtroOpciones{
+    width: 750px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtroTarjeta{
+    display: flex;
+}
+
+.footer{
+    margin-top: 10%;
+
+}
