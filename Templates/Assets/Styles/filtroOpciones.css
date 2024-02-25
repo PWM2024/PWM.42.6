@@ -3,6 +3,15 @@
 .checkbox-wrapper-65 ::before {
     box-sizing: border-box;
 }
+
+h2{
+    margin-bottom: 25%;
+}
+
+.checkbox-wrapper-65{
+    margin-top: 7%;
+}
+
 .checkbox-wrapper-65 .cbx {
     position: relative;
     display: block;

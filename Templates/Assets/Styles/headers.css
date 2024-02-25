@@ -25,6 +25,10 @@ header {
     margin-right: 20px; 
 }
 
+nav{
+    margin-top: 5%;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -99,6 +103,7 @@ input{
     appearance: none; 
 }
 
+
 nav ul li ul {
     width: 160px;
     display: flex;
@@ -123,6 +128,7 @@ nav ul li ul li {
 }
 nav ul li ul li a {
     font-size: 16px;
+    text-align: center;
 }
 
 nav ul li ul li:hover {
