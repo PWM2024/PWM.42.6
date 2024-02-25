@@ -93,3 +93,4 @@ fetchComponente("../Header/HeaderSinLoginRegister/header.html", 'header');
 fetchComponente("../Forms/iniciarSesion.html", 'iniciarSesion');
 fetchComponente("../Forms/registrarUsuario.html", 'registrarUsuario');
 fetchComponente("../Components/slider.html", 'slider');
+fetchComponente("../Components/imcDetalles.html", 'imcDetalles');

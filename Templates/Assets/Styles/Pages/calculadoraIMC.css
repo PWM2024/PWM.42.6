@@ -1,0 +1,34 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header,
+.slider,
+.formCalculadoraIMC,
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.imcInfo {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.imcDetalles {
+    width: 48%;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: auto;
+}
