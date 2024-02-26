@@ -33,11 +33,11 @@ body {
 
 .slider-container:nth-child(2) {
   background: #332863;
-  color: #fff;
+  color: #c5c4c4;
 }
 
 .slider-container:nth-child(3) {
-  background: #ffffff;
+  background: #c5c4c4;
 }
 
 .slider-container > img {

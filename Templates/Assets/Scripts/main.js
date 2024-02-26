@@ -60,7 +60,7 @@ function fetchComponenteconJSPropio(url, containerClass) {
         });
 }
 
-fetchComponente('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
+fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
