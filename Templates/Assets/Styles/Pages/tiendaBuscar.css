@@ -19,3 +19,8 @@ body {
 .filtros-productos{
     display: flex;
 }
+
+.ordenarPor{
+    position: absolute;
+    right: 25%;
+}

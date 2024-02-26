@@ -76,7 +76,7 @@ fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal')
 fetchComponente('../Components/kcalForm.html', 'kcalForm');
 fetchComponente('../Components/listaKcal.html', 'listaKcal');
 fetchComponente('../Components/miPerfilDetalles.html', 'miPerfilDetalles');
-fetchComponente('../Components/ordenarPorDesplegable.html', 'ordenarPorDesplegable');
+fetchComponente('../Components/ordenarPorDesplegable.html', 'ordenarPor');
 fetchComponente('../Components/formPassword.html', 'formPassword');
 fetchComponente('../Components/pesoForm.html', 'pesoForm');
 fetchComponente('../Components/nickNameForm.html', 'nickNameForm');
