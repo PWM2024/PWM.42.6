@@ -1,34 +1,21 @@
 body {
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.header,
-.slider,
-.formCalculadoraIMC,
-.footer {
-    width: 100%;
-    box-sizing: border-box;
+
+.imcDetalles{
+    border: 1px solid black;
 }
+
 
 .imcInfo {
-    width: 100%;
-    max-width: 1200px;
+    margin-top: 5%;
+    height: 300px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    box-sizing: border-box;
-}
-
-.imcDetalles {
-    width: 48%;
-    background-color: #fff;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    align-items: center; 
+    justify-content:space-around;
 }
 
 .footer {
-    margin-top: auto;
+    margin-top: 20%;
 }
