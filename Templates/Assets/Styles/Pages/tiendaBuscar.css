@@ -1,0 +1,21 @@
+body {
+    background-color: white ;
+}
+
+
+.filtroOpciones{
+    width: 210px;
+}
+
+.productos-container{
+    width: fit-content;
+    margin-left: 12%;
+}
+
+.filtros-container{
+    width: fit-content;
+}
+
+.filtros-productos{
+    display: flex;
+}
