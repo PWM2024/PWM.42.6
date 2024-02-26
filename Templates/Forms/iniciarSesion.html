@@ -10,13 +10,14 @@
 <body>
 
 <div class="centered-container">
-    <img class="logo" src="../Source/logo.jpg" />
-
-    <form>
+    
+    <img class="logo1" src="../Source/logo.jpg" />
+    <h1> Inicio de Sesión </h1>
+    <form class="input-form">
         <input type="email" name="email" placeholder="Correo Electrónico" required><br>
         <input type="password" name="password" placeholder="Contraseña" required><br>
         <div class="buttons">
-            <button type="button" onclick="window.location.href = '../Pages/inicioNotLoggedIn.html'">Volver</button>
+            <button type="button" onclick="clearElementContent('miDiv');">Volver</button>
             <button type="submit" onclick="window.location.href = '../Pages/inicioLoggedIn.html'">Iniciar Sesión</button>
         </div>
     </form>

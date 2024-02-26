@@ -60,7 +60,52 @@ function fetchComponenteconJSPropio(url, containerClass) {
         });
 }
 
-fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
+function fetchAndInsertHTML(url, containerId) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el recurso: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(html => {
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.innerHTML = html;
+            } else {
+                console.error(`Contenedor con ID '${containerId}' no encontrado.`);
+            }
+        })
+        .catch(error => {
+            console.error(`Error al cargar/inserir HTML: ${error}`);
+        });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var clsname = 'login-btn'
+    const btnInicioSesionList = document.getElementsByClassName(clsname);
+
+    // Imprimir la cantidad de elementos seleccionados
+    console.log(`Cantidad de elementos con clase 'login-btn': ${btnInicioSesionList.length}`);
+        const containers = document.getElementsByClassName(clsname);
+        if (containers.length > 0) {
+            Array.from(containers).forEach(container => {
+                fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv');
+            });
+        }
+    });
+
+    function clearElementContent(elementId) {
+        const element = document.getElementById(elementId);
+    
+        if (element) {
+            element.innerHTML = '';
+        } else {
+            console.error(`Elemento con ID '${elementId}' no encontrado.`);
+        }
+    }
+
+fetchComponente('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');

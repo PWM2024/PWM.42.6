@@ -13,8 +13,8 @@
         <header>
             <section class="up-header">
                 <img src="tu_imagen.png" class="logo" />
-                <button class="login-btn" onclick="window.location.href = '../Forms/iniciarSesion.html'">Login</button>
-                <button class="register-btn" onclick="window.location.href = '../Forms/registrarUsuario.html'"> Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+                <button class="login-btn" onclick="fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv')">Login</button>
+                <button class="register-btn" onclick="fetchAndInsertHTML('../Forms/registrarUsuario.html', 'miDiv')">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
             </section>
             <nav>
                 <ul>
@@ -32,6 +32,5 @@
                 </ul>
             </nav>
         </header>
-        
     </body>
 </html>
