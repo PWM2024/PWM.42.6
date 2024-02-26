@@ -1,11 +1,21 @@
-body {
-  display: flex;
+.formulario-alimentos{
+  width: fit-content;
+  margin-right: 10%;
+  height: fit-content;
+  margin-top: 12%;
+}
+
+.formulario-alimentos button{
+  margin-right: 15%;
 }
 
 .tabla-alimentos {
   text-align: center;
+  width: fit-content;
 }
+
 .tabla-alimentos ul {
+  height: 700px;
   border: 1px solid rgb(233, 120, 28);
 }
 
@@ -24,8 +34,8 @@ span {
 }
 
 input {
-  width: 70px;
-  height: 20px;
+  width: 120px;
+  height: 30px;
 }
 
 form {
@@ -37,4 +47,13 @@ form {
 }
 .input-container{
   margin-top: 10px;
+}
+
+.kcalTotales{
+  margin-top: 7%;
+}
+
+.alimentos{
+  width: 150px;
+  height: 30px;
 }

@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+}
+
+.formCalculadoraKcal{
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    margin-top: 5%;
+}
