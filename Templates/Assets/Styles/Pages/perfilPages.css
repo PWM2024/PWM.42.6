@@ -21,7 +21,6 @@
 .detalles-tarjetas{
     display: flex;
     margin-top: 3%;
-    height: 1000px; /*Añadido*/
 }
 
 
@@ -45,8 +44,7 @@
     border-radius: 1%;
 }
 
-/*AÑADIDO*/
-.codigoPromocional{
-    margin-left: 20%;
+.perfilForm{
+    width: 57%;
+    text-align: center;
 }
-/*-----*/

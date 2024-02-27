@@ -81,6 +81,19 @@ function fetchAndInsertHTML(url, containerId) {
         });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    var clsname = 'login-btn'
+    const btnInicioSesionList = document.getElementsByClassName(clsname);
+
+    // Imprimir la cantidad de elementos seleccionados
+    console.log(`Cantidad de elementos con clase 'login-btn': ${btnInicioSesionList.length}`);
+        const containers = document.getElementsByClassName(clsname);
+        if (containers.length > 0) {
+            Array.from(containers).forEach(container => {
+                fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv');
+            });
+        }
+    });
 
     function clearElementContent(elementId) {
         const element = document.getElementById(elementId);
@@ -92,24 +105,11 @@ function fetchAndInsertHTML(url, containerId) {
         }
     }
 
-    function generarComponente(numComponentes, contenedorId, nombreElemento) {
-        var Container = document.getElementById(contenedorId);
-    
-        if (Container){
-            for (var i = 0; i < numComponentes; i++) {
-                var elemento = document.createElement("div");
-                elemento.className = nombreElemento;
-                Container.appendChild(elemento);
-            }
-        }
-    }
-
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
 fetchComponente('../Components/tarjetaProducto3.html', 'tarjetaProducto3');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
-fetchComponente('../Components/alturaForm.html', 'alturaForm');
 fetchComponente('../Components/tarjetaProductoListaDeseos.html', 'tarjetaProductoListaDeseos');
 fetchComponente('../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
 fetchComponente('../Components/codigoPromocional.html', 'codigoPromocional');
@@ -118,13 +118,11 @@ fetchComponente('../Components/descripcion.html', 'descripcion');
 fetchComponente('../Components/botonesCesta.html', 'botonesCesta');
 fetchComponente('../Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
 fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
-fetchComponente('../Components/kcalForm.html', 'kcalForm');
 fetchComponente('../Components/listaKcal.html', 'listaKcal');
 fetchComponente('../Components/miPerfilDetalles.html', 'miPerfilDetalles');
 fetchComponente('../Components/ordenarPorDesplegable.html', 'ordenarPor');
 fetchComponente('../Components/formPassword.html', 'formPassword');
-fetchComponente('../Components/pesoForm.html', 'pesoForm');
-fetchComponente('../Components/nickNameForm.html', 'nickNameForm');
+fetchComponente('../Components/perfilForm.html', 'perfilForm');
 fetchComponente('../Components/statsForm.html', 'statsForm');
 fetchComponente('../Components/footer.html', 'footer');
 fetchComponenteconJSPropio('../Components/filtroOpciones.html', 'filtroOpciones');
@@ -132,8 +130,8 @@ fetchComponenteconJSPropio('../Components/filtroPrecio.html', 'filtroPrecio');
 
 fetchComponente("../Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
 fetchComponente("../Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
-fetchComponenteconJSPropio('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
-fetchComponenteconJSPropio("../Header/HeaderSinLoginRegister/header.html", 'header');
+fetchComponente('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
+fetchComponente("../Header/HeaderSinLoginRegister/header.html", 'header');
 
 fetchComponente("../Forms/iniciarSesion.html", 'iniciarSesion');
 fetchComponente("../Forms/registrarUsuario.html", 'registrarUsuario');

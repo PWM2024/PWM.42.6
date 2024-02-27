@@ -84,7 +84,7 @@ nav ul li a:hover::after {
     margin-right: 5px;
 }
 
-input{
+.up-header input{
     height: 40px;
     width: 500px;
 }
