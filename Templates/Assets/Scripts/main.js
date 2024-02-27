@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
+fetchComponente('../Components/tarjetaProducto3.html', 'tarjetaProducto3');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
 fetchComponente('../Components/alturaForm.html', 'alturaForm');
