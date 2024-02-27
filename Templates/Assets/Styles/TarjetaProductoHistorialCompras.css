@@ -4,18 +4,24 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+
+.pruchase-details{
+    display: flex;
+}
+
+
 .purchase-info {
     width: 600px;
-  	height: 160px;
+  	height: 250px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: center;*/
 }
 
 .purchase-info div {
