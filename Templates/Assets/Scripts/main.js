@@ -81,19 +81,6 @@ function fetchAndInsertHTML(url, containerId) {
         });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var clsname = 'login-btn'
-    const btnInicioSesionList = document.getElementsByClassName(clsname);
-
-    // Imprimir la cantidad de elementos seleccionados
-    console.log(`Cantidad de elementos con clase 'login-btn': ${btnInicioSesionList.length}`);
-        const containers = document.getElementsByClassName(clsname);
-        if (containers.length > 0) {
-            Array.from(containers).forEach(container => {
-                fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv');
-            });
-        }
-    });
 
     function clearElementContent(elementId) {
         const element = document.getElementById(elementId);
@@ -102,6 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
             element.innerHTML = '';
         } else {
             console.error(`Elemento con ID '${elementId}' no encontrado.`);
+        }
+    }
+
+    function generarComponente(numComponentes, contenedorId, nombreElemento) {
+        var Container = document.getElementById(contenedorId);
+    
+        if (Container){
+            for (var i = 0; i < numComponentes; i++) {
+                var elemento = document.createElement("div");
+                elemento.className = nombreElemento;
+                Container.appendChild(elemento);
+            }
         }
     }
 

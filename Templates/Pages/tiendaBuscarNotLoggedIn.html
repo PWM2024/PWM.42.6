@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../Assets/Scripts/main.js"></script>
-    <link rel="stylesheet" href="../Assets/Styles/Pages/tiendaBuscar.css">
-    <title>Página Tienda</title>
+    <link rel="stylesheet" href="../Assets/Styles/Pages/dietaRutina.css">
+    <title>Página Rutina</title>
 </head>
-
 <body>
-    <header class="headerConLogin"></header>
-    <section class="ordenarPor"></section>
+    <header class="headerSinBuscarConLogin"></header>
 
-    <section class="filtros-productos">
-        <section class="filtros-container">
-            <div class="filtroOpciones"></div>
-            <div class="filtroPrecio"></div>
-        </section>
-        
-        <section class="productos-container">
-            <div class="tarjetaProducto2"></div>
-            <div class="tarjetaProducto2"></div>
-            <div class="tarjetaProducto2"></div>
-            <div class="tarjetaProducto2"></div>
-            <div class="tarjetaProducto2"></div>
+    <section class="filtroTarjeta">
+        <div class="filtroOpciones"></div>
+        <section class="tarjetas" id="tarjetasRutina-container">
+            <script>generarComponente(20, "tarjetasRutina-container", "tarjetaGeneral");</script>
         </section>
     </section>
 
