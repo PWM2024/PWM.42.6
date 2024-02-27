@@ -81,19 +81,17 @@ function fetchAndInsertHTML(url, containerId) {
         });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var clsname = 'login-btn'
-    const btnInicioSesionList = document.getElementsByClassName(clsname);
+function generarComponente(numComponentes, contenedorId, nombreElemento) {
+    var Container = document.getElementById(contenedorId);
 
-    // Imprimir la cantidad de elementos seleccionados
-    console.log(`Cantidad de elementos con clase 'login-btn': ${btnInicioSesionList.length}`);
-        const containers = document.getElementsByClassName(clsname);
-        if (containers.length > 0) {
-            Array.from(containers).forEach(container => {
-                fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv');
-            });
+    if (Container){
+        for (var i = 0; i < numComponentes; i++) {
+            var elemento = document.createElement("div");
+            elemento.className = nombreElemento;
+            Container.appendChild(elemento);
         }
-    });
+    }
+}
 
     function clearElementContent(elementId) {
         const element = document.getElementById(elementId);
@@ -130,8 +128,8 @@ fetchComponenteconJSPropio('../Components/filtroPrecio.html', 'filtroPrecio');
 
 fetchComponente("../Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
 fetchComponente("../Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
-fetchComponenteconJSPropio('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
-fetchComponenteconJSPropio("../Header/HeaderSinLoginRegister/header.html", 'header');
+fetchComponente('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
+fetchComponente("../Header/HeaderSinLoginRegister/header.html", 'header');
 
 fetchComponente("../Forms/iniciarSesion.html", 'iniciarSesion');
 fetchComponente("../Forms/registrarUsuario.html", 'registrarUsuario');
