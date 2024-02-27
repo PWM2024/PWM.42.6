@@ -21,6 +21,11 @@
 .detalles-tarjetas{
     display: flex;
     margin-top: 3%;
+    height: 1000px;
+}
+
+.codigoPromocional{
+    margin-left: 20%;
 }
 
 

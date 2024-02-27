@@ -1,10 +1,53 @@
-form {
+.form-main {
     display: flex;
     flex-direction: column;
+    text-align: center;
+  }
+  .datos-container {
+    margin-left: 15%;
+    width: 50%;
+    border: 1px solid #fb7201;
+    border-radius: 5px;
+    padding: 25px;
+    height: 100%;
+  }
+  
+  .datos-container input {
+    width: 50%;
+    height: 25px;
+    font-size: 20px;
+  }
+  
+  .statsForm {
+    width: fit-content;
+    margin-left: 23%;
+  }
+  
+  .perfilForm Form {
+    margin-top: 25px;
+  }
+  
+  .footer {
+    overflow-x: hidden;
+  }
+  
+  .perfilForm {
+    margin: 0 auto;
+  }
+  
+  
+  .password-container {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-}
-
-input{
-    margin-top: 15px;
-}
-
+    justify-content: center;
+    height: 60px;
+  }
+  
+  input[type="password"] {
+    margin-right: 10px;
+    height: 25px;
+    width:fit-content;
+  }
+  
+  
