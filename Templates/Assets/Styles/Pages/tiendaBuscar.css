@@ -9,6 +9,7 @@ body {
 .productos-container{
     width: fit-content;
     margin-left: 10%;
+    margin-top: 5%;
 }
 
 .filtros-container{
@@ -27,4 +28,5 @@ body {
 .ordenarPor{
     position: absolute;
     right: 25%;
+    top: 25%;
 }
