@@ -17,6 +17,12 @@ body {
     display: flex;
 }
 
+.limpiar{
+    position: absolute;
+    margin-left: 4%;
+    top: 65%;
+}
+
 .footer{
     margin-top: 10%;
 }

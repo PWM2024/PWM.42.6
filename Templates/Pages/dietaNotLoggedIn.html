@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Assets/Scripts/main.js"></script>
-    <link rel="stylesheet" href="../Assets/Styles/Pages/dietaRutina.css">
-    <title>Página Dieta</title>
-</head>
-<body>
-    <header class="headerSinBuscarConLogin"></header>
-
-    <section class="filtroTarjeta">
-        <div class="filtroOpciones"></div>
-        <div id="detalles-tarjeta"></div>
-        <section class="tarjetas" id="tarjetasDieta-container">
-            <script>generarComponente(18, "tarjetasDieta-container", "tarjetaGeneral");</script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../Assets/Scripts/main.js"></script>
+        <link rel="stylesheet" href="../Assets/Styles/Pages/dietaRutina.css">
+        <title>Página Dieta</title>
+    </head>
+    <body>
+        <header class="headerSinBuscarConLogin"></header>
+        <section class="filtroTarjeta">
+            <div class="filtroOpciones"></div>
+            <button class="limpiar">Limpiar Filtros</button>
+            <div id="detalles-tarjeta"></div>
+            <section class="tarjetas" id="tarjetasDieta-container">
+                <script>generarComponente(18, "tarjetasDieta-container", "tarjetaGeneral");</script>
+            </section>
         </section>
-    </section>
-
-    <footer class="footer"></footer>
-
-</body>
+        <footer class="footer"></footer>
+        <script src="../Assets/Scripts/limpiarFiltros.js"></script>
+    </body>
 </html>
