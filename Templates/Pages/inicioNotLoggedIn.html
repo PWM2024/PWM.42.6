@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Assets/Scripts/main.js"></script>
-    <link rel="stylesheet" href="../Assets/Styles/Pages/inicio.css">
-    <title>Página Inicio</title>
-</head>
-<body>
-    <header class="headerSinBuscarConLogin"></header>
-    <div class="slider"></div>
-    <div id="miDiv"></div>
-    <h1>Productos</h1>
-    
-    <section class="productos-container">
-        <div class="tarjetaProducto1"></div>
-        <div class="tarjetaProducto1"></div>
-    </section>
-    
-    <h1>Rutinas</h1>
-    <section class="rutinas-container">
-        <div class="tarjetaGeneral"></div>
-        <div class="tarjetaGeneral"></div>
-        <div class="tarjetaGeneral"></div>
-        <div class="tarjetaGeneral"></div>
-        <div class="tarjetaGeneral"></div>
-        <div class="tarjetaGeneral"></div>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../Assets/Scripts/main.js"></script>
+        <script src="../Assets/Scripts/custom-scrollbar.js"></script>
+        <link rel="stylesheet" href="../Assets/Styles/Pages/inicio.css">
+        <title>Página Inicio</title>
+    </head>
+    <body>
+        <header class="headerSinBuscarConLogin"></header>
+        <div class="slider"></div>
+        <div id="miDiv"></div>
+        <h1>Productos</h1>
+        
+        <section class="productos-container">
+            <div class="tarjetaProducto1"></div>
+            <div class="tarjetaProducto1"></div>
+        </section>
+        
+        <h1>Rutinas</h1>
+        <div class="detalles-tarjeta"></div>
+        <section class="rutinas-completo">
+            <section id="left-btn"></section>
+            <section class="rutinas-container" id="rutinas-container">
+                <div class="tarjetaGeneral"></div>
+                <div class="tarjetaGeneral"></div>
+                <div class="tarjetaGeneral"></div>
+                <div class="tarjetaGeneral"></div>
+                <div class="tarjetaGeneral"></div>
+                <div class="tarjetaGeneral"></div>
+            </section>
+            <section id="right-btn"></section>
+        </section>
 
-    <footer class="footer"></footer>
 
-</body>
+        <footer class="footer"></footer>
+
+    </body>
 </html>

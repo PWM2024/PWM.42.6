@@ -1,10 +1,11 @@
-
 h1{
     text-align: center;
     margin-top: 5%;
     margin-bottom: 1%;
     font-size:xx-large;
 }
+
+
 
 .productos-container {
     height: 300px;
@@ -18,12 +19,34 @@ h1{
     margin: 50px;
 }
 
+
+
+.rutinas-completo{
+    display: flex;
+
+}
+
 .rutinas-container {
     width: 1350px;
     display: flex;
     overflow-x: scroll;
-    margin-left: 13.5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
+
+#left-btn{
+    margin-left: 8%;
+    display: flex;
+    align-items: center; 
+
+}
+
+#right-btn{
+    display: flex; 
+    align-items: center; 
+}
+
+
 
 .tarjetaGeneral .tarjeta {
     border: 1px solid #FB7201;
@@ -38,4 +61,27 @@ h1{
 
 .footer{
     margin-top: 10%;
+}
+
+
+.rutinas-container{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.rutinas-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.rutinas-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.rutinas-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.rutinas-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
