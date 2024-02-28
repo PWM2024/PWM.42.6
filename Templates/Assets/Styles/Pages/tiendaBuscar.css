@@ -27,6 +27,5 @@ body {
 
 .ordenarPor{
     position: absolute;
-    right: 25%;
-    top: 25%;
+    margin-left: 61%;
 }

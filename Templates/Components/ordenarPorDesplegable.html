@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Componente Desplegable "Ordenar por"</title>
-    <link rel="stylesheet" href="../Assets/Styles/components.css">
+    <link rel="stylesheet" href="../Assets/Styles/ordenarPorDesplegable.css">
 
   </head>
   <body>
-    <section class="ordenar-por">
-      <select id="ordenar-por-select">
-        <option value="" disabled selected>Ordenar por</option>
-        <option value="precio-bajo">Precio más bajo</option>
-        <option value="precio-alto">Precio más alto</option>
-      </select>
-    </section>
+    <div class="sort">
+      <button class="sort-toggle">Ordenar por<i class="fas fa-bars"></i></button>
+      <div class="dropdown-content">
+          <a href="../../../Templates/Pages/perfilMisDatos.html"><i class="fas fa-sort-amount-down-alt"></i>Precio Más Bajo</a>
+          <a href="../../../Templates/Pages/cesta.html"><i class="fas fa-sort-amount-up"></i>Precio Más Alto</a>
+      </div>
+    </div>
   </body>
 </html>
+
+
