@@ -16,12 +16,14 @@
                 <input type="text" class="search-input" placeholder="Buscar..." />
                 <button class="submit" onclick="window.location.href = '../Pages/tiendaBuscarLoggedIn.html'"><i class="fas fa-search fa-sm"></i></button>
 
-                <select class="account fa">
-                    <option class="options fa" value="defecto" disabled selected> &#xf44b MI CUENTA</option>
-                    <option class="options fa" value="opcion1" > &#xf007 PERFIL</span></option>
-                    <option class="options fa" value="opcion2"> &#xf44b MI CESTA</option>
-                    <option class="options fa" value="opcion3"> &#xf2f5 CERRAR SESIÓN</option>
-                </select>
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Mi Cuenta<i class="fas fa-bars"></i></button>
+                    <div class="dropdown-content">
+                        <a href="../../../Templates/Pages/perfilMisDatos.html"><i class="fas fa-user"></i>Perfil</a>
+                        <a href="../../../Templates/Pages/cesta.html"><i class="fas fa-shopping-basket"></i>Cesta</a>
+                        <a href="../../../Templates/Pages/inicioNotLoggedIn.html"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+                    </div>
+                </div>
                 
             </section>
 
