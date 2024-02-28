@@ -110,7 +110,6 @@ nav ul li ul {
     left: 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.2s, opacity 0.2s ease-in-out;
     z-index: 1;
 }
 
