@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Assets/Scripts/main.js"></script>
-    <link rel="stylesheet" href="../Assets/Styles/Pages/tienda.css">
-    <title>Página Tienda</title>
-</head>
-<body>
-    <header class="headerConLogin"></header>
-    <div class="slider"></div>
-    <h1>Promociones</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../Assets/Scripts/main.js"></script>
+        <link rel="stylesheet" href="../Assets/Styles/Pages/tienda.css">
+        <title>Página Tienda</title>
+    </head>
+    <body>
+        <header class="headerConLogin"></header>
+        <div class="slider"></div>
+        <h1>Promociones</h1>
+        <section class="promociones-container" id="promociones">
+            <script>generarComponente(3, "promociones", "tarjetaProducto2");</script>
+        </section>
 
-    <section class="promociones-container">
-        <div class="tarjetaProducto2"></div>
-        <div class="tarjetaProducto2"></div>
-        <div class="tarjetaProducto2"></div>
-    </section>
-
-    <h1>Novedades</h1>
-    <section class="novedades-container">
-        <div class="tarjetaProducto2"></div>
-        <div class="tarjetaProducto2"></div>
-        <div class="tarjetaProducto2"></div>
-    </section>
-
-    <footer class="footer"></footer>
-
-</body>
+        <h1>Novedades</h1>
+        <section class="novedades-container" id="novedades">
+            <script>generarComponente(3, "novedades", "tarjetaProducto2");</script>
+        </section>
+        <footer class="footer"></footer>
+    </body>
 </html>
