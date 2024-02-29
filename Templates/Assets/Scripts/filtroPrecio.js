@@ -1,50 +1,41 @@
-const minValueDisplay = document.getElementById("min-value-display");
-const maxValueDisplay = document.getElementById("max-value-display");
-const rangeFill = document.querySelector(".range-fill");
-const inputElements = document.querySelectorAll("input");
+const rangeInput = document.querySelectorAll(".range-input input"),
+  priceInput = document.querySelectorAll(".price-input input"),
+  range = document.querySelector(".slid3r .progress");
+let priceGap = 1000;
 
+priceInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minPrice = parseInt(priceInput[0].value),
+      maxPrice = parseInt(priceInput[1].value);
 
-
-function updateValueDisplays() {
-  minValueDisplay.style.left = `${(inputElements[0].value / 1000) * 100}%`;
-  maxValueDisplay.style.left = `${(inputElements[1].value / 1000) * 100}%`;
-
-  minValueDisplay.textContent = `${inputElements[0].value}€`;
-  maxValueDisplay.textContent = `${inputElements[1].value}€`;
-}
-
-function validateRange() {
-  const minPrice = parseInt(inputElements[0].value);
-  const maxPrice = parseInt(inputElements[1].value);
-  const step = parseInt(inputElements[0].step);
-
-
-  if (maxPrice < (minPrice + 5) && ((1000-maxPrice) > (minPrice-0))) {
-    inputElements[1].value = minPrice + step;
-    return;
-  }
-  if (minPrice > (maxPrice - 5) && ((1000-maxPrice) < (minPrice-0))){
-    inputElements[0].value = maxPrice - step;
-    return;
-  }
-
-  const minPercentage = ((minPrice - 5) / 990) * 100;
-  const maxPercentage = ((maxPrice - 5) / 990) * 100;
-
-  rangeFill.style.left = minPercentage + "%";
-  rangeFill.style.width = maxPercentage - minPercentage + "%";
-
-  updateValueDisplays();
-}
-
-
-updateValueDisplays();
-inputElements.forEach((element) => {
-  element.addEventListener("input", () => {
-    validateRange();
-    updateValueDisplays();
+    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+      if (e.target.className === "input-min") {
+        rangeInput[0].value = minPrice;
+        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+      } else {
+        rangeInput[1].value = maxPrice;
+        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+      }
+    }
   });
 });
 
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minVal = parseInt(rangeInput[0].value),
+      maxVal = parseInt(rangeInput[1].value);
 
-validateRange();
+    if (maxVal - minVal < priceGap) {
+      if (e.target.className === "range-min") {
+        rangeInput[0].value = maxVal - priceGap;
+      } else {
+        rangeInput[1].value = minVal + priceGap;
+      }
+    } else {
+      priceInput[0].value = minVal;
+      priceInput[1].value = maxVal;
+      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    }
+  });
+});

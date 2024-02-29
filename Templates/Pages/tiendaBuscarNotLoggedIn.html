@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Assets/Scripts/main.js"></script>
-    <link rel="stylesheet" href="../Assets/Styles/Pages/tiendaBuscar.css">
-    <title>Tienda sin la sesión inicida y buscador</title>
-</head>
-<body>
-    <header class="headerConLogin"></header>
-
-
-    <section class="filtros-productos">
-        <section class="filtros-container">
-            <div class="filtroOpciones"></div>
-            <div class="filtroPrecio"></div>
-            <button>Limpiar Filtros</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../Assets/Scripts/main.js"></script>
+        <link rel="stylesheet" href="../Assets/Styles/Pages/tiendaBuscar.css">
+        <title>Tienda sin la sesión inicida y buscador</title>
+    </head>
+    <body>
+        <header class="headerConLogin"></header>
+        <section class="filtros-productos">
+            <section class="filtros-container">
+                <div class="filtroOpciones"></div>
+                <div class="filtroPrecio"></div>
+                <button class="limpiar">Limpiar Filtros</button>
+            </section>
+            <section class="ordenarPor"></section>
+            <section class="productos-container", id="productos">
+                <script>generarComponente(5, "productos", "tarjetaProducto2");</script>
+            </section>
         </section>
-        
-        <section class="ordenarPor"></section>
-        <section class="productos-container", id="productos">
-            <script>generarComponente(5, "productos", "tarjetaProducto2");</script>
-        </section>
-    </section>
-
-    <footer class="footer"></footer>
-
-</body>
+        <footer class="footer"></footer>
+        <script src="../Assets/Scripts/limpiarFiltros.js"></script>
+    </body>
 </html>

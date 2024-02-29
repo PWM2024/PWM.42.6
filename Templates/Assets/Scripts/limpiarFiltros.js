@@ -1,18 +1,18 @@
 function resetPriceFilter() {
-    const inputElements = document.querySelectorAll(".filtroPrecio input[type='range']");
-    const minValueDisplay = document.getElementById("min-value-display");
-    const maxValueDisplay = document.getElementById("max-value-display");
-    const rangeFill = document.querySelector(".range-fill");
+    const inputElements = document.querySelectorAll(".slid3r input[type='range']");
+    const minValueDisplay = document.querySelector(".price-input .input-min");
+    const maxValueDisplay = document.querySelector(".price-input .input-max");
+    const rangeFill = document.querySelector(".slid3r .progress");
 
-    inputElements[0].value = 0;
-    inputElements[1].value = 1000;
+    inputElements[0].value = 2500;
+    inputElements[1].value = 7500;
 
-    minValueDisplay.textContent = `${inputElements[0].value}€`;
-    maxValueDisplay.textContent = `${inputElements[1].value}€`;
+    minValueDisplay.value = 2500;
+    maxValueDisplay.value = 7500;
 
-    rangeFill.style.left = "0%";
-    rangeFill.style.width = "100%";
-}  
+    rangeFill.style.left = "25%";
+    rangeFill.style.width = "50%";
+}
 
 var boton = document.getElementsByClassName('limpiar');
 boton[0].addEventListener('click', function() {
@@ -20,9 +20,10 @@ boton[0].addEventListener('click', function() {
         checkbox.checked = false;
     });
 
-    if (document.querySelectorAll(".filtroPrecio input[type='range']").length !== 0){
-        document.querySelector('.min-price').value = 0;
-        document.querySelector('.max-price').value = 1000;
+    console.log(`${document.querySelectorAll(".slid3r input[type='range']").length}`);
+    if (document.querySelectorAll(".slid3r input[type='range']").length !== 0){
+        document.querySelector('.slid3r .input-min').value = 2500;
+        document.querySelector('.slid3r .input-max').value = 7500;
         resetPriceFilter();
     }
 });
