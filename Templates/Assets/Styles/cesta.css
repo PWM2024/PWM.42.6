@@ -1,0 +1,132 @@
+.aplicarCodigoPromocional{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.head-cesta {
+    padding: 1rem;
+    border-bottom: 1px solid #d0cdcd;
+    display: flex;
+    justify-content: center; /* Alineación horizontal al centro */
+    align-items: center; /* Alineación vertical al centro */
+    width: 100%;
+}
+
+.head-cesta h1 {
+    font-size: 120%;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cesta-ico {
+    position: absolute;
+    left: 5%;
+    scale: 0.6;
+    padding: 10px;
+}
+
+#cesta-cerrar {
+    position: absolute;
+    right: 5%;
+    border-radius: 5px;
+    padding: 4px;
+    transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* Agregado box-shadow a la transición */
+}
+
+#cesta-cerrar:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.cesta-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 1000%;
+    min-width: 550px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.body-cesta{
+    margin: 1%;
+}
+.resumen-compra{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5%;
+    margin-top: 60px;
+}
+.resumen-compra span{
+    position: absolute;
+    right: 6%;
+    font-weight: bold;
+}
+#precio-final{
+    font-size: xx-large;
+}
+
+.cesta-container .producto-card{
+    box-shadow: none;
+    border: none;
+    border-radius: 0%;
+    border-bottom: 1px solid #f3efef;
+}
+.producto-unidades{
+    position:absolute;
+    left: 40%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+.producto-unidades h1 {
+    font-size: 80% !important;
+}
+.operar-cantidad {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(135, 135, 135);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #b7b6b6, -1px -1px 2px #e8e8e8;
+    user-select: none;
+}
+.operar-cantidad:hover{
+    scale: 1.1;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.operar-cantidad:active{
+    scale: 1;
+}
+
+.producto-unidades h2 {
+    margin: 0 !important;
+    font-size: 110% !important;
+    color: rgb(58, 58, 58) !important;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.botonesCesta{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.cestaHeader{
+transform: translateX(110%);
+}
+.cestaHeader.open{
+    transform: translateX(0);
+}

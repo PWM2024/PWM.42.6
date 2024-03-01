@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Assets/Styles/cesta.css" />
+    <title>Página Cesta</title>
+    <script src="../Assets/Scripts/main.js"></script>
+    <script>fetchComponentesCesta()</script>
+  </head>
+  <body>
+    <section class="cesta-container">
+      <div class="head-cesta">
+        <img
+          width="48"
+          height="48"
+          id="cesta-ico"
+          src="https://img.icons8.com/sf-regular/48/shopping-cart.png"
+          alt="shopping-cart"
+        />
+        <h1>Mi cesta</h1>
+        <img
+          width="25"
+          height="25"
+          id="cesta-cerrar"
+          src="https://img.icons8.com/sf-ultralight/25/delete-sign.png"
+          alt="delete-sign"
+          onclick="closeCesta()"
+        />
+      </div>
+      <section class="body-cesta">
+        <!-- Falta por arreglar -->
+        <div id="tarjetaProductoCesta">
+          <section class="producto-card">
+            <img src="../Source/default-img.png" alt="Producto">
+            <section class="producto-details">
+                <h1>Producto</h1>
+                <h2>SKU</h2>
+                <h1>XX.XX€</h1>
+                <section class="producto-unidades">
+                    <button class="operar-cantidad">-</button>
+                    <h2>1</h2>
+                    <button class="operar-cantidad">+</button>
+                </section>
+            </section>
+        </section>
+        <div id="tarjetaProductoCesta">
+          <section class="producto-card">
+            <img src="../Source/default-img.png" alt="Producto">
+            <section class="producto-details">
+                <h1>Producto</h1>
+                <h2>SKU</h2>
+                <h1>XX.XX€</h1>
+                <section class="producto-unidades">
+                    <button class="operar-cantidad">-</button>
+                    <h2>1</h2>
+                    <button class="operar-cantidad">+</button>
+                </section>
+            </section>
+        </section>
+        </div>
+        <div class="tarjetaProductoCesta"></div>
+        <div class="aplicarCodigoPromocional"></div>
+        <div class="resumen-Compra">
+          <section class="resumen-compra">
+            <p class="unidades">Unidades <span>2</span></p>
+            <p class="descuento">Descuento <span>XX%</span></p>
+            <p class="total">
+              Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
+            </p>
+          </section>
+        </div>
+        <div class="botonesCesta"></div>
+      </section>
+    </section>
+  </body>
+</html>

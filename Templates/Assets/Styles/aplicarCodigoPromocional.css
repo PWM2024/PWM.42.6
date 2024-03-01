@@ -1,4 +1,10 @@
 .input-button-container input {
     height: 35px;
-    width: 300px;
+    width: 200px;
+}
+.codigo-promocional button{
+    margin: 2%;
+}
+.codigo-promocional{
+    width: 110%;
 }

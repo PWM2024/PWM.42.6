@@ -60,6 +60,27 @@ function fetchComponenteconJSPropio(url, containerClass) {
         });
 }
 
+function fetchComponenteConId(url, containerId) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                //console.warn('Error al cargar el recurso: ' + response.status);
+                return; 
+            }
+            return response.text();
+        })
+        .then(data => {
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.innerHTML = data;
+            } else {
+                console.warn(`Contenedor con id '${containerId}' no encontrado.`);
+                return;
+            }
+        })
+        .catch(error => console.error(`Error al cargar html -> ${error}`));
+}
+
 function fetchAndInsertHTML(url, containerId) {
     fetch(url)
         .then(response => {
@@ -103,10 +124,17 @@ function generarComponente(numComponentes, contenedorId, nombreElemento) {
         }
     }
 
+    function fetchComponentesCesta(){
+        fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+    }
+    
+fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
 fetchComponente('../Components/tarjetaProducto3.html', 'tarjetaProducto3');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
+fetchComponente('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+fetchComponente('../Components/cesta.html', 'cestaHeader');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
 fetchComponente('../Components/tarjetaProductoListaDeseos.html', 'tarjetaProductoListaDeseos');
 fetchComponente('../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');

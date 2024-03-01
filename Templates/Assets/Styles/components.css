@@ -55,3 +55,41 @@ select option {
 label {
   font-weight: bold;
 }
+
+.cestaHeader {
+  position: fixed;
+  top: 0;
+  right: -25%;
+  height: 100vh;
+  min-width: 550px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  transition: right 0.3s ease-in-out;
+}
+
+.cestaHeader.open {
+  right: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  opacity: 0; /* Inicialmente invisible */
+  display: none;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+  transition: opacity 0.5 ease;
+}
+
+.overlay.active {
+  opacity: 1; /* Hace visible el overlay */
+  display:block;
+}

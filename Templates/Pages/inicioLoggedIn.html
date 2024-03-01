@@ -9,12 +9,28 @@
         <title>Página Inicio</title>
     </head>
     <body>
+        <section class="overlay" id="overlay"></section>
         <header class="headerSinBuscar"></header>
+        <section class="cestaHeader" id="cesta-container"></section>
         <div class="slider"></div>
         <h1>Productos</h1>
         
         <section class="productos-container">
-            <div class="tarjetaProducto1"></div>
+            <div class="tarjetaProducto1">
+                <section class="producto-card">
+                    <img src="../Source/default-img.png" alt="Producto">
+                    <section class="producto-details">
+                        <h1>Producto</h1>
+                        <h2>SKU</h2>
+                        <h1>XX.XX€</h1>
+                        <section class="producto-unidades">
+                            <button class="operar-cantidad">-</button>
+                            <h2>1</h2>
+                            <button class="operar-cantidad">+</button>
+                        </section>
+                    </section>
+                </section>
+            </div>
             <div class="tarjetaProducto1"></div>
         </section>
         
@@ -27,8 +43,9 @@
             </section>
             <section id="right-btn"></section>
         </section>
-
+        
         <footer class="footer"></footer>
-
+        
     </body>
+    <script src="../Assets/Scripts/cestaSidebar.js"></script>
 </html>

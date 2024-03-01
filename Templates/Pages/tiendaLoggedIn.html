@@ -8,19 +8,22 @@
         <title>Tienda con la sesión inicida y buscador</title>
     </head>
     <body>
-        <header class="header"></header>
-
-        <div class="slider"></div>
-        <h1>Promociones</h1>
-        <section class="promociones-container" id="promociones">
-            <script>generarComponente(3, "promociones", "tarjetaProducto2");</script>
-        </section>
+        <section class="overlay" id="overlay"></section>
+    <section class="cestaHeader" id="cesta-container"></section>
+    <header class="header"></header>
     
-        <h1>Novedades</h1>
-        <section class="novedades-container" id="novedades">
-            <script>generarComponente(3, "novedades", "tarjetaProducto2");</script>
-        </section>
+    <div class="slider"></div>
+    <h1>Promociones</h1>
+    <section class="promociones-container" id="promociones">
+        <script>generarComponente(3, "promociones", "tarjetaProducto2");</script>
+    </section>
     
-        <footer class="footer"></footer>
+    <h1>Novedades</h1>
+    <section class="novedades-container" id="novedades">
+        <script>generarComponente(3, "novedades", "tarjetaProducto2");</script>
+    </section>
+    
+    <footer class="footer"></footer>
+    <script src="../Assets/Scripts/cestaSidebar.js"></script>
     </body>
 </html>

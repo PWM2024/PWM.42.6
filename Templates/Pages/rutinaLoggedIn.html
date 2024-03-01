@@ -8,16 +8,19 @@
         <title>Página Rutina</title>
     </head>
     <body>
-        <header class="header"></header>
-        <section class="filtroTarjeta">
-            <div class="filtroOpciones"></div>
-            <button class="limpiar">Limpiar Filtros</button>
-            <div id="detalles-tarjeta"></div>
-            <section class="tarjetas" id="tarjetasRutina-container">
-                <script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>
-            </section>
+        <section class="overlay" id="overlay"></section>
+    <section class="cestaHeader" id="cesta-container"></section>
+    <header class="header"></header>
+    <section class="filtroTarjeta">
+        <div class="filtroOpciones"></div>
+        <button class="limpiar">Limpiar Filtros</button>
+        <div id="detalles-tarjeta"></div>
+        <section class="tarjetas" id="tarjetasRutina-container">
+            <script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>
         </section>
-        <script src="../Assets/Scripts/limpiarFiltros.js"></script>
-        <footer class="footer"></footer>
-    </body>
+    </section>
+    <script src="../Assets/Scripts/limpiarFiltros.js"></script>
+    <footer class="footer"></footer>
+    <script src="../Assets/Scripts/cestaSidebar.js"></script>
+</body>
 </html>
