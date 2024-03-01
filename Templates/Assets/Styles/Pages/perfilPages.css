@@ -1,5 +1,5 @@
 .tarjetaProductoHistorialCompras .purchase-info{ 
-    height: 150px;
+    height: 230px;
 }
 .miPerfilDetalles{
     width: fit-content;
@@ -11,6 +11,7 @@
     width: 700px;
     border: 0.5px solid rgb(172, 172, 172);
     border-radius: 1%;
+    height: 900px;
 }
 
 .footer{
@@ -31,6 +32,7 @@
 
 .tarjetaProductoListaDeseos{
     margin:1%;
+
 }
 
 .tarjetaProductoListaDeseos button{
