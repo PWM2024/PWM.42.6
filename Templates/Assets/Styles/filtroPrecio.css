@@ -74,8 +74,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .slid3r .progress {
   height: 100%;
-  left: 25%;
-  right: 25%;
+  left: 1%;
+  right: 1%;
   position: absolute;
   border-radius: 5px;
   background: #FB7201;
