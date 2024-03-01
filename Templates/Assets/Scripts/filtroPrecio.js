@@ -1,7 +1,7 @@
 const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slid3r .progress");
-let priceGap = 1000;
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slid3r .progress");
+let priceGap = 1;
 
 priceInput.forEach((input) => {
   input.addEventListener("input", (e) => {
