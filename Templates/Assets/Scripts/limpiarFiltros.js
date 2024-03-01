@@ -1,18 +1,26 @@
 function resetPriceFilter() {
-    const inputElements = document.querySelectorAll(".slid3r input[type='range']");
+    const inputElements = document.querySelectorAll(".range-input input[type='range']");
     const minValueDisplay = document.querySelector(".price-input .input-min");
     const maxValueDisplay = document.querySelector(".price-input .input-max");
     const rangeFill = document.querySelector(".slid3r .progress");
 
-    inputElements[0].value = 2500;
-    inputElements[1].value = 7500;
 
-    minValueDisplay.value = 2500;
-    maxValueDisplay.value = 7500;
+    const minDefaultValue = 0;
+    const maxDefaultValue = 100;
+    inputElements[0].value = minDefaultValue;
+    inputElements[1].value = maxDefaultValue;
+    minValueDisplay.value = minDefaultValue;
+    maxValueDisplay.value = maxDefaultValue;
 
-    rangeFill.style.left = "25%";
-    rangeFill.style.width = "50%";
+
+    const rangeWidth = inputElements[0].offsetWidth;
+    const minPos = (minDefaultValue - inputElements[0].min) / (inputElements[0].max - inputElements[0].min);
+    const maxPos = (maxDefaultValue - inputElements[1].min) / (inputElements[1].max - inputElements[1].min);
+    const progressWidth = maxPos * rangeWidth - minPos * rangeWidth;
+    rangeFill.style.left = minPos * rangeWidth + "px";
+    rangeFill.style.width = progressWidth + "px";
 }
+
 
 var boton = document.getElementsByClassName('limpiar');
 boton[0].addEventListener('click', function() {
@@ -20,10 +28,8 @@ boton[0].addEventListener('click', function() {
         checkbox.checked = false;
     });
 
-    console.log(`${document.querySelectorAll(".slid3r input[type='range']").length}`);
-    if (document.querySelectorAll(".slid3r input[type='range']").length !== 0){
-        document.querySelector('.slid3r .input-min').value = 2500;
-        document.querySelector('.slid3r .input-max').value = 7500;
+
+    if (document.querySelector(".slid3r")) {
         resetPriceFilter();
     }
 });
