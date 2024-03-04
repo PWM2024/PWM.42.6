@@ -1,7 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
-  /*margin: 2.5px;*/
 }
 
 input {
@@ -82,7 +81,7 @@ label {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9;
-  opacity: 0; /* Inicialmente invisible */
+  opacity: 0; 
   display: none;
   background-color: rgba(0,0,0,0.5);
   z-index: 1;
@@ -90,6 +89,6 @@ label {
 }
 
 .overlay.active {
-  opacity: 1; /* Hace visible el overlay */
+  opacity: 1; 
   display:block;
 }

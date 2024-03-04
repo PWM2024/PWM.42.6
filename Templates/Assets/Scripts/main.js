@@ -2,7 +2,6 @@ function fetchComponente(url, containerClass) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                //console.warn('Error al cargar el recurso: ' + response.status);
                 return; 
             }
             return response.text();
@@ -15,7 +14,6 @@ function fetchComponente(url, containerClass) {
                 });
             } else {
                 return;
-                //console.warn(`Contenedor con clase '${containerClass}' no encontrado.`);
             }
         })
         .catch(error => console.error(`Error al cargar html -> ${error}`));
@@ -51,12 +49,10 @@ function fetchComponenteconJSPropio(url, containerClass) {
                 });
             } else {
                 return;
-                //console.error(`No containers found with class '${containerClass}'.`);
             }
         })
         .catch(error => {
             return;
-            //console.error(`Error loading HTML: ${error}`);
         });
 }
 
@@ -64,7 +60,6 @@ function fetchComponenteConId(url, containerId) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                //console.warn('Error al cargar el recurso: ' + response.status);
                 return; 
             }
             return response.text();
@@ -114,19 +109,19 @@ function generarComponente(numComponentes, contenedorId, nombreElemento) {
     }
 }
 
-    function clearElementContent(elementId) {
-        const element = document.getElementById(elementId);
-    
-        if (element) {
-            element.innerHTML = '';
-        } else {
-            console.error(`Elemento con ID '${elementId}' no encontrado.`);
-        }
-    }
+function clearElementContent(elementId) {
+    const element = document.getElementById(elementId);
 
-    function fetchComponentesCesta(){
-        fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+    if (element) {
+        element.innerHTML = '';
+    } else {
+        console.error(`Elemento con ID '${elementId}' no encontrado.`);
     }
+}
+
+function fetchComponentesCesta(){
+    fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+}
     
 fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');

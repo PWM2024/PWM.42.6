@@ -7,8 +7,8 @@
     padding: 1rem;
     border-bottom: 1px solid #d0cdcd;
     display: flex;
-    justify-content: center; /* Alineación horizontal al centro */
-    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
 }
 
@@ -30,7 +30,7 @@
     right: 5%;
     border-radius: 5px;
     padding: 4px;
-    transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* Agregado box-shadow a la transición */
+    transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out; 
 }
 
 #cesta-cerrar:hover {
