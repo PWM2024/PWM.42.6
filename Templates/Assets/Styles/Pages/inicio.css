@@ -85,30 +85,3 @@ h1{
 .rutinas-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
-
-@media only screen and (max-width: 1024px) {
-    h1 {
-        font-size: x-large;
-        margin-bottom: 4%;
-    }
-
-    .tarjetaProducto1 {
-        width: 400px;
-    }
-
-    .rutinas-container {
-        width: 100%;
-        overflow-x: auto;
-
-        margin: 0;
-    }
-
-    #left-btn, #right-btn {
-        display: none;
-    }
-
-    .footer {
-        margin-top: 5%;
-    }
-}
