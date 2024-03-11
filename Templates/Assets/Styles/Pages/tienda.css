@@ -52,6 +52,11 @@ h1{
         text-align: center;
     }
 
+    .tarjetaProducto2 .producto-card p{
+        margin-left: 10%;
+    }
+
+
     .promociones-container{
         margin-top: 15%;
         margin-bottom: 20%;
