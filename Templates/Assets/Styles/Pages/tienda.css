@@ -39,3 +39,27 @@ h1{
 .footer{
     margin-top: 10%;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .tarjetaProducto2{
+        width: 30%;
+    }
+
+    .tarjetaProducto2 .producto-card{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .promociones-container{
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
+    .novedades-container {
+        margin-top: 15%;
+        margin-bottom: 25%;
+    }
+
+}
