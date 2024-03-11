@@ -6,6 +6,7 @@
     <title>Formulario de Registro de Usuario</title>
     <link rel="stylesheet" href="../Assets/Styles/formsUsuarios.css" />
     <link rel="stylesheet" href="../Assets/Styles/components.css" />
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/validarRegistro.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         <input type="password" name="confirm_password" placeholder="Repetir Contraseña" required><br>
         <div class="buttons">
             <button type="button" onclick="clearElementContent('miDiv');">Volver</button>
-            <button type="submit" onclick="window.location.href = '../Pages/inicioLoggedIn.html'">Registrarse</button>
+            <button type="submit" onclick="validarFormulario()">Registrarse</button>
         </div>
     </form>
 </div>

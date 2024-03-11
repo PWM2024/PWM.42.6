@@ -6,6 +6,7 @@
     <title>Formulario de Inicio de Sesión</title>
     <link rel="stylesheet" href="../Assets/Styles/formsUsuarios.css" />
     <link rel="stylesheet" href="../Assets/Styles/components.css" />
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/validarInicioSesion.js"></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
         <input type="password" name="password" placeholder="Contraseña" required><br>
         <div class="buttons">
             <button type="button" onclick="clearElementContent('miDiv');">Volver</button>
-            <button type="submit" onclick="window.location.href = '../Pages/inicioLoggedIn.html'">Iniciar Sesión</button>
+            <button type="submit" onclick="validarInicioSesion()">Iniciar Sesión</button>
         </div>
     </form>
 
