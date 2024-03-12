@@ -10,11 +10,16 @@ window.onload = function() {
     }
 };
 
-function validarFormulario() {
+function validarRegistro() {
     var nombre = document.getElementsByName('nombre')[0].value.trim();
     var email = document.getElementsByName('email')[0].value.trim();
     var password = document.getElementsByName('password')[0].value.trim();
     var confirm_password = document.getElementsByName('confirm_password')[0].value.trim();
+
+    if (!nombre || !email || !password || !confirm_password){
+        alert("Por favor, complete todos los campos");
+        return false;
+    }
 
     // Verificar si el correo ya está registrado
     var storedUser = localStorage.getItem(email);
