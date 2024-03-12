@@ -25,3 +25,13 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+
+@media only screen and (max-width: 430px) {
+    .promo-container{
+        padding: 1%;
+    }
+    .promo-container button{
+        margin-bottom: 2%;
+    }
+}

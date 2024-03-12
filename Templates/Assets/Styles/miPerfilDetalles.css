@@ -35,3 +35,11 @@ body {
     transition: all 0.15s ease;
     background-color: #c5c5c5;
 }
+
+@media only screen and (max-width: 430px) {
+    #detalles{
+        display:none;
+    }
+
+
+}

@@ -77,3 +77,22 @@ width:fit-content;
   margin-top: 10%;
 }
 }
+
+
+@media only screen and (max-width: 430px) {
+  .datos-container{
+    width: 80%;
+    text-align: center;
+  }
+
+  .datos-container .statsForm {
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;
+  }
+
+  .perfilForm{
+    width: 100%;
+  }
+
+}
