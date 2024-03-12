@@ -51,48 +51,6 @@ width:fit-content;
 }
 
 
-@media only screen and (max-width: 1024px) {
-.datos-container{
-  margin-left: 5%;
-  text-align: center;
-}
-
-.statsForm {
-  margin-left: 7%;
-}
 
 
-.password-container {
-  display:block;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-}
 
-.password-container input{
-  margin: 1%;
-}
-
-.passwordForm button{
-  margin-top: 10%;
-}
-}
-
-
-@media only screen and (max-width: 430px) {
-  .datos-container{
-    width: 360px;
-    text-align: center;
-  }
-
-  .datos-container .statsForm {
-    width: 100%;
-    margin-left: 0%;
-    text-align: center;
-  }
-
-  .perfilForm{
-    width: 100%;
-  }
-
-}
