@@ -1,4 +1,24 @@
-.tarjetaProductoHistorialCompras .purchase-info{ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-card {
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img{
+    width: 100%;
+}
+
+.tarjetaProductoHistorialCompras .purchase-info{
     height: 230px;
 }
 .miPerfilDetalles{
@@ -45,8 +65,8 @@
     margin-left: 20%;
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
-    height: 900px;
+    width: 50%;
+    height: 1000px;
     border: 1px solid black;
     border-radius: 1%;
 }
@@ -84,13 +104,13 @@
         margin-left: 5%;
         margin-bottom: 20%;
         width: 55%;
-        height: 1250px;
+        height: 1480px;
         border: 1px solid black;
         border-radius: 1%;
     }
 
     .footer{
-        margin-top: 30%;
+        margin-top: 70%;
     }
 
 }
@@ -151,7 +171,7 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 2px;
         width: 405px;
-        height: 130%;
+        height: 135%;
     }
     .tarjetaProductoListaDeseos{
         width: 45%;
