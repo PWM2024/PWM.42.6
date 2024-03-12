@@ -93,22 +93,73 @@ h1{
         margin-bottom: 4%;
     }
 
+
     .tarjetaProducto1 {
         width: 400px;
     }
 
+    #left-btn,
+    #right-btn{
+        display:none;
+    }
     .rutinas-container {
         width: 100%;
         overflow-x: auto;
-
         margin: 0;
     }
 
-    #left-btn, #right-btn {
+    .scroll-button scroll-right {
         display: none;
     }
 
     .footer {
         margin-top: 5%;
     }
+}
+
+
+@media only screen and (max-width: 430px) {
+
+    .productos-container {
+        text-align: center;
+        height: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjetaProducto1{
+        text-align: center;
+        width: 100%;
+        margin:0;
+    }
+
+    .tarjetaProducto1 .producto-card{
+        display: block;
+        text-align: center;
+        width: 50%;
+    }
+
+    .tarjetaProducto1 .producto-card img{
+        margin:0;
+    }
+
+    
+    #left-btn,
+    #right-btn{
+        display:none;
+    }
+
+    .rutinas-container{
+        overflow-y: hidden;
+    }
+
+    .tarjetaGeneral .tarjeta{
+        width: 225px;
+        height: 250px;
+        text-align: center;
+    }
+
+
+
 }
