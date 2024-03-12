@@ -68,3 +68,50 @@ h1{
     }
 
 }
+
+@media only screen and (max-width: 430px) {
+    .promociones-container{
+        display: block;
+        height: 600px;
+        margin-top: 15%;
+        margin-bottom: 0%;
+    }
+    .tarjetaProducto2{
+        width: fit-content;
+        height: 25%;
+        text-align: center;
+    }
+
+    .tarjetaProducto2 .producto-card{
+        width: 120%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        margin:0;
+        padding: 0;
+
+    }
+
+    .tarjetaProducto2 .producto-card .producto-details {
+        text-align: center;
+    }
+
+    .tarjetaProducto2 .producto-card .producto-details p {
+        display: none;
+    }
+
+    .tarjetaProducto2 .producto-card .producto-details .precio-y-botones {
+        margin-right: 10%;
+    }
+
+
+    .novedades-container {
+        display: block;
+        height: 600px;
+        margin-top: 15%;
+        margin-bottom: 0%;
+    }
+
+}
+
+
