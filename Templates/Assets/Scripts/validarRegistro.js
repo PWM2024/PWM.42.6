@@ -45,5 +45,7 @@ function validarRegistro() {
     localStorage.setItem(newUser.email, JSON.stringify(newUser));
 
     // Si todo está bien, permite el envío del formulario
+    alert("Se ha registrado correctamente.");
+    window.location.href = '/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html';
     return true;
 }
