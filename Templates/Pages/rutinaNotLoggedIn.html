@@ -6,6 +6,10 @@
         <script src="../Assets/Scripts/main.js"></script>
         <link rel="stylesheet" href="../Assets/Styles/Pages/dietaRutina.css">
         <title>Página Rutina</title>
+
+        <!--css componentes-->
+        <link rel="stylesheet" href="../Assets/Styles/tarjetaGeneral.css">
+
     </head>
     <body>
         <header class="headerSinBuscarConLogin"></header>
@@ -14,12 +18,12 @@
             <button class="limpiar">Limpiar Filtros</button>
             <div id="detalles-tarjeta"></div>
             <section class="tarjetas" id="tarjetasRutina-container">
-                <script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>
+                <!--<script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>-->
             </section>
         </section>
         <footer class="footer"></footer>
         <script src="../Assets/Scripts/limpiarFiltros.js"></script>
-        <script src="/PWM.42.6-main/Templates/Assets/Scripts/validarLoggIn.js"></script>
-        <script src="/PWM.42.6-main/Templates/Assets/Scripts/validarRegistro.js"></script>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/iniciarUsuario.js"></script>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/rutina.js"></script>
     </body>
 </html>
