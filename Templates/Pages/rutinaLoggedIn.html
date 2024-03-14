@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../Assets/Scripts/main.js"></script>
         <link rel="stylesheet" href="../Assets/Styles/Pages/dietaRutina.css">
+
+        <!--css componentes-->
+        <link rel="stylesheet" href="../Assets/Styles/tarjetaGeneral.css">
+
         <title>Página Rutina</title>
     </head>
     <body>
@@ -16,11 +20,17 @@
         <button class="limpiar">Limpiar Filtros</button>
         <div id="detalles-tarjeta"></div>
         <section class="tarjetas" id="tarjetasRutina-container">
-            <script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>
+            <!--<script>generarComponente(18, "tarjetasRutina-container", "tarjetaGeneral");</script>-->
         </section>
     </section>
-    <script src="../Assets/Scripts/limpiarFiltros.js"></script>
+
     <footer class="footer"></footer>
+
+    <script src="../Assets/Scripts/limpiarFiltros.js"></script>
     <script src="../Assets/Scripts/cestaSidebar.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/iniciarUsuario.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/rutina.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/registrarUsuario.js"></script>
+
 </body>
 </html>

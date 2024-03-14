@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productosContainer = document.getElementsByClassName("productos-container")[0];
+    const productosContainer2 = document.getElementsByClassName("rutinas-container")[0];
     fetch("http://localhost:3000/productos")
         .then(response => response.json())
         .then(data => {
             console.log(data)
-            let contador = 0; // Variable contador para llevar el seguimiento de cuántas tarjetas se han creado
+            let contador = 0;
 
             data.forEach(producto => {
-                if (contador < 2) { // Limitar a dos iteraciones
+                if (contador < 2) {
                     const productoCard = document.createElement("div");
                     console.log(productoCard)
                     productoCard.classList.add("tarjetaProducto1");
@@ -27,12 +28,46 @@ document.addEventListener("DOMContentLoaded", function() {
                     `;
 
                     productosContainer.appendChild(productoCard);
-                    contador++; // Incrementar el contador después de crear una tarjeta de producto
+                    contador++;
                 } else {
-                    // Si ya se han creado dos tarjetas, salir del bucle forEach
+
                     return;
                 }
             });
+        })
+        .catch(error => {
+            console.error("Error al cargar los datos:", error);
+        });
+
+
+    fetch("http://localhost:3000/rutinas")
+        .then(response => response.json())
+        .then(data => {
+            let contador = 0;
+
+            data.forEach(rutina => {
+                if (contador < 6) {
+                    const productoCard = document.createElement("div");
+                    console.log(productoCard)
+                    productoCard.classList.add("tarjetaGeneral");
+
+                    productoCard.innerHTML = `
+                        <article class="tarjeta">
+                            <a href="#" onclick="fetchAndInsertHTML('../Components/descripcion.html', 'detalles-tarjeta')">
+                                <img src="${rutina.imagen}" alt="${rutina.nombre}">
+                                <p>${rutina.nombre}</p>
+                            </a>
+                        </article>
+                    `;
+
+
+                    productosContainer2.appendChild(productoCard);
+                    contador++;
+                } else{
+                    return;
+                }
+            });
+
         })
         .catch(error => {
             console.error("Error al cargar los datos:", error);
