@@ -1,5 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
+let formSubmitted = false;
+
+document.addEventListener('click', function () {
     const registerForm = document.getElementById('registerForm');
+
+    function generatePromoCode() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const length = 8;
+        let code = '';
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            code += characters.charAt(randomIndex);
+        }
+        return code;
+    }
 
     if (registerForm) {
         registerForm.addEventListener('submit', function (event) {
@@ -14,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
+            // Inicializar campos adicionales
+            const additionalData = {
+                peso: "",
+                altura: "",
+                imc: "",
+                kcal: [],
+                cesta: []
+            };
+
             fetch(`http://localhost:3000/users?email=${email}`)
                 .then(response => {
                     if (!response.ok) {
@@ -24,29 +46,51 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(data => {
                     console.log(data.length);
                     if (data.length > 0) {
-                        alert('El usuario ya está registrado.');
+                        showPopup('Usuario registrado.');
                     } else {
-                        fetch('http://localhost:3000/users', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ nickname, email, password })
-                        })
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Error de red: ' + response.statusText);
-                                }
-                                return response.json();
-                            })
-                            .then(data => {
-                                console.log('Respuesta del servidor:', data);
+                        if(!formSubmitted){
+                            formSubmitted = true;
+                            const promoCode = generatePromoCode();
+                            fetch(`http://localhost:3000/users?email=${email}&promoCode=${promoCode}`) // Comprueba si el código promocional ya existe
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Error de red: ' + response.statusText);
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    if (data.length > 0) {
+                                        // Si ya existe un usuario con este código, generamos uno nuevo recursivamente
+                                        generatePromoCode();
+                                    } else {
+                                        fetch('http://localhost:3000/users', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({ nickname, email, password, promoCode, ...additionalData })
+                                        })
+                                            .then(response => {
+                                                if (!response.ok) {
+                                                    throw new Error('Error de red: ' + response.statusText);
+                                                }
+                                                return response.json();
+                                            })
+                                            .then(data => {
+                                                console.log('Respuesta del servidor:', data);
+                                                window.location.href = '/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html';
+                                                localStorage.setItem('userID', data[0].id);
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error);
+                                            });
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                });
+                        }
 
-                                window.location.href = '/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html';
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                            });
                     }
                 })
                 .catch(error => {
@@ -55,3 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+function showPopup(message) {
+    const popup = document.getElementById('messagePopup');
+    popup.textContent = message;
+    popup.style.display = 'block';
+    setTimeout(function () {
+        popup.style.display = 'none';
+    }, 4500);
+
+}
+

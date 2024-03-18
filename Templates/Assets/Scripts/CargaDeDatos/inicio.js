@@ -27,7 +27,6 @@ fetch('http://localhost:3000/rutinas')
     .then(response => response.json()) // Convertir la respuesta a JSON
     .then(data => {
         const contenedorRutinas = document.getElementById('rutinas-container');
-        console.log(contenedorRutinas)
 
         // Iterar sobre los primeros dos elementos del array de productos
         for (let i = 0; i < 6 && i < data.length; i++) {

@@ -1,3 +1,4 @@
+
 document.addEventListener('click', function () {
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
@@ -5,7 +6,6 @@ document.addEventListener('click', function () {
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
 
             fetch(`http://localhost:3000/users?email=${email}&password=${password}`)
                 .then(response => {
@@ -17,8 +17,9 @@ document.addEventListener('click', function () {
                 .then(data => {
                     if (data.length > 0) {
                         window.location.href = '/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html';
+                        localStorage.setItem('userID', data[0].id);
                     } else {
-                        alert('Credenciales inválidos.');
+                        showPopup('Credenciales inválidos.');
                     }
                 })
                 .catch(error => {
@@ -27,3 +28,13 @@ document.addEventListener('click', function () {
         });
     }
 });
+
+function showPopup(message) {
+    const popup = document.getElementById('messagePopup');
+    popup.textContent = message;
+    popup.style.display = 'block';
+    setTimeout(function () {
+        popup.style.display = 'none';
+    }, 4500);
+
+}
