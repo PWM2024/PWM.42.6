@@ -18,7 +18,8 @@
         <div class="slider"></div>
         <div id="miDiv"></div>
         <h1>Productos</h1>
-        <section class="productos-container">
+        <section class="productos-container" id="productos-container">
+            <script>generarComponente(2, "productos-container", "tarjetaProducto1");</script>
             <!--TarjetasProductos-->
             <!--for(int i=0; i<2; i++){
                 TarjetaProducto(fecth(json, producto[i]))
@@ -30,13 +31,13 @@
             <section id="left-btn"></section>
             <section class="rutinas-container" id="rutinas-container">
                 <!--TarjetasRutinas-->
-                <!--<script>generarComponente(6, "rutinas-container", "tarjetaGeneral");</script>-->
+                <script>generarComponente(6, "rutinas-container", "tarjetaGeneral");</script>
             </section>
             <section id="right-btn"></section>
         </section>
         <footer class="footer"></footer>
     </body>
+
     <script src="/PWM.42.6-main/Templates/Assets/Scripts/iniciarUsuario.js"></script>
     <script src="/PWM.42.6-main/Templates/Assets/Scripts/registrarUsuario.js"></script>
-    <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/inicio.js"></script>
 </html>
