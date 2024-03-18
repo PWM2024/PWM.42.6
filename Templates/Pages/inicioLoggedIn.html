@@ -19,24 +19,9 @@
         <section class="cestaHeader" id="cesta-container"></section>
         <div class="slider"></div>
         <h1>Productos</h1>
-        
-        <section class="productos-container">
-            <!--<div class="tarjetaProducto1">
-                <section class="producto-card">
-                    <img src="../Source/default-img.png" alt="Producto">
-                    <section class="producto-details">
-                        <h1>Producto</h1>
-                        <h2>SKU</h2>
-                        <h1>XX.XX€</h1>
-                        <section class="producto-unidades">
-                            <button class="operar-cantidad">-</button>
-                            <h2>1</h2>
-                            <button class="operar-cantidad">+</button>
-                        </section>
-                    </section>
-                </section>
-            </div>
-            <div class="tarjetaProducto1"></div>-->
+
+        <section class="productos-container" id="productos-container">
+            <script>generarComponente(2, "productos-container", "tarjetaProducto1");</script>
         </section>
         
         <h1>Rutinas</h1>
@@ -44,7 +29,7 @@
         <section class="rutinas-completo">
             <section id="left-btn"></section>
             <section class="rutinas-container" id="rutinas-container">
-                <!--<script>generarComponente(6, "rutinas-container", "tarjetaGeneral");</script>-->
+                <script>generarComponente(6, "rutinas-container", "tarjetaGeneral");</script>
             </section>
             <section id="right-btn"></section>
         </section>
