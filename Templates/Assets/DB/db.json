@@ -1,0 +1,402 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nickname": "usuario1",
+      "email": "usuario1@example.com",
+      "password": "contraseña1"
+    },
+    {
+      "id": "2",
+      "nickname": "usuario2",
+      "email": "usuario2@example.com",
+      "password": "contraseña2"
+    },
+    {
+      "id": "abe8",
+      "nickname": "aca",
+      "email": "aca@gmail.com",
+      "password": "aca"
+    },
+    {
+      "id": "c328",
+      "nickname": "aca3www",
+      "email": "acaimopcgc@gmail.com",
+      "password": "aca"
+    },
+    {
+      "id": "8dfa",
+      "nickname": "santi",
+      "email": "santi@pene.com",
+      "password": "santi"
+    }
+  ],
+
+  "productos": [
+    {
+      "nombre": "Proteína en Polvo",
+      "nombre_detallado": "Proteína en Polvo de Suero de Leche",
+      "descripcion": "Suplemento de proteína en polvo de suero de leche, ideal para la construcción muscular y la recuperación después del ejercicio.",
+      "precio": 29.99,
+      "img": "proteina.jpg",
+      "etiquetas": ["proteína", "musculación", "recuperación"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Barra Energética",
+      "nombre_detallado": "Barra Energética de Avena y Frutos Secos",
+      "descripcion": "Barra energética hecha con ingredientes naturales como avena, almendras, nueces y pasas, perfecta como refrigerio antes o después del entrenamiento.",
+      "precio": 2.99,
+      "img": "barra_energetica.jpg",
+      "etiquetas": ["energía", "avena", "frutos secos"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Batido de Proteínas",
+      "nombre_detallado": "Batido de Proteínas Sabor Vainilla",
+      "descripcion": "Delicioso batido de proteínas con sabor a vainilla, perfecto para después del entrenamiento para recuperar energía y nutrir los músculos.",
+      "precio": 24.99,
+      "img": "batido_proteinas.jpg",
+      "etiquetas": ["proteína", "musculación", "recuperación"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Snack de Frutos Secos",
+      "nombre_detallado": "Mezcla de Frutos Secos con Pasas",
+      "descripcion": "Mezcla de frutos secos y pasas con un toque de sal, ideal como un snack saludable para cualquier momento del día.",
+      "precio": 4.49,
+      "img": "snack_frutos_secos.jpg",
+      "etiquetas": ["snack", "frutos secos", "saludable"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Barras de Proteínas",
+      "nombre_detallado": "Pack de Barras de Proteínas Variadas",
+      "descripcion": "Pack variado de barras de proteínas con sabores como chocolate, vainilla y fresa, perfectas para llevar como refrigerio después del ejercicio.",
+      "precio": 12.99,
+      "img": "barras_proteinas.jpg",
+      "etiquetas": ["proteína", "snack", "refrigerio"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Suplemento de Creatina",
+      "nombre_detallado": "Polvo de Creatina Monohidratada",
+      "descripcion": "Suplemento en polvo de creatina monohidratada, ideal para mejorar el rendimiento deportivo y la recuperación muscular.",
+      "precio": 17.99,
+      "img": "suplemento_creatina.jpg",
+      "etiquetas": ["suplemento", "rendimiento", "musculación"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Botella de Agua Deportiva",
+      "nombre_detallado": "Botella de Agua Deportiva de 1 litro",
+      "descripcion": "Botella de agua deportiva resistente y reutilizable, con capacidad de 1 litro, perfecta para mantenerse hidratado durante el ejercicio.",
+      "precio": 5.49,
+      "img": "botella_agua.jpg",
+      "etiquetas": ["agua", "hidratación", "deporte"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Mezcla de Frutos Secos y Chocolate",
+      "nombre_detallado": "Mezcla de Frutos Secos con Trozos de Chocolate",
+      "descripcion": "Mezcla de frutos secos como almendras, nueces y avellanas con trozos de chocolate negro, una combinación perfecta de energía y sabor.",
+      "precio": 6.99,
+      "img": "mezcla_frutos_chocolate.jpg",
+      "etiquetas": ["snack", "energía", "chocolate"],
+      "promocion":false,
+      "novedad":false
+    },
+    {
+      "nombre": "Polvo de Proteína Vegana",
+      "nombre_detallado": "Polvo de Proteína Vegana Sabor a Chocolate",
+      "descripcion": "Suplemento en polvo de proteína vegana con un delicioso sabor a chocolate, ideal para personas que siguen una dieta vegetariana o vegana.",
+      "precio": 21.99,
+      "img": "proteina_vegana.jpg",
+      "etiquetas": ["proteína", "vegano", "chocolate"],
+      "promocion":false,
+      "novedad": true
+    },
+    {
+      "nombre": "Galletas de Avena y Plátano",
+      "nombre_detallado": "Galletas de Avena y Plátano sin Azúcar",
+      "descripcion": "Galletas saludables hechas con avena, plátano maduro y sin añadir azúcar, perfectas para un tentempié nutritivo y delicioso.",
+      "precio": 3.99,
+      "img": "galletas_avena_platano.jpg",
+      "etiquetas": ["galletas", "avena", "snack"],
+      "promocion":true,
+      "novedad":false
+    },
+    {
+      "nombre": "Suplemento de Omega-3",
+      "nombre_detallado": "Cápsulas de Omega-3 con Aceite de Pescado",
+      "descripcion": "Suplemento en cápsulas de omega-3 con aceite de pescado de alta calidad, ideal para promover la salud del corazón y las articulaciones.",
+      "precio": 14.99,
+      "img": "suplemento_omega3.jpg",
+      "etiquetas": ["suplemento", "omega-3", "salud"],
+      "promocion":false,
+      "novedad": true
+    },
+    {
+      "nombre": "Crema de Almendras Natural",
+      "nombre_detallado": "Crema de Almendras 100% Natural",
+      "descripcion": "Deliciosa crema de almendras sin añadir azúcar ni aceites añadidos, perfecta para untar en tostadas o agregar a batidos y recetas.",
+      "precio": 9.99,
+      "img": "crema_almendras.jpg",
+      "etiquetas": ["crema", "almendras", "natural"],
+      "promocion":true,
+      "novedad":false
+    },
+    {
+      "nombre": "Pack de Muesli",
+      "nombre_detallado": "Pack de Muesli Variado para Desayunos",
+      "descripcion": "Pack variado de muesli con ingredientes como copos de avena, frutos secos y semillas, perfecto para un desayuno nutritivo y saludable.",
+      "precio": 11.49,
+      "img": "pack_muesli.jpg",
+      "etiquetas": ["muesli", "desayuno", "saludable"],
+      "promocion":false,
+      "novedad": true
+    },
+    {
+      "nombre": "Té Verde Matcha",
+      "nombre_detallado": "Té Verde Matcha en Polvo Orgánico",
+      "descripcion": "Té verde matcha en polvo de origen orgánico, rico en antioxidantes y energizante, ideal para preparar bebidas calientes o frías.",
+      "precio": 18.99,
+      "img": "te_matcha.jpg",
+      "etiquetas": ["té", "matcha", "orgánico"],
+      "promocion":true,
+      "novedad":false
+    }
+
+  ],
+
+  "dietas": [
+    {
+      "id": 1,
+      "nombre": "Dieta Mediterránea",
+      "descripcion": "Prepara un plato con una base de aceitunas, tomates y aceite de oliva. Acompaña con pescado grillado sazonado con hierbas mediterráneas como el romero y el tomillo. Sirve junto con una porción de verduras asadas o al vapor, como calabacín, berenjena y pimientos.",
+      "etiquetas": ["mediterránea", "pescado", "aceitunas", "tomates", "aceite de oliva"]
+    },
+    {
+      "id": 2,
+      "nombre": "Dieta Rica en Proteínas",
+      "descripcion": "Prepara una pechuga de pollo a la parrilla sazonada con limón, ajo y hierbas. Acompaña con quinoa cocida al vapor y espárragos asados con aceite de oliva y sal. Sirve caliente y disfruta de una comida rica en proteínas y nutrientes.",
+      "etiquetas": ["proteínas", "pollo", "quinoa", "espárragos"]
+    },
+    {
+      "id": 3,
+      "nombre": "Dieta Cetogénica",
+      "descripcion": "Desayuna con huevos revueltos con aguacate y bacon. Almuerza una ensalada de espinacas con salmón ahumado y adereza con aceite de oliva y limón. Cena una tortilla de espinacas y queso feta. Mantén la ingesta de carbohidratos baja y la de grasas y proteínas alta para entrar en cetosis.",
+      "etiquetas": ["cetogénica", "aguacate", "huevos", "tocino"]
+    },
+    {
+      "id": 4,
+      "nombre": "Dieta Vegetariana",
+      "descripcion": "Prepara una ensalada fresca con una variedad de hojas verdes como lechuga, espinacas y rúcula. Agrega tomates cherry, nueces picadas y trozos de queso feta. Aliña con una vinagreta de aceite de oliva, vinagre balsámico y mostaza. Sirve con pan integral tostado y disfruta de una comida vegetariana y saludable.",
+      "etiquetas": ["vegetariana", "ensalada", "hojas verdes", "tomates", "nueces", "queso"]
+    },
+    {
+      "id": 5,
+      "nombre": "Dieta Rica en Grasas",
+      "descripcion": "Cocina un filete de salmón al horno con rodajas de limón y hierbas frescas como el eneldo y el perejil. Acompaña con una guarnición de aguacate rebanado y almendras tostadas. Rocía con un chorrito de aceite de oliva extra virgen y salpica con semillas de sésamo. Disfruta de una comida rica en grasas saludables y omega-3.",
+      "etiquetas": ["rica en grasas", "salmón", "aguacate", "almendras"]
+    },
+    {
+      "id": 6,
+      "nombre": "Dieta DASH",
+      "descripcion": "Cocina un filete de pollo a la parrilla sazonado con hierbas como el tomillo y el romero. Acompaña con una guarnición de brócoli al vapor y batatas asadas al horno con una pizca de canela. Disfruta de una comida baja en sodio y rica en nutrientes.",
+      "etiquetas": ["DASH", "pollo", "brócoli", "batatas"]
+    },
+    {
+      "id": 7,
+      "nombre": "Dieta Atkins",
+      "descripcion": "Prepara una hamburguesa casera con carne magra de res sazonada con especias como la pimienta negra y el ajo en polvo. Acompaña con lonchas de queso cheddar, rodajas de tomate, aguacate y hojas de lechuga. Sirve sin pan y disfruta de una comida baja en carbohidratos y rica en proteínas.",
+      "etiquetas": ["Atkins", "hamburguesa", "queso", "tomate", "aguacate", "lechuga"]
+    },
+    {
+      "id": 8,
+      "nombre": "Dieta Rica en Carbohidratos",
+      "descripcion": "Cocina pasta integral al dente y sirve con una salsa casera de tomate, cebolla y champiñones. Acompaña con una ensalada fresca de hojas verdes, pepino y pimientos. Sirve con pan integral recién horneado y disfruta de una comida satisfactoria y llena de energía.",
+      "etiquetas": ["ricos en carbohidratos", "pasta", "salsa de tomate", "verduras"]
+    },
+    {
+      "id": 9,
+      "nombre": "Dieta de la Zona",
+      "descripcion": "Prepara una porción equilibrada de pechuga de pollo a la plancha con arroz integral cocido y verduras al vapor como brócoli y zanahorias. Aliña con un chorrito de aceite de oliva y una pizca de sal. Disfruta de una comida que sigue la proporción adecuada de carbohidratos, proteínas y grasas.",
+      "etiquetas": ["Zona", "pollo", "arroz integral", "verduras"]
+    },
+    {
+      "id": 10,
+      "nombre": "Dieta Flexitaria",
+      "descripcion": "Marina cubos de tofu en una mezcla de salsa de soja, jengibre rallado y ajo picado. Asa en una sartén caliente hasta que estén dorados y crujientes. Acompaña con verduras asadas como pimientos, calabacín y champiñones, y una porción de quinoa cocida. Disfruta de una comida flexible y nutritiva.",
+      "etiquetas": ["flexitaria", "tofu", "verduras asadas", "quinoa"]
+    },
+    {
+      "id": 11,
+      "nombre": "Dieta Rica en Fibras",
+      "descripcion": "Prepara tacos de tortilla integral rellenos de frijoles cocidos, aguacate en rodajas, salsa de tomate fresco, cebolla picada y cilantro. Acompaña con una ensalada de col y zanahoria rallada aliñada con limón y aceite de oliva. Disfruta de una comida rica en fibras y nutrientes.",
+      "etiquetas": ["ricos en fibras", "tacos", "frijoles", "aguacate", "salsa"]
+    },
+    {
+      "id": 12,
+      "nombre": "Dieta de la Sopa de Col",
+      "descripcion": "Prepara una sopa de col con cebolla, zanahoria, apio y col cortados en trozos. Cocina en caldo de verduras hasta que estén tiernos y sazona con hierbas aromáticas como el tomillo y el orégano. Sirve caliente y disfruta de una comida reconfortante y baja en calorías.",
+      "etiquetas": ["sopa de col", "verduras"]
+    },
+    {
+      "id": 13,
+      "nombre": "Dieta Ornish",
+      "descripcion": "Prepara una ensalada de garbanzos con tomates cherry cortados por la mitad, pepinos en rodajas y cebolla roja picada finamente. Aliña con una vinagreta de limón y mostaza. Sirve junto con pan integral tostado y disfruta de una comida deliciosa y saludable.",
+      "etiquetas": ["Ornish", "ensalada", "garbanzos", "tomates", "pepinos"]
+    },
+    {
+      "id": 14,
+      "nombre": "Dieta de South Beach",
+      "descripcion": "Cocina un filete de salmón a la parrilla con espárragos al vapor y puré de coliflor. Sazona el salmón con sal, pimienta y un chorrito de aceite de oliva. Sirve caliente y disfruta de una comida baja en carbohidratos y rica en nutrientes.",
+      "etiquetas": ["South Beach", "salmón", "espárragos", "puré de coliflor"]
+    },
+    {
+      "id": 15,
+      "nombre": "Dieta de la Clínica Mayo",
+      "descripcion": "Cocina un filete de ternera a la parrilla con una mezcla de especias como el comino, el pimentón y el ajo en polvo. Acompaña con quinoa cocida al vapor y una guarnición de verduras salteadas con espárragos. Sirve caliente y disfruta de una comida nutritiva y satisfactoria.",
+      "etiquetas": ["Clínica Mayo", "ternera", "quinoa", "verduras", "espárragos"]
+    },
+    {
+      "id": 16,
+      "nombre": "Dieta Alcalina",
+      "descripcion": "Prepara un batido verde con una base de espinacas frescas, pepino cortado en rodajas y apio picado. Agrega un puñado de hojas de menta fresca y agua de coco. Mezcla hasta obtener una consistencia suave y sirve frío. Disfruta de una bebida refrescante y alcalinizante.",
+      "etiquetas": ["Alcalina", "batido verde", "espinacas", "pepino", "apio"]
+    },
+    {
+      "id": 17,
+      "nombre": "Dieta Macrobiótica",
+      "descripcion": "Prepara un tazón de arroz integral cocido y sirve con una variedad de vegetales al vapor como brócoli, zanahorias y champiñones. Agrega cubos de tofu marinados en salsa de soja y jengibre rallado. Disfruta de una comida equilibrada y nutritiva.",
+      "etiquetas": ["Macrobiótica", "arroz integral", "vegetales", "tofu"]
+    },
+    {
+      "id": 18,
+      "nombre": "Dieta de la Avena",
+      "descripcion": "Prepara porridge (o gacha) de avena cocida en leche de almendras con una pizca de canela y una cucharadita de miel. Decora con rodajas de plátano y un puñado de nueces picadas. Sirve caliente y disfruta de un desayuno reconfortante y lleno de energía.",
+      "etiquetas": ["avena", "porridge", "gacha"]
+    }
+  ],
+
+  "rutinas": [
+    {
+      "id": 1,
+      "nombre": "Rutina de Fuerza",
+      "descripcion": "Realiza ejercicios de fuerza con pesas libres y máquinas de entrenamiento. Incluye movimientos como sentadillas, press de banca, dominadas y peso muerto. Realiza 3-4 series de 8-12 repeticiones por ejercicio, descansando 1-2 minutos entre series.",
+      "etiquetas": ["fuerza", "pesas", "máquinas", "sentadillas", "press de banca", "dominadas", "peso muerto"]
+    },
+    {
+      "id": 2,
+      "nombre": "Rutina de Cardio",
+      "descripcion": "Realiza ejercicios cardiovasculares como correr, andar en bicicleta estática, saltar la cuerda o hacer elíptica. Mantén una intensidad moderada a alta durante 20-30 minutos. Alterna entre intervalos de alta intensidad y recuperación para mejorar el rendimiento cardiovascular.",
+      "etiquetas": ["cardio", "correr", "bicicleta estática", "saltar la cuerda", "elíptica", "intervalos"]
+    },
+    {
+      "id": 3,
+      "nombre": "Rutina de HIIT",
+      "descripcion": "Realiza entrenamiento de intervalos de alta intensidad (HIIT) con ejercicios explosivos como burpees, sprint, saltos y flexiones. Realiza cada ejercicio durante 30-60 segundos seguido de 10-20 segundos de descanso. Repite el circuito 3-4 veces para una sesión intensa de entrenamiento.",
+      "etiquetas": ["HIIT", "entrenamiento intervalos", "burpees", "sprint", "saltos", "flexiones"]
+    },
+    {
+      "id": 4,
+      "nombre": "Rutina de Flexibilidad",
+      "descripcion": "Realiza ejercicios de estiramiento estático y dinámico para mejorar la flexibilidad y la movilidad articular. Incluye movimientos como estocadas, estiramientos de espalda, flexiones de cadera y torsiones. Mantén cada estiramiento durante 15-30 segundos y repite de 2 a 3 veces.",
+      "etiquetas": ["flexibilidad", "estiramiento", "estocadas", "espaldas", "flexiones de cadera", "torsiones"]
+    },
+    {
+      "id": 5,
+      "nombre": "Rutina de Entrenamiento Funcional",
+      "descripcion": "Realiza ejercicios que imitan movimientos naturales del cuerpo y fortalecen los músculos para actividades cotidianas. Incluye ejercicios como sentadillas con salto, flexiones de una pierna, levantamiento de pesas rusas y giros de torso. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["entrenamiento funcional", "movimientos naturales", "sentadillas con salto", "flexiones de una pierna", "pesas rusas", "giros de torso"]
+    },
+    {
+      "id": 6,
+      "nombre": "Rutina de Entrenamiento en Casa",
+      "descripcion": "Realiza ejercicios que puedas hacer en casa con poco o ningún equipamiento. Incluye ejercicios como sentadillas, flexiones, abdominales, planchas y saltos. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["entrenamiento en casa", "ejercicios sin equipamiento", "sentadillas", "flexiones", "abdominales", "planchas", "saltos"]
+    },
+    {
+      "id": 7,
+      "nombre": "Rutina de Entrenamiento de Peso Corporal",
+      "descripcion": "Realiza ejercicios que utilicen el peso corporal como resistencia. Incluye movimientos como flexiones, dominadas, sentadillas, planchas y zancadas. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["peso corporal", "flexiones", "dominadas", "sentadillas", "planchas", "zancadas"]
+    },
+    {
+      "id": 8,
+      "nombre": "Rutina de Entrenamiento de Resistencia",
+      "descripcion": "Realiza ejercicios que mejoren la resistencia muscular y cardiovascular. Incluye movimientos como correr, nadar, montar en bicicleta y remar. Realiza sesiones de 30-60 minutos con intensidad moderada a alta.",
+      "etiquetas": ["resistencia", "correr", "nadar", "bicicleta", "remar"]
+    },
+    {
+      "id": 9,
+      "nombre": "Rutina de Entrenamiento de Intervalos de Alta Intensidad (HIIT)",
+      "descripcion": "Realiza ejercicios de alta intensidad seguidos de cortos períodos de descanso. Incluye movimientos como burpees, sprints, saltos y flexiones. Realiza cada ejercicio durante 30-60 segundos seguido de 10-20 segundos de descanso. Repite el circuito de 3 a 4 veces.",
+      "etiquetas": ["HIIT", "alta intensidad", "burpees", "sprints", "saltos", "flexiones"]
+    },
+    {
+      "id": 10,
+      "nombre": "Rutina de Entrenamiento de Potencia",
+      "descripcion": "Realiza ejercicios explosivos que mejoren la fuerza y la potencia muscular. Incluye movimientos como saltos de caja, lanzamiento de balón medicinal, arrancadas y saltos con barra. Realiza de 3 a 4 series de 6-8 repeticiones por ejercicio con descanso completo entre series.",
+      "etiquetas": ["potencia", "explosivo", "saltos de caja", "lanzamiento de balón medicinal", "arrancadas", "saltos con barra"]
+    },
+    {
+      "id": 11,
+      "nombre": "Rutina de Entrenamiento de Estabilidad",
+      "descripcion": "Realiza ejercicios que mejoren el equilibrio y la estabilidad del core y las articulaciones. Incluye movimientos como planchas, levantamiento de una pierna, equilibrio sobre fitball y rotaciones de torso. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["estabilidad", "equilibrio", "core", "fitball", "rotaciones"]
+    },
+    {
+      "id": 12,
+      "nombre": "Rutina de Entrenamiento de Resistencia Muscular",
+      "descripcion": "Realiza ejercicios que aumenten la resistencia de los músculos. Incluye movimientos como flexiones, sentadillas, zancadas, dominadas y abdominales. Realiza de 3 a 4 series de 12-15 repeticiones por ejercicio.",
+      "etiquetas": ["resistencia muscular", "flexiones", "sentadillas", "zancadas", "dominadas", "abdominales"]
+    },
+    {
+      "id": 13,
+      "nombre": "Rutina de Entrenamiento de Movilidad",
+      "descripcion": "Realiza ejercicios que mejoren la movilidad y flexibilidad de las articulaciones. Incluye movimientos como estiramientos dinámicos, movilizaciones articulares y ejercicios de yoga. Realiza de 3 a 4 series de 10-12 repeticiones por ejercicio.",
+      "etiquetas": ["movilidad", "flexibilidad", "estiramientos", "yoga"]
+    },
+    {
+      "id": 14,
+      "nombre": "Rutina de Entrenamiento de Alta Intensidad y Baja Duración",
+      "descripcion": "Realiza ejercicios de alta intensidad durante cortos períodos de tiempo. Incluye movimientos como saltos, sprints, flexiones y sentadillas. Realiza cada ejercicio durante 20-30 segundos seguido de 10-20 segundos de descanso. Repite el circuito de 3 a 4 veces.",
+      "etiquetas": ["alta intensidad", "corta duración", "saltos", "sprints", "flexiones", "sentadillas"]
+    },
+    {
+      "id": 15,
+      "nombre": "Rutina de Entrenamiento de Hipertrofia",
+      "descripcion": "Realiza ejercicios específicos para aumentar el tamaño y la fuerza de los músculos. Incluye movimientos como press de banca, curls de bíceps, extensiones de tríceps y sentadillas. Realiza de 3 a 4 series de 8-12 repeticiones por ejercicio.",
+      "etiquetas": ["hipertrofia", "aumento de tamaño", "press de banca", "curls de bíceps", "extensiones de tríceps", "sentadillas"]
+    },
+    {
+      "id": 16,
+      "nombre": "Rutina de Entrenamiento de Equilibrio",
+      "descripcion": "Realiza ejercicios que mejoren el equilibrio y la coordinación. Incluye movimientos como equilibrio sobre una pierna, ejercicios con bosu, saltos laterales y movimientos de brazos y piernas. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["equilibrio", "coordinación", "bosu", "saltos laterales"]
+    },
+    {
+      "id": 17,
+      "nombre": "Rutina de Entrenamiento de Agilidad",
+      "descripcion": "Realiza ejercicios que mejoren la agilidad y la velocidad de reacción. Incluye movimientos como cambio de dirección, saltos a una pierna, ejercicios de slalom y sprints cortos. Realiza de 3 a 4 series de 10-15 repeticiones por ejercicio.",
+      "etiquetas": ["agilidad", "velocidad", "cambio de dirección", "slalom", "sprints"]
+    },
+    {
+      "id": 18,
+      "nombre": "Rutina de Entrenamiento de Plyometrics",
+      "descripcion": "Realiza ejercicios plyométricos que mejoren la potencia y explosividad muscular. Incluye movimientos como saltos en caja, saltos de rana, saltos con cuerda y burpees. Realiza de 3 a 4 series de 8-10 repeticiones por ejercicio.",
+      "etiquetas": ["plyometrics", "potencia", "explosividad", "saltos en caja", "saltos de rana", "burpees"]
+    }
+  ]
+}
+
+

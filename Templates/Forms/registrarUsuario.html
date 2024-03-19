@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="../Assets/Styles/components.css" />
 </head>
 <body>
-
 <div class="centered-container">
     <img class="logo1" src="../Source/logo.jpg" />
     <h1> Registrar Usuario </h1>
-    <form>
-        <input type="text" name="nombre" placeholder="Nombre" required><br>
-        <input type="email" name="email" placeholder="Correo Electrónico" required><br>
-        <input type="password" name="password" placeholder="Contraseña" required><br>
-        <input type="password" name="confirm_password" placeholder="Repetir Contraseña" required><br>
+    <div id="messagePopup" style="display: none;"></div>
+    <form id="registerForm">
+        <input id="nickname" type="text" name="nombre" placeholder="Nombre" required><br>
+        <input id="email" type="email" name="email" placeholder="Correo Electrónico" required><br>
+        <input id="password" type="password" name="password" placeholder="Contraseña" required><br>
+        <input id="verifyPassword" type="password" name="confirm_password" placeholder="Repetir Contraseña" required><br>
         <div class="buttons">
             <button type="button" onclick="clearElementContent('miDiv');">Volver</button>
-            <button type="submit" onclick="window.location.href = '../Pages/inicioLoggedIn.html'">Registrarse</button>
+            <button type="submit" >Registrarse</button>
+
         </div>
     </form>
 </div>
-
+<script src="/PWM.42.6-main/Templates/Assets/Scripts/registrarUsuario.js"></script>
 </body>
 </html>

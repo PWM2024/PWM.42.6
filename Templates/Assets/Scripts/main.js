@@ -142,7 +142,6 @@ fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal')
 fetchComponente('../Components/listaKcal.html', 'listaKcal');
 fetchComponente('../Components/miPerfilDetalles.html', 'miPerfilDetalles');
 fetchComponente('../Components/ordenarPorDesplegable.html', 'ordenarPor');
-fetchComponente('../Components/formPassword.html', 'formPassword');
 fetchComponente('../Components/perfilForm.html', 'perfilForm');
 fetchComponente('../Components/statsForm.html', 'statsForm');
 fetchComponente('../Components/footer.html', 'footer');
@@ -154,7 +153,7 @@ fetchComponente("../Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.htm
 fetchComponenteconJSPropio('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
 fetchComponenteconJSPropio("../Header/HeaderSinLoginRegister/header.html", 'header');
 
-fetchComponente("../Forms/iniciarSesion.html", 'iniciarSesion');
-fetchComponente("../Forms/registrarUsuario.html", 'registrarUsuario');
+fetchComponenteconJSPropio("../Forms/iniciarSesion.html", 'iniciarSesion');
+fetchComponenteconJSPropio("../Forms/registrarUsuario.html", 'registrarUsuario');
 fetchComponenteconJSPropio("../Components/slider.html", 'slider');
 fetchComponente("../Components/imcDetalles.html", 'imcDetalles');

@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../Assets/Scripts/main.js"></script>
         <link rel="stylesheet" href="../Assets/Styles/Pages/tienda.css">
+
+        <!--css componentes-->
+        <link rel="stylesheet" href="../Assets/Styles/TarjetaProducto1.css">
+
         <title>Página Tienda</title>
     </head>
     <body>
@@ -12,13 +16,17 @@
         <div class="slider"></div>
         <h1>Promociones</h1>
         <section class="promociones-container" id="promociones">
+            <!--TarjetasPromociones-->
             <script>generarComponente(3, "promociones", "tarjetaProducto2");</script>
         </section>
-
         <h1>Novedades</h1>
         <section class="novedades-container" id="novedades">
+            <!--TarjetasNovedades-->
             <script>generarComponente(3, "novedades", "tarjetaProducto2");</script>
         </section>
         <footer class="footer"></footer>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/iniciarUsuario.js"></script>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/tienda.js"></script>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/registrarUsuario.js"></script>
     </body>
 </html>

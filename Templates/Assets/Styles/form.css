@@ -36,13 +36,7 @@ overflow-x: hidden;
 margin: 0 auto;
 }
 
-.password-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-height: 60px;
-}
+
 
 input[type="password"] {
 margin-right: 10px;
@@ -53,4 +47,39 @@ width:fit-content;
 
 
 
+
+.password-container {
+  display:block;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.password-container input{
+  margin: 1%;
+}
+
+.passwordForm button{
+  margin-top: 10%;
+}
+}
+
+
+@media only screen and (max-width: 430px) {
+  .datos-container{
+    width: 360px;
+    text-align: center;
+  }
+
+  .datos-container .statsForm {
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;
+  }
+
+  .perfilForm{
+    width: 100%;
+  }
+
+}
 

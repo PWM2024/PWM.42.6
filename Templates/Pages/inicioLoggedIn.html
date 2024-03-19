@@ -6,6 +6,11 @@
         <script src="../Assets/Scripts/main.js"></script>
         <script src="../Assets/Scripts/custom-scrollbar.js"></script>
         <link rel="stylesheet" href="../Assets/Styles/Pages/inicio.css">
+
+        <!--css componentes-->
+        <link rel="stylesheet" href="../Assets/Styles/TarjetaProducto1.css">
+        <link rel="stylesheet" href="../Assets/Styles/tarjetaGeneral.css">
+
         <title>Página Inicio</title>
     </head>
     <body>
@@ -14,24 +19,9 @@
         <section class="cestaHeader" id="cesta-container"></section>
         <div class="slider"></div>
         <h1>Productos</h1>
-        
-        <section class="productos-container">
-            <div class="tarjetaProducto1">
-                <section class="producto-card">
-                    <img src="../Source/default-img.png" alt="Producto">
-                    <section class="producto-details">
-                        <h1>Producto</h1>
-                        <h2>SKU</h2>
-                        <h1>XX.XX€</h1>
-                        <section class="producto-unidades">
-                            <button class="operar-cantidad">-</button>
-                            <h2>1</h2>
-                            <button class="operar-cantidad">+</button>
-                        </section>
-                    </section>
-                </section>
-            </div>
-            <div class="tarjetaProducto1"></div>
+
+        <section class="productos-container" id="productos-container">
+            <script>generarComponente(2, "productos-container", "tarjetaProducto1");</script>
         </section>
         
         <h1>Rutinas</h1>
@@ -48,4 +38,7 @@
         
     </body>
     <script src="../Assets/Scripts/cestaSidebar.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/iniciarUsuario.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/registrarUsuario.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/inicio.js"></script>
 </html>
