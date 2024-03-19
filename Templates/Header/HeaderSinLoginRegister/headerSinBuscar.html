@@ -7,14 +7,32 @@
         <link rel="stylesheet" type="text/css" href="../Assets/Styles/components.css">
         <link rel="stylesheet" type="text/css" href="../Assets/Styles/headers.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
     </head>
     <body>
+        <section class="right-sidebar" id="right-sidebar-container">
+            <div class="dropdown">
+                <div class="close-icon">
+                    <a><img
+                            width="25"
+                            height="25"
+                            id="hideRightSidebar"
+                            src="https://img.icons8.com/sf-ultralight/25/delete-sign.png"
+                            alt="delete-sign"
+                    /></a>
+                </div>
+                <button class="dropdown-toggle">Mi Cuenta<i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                    <a href="/PWM.42.6-main/Templates/Pages/perfilMisDatos.html"><i class="fas fa-user"></i>Perfil</a>
+                    <a href="#" id="cesta-btn" onclick="openCesta()"><i class="fas fa-shopping-basket"></i>Cesta</a>
+                    <a href="/PWM.42.6-main/Templates/Pages/inicioNotLoggedIn.html"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+                </div>
+            </div>
+        </section>
+
         <header>
             <section class="up-header">
                 <img src="tu_imagen.png" alt="Logo" class="logo3"/>
-                <div class="dropdown">
+                <div class="dropdown" id="hide-up-header">
                     <button class="dropdown-toggle">Mi Cuenta<i class="fas fa-bars"></i></button>
                     <div class="dropdown-content">
                         <a href="/PWM.42.6-main/Templates/Pages/perfilMisDatos.html"><i class="fas fa-user"></i>Perfil</a>
@@ -23,8 +41,16 @@
                     </div>
                 </div>
             </section>
+
             <nav>
-                <ul>
+                <ul class="sidebar">
+                    <li><a href="#"><img
+                            width="25"
+                            height="25"
+                            id="hideSidebar"
+                            src="https://img.icons8.com/sf-ultralight/25/delete-sign.png"
+                            alt="delete-sign"
+                    /></a></li>
                     <li><a href="/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="/PWM.42.6-main/Templates/Pages/tiendaLoggedIn.html"><i class="fas fa-store"></i> Tienda</a></li>
                     <li>
@@ -38,6 +64,29 @@
                     <li><a href="/PWM.42.6-main/Templates/Pages/rutinaLoggedIn.html"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
                 </ul>
             </nav>
+
+            <nav>
+                <ul>
+                    <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/inicioLoggedIn.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/tiendaLoggedIn.html"><i class="fas fa-store"></i> Tienda</a></li>
+                    <li class="hideOnMobile">
+                        <a href="#"><i class="fas fa-calculator"></i> Calculadoras</a>
+                        <ul>
+                            <li><a href="/PWM.42.6-main/Templates/Pages/calculadoraIMCLoggedIn.html">Calculadora IMC</a></li>
+                            <li><a href="/PWM.42.6-main/Templates/Pages/calculadoraKcalLoggedIn.html">Calculadora Kcal</a></li>
+                        </ul>
+                    </li>
+                    <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/dietaLoggedIn.html"><i class="fas fa-utensils"></i> Dieta</a></li>
+                    <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/rutinaLoggedIn.html"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
+                    <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar"></i></a></li>
+                </ul>
+            </nav>
         </header>
+        <div class="bocadillo-movil">
+            <div class="circle">
+                <a href="#"><i class="fas fa-arrow-left" id="bocadillo-menu"></i></a>
+            </div>
+        </div>
+        <script src="/PWM.42.6-main/Templates/Assets/Scripts/header.js"></script>
     </body>
 </html>
