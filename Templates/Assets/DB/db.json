@@ -11,10 +11,23 @@
       "kcal": [],
       "cesta": [],
       "id": 1
+    },
+    {
+      "nickname": "prueba",
+      "email": "prueba@gmail.com",
+      "password": "prueba",
+      "promoCode": "T46Ksxux",
+      "peso": "",
+      "altura": "",
+      "imc": "",
+      "kcal": [],
+      "cesta": [],
+      "id": 2
     }
   ],
   "productos": [
     {
+      "id": "001",
       "nombre": "Proteína en Polvo",
       "nombre_detallado": "Proteína en Polvo de Suero de Leche",
       "descripcion": "Suplemento de proteína en polvo de suero de leche, ideal para la construcción muscular y la recuperación después del ejercicio.",
@@ -29,6 +42,7 @@
       "novedad": false
     },
     {
+      "id": "002",
       "nombre": "Barra Energética",
       "nombre_detallado": "Barra Energética de Avena y Frutos Secos",
       "descripcion": "Barra energética hecha con ingredientes naturales como avena, almendras, nueces y pasas, perfecta como refrigerio antes o después del entrenamiento.",
@@ -43,6 +57,7 @@
       "novedad": false
     },
     {
+      "id": "003",
       "nombre": "Batido de Proteínas",
       "nombre_detallado": "Batido de Proteínas Sabor Vainilla",
       "descripcion": "Delicioso batido de proteínas con sabor a vainilla, perfecto para después del entrenamiento para recuperar energía y nutrir los músculos.",
@@ -57,6 +72,7 @@
       "novedad": false
     },
     {
+      "id": "004",
       "nombre": "Snack de Frutos Secos",
       "nombre_detallado": "Mezcla de Frutos Secos con Pasas",
       "descripcion": "Mezcla de frutos secos y pasas con un toque de sal, ideal como un snack saludable para cualquier momento del día.",
@@ -71,6 +87,7 @@
       "novedad": false
     },
     {
+      "id": "005",
       "nombre": "Barras de Proteínas",
       "nombre_detallado": "Pack de Barras de Proteínas Variadas",
       "descripcion": "Pack variado de barras de proteínas con sabores como chocolate, vainilla y fresa, perfectas para llevar como refrigerio después del ejercicio.",
@@ -85,6 +102,7 @@
       "novedad": false
     },
     {
+      "id": "006",
       "nombre": "Suplemento de Creatina",
       "nombre_detallado": "Polvo de Creatina Monohidratada",
       "descripcion": "Suplemento en polvo de creatina monohidratada, ideal para mejorar el rendimiento deportivo y la recuperación muscular.",
@@ -99,6 +117,7 @@
       "novedad": false
     },
     {
+      "id": "007",
       "nombre": "Botella de Agua Deportiva",
       "nombre_detallado": "Botella de Agua Deportiva de 1 litro",
       "descripcion": "Botella de agua deportiva resistente y reutilizable, con capacidad de 1 litro, perfecta para mantenerse hidratado durante el ejercicio.",
@@ -113,6 +132,7 @@
       "novedad": false
     },
     {
+      "id": "008",
       "nombre": "Mezcla de Frutos Secos y Chocolate",
       "nombre_detallado": "Mezcla de Frutos Secos con Trozos de Chocolate",
       "descripcion": "Mezcla de frutos secos como almendras, nueces y avellanas con trozos de chocolate negro, una combinación perfecta de energía y sabor.",
@@ -127,6 +147,7 @@
       "novedad": false
     },
     {
+      "id": "009",
       "nombre": "Polvo de Proteína Vegana",
       "nombre_detallado": "Polvo de Proteína Vegana Sabor a Chocolate",
       "descripcion": "Suplemento en polvo de proteína vegana con un delicioso sabor a chocolate, ideal para personas que siguen una dieta vegetariana o vegana.",
@@ -141,6 +162,7 @@
       "novedad": true
     },
     {
+      "id": "010",
       "nombre": "Galletas de Avena y Plátano",
       "nombre_detallado": "Galletas de Avena y Plátano sin Azúcar",
       "descripcion": "Galletas saludables hechas con avena, plátano maduro y sin añadir azúcar, perfectas para un tentempié nutritivo y delicioso.",
@@ -155,6 +177,7 @@
       "novedad": false
     },
     {
+      "id": "011",
       "nombre": "Suplemento de Omega-3",
       "nombre_detallado": "Cápsulas de Omega-3 con Aceite de Pescado",
       "descripcion": "Suplemento en cápsulas de omega-3 con aceite de pescado de alta calidad, ideal para promover la salud del corazón y las articulaciones.",
@@ -169,6 +192,7 @@
       "novedad": true
     },
     {
+      "id": "012",
       "nombre": "Crema de Almendras Natural",
       "nombre_detallado": "Crema de Almendras 100% Natural",
       "descripcion": "Deliciosa crema de almendras sin añadir azúcar ni aceites añadidos, perfecta para untar en tostadas o agregar a batidos y recetas.",
@@ -183,6 +207,7 @@
       "novedad": false
     },
     {
+      "id": "013",
       "nombre": "Pack de Muesli",
       "nombre_detallado": "Pack de Muesli Variado para Desayunos",
       "descripcion": "Pack variado de muesli con ingredientes como copos de avena, frutos secos y semillas, perfecto para un desayuno nutritivo y saludable.",
@@ -197,6 +222,7 @@
       "novedad": true
     },
     {
+      "id": "014",
       "nombre": "Té Verde Matcha",
       "nombre_detallado": "Té Verde Matcha en Polvo Orgánico",
       "descripcion": "Té verde matcha en polvo de origen orgánico, rico en antioxidantes y energizante, ideal para preparar bebidas calientes o frías.",

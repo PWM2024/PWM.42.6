@@ -14,6 +14,7 @@ fetch('http://localhost:3000/productos')
             tarjetaProducto.querySelector('h2').innerText = producto.nombre_detallado;
             tarjetaProducto.querySelector('p').innerText = producto.descripcion;
 
+
             // Agregar la tarjeta al contenedor de productos
             contenedorProductos.appendChild(tarjetaProducto);
         }
@@ -37,6 +38,7 @@ fetch('http://localhost:3000/rutinas')
             // Llenar la tarjeta clonada con los datos del producto
             tarjetaRutina.querySelector('img').innerText = rutina.img;
             tarjetaRutina.querySelector('p').innerText = rutina.nombre;
+            tarjetaRutina.querySelector('#id').innerText = rutina.id;
 
             // Agregar la tarjeta al contenedor de productos
             contenedorRutinas.appendChild(tarjetaRutina);
@@ -45,3 +47,30 @@ fetch('http://localhost:3000/rutinas')
     .catch(error => {
         console.error('Error al obtener los datos de productos:', error);
     });
+
+/*document.addEventListener("DOMContentLoaded", function ({
+
+
+
+
+                                                        }))
+const tarjetaRutina = document.getElementsByName('.tarjeta')[0];
+console.log(tarjetaRutina);
+tarjetaRutina.addEventListener("click", function (){
+
+
+});*/
+/*fetch('http://localhost:3000/rutinas')
+    .then(response => response.json()) // Convertir la respuesta a JSON
+    .then(data => {
+            const tarjetaDescripcion = document.querySelector('.descripcion');
+            console.log(document);
+            console.log(tarjetaDescripcion);
+            // Llenar la tarjeta clonada con los datos del producto
+        tarjetaDescripcion.querySelector('p').innerText = "esto es una prueba";
+
+    })
+    .catch(error => {
+        console.error('Error al obtener los datos de productos:', error);
+    });
+*/

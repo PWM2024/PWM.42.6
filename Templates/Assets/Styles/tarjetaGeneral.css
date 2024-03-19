@@ -24,6 +24,10 @@
     border-radius: 8px;
 }
 
+#id{
+    display:none;
+}
+
 .tarjeta p {
     position: absolute;
     bottom: 0;
