@@ -36,13 +36,7 @@ overflow-x: hidden;
 margin: 0 auto;
 }
 
-.password-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-height: 60px;
-}
+
 
 input[type="password"] {
 margin-right: 10px;
@@ -51,15 +45,7 @@ width:fit-content;
 }
 
 
-@media only screen and (max-width: 1024px) {
-.datos-container{
-  margin-left: 5%;
-  text-align: center;
-}
 
-.statsForm {
-  margin-left: 7%;
-}
 
 
 .password-container {
@@ -96,3 +82,4 @@ width:fit-content;
   }
 
 }
+

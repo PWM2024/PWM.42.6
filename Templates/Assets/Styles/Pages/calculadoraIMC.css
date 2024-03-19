@@ -19,31 +19,3 @@ body {
 .footer {
     margin-top: 20%;
 }
-
-
-@media only screen and (max-width: 430px) {
-    .imcInfo {
-        margin-top: 5%;
-        display: block;
-        align-items: center;
-        width: 90%;
-        margin-left: 4%;
-    }
-
-    .imcInfo .imcDetalles{
-        margin-bottom: 10%;
-    }
-
-
-
-    .formulario-imc{
-        margin-top:10%;
-    }
-
-
-    .formulario-imc label,
-    .formulario-imc input{
-        display: block;
-        margin-bottom: 10px;
-    }
-}

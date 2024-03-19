@@ -15,16 +15,3 @@ body {
 .imcDetalle label{
     font-weight: normal;    
 }
-
-@media only screen and (max-width: 430px) {
-    .imcDetalle{
-        background: white;
-        width: auto;
-        height: auto;
-        text-align: justify;
-    }
-
-    .imcDetalle label{
-        font-size: 15px;
-    }
-}
