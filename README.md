@@ -19,5 +19,7 @@ FitByte es un proyecto web para la asignatura Programación Web y Móvil (PWM) e
     - **Source**: El logo elegido para representar a FitByte y las imágenes por defecto tanto del carrusel como de los elementos de la página están aquí
         - **slider-img**: Imágenes para el carrusel
 
-# Estado del proyecto: ***En desarrollo (Sprint 1)***
-Actualmente nos encontramos en el primero de cuatro sprints del desarrollo, que se centra en la creación de los componentes basándose en los mock-ups realizados en Figma y la carga dinámica de los componentes para formar las vistas de la página web.
+# Estado del proyecto: ***En desarrollo (Sprint 2)***
+- ***Sprint 1 finalizado***
+
+Actualmente nos encontramos en el segundo de cuatro sprints del desarrollo, que se centra en la carga dinámica de datos y en el diseño responsive.
