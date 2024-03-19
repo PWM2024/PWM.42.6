@@ -19,11 +19,14 @@ if (userId) {
     obtenerUsuarioPorId(userId)
         .then(usuario => {
             console.log(usuario)
-            const tarjetaDetalles = document.querySelector('.statsForm');
-            const tarjetaPromoCode = document.querySelector('.codigoPromocional');
-            const PromoCode = tarjetaPromoCode.querySelector('.promo-container');
+            let tarjetaDetalles = document.querySelector('.statsForm');
+            let tarjetaPromoCode = document.querySelector('.codigoPromocional');
+            console.log(tarjetaPromoCode);
 
             if(tarjetaPromoCode){
+                const PromoCode = tarjetaPromoCode.querySelector('.promo-container');
+                console.log(PromoCode);
+                console.log(PromoCode.querySelector('p'));
                 PromoCode.querySelector('p').innerText = usuario.promoCode;
             }
 
