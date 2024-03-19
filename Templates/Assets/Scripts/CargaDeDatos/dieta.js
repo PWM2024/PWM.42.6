@@ -1,3 +1,9 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
 fetch('http://localhost:3000/dietas')
     .then(response => response.json()) // Convertir la respuesta a JSON
     .then(data => {
@@ -48,4 +54,21 @@ fetch('http://localhost:3000/dietas')
     })
     .catch(error => {
         console.error('Error al obtener los datos de productos:', error);
+    });
+
+
+fetch('http://localhost:3000/dietas')
+    .then(response => response.json())
+    .then(data => {
+        const filtro = document.querySelector('.filtro');
+        async function ejecutarDespuesDeTiempo() {
+            await sleep(30); // Espera 2000 milisegundos (2 segundos)
+            const opciones = ["Mediterránea", "Rica en Proteínas", "Sin Gluten"];
+            const opcion = filtro.querySelectorAll('.check');
+            for (let i = 0; i < opciones.length; i++ ){
+                opcion[i].querySelector('.text').innerText = opciones[i];
+            }
+        }
+
+        ejecutarDespuesDeTiempo();
     });

@@ -242,205 +242,109 @@
       "id": 1,
       "nombre": "Dieta Mediterránea",
       "descripcion": "Prepara un plato con una base de aceitunas, tomates y aceite de oliva. Acompaña con pescado grillado sazonado con hierbas mediterráneas como el romero y el tomillo. Sirve junto con una porción de verduras asadas o al vapor, como calabacín, berenjena y pimientos.",
-      "etiquetas": [
-        "mediterránea",
-        "pescado",
-        "aceitunas",
-        "tomates",
-        "aceite de oliva"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 2,
       "nombre": "Dieta Rica en Proteínas",
       "descripcion": "Prepara una pechuga de pollo a la parrilla sazonada con limón, ajo y hierbas. Acompaña con quinoa cocida al vapor y espárragos asados con aceite de oliva y sal. Sirve caliente y disfruta de una comida rica en proteínas y nutrientes.",
-      "etiquetas": [
-        "proteínas",
-        "pollo",
-        "quinoa",
-        "espárragos"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 3,
       "nombre": "Dieta Cetogénica",
       "descripcion": "Desayuna con huevos revueltos con aguacate y bacon. Almuerza una ensalada de espinacas con salmón ahumado y adereza con aceite de oliva y limón. Cena una tortilla de espinacas y queso feta. Mantén la ingesta de carbohidratos baja y la de grasas y proteínas alta para entrar en cetosis.",
-      "etiquetas": [
-        "cetogénica",
-        "aguacate",
-        "huevos",
-        "tocino"
-      ]
+      "etiqueta": "Sin Gluten"
     },
     {
       "id": 4,
       "nombre": "Dieta Vegetariana",
       "descripcion": "Prepara una ensalada fresca con una variedad de hojas verdes como lechuga, espinacas y rúcula. Agrega tomates cherry, nueces picadas y trozos de queso feta. Aliña con una vinagreta de aceite de oliva, vinagre balsámico y mostaza. Sirve con pan integral tostado y disfruta de una comida vegetariana y saludable.",
-      "etiquetas": [
-        "vegetariana",
-        "ensalada",
-        "hojas verdes",
-        "tomates",
-        "nueces",
-        "queso"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 5,
       "nombre": "Dieta Rica en Grasas",
       "descripcion": "Cocina un filete de salmón al horno con rodajas de limón y hierbas frescas como el eneldo y el perejil. Acompaña con una guarnición de aguacate rebanado y almendras tostadas. Rocía con un chorrito de aceite de oliva extra virgen y salpica con semillas de sésamo. Disfruta de una comida rica en grasas saludables y omega-3.",
-      "etiquetas": [
-        "rica en grasas",
-        "salmón",
-        "aguacate",
-        "almendras"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 6,
       "nombre": "Dieta DASH",
       "descripcion": "Cocina un filete de pollo a la parrilla sazonado con hierbas como el tomillo y el romero. Acompaña con una guarnición de brócoli al vapor y batatas asadas al horno con una pizca de canela. Disfruta de una comida baja en sodio y rica en nutrientes.",
-      "etiquetas": [
-        "DASH",
-        "pollo",
-        "brócoli",
-        "batatas"
-      ]
+      "etiqueta": "Sin Gluten"
     },
     {
       "id": 7,
       "nombre": "Dieta Atkins",
       "descripcion": "Prepara una hamburguesa casera con carne magra de res sazonada con especias como la pimienta negra y el ajo en polvo. Acompaña con lonchas de queso cheddar, rodajas de tomate, aguacate y hojas de lechuga. Sirve sin pan y disfruta de una comida baja en carbohidratos y rica en proteínas.",
-      "etiquetas": [
-        "Atkins",
-        "hamburguesa",
-        "queso",
-        "tomate",
-        "aguacate",
-        "lechuga"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 8,
       "nombre": "Dieta Rica en Carbohidratos",
       "descripcion": "Cocina pasta integral al dente y sirve con una salsa casera de tomate, cebolla y champiñones. Acompaña con una ensalada fresca de hojas verdes, pepino y pimientos. Sirve con pan integral recién horneado y disfruta de una comida satisfactoria y llena de energía.",
-      "etiquetas": [
-        "ricos en carbohidratos",
-        "pasta",
-        "salsa de tomate",
-        "verduras"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 9,
       "nombre": "Dieta de la Zona",
       "descripcion": "Prepara una porción equilibrada de pechuga de pollo a la plancha con arroz integral cocido y verduras al vapor como brócoli y zanahorias. Aliña con un chorrito de aceite de oliva y una pizca de sal. Disfruta de una comida que sigue la proporción adecuada de carbohidratos, proteínas y grasas.",
-      "etiquetas": [
-        "Zona",
-        "pollo",
-        "arroz integral",
-        "verduras"
-      ]
+      "etiqueta": "Sin Gluten"
     },
     {
       "id": 10,
       "nombre": "Dieta Flexitaria",
       "descripcion": "Marina cubos de tofu en una mezcla de salsa de soja, jengibre rallado y ajo picado. Asa en una sartén caliente hasta que estén dorados y crujientes. Acompaña con verduras asadas como pimientos, calabacín y champiñones, y una porción de quinoa cocida. Disfruta de una comida flexible y nutritiva.",
-      "etiquetas": [
-        "flexitaria",
-        "tofu",
-        "verduras asadas",
-        "quinoa"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 11,
       "nombre": "Dieta Rica en Fibras",
       "descripcion": "Prepara tacos de tortilla integral rellenos de frijoles cocidos, aguacate en rodajas, salsa de tomate fresco, cebolla picada y cilantro. Acompaña con una ensalada de col y zanahoria rallada aliñada con limón y aceite de oliva. Disfruta de una comida rica en fibras y nutrientes.",
-      "etiquetas": [
-        "ricos en fibras",
-        "tacos",
-        "frijoles",
-        "aguacate",
-        "salsa"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 12,
       "nombre": "Dieta de la Sopa de Col",
       "descripcion": "Prepara una sopa de col con cebolla, zanahoria, apio y col cortados en trozos. Cocina en caldo de verduras hasta que estén tiernos y sazona con hierbas aromáticas como el tomillo y el orégano. Sirve caliente y disfruta de una comida reconfortante y baja en calorías.",
-      "etiquetas": [
-        "sopa de col",
-        "verduras"
-      ]
+      "etiqueta": "Sin Gluten"
     },
     {
       "id": 13,
       "nombre": "Dieta Ornish",
       "descripcion": "Prepara una ensalada de garbanzos con tomates cherry cortados por la mitad, pepinos en rodajas y cebolla roja picada finamente. Aliña con una vinagreta de limón y mostaza. Sirve junto con pan integral tostado y disfruta de una comida deliciosa y saludable.",
-      "etiquetas": [
-        "Ornish",
-        "ensalada",
-        "garbanzos",
-        "tomates",
-        "pepinos"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 14,
       "nombre": "Dieta de South Beach",
       "descripcion": "Cocina un filete de salmón a la parrilla con espárragos al vapor y puré de coliflor. Sazona el salmón con sal, pimienta y un chorrito de aceite de oliva. Sirve caliente y disfruta de una comida baja en carbohidratos y rica en nutrientes.",
-      "etiquetas": [
-        "South Beach",
-        "salmón",
-        "espárragos",
-        "puré de coliflor"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 15,
       "nombre": "Dieta de la Clínica Mayo",
       "descripcion": "Cocina un filete de ternera a la parrilla con una mezcla de especias como el comino, el pimentón y el ajo en polvo. Acompaña con quinoa cocida al vapor y una guarnición de verduras salteadas con espárragos. Sirve caliente y disfruta de una comida nutritiva y satisfactoria.",
-      "etiquetas": [
-        "Clínica Mayo",
-        "ternera",
-        "quinoa",
-        "verduras",
-        "espárragos"
-      ]
+      "etiqueta": "Sin Gluten"
     },
     {
       "id": 16,
       "nombre": "Dieta Alcalina",
       "descripcion": "Prepara un batido verde con una base de espinacas frescas, pepino cortado en rodajas y apio picado. Agrega un puñado de hojas de menta fresca y agua de coco. Mezcla hasta obtener una consistencia suave y sirve frío. Disfruta de una bebida refrescante y alcalinizante.",
-      "etiquetas": [
-        "Alcalina",
-        "batido verde",
-        "espinacas",
-        "pepino",
-        "apio"
-      ]
+      "etiqueta": "Mediterránea"
     },
     {
       "id": 17,
       "nombre": "Dieta Macrobiótica",
       "descripcion": "Prepara un tazón de arroz integral cocido y sirve con una variedad de vegetales al vapor como brócoli, zanahorias y champiñones. Agrega cubos de tofu marinados en salsa de soja y jengibre rallado. Disfruta de una comida equilibrada y nutritiva.",
-      "etiquetas": [
-        "Macrobiótica",
-        "arroz integral",
-        "vegetales",
-        "tofu"
-      ]
+      "etiqueta": "Rica en Proteínas"
     },
     {
       "id": 18,
       "nombre": "Dieta de la Avena",
       "descripcion": "Prepara porridge (o gacha) de avena cocida en leche de almendras con una pizca de canela y una cucharadita de miel. Decora con rodajas de plátano y un puñado de nueces picadas. Sirve caliente y disfruta de un desayuno reconfortante y lleno de energía.",
-      "etiquetas": [
-        "avena",
-        "porridge",
-        "gacha"
-      ]
+      "etiqueta": "Sin Gluten"
     }
   ],
   "rutinas": [
