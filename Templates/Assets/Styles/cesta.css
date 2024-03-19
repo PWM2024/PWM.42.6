@@ -125,7 +125,7 @@
 }
 
 .cestaHeader{
-transform: translateX(110%);
+    transform: translateX(110%);
 }
 .cestaHeader.open{
     transform: translateX(0);

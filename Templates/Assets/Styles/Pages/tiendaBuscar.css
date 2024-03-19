@@ -31,3 +31,34 @@ body {
     position: absolute;
     margin-left: 61%;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .productos-container{
+        width: fit-content;
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+
+    .filtros-container {
+        width: 35%;
+    }
+    .filtroOpciones {
+        margin-top: 20%;
+        width: 90%;
+    }
+
+    .filtros-container button{
+        margin-top: 8%;
+        margin-left: 25%;
+    }
+
+    .filtroPrecio .d-flex .wrapper{
+        width: 90%;
+    }
+    .ordenarPor{
+        position: absolute;
+        margin-left: 78%;
+    }
+
+}

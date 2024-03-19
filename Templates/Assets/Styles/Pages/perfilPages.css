@@ -1,4 +1,4 @@
-.tarjetaProductoHistorialCompras .purchase-info{
+.tarjetaProductoHistorialCompras .purchase-info{ 
     height: 230px;
 }
 .miPerfilDetalles{
@@ -95,8 +95,6 @@
 
 }
 
-
-
 @media only screen and (max-width: 430px) {
     .tarjetaProductoHistorialCompras .purchase-info{
         width: 86%;
@@ -170,5 +168,4 @@
         width: 50%;
         text-align: center;
     }
-
 }

@@ -1,4 +1,8 @@
-
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
 .product-card {
     max-width: 200px;
@@ -35,7 +39,6 @@
 }
 
 
-
 .detalles-tarjetas{
     display: flex;
     margin-top: 3%;
@@ -52,15 +55,9 @@
 
 }
 
-
 .tarjetaProductoListaDeseos button{
     margin-top: 3%;
     width: 180px;
-
-.product-card p.product-price {
-    font-size: 16px;
-    margin: 0 0 5px;
-    color: #888;
 }
 
 .tarjetas{
@@ -193,12 +190,5 @@
         width: 50%;
         text-align: center;
     }
-
-
-}
-
-
-
-
 
 }

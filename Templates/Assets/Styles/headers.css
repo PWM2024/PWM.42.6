@@ -14,7 +14,7 @@ header {
 }
 
 nav{
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 nav ul {
@@ -113,8 +113,6 @@ nav ul li ul li:hover {
     color: #fff;
 }
 
-
-
 .dropdown-toggle {
     background-color: transparent;
     color: #333;
@@ -126,7 +124,6 @@ nav ul li ul li:hover {
     transition: background-color 0.3s; 
 }
 
-
 .dropdown-toggle:active {
     background-color: #f2f2f2; 
 }
@@ -134,7 +131,6 @@ nav ul li ul li:hover {
 .dropdown-toggle:hover {
     background-color: #f2f2f2; 
 }
-
 
 .dropdown-toggle {
     width: 200px; 
@@ -144,9 +140,6 @@ nav ul li ul li:hover {
 .dropdown-toggle i {
     margin-left: 20px; 
 }
-
-
-  
 
 .dropdown-content {
     display: none;
@@ -173,13 +166,110 @@ nav ul li ul li:hover {
 
   
 .dropdown-content a:hover {
-background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
 .dropdown-content:hover {
-display: block;
+    display: block;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*.sidebar a:hover{
+    background-color: #f0f0f0;
+}*/
+
+.menu-button{
+    display: none;
+}
+
+.dropdown-mobile{
+    display: none;
+}
+
+.bocadillo-movil{
+    display: none;
+}
+
+@media only screen and (max-width: 430px){
+    .hideOnMobile, #hide-up-header{
+        display: none;
+    }
+
+    .menu-button, .dropdown-mobile{
+        display: block;
+    }
+
+    .bocadillo-movil{
+        display: flex;
+        width: 93%;
+        justify-content: end;
+        position: fixed;
+        top: 50%;
+    }
+
+    #bocadillo-menu{
+        margin-top: 22%;
+        color: black;
+    }
+
+    .circle{
+        border-radius: 100%;
+        background-color: #FB7201;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+    }
+
+    .sidebar{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sidebar .up-header{
+        justify-content: center;
+    }
+
+    .sidebar .up-header input{
+        width: 104px;
+        height: 40px;
+    }
+
+    .sidebar .container-dropdown{
+        text-align: center;
+        margin-top: 8%;
+    }
+
+    .container-dropdown .dropdown-content{
+        left: 28%;
+    }
+
+    .botones{
+        text-align: center;
+        margin-top: 6%;
+    }
+
+    .botones .login-btn,
+    .botones .register-btn{
+        width: 126px;
+        height: 50px;
+        text-align: center;
+    }
 }
