@@ -12,10 +12,39 @@ fetch('http://localhost:3000/dietas')
             // Llenar la tarjeta clonada con los datos del producto
             tarjetaDieta.querySelector('img').innerText = dieta.img;
             tarjetaDieta.querySelector('p').innerText = dieta.nombre;
+            tarjetaDieta.querySelector('#id').innerText = dieta.id;
 
             // Agregar la tarjeta al contenedor de productos
             contenedorDietas.appendChild(tarjetaDieta);
         }
+    })
+    .catch(error => {
+        console.error('Error al obtener los datos de productos:', error);
+    });
+
+
+fetch('http://localhost:3000/dietas')
+    .then(response => response.json())
+    .then(data => {
+        const lengthData = document.querySelectorAll('.tarjetaGeneral').length;
+        const tarjetaDieta = document.querySelectorAll('.tarjetaGeneral');
+
+        for (let i = 0; i < lengthData; i++) {
+            tarjetaDieta[i].addEventListener("click", function () {
+
+                var id = tarjetaDieta[i].querySelector('#id').textContent;
+                localStorage.setItem('tarjetaDietaID', id);
+
+                fetch(`http://localhost:3000/dietas/${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
+                        detallesTarjeta.querySelector('p').innerText = data.descripcion;
+
+                    })
+            })
+        }
+
     })
     .catch(error => {
         console.error('Error al obtener los datos de productos:', error);

@@ -35,7 +35,7 @@ fetch('http://localhost:3000/rutinas')
             // Clonar la tarjetaProducto1
             const tarjetaRutina = document.querySelector('.tarjetaGeneral');
 
-            // Llenar la tarjeta clonada con los datos del producto
+            // Llenar la tarjeta clonada con los datos del product
             tarjetaRutina.querySelector('img').innerText = rutina.img;
             tarjetaRutina.querySelector('p').innerText = rutina.nombre;
             tarjetaRutina.querySelector('#id').innerText = rutina.id;
@@ -48,29 +48,33 @@ fetch('http://localhost:3000/rutinas')
         console.error('Error al obtener los datos de productos:', error);
     });
 
-/*document.addEventListener("DOMContentLoaded", function ({
 
-
-
-
-                                                        }))
-const tarjetaRutina = document.getElementsByName('.tarjeta')[0];
-console.log(tarjetaRutina);
-tarjetaRutina.addEventListener("click", function (){
-
-
-});*/
-/*fetch('http://localhost:3000/rutinas')
-    .then(response => response.json()) // Convertir la respuesta a JSON
+fetch('http://localhost:3000/rutinas')
+    .then(response => response.json())
     .then(data => {
-            const tarjetaDescripcion = document.querySelector('.descripcion');
-            console.log(document);
-            console.log(tarjetaDescripcion);
-            // Llenar la tarjeta clonada con los datos del producto
-        tarjetaDescripcion.querySelector('p').innerText = "esto es una prueba";
+        const lengthData = document.querySelectorAll('.tarjetaGeneral').length;
+        const tarjetaRutina = document.querySelectorAll('.tarjetaGeneral');
+
+        for (let i = 0; i < lengthData; i++) {
+            tarjetaRutina[i].addEventListener("click", function () {
+
+                var id = tarjetaRutina[i].querySelector('#id').textContent;
+                localStorage.setItem('tarjetaID', id);
+
+                fetch(`http://localhost:3000/rutinas/${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
+                        detallesTarjeta.querySelector('p').innerText = data.descripcion;
+
+                    })
+            })
+        }
 
     })
     .catch(error => {
         console.error('Error al obtener los datos de productos:', error);
     });
-*/
+
+
+

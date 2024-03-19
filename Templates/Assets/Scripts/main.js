@@ -98,10 +98,7 @@ function fetchAndInsertHTML(url, containerId) {
 }
 
 
-function prueba(url, containerId, tarjetaId){
-    fetchAndInsertHTML(url, containerId);
-    localStorage.setItem('tarjetaID', tarjetaId);
-}
+
 function generarComponente(numComponentes, contenedorId, nombreElemento) {
     var Container = document.getElementById(contenedorId);
 
