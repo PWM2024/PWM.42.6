@@ -122,22 +122,32 @@ h1{
 
     .productos-container {
         text-align: center;
-        height: auto;
-        display: block;
+        height: 345px;
         justify-content: center;
         align-items: center;
     }
 
     .tarjetaProducto1{
         text-align: center;
-        width: 100%;
+        scale: 0.8;
         margin:0;
     }
 
     .tarjetaProducto1 .producto-card{
         display: block;
         text-align: center;
-        width: 50%;
+        margin: 0;
+        height: 41vh;
+    }
+
+    .precio-y-botones{
+        position: absolute;
+        bottom: 20px;
+        right: 44px;
+    }
+
+    .producto-card{
+        margin: 0;
     }
 
     .tarjetaProducto1 .producto-card img{
@@ -154,12 +164,11 @@ h1{
         overflow-y: hidden;
     }
 
-    .tarjetaGeneral .tarjeta{
-        width: 225px;
-        height: 250px;
-        text-align: center;
+    .producto-details h1{
+        font-size: 18px !important;
     }
-
-
+    .producto-details h2{
+        font-size: 0.8rem !important;
+    }
 
 }

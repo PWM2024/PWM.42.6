@@ -150,8 +150,8 @@ fetchComponente('../Components/footer.html', 'footer');
 fetchComponenteconJSPropio('../Components/filtroOpciones.html', 'filtroOpciones');
 fetchComponenteconJSPropio('../Components/filtroPrecio.html', 'filtroPrecio');
 
-fetchComponente("../Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
-fetchComponente("../Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
+fetchComponenteconJSPropio("../Header/HeaderConLoginAndRegister/headerConLogin.html", 'headerConLogin');
+fetchComponenteconJSPropio("../Header/HeaderConLoginAndRegister/headerSinBuscarConLogin.html", 'headerSinBuscarConLogin');
 fetchComponenteconJSPropio('../Header/HeaderSinLoginRegister/headerSinBuscar.html', 'headerSinBuscar');
 fetchComponenteconJSPropio("../Header/HeaderSinLoginRegister/header.html", 'header');
 

@@ -64,6 +64,18 @@
 @media screen and (max-width: 600px) {
   .slider-container {
     flex-direction: column-reverse;
+    height: fit-content;
+
+  }
+
+  .slider-container h2 {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .slider-container > img {
+    margin-top: 10px;
+    scale: 0.9;
   }
 
   .slider-container > div {
