@@ -92,3 +92,18 @@ label {
   opacity: 1; 
   display:block;
 }
+
+#icono-estrella {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.5s;
+}
+
+#icono-estrella:hover {
+  color: gold;
+}
+
+#icono-estrella.clicked {
+  color: gold;
+  transform: scale(1.4);
+}
