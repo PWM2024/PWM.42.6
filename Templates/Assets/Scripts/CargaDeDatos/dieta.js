@@ -4,6 +4,37 @@ function sleep(ms) {
 
 
 
+function filtrarComponentes(etiquetas){
+    console.log(etiquetas);
+    fetch('http://localhost:3000/dietas')
+        .then(response => response.json())
+        .then(data => {
+            const dietasFiltradas = [];
+            data.forEach(dieta => {
+                if (dieta.etiqueta && etiquetas.includes(dieta.etiqueta)) {
+                    dietasFiltradas.push(dieta.id);
+                }
+            });
+
+
+            const tarjetaDieta = document.querySelectorAll('.tarjetaGeneral');
+            for (let i = 0; i < tarjetaDieta.length; i++){
+                if(!dietasFiltradas.includes(tarjetaDieta[i].querySelector('#id').textContent)){
+                    tarjetaDieta[i].remove();
+                }
+            }
+
+            console.log(tarjetaDieta.length);
+
+
+
+        })
+        .catch(error => {
+            console.error('Error al obtener las rutinas:', error);
+        });
+}
+
+
 fetch('http://localhost:3000/dietas')
     .then(response => response.json()) // Convertir la respuesta a JSON
     .then(data => {
@@ -71,4 +102,30 @@ fetch('http://localhost:3000/dietas')
         }
 
         ejecutarDespuesDeTiempo();
+    });
+
+fetch('http://localhost:3000/dietas')
+    .then(response => response.json())
+    .then(data => {
+        const boton = document.querySelector('.aplicar');
+        const boton2 = document.querySelector('.limpiar');
+
+        boton.addEventListener("click", function () {
+            const filtro =  document.querySelector('.filtro');
+            const checkboxes = filtro.querySelectorAll('.filtro input[type="checkbox"]')
+            let etiquetas = [];
+            for(let i = 0; i < checkboxes.length; i++){
+                if(checkboxes[i].checked){
+                    etiquetas.push(filtro.querySelectorAll('.text')[i].textContent);
+                }
+            }
+
+            filtrarComponentes(etiquetas);
+
+
+        })
+
+        boton2.addEventListener("click", function () {
+            location.reload();
+        })
     });
