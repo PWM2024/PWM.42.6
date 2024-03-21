@@ -1,9 +1,15 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 function obtenerUsuarioPorId(idUsuario) {
     return fetch(`http://localhost:3000/users/${idUsuario}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al obtener el usuario');
             }
+
             return response.json();
         })
         .then(usuario => usuario)
@@ -18,10 +24,8 @@ const userId = localStorage.getItem('userID');
 if (userId) {
     obtenerUsuarioPorId(userId)
         .then(usuario => {
-            console.log(usuario)
             let tarjetaDetalles = document.querySelector('.statsForm');
             let tarjetaPromoCode = document.querySelector('.codigoPromocional');
-            console.log(tarjetaPromoCode);
 
             if(tarjetaPromoCode){
                 const PromoCode = tarjetaPromoCode.querySelector('.promo-container');
@@ -42,3 +46,30 @@ if (userId) {
 } else {
     console.error('No se encontró la ID del usuario en el localStorage.');
 }
+
+
+
+
+
+fetch(`http://localhost:3000/users/`)
+    .then(response => response.json()) // Convertir la respuesta a JSON
+    .then(data => {
+        const boton = document.querySelector('#nickNameButton');
+
+        boton.addEventListener("click", function () {
+            const nuevoNickName = document.querySelector('#nicknameInput').value;
+            let nickname = nuevoNickName;
+            fetch(`http://localhost:3000/users/${userId}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nickname })
+            })
+            location.reload();
+        })
+
+    })
+    .catch(error => {
+        console.error('Error al obtener los datos de usuarios:', error);
+    });
