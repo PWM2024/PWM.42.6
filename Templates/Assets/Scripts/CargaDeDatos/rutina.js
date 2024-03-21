@@ -2,22 +2,57 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
+
+function cambiarRutina(tarjetaRutina, rutina){
+    tarjetaRutina.querySelector('img').innerText = rutina.img;
+    tarjetaRutina.querySelector('p').innerText = rutina.nombre;
+    tarjetaRutina.querySelector('#id').innerText = rutina.id;
+}
+
+function filtrarComponentes(etiquetas){
+    console.log(etiquetas);
+    fetch('http://localhost:3000/rutinas')
+        .then(response => response.json())
+        .then(data => {
+            const rutinasFiltradas = [];
+            data.forEach(rutina => {
+                if (rutina.etiqueta && etiquetas.includes(rutina.etiqueta)) {
+                    rutinasFiltradas.push(rutina.id);
+                }
+            });
+
+
+            const tarjetaRutina = document.querySelectorAll('.tarjetaGeneral');
+            for (let i = 0; i < tarjetaRutina.length; i++){
+                if(!rutinasFiltradas.includes(tarjetaRutina[i].querySelector('#id').textContent)){
+                    tarjetaRutina[i].remove();
+                }
+            }
+
+            console.log(rutinasFiltradas.length);
+
+
+
+        })
+        .catch(error => {
+            console.error('Error al obtener las rutinas:', error);
+        });
+}
+
+
+
 fetch('http://localhost:3000/rutinas')
     .then(response => response.json()) // Convertir la respuesta a JSON
     .then(data => {
         const contenedorRutinas = document.getElementById('tarjetasRutina-container');
-        console.log(contenedorRutinas)
 
         // Iterar sobre los primeros dos elementos del array de productos
         for (let i = 0; i < data.length; i++) {
             const rutina = data[i];
-            // Clonar la tarjetaProducto1
-            const tarjetaRutina = document.querySelector('.tarjetaGeneral');
 
-            // Llenar la tarjeta clonada con los datos del producto
-            tarjetaRutina.querySelector('img').innerText = rutina.img;
-            tarjetaRutina.querySelector('p').innerText = rutina.nombre;
-            tarjetaRutina.querySelector('#id').innerText = rutina.id;
+            const tarjetaRutina = document.querySelector('.tarjetaGeneral');
+            cambiarRutina(tarjetaRutina, rutina)
 
             // Agregar la tarjeta al contenedor de productos
             contenedorRutinas.appendChild(tarjetaRutina);
@@ -70,4 +105,31 @@ fetch('http://localhost:3000/rutinas')
         }
 
         ejecutarDespuesDeTiempo();
+    });
+
+
+fetch('http://localhost:3000/rutinas')
+    .then(response => response.json())
+    .then(data => {
+        const boton = document.querySelector('.aplicar');
+        const boton2 = document.querySelector('.limpiar');
+
+        boton.addEventListener("click", function () {
+            const filtro =  document.querySelector('.filtro');
+            const checkboxes = filtro.querySelectorAll('.filtro input[type="checkbox"]')
+            let etiquetas = [];
+            for(let i = 0; i < checkboxes.length; i++){
+                if(checkboxes[i].checked){
+                    etiquetas.push(filtro.querySelectorAll('.text')[i].textContent);
+                }
+            }
+
+            filtrarComponentes(etiquetas);
+
+
+        })
+
+        boton2.addEventListener("click", function () {
+            location.reload();
+        })
     });
