@@ -20,7 +20,6 @@ body {
     margin-top: 20%;
 }
 
-
 @media only screen and (max-width: 430px) {
     .imcInfo {
         margin-top: 5%;
@@ -34,16 +33,31 @@ body {
         margin-bottom: 10%;
     }
 
-
-
-    .formulario-imc{
-        margin-top:10%;
+    .imcDetalle{
+        min-width: 385px;
+        min-height: 115px
     }
 
-
-    .formulario-imc label,
-    .formulario-imc input{
+    .formulario-imc label{
         display: block;
         margin-bottom: 10px;
+        position: relative;
+        left: -3%;
     }
+
+    .formulario-imc input{
+        position: relative;
+        left: 8%;
+    }
+
+    .formulario-imc span{
+        position: relative;
+        left: 12%;
+    }
+
+    .calcular-imc{
+        position: relative;
+        left: -3%;
+    }
+
 }
