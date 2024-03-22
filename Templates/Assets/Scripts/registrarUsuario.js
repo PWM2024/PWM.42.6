@@ -32,7 +32,7 @@ document.addEventListener('click', function () {
                 peso: "",
                 altura: "",
                 imc: "",
-                kcal: [],
+                kcal: "",
                 cesta: []
             };
 

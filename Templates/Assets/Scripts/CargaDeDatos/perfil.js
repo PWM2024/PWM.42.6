@@ -1,75 +1,112 @@
+// Función para obtener datos del usuario
+function obtenerUsuario() {
+    const userId = localStorage.getItem('userID');
+    if (!userId) {
+        console.error('No se encontró la ID del usuario en el localStorage.');
+        return Promise.reject('No se encontró la ID del usuario en el localStorage.');
+    }
+    return fetch(`http://localhost:3000/users/${userId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al obtener el usuario');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Error al obtener el usuario:', error);
+            throw error;
+        });
+}
+
+// Función para enviar actualizaciones al servidor
+function enviarActualizacion(endpoint, data, userId) {
+    return fetch(`http://localhost:3000/users/${userId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al enviar la actualización');
+            }
+            return response.json(); // Devolver la respuesta como JSON
+        })
+        .then(() => {
+            location.reload(); // Recargar la página después de completar la actualización
+        })
+        .catch(error => {
+            console.error('Error al enviar la actualización:', error);
+        });
+}
+
+// Función para manejar eventos de botones de actualización
+function manejarActualizacion(botonId, campoId, propiedad, userId, usuario) {
+    const boton = document.querySelector(botonId);
+    boton.addEventListener("click", function () {
+        const valor = document.querySelector(campoId).value;
+        if (propiedad === 'password') {
+            const antiguaContrasena = document.querySelector('#antiguaContrasena').value;
+            const nuevaContrasena = document.querySelector('#nuevaContrasena').value;
+            const repetirContrasena = document.querySelector('#repetirContrasena').value;
+            if (antiguaContrasena !== usuario.password) {
+                console.error('La contraseña antigua no coincide.');
+                return;
+            }
+            if (nuevaContrasena !== repetirContrasena) {
+                console.error('Las contraseñas nuevas no coinciden.');
+                return;
+            }
+        }
+        const data = {};
+        data[propiedad] = valor;
+        enviarActualizacion(`/users/${userId}`, data, userId);
+    });
+}
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 
-function obtenerUsuarioPorId(idUsuario) {
-    return fetch(`http://localhost:3000/users/${idUsuario}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al obtener el usuario');
-            }
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener usuario y manejar actualizaciones
+    obtenerUsuario().then(async usuario => {
+        await sleep(50); // Espera 1 segundo
+        if (usuario) {
 
-            return response.json();
-        })
-        .then(usuario => usuario)
-        .catch(error => {
-            console.error('Error:', error);
-            return null;
-        });
-}
-
-// Uso de la función para obtener el usuario con la ID almacenada en el localStorage
-const userId = localStorage.getItem('userID');
-if (userId) {
-    obtenerUsuarioPorId(userId)
-        .then(usuario => {
-            let tarjetaDetalles = document.querySelector('.statsForm');
             let tarjetaPromoCode = document.querySelector('.codigoPromocional');
 
             if(tarjetaPromoCode){
                 const PromoCode = tarjetaPromoCode.querySelector('.promo-container');
-                console.log(PromoCode);
-                console.log(PromoCode.querySelector('p'));
                 PromoCode.querySelector('p').innerText = usuario.promoCode;
             }
 
-            if (usuario && usuario.nickname) {
-                tarjetaDetalles.querySelector('p').innerText = usuario.nickname;
+            if (usuario.nickname) {
+                document.querySelector('.statsForm p').innerText = usuario.nickname;
             } else {
                 console.error('El usuario no tiene un nombre válido.');
             }
-        })
-        .catch(error => {
-            console.error('Error al obtener el usuario:', error);
-        });
-} else {
-    console.error('No se encontró la ID del usuario en el localStorage.');
-}
 
+            if (usuario.kcal) {
+                document.querySelector('#kcalConsumidas').innerText = usuario.kcal;
+            }
 
+            if (usuario.peso && usuario.altura) {
+                const altura = usuario.altura / 100;
+                const imc = usuario.peso / (altura * altura);
+                document.querySelector('#imc').innerText = imc.toFixed(2);
+            }
 
-
-
-fetch(`http://localhost:3000/users/`)
-    .then(response => response.json()) // Convertir la respuesta a JSON
-    .then(data => {
-        const boton = document.querySelector('#nickNameButton');
-
-        boton.addEventListener("click", function () {
-            const nuevoNickName = document.querySelector('#nicknameInput').value;
-            let nickname = nuevoNickName;
-            fetch(`http://localhost:3000/users/${userId}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ nickname })
-            })
-            location.reload();
-        })
-
-    })
-    .catch(error => {
-        console.error('Error al obtener los datos de usuarios:', error);
+            // Manejar eventos de actualización después de una pausa de 1 segundo
+            await sleep(2000); // Espera 1 segundo
+            manejarActualizacion('#nickNameButton', '#nicknameInput', 'nickname', usuario.id, usuario);
+            manejarActualizacion('#passwordButton', '#nuevaContrasena', 'password', usuario.id, usuario);
+            manejarActualizacion('#KcalButton', '#kcalInput', 'kcal', usuario.id, usuario);
+            manejarActualizacion('#pesoButton', '#pesoInput', 'peso', usuario.id, usuario);
+            manejarActualizacion('#alturaButton', '#alturaInput', 'altura', usuario.id, usuario);
+        }
     });
+});
+
