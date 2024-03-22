@@ -164,7 +164,6 @@ nav ul li ul li:hover {
     margin-right: 10px;
 }
 
-
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
@@ -224,9 +223,40 @@ nav ul li ul li:hover {
     display: none;
 }
 
+.up-header-mobile{
+    display: none;
+}
+
 @media only screen and (max-width: 430px){
     .hideOnMobile, #hide-up-header{
         display: none;
+    }
+
+    /*nav ul li ul{
+        top: -118%;
+        left: 39%;
+    }*/
+
+    .up-header-mobile {
+        text-align: center;
+        display: block;
+    }
+
+    .up-header-mobile input{
+        height: 40px;
+        width: 125px;
+    }
+
+    .up-header-mobile .login-btn,
+    .up-header-mobile .register-btn{
+        width: 128px;
+        height: 45px;
+        margin-top: 4%;
+    }
+
+    .up-header-mobile .submit{
+        height: 43px;
+        width: 55px;
     }
 
     .menu-button, .dropdown-mobile{
@@ -276,18 +306,6 @@ nav ul li ul li:hover {
 
     .container-dropdown .dropdown-content{
         left: 28%;
-    }
-
-    .botones{
-        text-align: center;
-        margin-top: 6%;
-    }
-
-    .botones .login-btn,
-    .botones .register-btn{
-        width: 126px;
-        height: 50px;
-        text-align: center;
     }
 
     .right-sidebar{
