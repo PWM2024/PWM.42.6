@@ -24,14 +24,12 @@ var bocadilloMovil = document.querySelector('.bocadillo-movil');
 
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
-    bocadilloMovil.style.zIndex = '0';
+    sidebar.style.transform = 'translateX(0)';
 }
 
 function hideSidebar(){
     const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
-    bocadilloMovil.style.zIndex = '9999';
+    sidebar.style.transform = 'translateX(-110%)';
 }
 
 function openRightSidebar(){

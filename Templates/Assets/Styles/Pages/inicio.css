@@ -5,21 +5,10 @@ h1{
     font-size:xx-large;
 }
 
-
-
-.productos-container {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
 .tarjetaProducto1 {
     width: fit-content;
     margin: 50px;
 }
-
-
 
 .rutinas-completo{
     display: flex;
@@ -121,10 +110,16 @@ h1{
 @media only screen and (max-width: 430px) {
 
     .productos-container {
+        display: flex;
         text-align: center;
-        height: 345px;
         justify-content: center;
         align-items: center;
+        /*padding: 10%;*/
+    }
+
+    #productos-bar{
+        margin-bottom: 0;
+        margin-top: 44px;
     }
 
     .tarjetaProducto1{
@@ -137,13 +132,12 @@ h1{
         display: block;
         text-align: center;
         margin: 0;
-        height: 41vh;
+        height: fit-content;
     }
 
     .precio-y-botones{
-        position: absolute;
-        bottom: 20px;
-        right: 44px;
+        position: relative;
+        right: 23px;
     }
 
     .producto-card{

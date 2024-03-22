@@ -2,7 +2,7 @@ function fetchComponente(url, containerClass) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                return; 
+                return;
             }
             return response.text();
         })
@@ -23,7 +23,7 @@ function fetchComponente(url, containerClass) {
 function fetchComponenteconJSPropio(url, containerClass) {
     fetch(url)
         .then(response => {
-            if (!response.ok){
+            if (!response.ok) {
                 throw new Error('Error al cargar el recurso: ' + response.status);
             }
             return response.text();
@@ -35,14 +35,13 @@ function fetchComponenteconJSPropio(url, containerClass) {
                     container.innerHTML = html;
 
                     const scripts = container.getElementsByTagName('script');
-                    for (let script of scripts){
-                        if (script.src){
+                    for (let script of scripts) {
+                        if (script.src) {
                             fetch(script.src)
-                            .then(response => response.text())
-                            .then(scriptText => eval(scriptText))
-                            .catch(error => console.error(`Error loading script: ${error}`));
-                        }
-                        else{
+                                .then(response => response.text())
+                                .then(scriptText => eval(scriptText))
+                                .catch(error => console.error(`Error loading script: ${error}`));
+                        } else {
                             eval(script.innerText);
                         }
                     }
@@ -60,7 +59,7 @@ function fetchComponenteConId(url, containerId) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                return; 
+                return;
             }
             return response.text();
         })
@@ -98,11 +97,10 @@ function fetchAndInsertHTML(url, containerId) {
 }
 
 
-
 function generarComponente(numComponentes, contenedorId, nombreElemento) {
     var Container = document.getElementById(contenedorId);
 
-    if (Container){
+    if (Container) {
         for (var i = 0; i < numComponentes; i++) {
             var elemento = document.createElement("div");
             elemento.className = nombreElemento;
@@ -121,10 +119,20 @@ function clearElementContent(elementId) {
     }
 }
 
-function fetchComponentesCesta(){
+function mostrarBlur() {
+    console.log("Blur añadido");
+    document.getElementById("fondoDesenfocado").style.display = "block";
+}
+
+function esconderBlur() {
+    console.log("Blur quitado");
+    document.getElementById("fondoDesenfocado").style.display = "none";
+}
+
+function fetchComponentesCesta() {
     fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
 }
-    
+
 fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
