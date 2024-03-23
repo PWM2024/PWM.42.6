@@ -33,7 +33,7 @@
       "descripcion": "Suplemento de proteína en polvo de suero de leche, ideal para la construcción muscular y la recuperación después del ejercicio.",
       "precio": 29.99,
       "img": "proteina.jpg",
-      "etiqueta": "proteína",
+      "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
     },
@@ -44,7 +44,7 @@
       "descripcion": "Barra energética hecha con ingredientes naturales como avena, almendras, nueces y pasas, perfecta como refrigerio antes o después del entrenamiento.",
       "precio": 2.99,
       "img": "barra_energetica.jpg",
-      "etiqueta": "musculación",
+      "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
     },
@@ -55,7 +55,7 @@
       "descripcion": "Delicioso batido de proteínas con sabor a vainilla, perfecto para después del entrenamiento para recuperar energía y nutrir los músculos.",
       "precio": 24.99,
       "img": "batido_proteinas.jpg",
-      "etiqueta": "recuperación",
+      "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": false
     },
@@ -66,7 +66,7 @@
       "descripcion": "Mezcla de frutos secos y pasas con un toque de sal, ideal como un snack saludable para cualquier momento del día.",
       "precio": 4.49,
       "img": "snack_frutos_secos.jpg",
-      "etiqueta": "proteína",
+      "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
     },
@@ -77,7 +77,7 @@
       "descripcion": "Pack variado de barras de proteínas con sabores como chocolate, vainilla y fresa, perfectas para llevar como refrigerio después del ejercicio.",
       "precio": 12.99,
       "img": "barras_proteinas.jpg",
-      "etiqueta": "musculación",
+      "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
     },
@@ -88,7 +88,7 @@
       "descripcion": "Suplemento en polvo de creatina monohidratada, ideal para mejorar el rendimiento deportivo y la recuperación muscular.",
       "precio": 17.99,
       "img": "suplemento_creatina.jpg",
-      "etiqueta": "recuperación",
+      "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": false
     },
@@ -99,7 +99,7 @@
       "descripcion": "Botella de agua deportiva resistente y reutilizable, con capacidad de 1 litro, perfecta para mantenerse hidratado durante el ejercicio.",
       "precio": 5.49,
       "img": "botella_agua.jpg",
-      "etiqueta": "proteína",
+      "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
     },
@@ -110,7 +110,7 @@
       "descripcion": "Mezcla de frutos secos como almendras, nueces y avellanas con trozos de chocolate negro, una combinación perfecta de energía y sabor.",
       "precio": 6.99,
       "img": "mezcla_frutos_chocolate.jpg",
-      "etiqueta": "musculación",
+      "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
     },
@@ -121,7 +121,7 @@
       "descripcion": "Suplemento en polvo de proteína vegana con un delicioso sabor a chocolate, ideal para personas que siguen una dieta vegetariana o vegana.",
       "precio": 21.99,
       "img": "proteina_vegana.jpg",
-      "etiqueta": "recuperación",
+      "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": true
     },
@@ -132,7 +132,7 @@
       "descripcion": "Galletas saludables hechas con avena, plátano maduro y sin añadir azúcar, perfectas para un tentempié nutritivo y delicioso.",
       "precio": 3.99,
       "img": "galletas_avena_platano.jpg",
-      "etiqueta": "proteína",
+      "etiqueta": "Proteína",
       "promocion": true,
       "novedad": false
     },
@@ -143,7 +143,7 @@
       "descripcion": "Suplemento en cápsulas de omega-3 con aceite de pescado de alta calidad, ideal para promover la salud del corazón y las articulaciones.",
       "precio": 14.99,
       "img": "suplemento_omega3.jpg",
-      "etiqueta": "musculación",
+      "etiqueta": "Musculación",
       "promocion": false,
       "novedad": true
     },
@@ -154,7 +154,7 @@
       "descripcion": "Deliciosa crema de almendras sin añadir azúcar ni aceites añadidos, perfecta para untar en tostadas o agregar a batidos y recetas.",
       "precio": 9.99,
       "img": "crema_almendras.jpg",
-      "etiqueta": "recuperación",
+      "etiqueta": "Recuperación",
       "promocion": true,
       "novedad": false
     },
@@ -165,7 +165,7 @@
       "descripcion": "Pack variado de muesli con ingredientes como copos de avena, frutos secos y semillas, perfecto para un desayuno nutritivo y saludable.",
       "precio": 11.49,
       "img": "pack_muesli.jpg",
-      "etiqueta": "proteína",
+      "etiqueta": "Proteína",
       "promocion": false,
       "novedad": true
     },
@@ -176,7 +176,7 @@
       "descripcion": "Té verde matcha en polvo de origen orgánico, rico en antioxidantes y energizante, ideal para preparar bebidas calientes o frías.",
       "precio": 18.99,
       "img": "te_matcha.jpg",
-      "etiqueta": "musculación",
+      "etiqueta": "Musculación",
       "promocion": true,
       "novedad": false
     }

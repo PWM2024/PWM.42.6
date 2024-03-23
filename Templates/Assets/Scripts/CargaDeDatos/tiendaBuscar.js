@@ -1,3 +1,6 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 var Container = document.getElementById('productos');
 if (Container) {
@@ -8,6 +11,22 @@ if (Container) {
     }
 }
 
+
+fetch('http://localhost:3000/productos')
+    .then(response => response.json())
+    .then(data => {
+        const filtro = document.querySelector('.filtro');
+        async function ejecutarDespuesDeTiempo() {
+            await sleep(70); // Espera 2000 milisegundos (2 segundos)
+            const opciones = ["Proteína", "Musculación", "Recuperación"];
+            const opcion = filtro.querySelectorAll('.check');
+            for (let i = 0; i < opciones.length; i++ ){
+                opcion[i].querySelector('.text').innerText = opciones[i];
+            }
+        }
+
+        ejecutarDespuesDeTiempo();
+    });
 
 // Introducir un retraso de 2000 milisegundos (2 segundos) antes de ejecutar el segundo fetch
 setTimeout(() => {
@@ -35,7 +54,7 @@ setTimeout(() => {
         .catch(error => {
             console.error('Error al obtener los datos de productos:', error);
         });
-}, 50); // 2000 milisegundos = 2 segundos
+}, 300); // 2000 milisegundos = 2 segundos
 
 
 document.addEventListener('DOMContentLoaded', function() {
