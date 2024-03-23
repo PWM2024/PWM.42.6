@@ -72,24 +72,53 @@ h1{
 @media only screen and (max-width: 430px) {
     .promociones-container{
         display: block;
-        height: 600px;
+        height: 700px;
         margin-top: 15%;
         margin-bottom: 0%;
     }
-    .tarjetaProducto2{
-        width: fit-content;
-        height: 25%;
+
+    h1{
         text-align: center;
+        margin-top: 8%;
+        font-size:xx-large;
     }
 
-    .tarjetaProducto2 .producto-card{
+    .tarjetaProducto2{
+        width: fit-content;
+        height: 26%;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .tarjetaProducto2 .producto-card {
         width: 120%;
-        height: 100%;
+        height: 120%;
         display: flex;
         text-align: center;
         margin:0;
         padding: 0;
+    }
 
+    .producto-card {
+        width: 120%;
+        height: 120%;
+        display: flex;
+        text-align: center;
+        margin:0;
+        padding: 0;
+    }
+
+    .producto-card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .producto-details {
+        height: 100%;
     }
 
     .tarjetaProducto2 .producto-card .producto-details {
@@ -108,8 +137,6 @@ h1{
     .novedades-container {
         display: block;
         height: 600px;
-        margin-top: 15%;
-        margin-bottom: 0%;
     }
 
 }
