@@ -9,7 +9,10 @@
       "altura": "171",
       "imc": "",
       "kcal": "1500",
-      "cesta": [],
+      "cesta": [
+        "011",
+        "012"
+      ],
       "listaDeseos": [],
       "id": "1"
     },
