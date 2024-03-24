@@ -280,7 +280,6 @@ nav ul li ul li:hover {
 
     .bocadillo-movil {
         display: flex;
-        width: 93%;
         justify-content: end;
         position: fixed;
         top: 50%;
