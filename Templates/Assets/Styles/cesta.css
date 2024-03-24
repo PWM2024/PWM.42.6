@@ -110,6 +110,10 @@
     scale: 1;
 }
 
+.producto-details #id{
+    display: none;
+}
+
 .producto-unidades h2 {
     margin: 0 !important;
     font-size: 110% !important;

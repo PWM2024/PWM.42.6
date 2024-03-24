@@ -28,50 +28,28 @@
           onclick="closeCesta()"
         />
       </div>
-      <section class="body-cesta">
+    <section class="body-cesta">
+        <div id="tarjetaProductoCesta">
 
-        <div id="tarjetaProductoCesta">
-          <section class="producto-card">
-            <img src="../Source/default-img.png" alt="Producto">
-            <section class="producto-details">
-                <h1>Producto</h1>
-                <h2>SKU</h2>
-                <h1>XX.XX€</h1>
-                <section class="producto-unidades">
-                    <button class="operar-cantidad">-</button>
-                    <h2>1</h2>
-                    <button class="operar-cantidad">+</button>
-                </section>
+            <section class="product-list">
+                <section class="producto-card"></section>
             </section>
-        </section>
-        <div id="tarjetaProductoCesta">
-          <section class="producto-card">
-            <img src="../Source/default-img.png" alt="Producto">
-            <section class="producto-details">
-                <h1>Producto</h1>
-                <h2>SKU</h2>
-                <h1>XX.XX€</h1>
-                <section class="producto-unidades">
-                    <button class="operar-cantidad">-</button>
-                    <h2>1</h2>
-                    <button class="operar-cantidad">+</button>
+
+            <div class="aplicarCodigoPromocional"></div>
+            <div class="resumen-Compra">
+                <section class="resumen-compra">
+                    <p class="unidades">Unidades <span>2</span></p>
+                    <p class="descuento">Descuento <span>XX%</span></p>
+                    <p class="total">
+                        Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
+                    </p>
                 </section>
-            </section>
-        </section>
+            </div>
+            <div class="botonesCesta"></div>
         </div>
-        <div class="tarjetaProductoCesta"></div>
-        <div class="aplicarCodigoPromocional"></div>
-        <div class="resumen-Compra">
-          <section class="resumen-compra">
-            <p class="unidades">Unidades <span>2</span></p>
-            <p class="descuento">Descuento <span>XX%</span></p>
-            <p class="total">
-              Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
-            </p>
-          </section>
-        </div>
-        <div class="botonesCesta"></div>
-      </section>
+    </section>
     </section>
   </body>
+
+
 </html>
