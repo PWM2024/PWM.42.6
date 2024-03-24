@@ -9,6 +9,24 @@
   </head>
   <body>
     <section class="overlay" id="overlay"></section>
+    <section class="miPerfilDetalles-movil">
+      <nav>
+        <ul class="sidebar-perfil-detalles">
+          <li><a href="#"><img
+                  width="25"
+                  height="25"
+                  id="closeMenu"
+                  src="https://img.icons8.com/sf-ultralight/25/delete-sign.png"
+                  alt="delete-sign"
+          /></a></li>
+          <li><a href="/PWM.42.6-main/Templates/Pages/perfilMisDatos.html">Mis Datos</a></li>
+          <li><a href="/PWM.42.6-main/Templates/Pages/perfilHistorialDeCompras.html">Historial de Compras</a></li>
+          <li><a href="/PWM.42.6-main/Templates/Pages/perfilListaDeDeseos.html">Lista de Deseos</a></li>
+          <li><a href="/PWM.42.6-main/Templates/Pages/perfilCodigoPromocional.html">Mi Código</a></li>
+          <li><a href="/PWM.42.6-main/Templates/Pages/inicioNotLoggedIn.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </section>
     <section class="cestaHeader" id="cesta-container"></section>
     <header class="header"></header>
     <div class="detalles-tarjetas">
@@ -18,8 +36,14 @@
         <section class="perfilForm"></section>
       </section>
     </div>
+    <div class="menu-perfil-detalles">
+      <div class="circle-perfil-detalles">
+        <a href="#"><i class="fas fa-arrow-right" id="bocadillo-perfil-detalles"></i></a>
+      </div>
+    </div>
     <footer class="footer"></footer>
     <script src="../Assets/Scripts/cestaSidebar.js"></script>
     <script src="/PWM.42.6-main/Templates/Assets/Scripts/CargaDeDatos/perfil.js"></script>
+    <script src="/PWM.42.6-main/Templates/Assets/Scripts/perfilDetallesMenu.js" defer></script>
   </body>
 </html>
