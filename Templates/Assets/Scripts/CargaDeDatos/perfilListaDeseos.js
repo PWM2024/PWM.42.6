@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     for (const producto of tarjetaListaDeseos) {
         const addButton = producto.querySelector('#add-btn');
-        console.log(addButton);
         const botonEliminar = producto.querySelector('#delete-btn');
         const productId = producto.querySelector('#id').textContent;
         addButton.addEventListener("click", async function(){
@@ -117,6 +116,29 @@ document.addEventListener("DOMContentLoaded", async function() {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ cesta, listaDeseos })
+                });
+            });
+        });
+
+        botonEliminar.addEventListener("click", async function(){
+
+            obtenerUsuario().then(async usuario => {
+
+                const listaDeseos = usuario.listaDeseos || [];
+
+                const index = listaDeseos.indexOf(productId);
+                if (index !== -1) {
+                    listaDeseos.splice(index, 1);
+                }
+
+                producto.remove();
+
+                return fetch(`http://localhost:3000/users/${userId}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ listaDeseos })
                 });
             });
         });

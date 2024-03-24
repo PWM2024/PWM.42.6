@@ -97,6 +97,13 @@ fetch('http://localhost:3000/productos')
             obtenerUsuarioPorId(userId)
                 .then(usuario => {
                     usuario[propiedad] = usuario[propiedad] || [];
+
+                    // Comprobación si el producto ya está en la lista
+                    if (usuario[propiedad].includes(productId)) {
+                        console.log('El producto ya está en la lista.');
+                        return; // No hace nada si el producto ya está en la lista
+                    }
+
                     usuario[propiedad].push(productId);
                     console.log(usuario[propiedad]);
                     return fetch(`http://localhost:3000/users/${userId}`, {
@@ -108,7 +115,7 @@ fetch('http://localhost:3000/productos')
                     });
                 })
                 .then(response => {
-                    if (!response.ok) {
+                    if (!response || !response.ok) {
                         throw new Error('La solicitud de actualización del usuario falló.');
                     }
                 })
