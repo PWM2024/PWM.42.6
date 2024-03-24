@@ -3,13 +3,14 @@
     {
       "nickname": "aca",
       "email": "aca@gmail.com",
-      "password": "prueba",
+      "password": "aca",
       "promoCode": "BlLsdT3w",
       "peso": "59",
       "altura": "171",
       "imc": "",
       "kcal": "1500",
       "cesta": [],
+      "listaDeseos": [],
       "id": "1"
     },
     {
@@ -22,6 +23,7 @@
       "imc": "",
       "kcal": "",
       "cesta": [],
+      "listaDeseos": [],
       "id": "2"
     }
   ],

@@ -2,6 +2,21 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function obtenerUsuarioPorId(idUsuario) {
+    return fetch(`http://localhost:3000/users/${idUsuario}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al obtener el usuario');
+            }
+            return response.json();
+        })
+        .then(usuario => usuario)
+        .catch(error => {
+            console.error('Error:', error);
+            return null;
+        });
+}
+
 var Container = document.getElementById('productos');
 if (Container) {
     for (var i = 0; i < 14; i++) {
@@ -86,6 +101,57 @@ function filtrarComponentes(etiquetas, precio){
             console.error('Error al obtener los productos:', error);
         });
 }
+
+setTimeout(() => {
+    fetch('http://localhost:3000/productos')
+        .then(response => response.json())
+        .then(data => {
+            const tarjetaProducto = document.querySelectorAll('.tarjetaProducto2');
+            const userId = localStorage.getItem('userID');
+
+            if (!userId) {
+                console.error('No se encontró la ID del usuario en el localStorage.');
+                return;
+            }
+
+            tarjetaProducto.forEach(producto => {
+                const botonEliminar = producto.querySelector('.eliminar-btn');
+                const listaDeseos = producto.querySelector('.contenedor-estrella');
+                const productId = producto.querySelector('#id').textContent;
+
+                botonEliminar.addEventListener("click", () => actualizarUsuario('cesta', productId));
+                listaDeseos.addEventListener("click", () => actualizarUsuario('listaDeseos', productId));
+            });
+
+            function actualizarUsuario(propiedad, productId) {
+                obtenerUsuarioPorId(userId)
+                    .then(usuario => {
+                        usuario[propiedad] = usuario[propiedad] || [];
+                        usuario[propiedad].push(productId);
+                        console.log(usuario[propiedad]);
+                        return fetch(`http://localhost:3000/users/${userId}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ [propiedad]: usuario[propiedad] })
+                        });
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('La solicitud de actualización del usuario falló.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al actualizar el usuario:', error);
+                    });
+            }
+        })
+        .catch(error => {
+            console.error('Error al obtener los datos de productos:', error);
+        });
+}, 300); // 2000 milisegundos = 2 segundos
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

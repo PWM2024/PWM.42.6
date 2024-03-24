@@ -76,40 +76,46 @@ fetch('http://localhost:3000/productos')
 fetch('http://localhost:3000/productos')
     .then(response => response.json())
     .then(data => {
-
         const tarjetaProducto = document.querySelectorAll('.tarjetaProducto2');
+        const userId = localStorage.getItem('userID');
 
-        for (let i = 0; i < tarjetaProducto.length; i++){
-            const boton = tarjetaProducto[i].querySelector('.eliminar-btn');
-
-            boton.addEventListener("click", function () {
-
-                var id = tarjetaProducto[i].querySelector('#id').textContent;
-                const userId = localStorage.getItem('userID');
-                if (userId) {
-                    obtenerUsuarioPorId(userId)
-                        .then(usuario => {
-                            let cesta = usuario.cesta || [];
-                            cesta.push(id);
-                            console.log(cesta);
-                            fetch(`http://localhost:3000/users/${userId}`, {
-                                method: 'PATCH',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify({ cesta })
-                            })
-                        })
-                        .catch(error => {
-                            console.error('Error al obtener el usuario:', error);
-                        });
-                } else {
-                    console.error('No se encontró la ID del usuario en el localStorage.');
-                }
-            })
+        if (!userId) {
+            console.error('No se encontró la ID del usuario en el localStorage.');
+            return;
         }
 
+        tarjetaProducto.forEach(producto => {
+            const botonEliminar = producto.querySelector('.eliminar-btn');
+            const listaDeseos = producto.querySelector('.contenedor-estrella');
+            const productId = producto.querySelector('#id').textContent;
 
+            botonEliminar.addEventListener("click", () => actualizarUsuario('cesta', productId));
+            listaDeseos.addEventListener("click", () => actualizarUsuario('listaDeseos', productId));
+        });
+
+        function actualizarUsuario(propiedad, productId) {
+            obtenerUsuarioPorId(userId)
+                .then(usuario => {
+                    usuario[propiedad] = usuario[propiedad] || [];
+                    usuario[propiedad].push(productId);
+                    console.log(usuario[propiedad]);
+                    return fetch(`http://localhost:3000/users/${userId}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ [propiedad]: usuario[propiedad] })
+                    });
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('La solicitud de actualización del usuario falló.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al actualizar el usuario:', error);
+                });
+        }
     })
     .catch(error => {
         console.error('Error al obtener los datos de productos:', error);
