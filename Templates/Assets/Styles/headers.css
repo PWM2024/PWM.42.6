@@ -11,6 +11,15 @@ header {
 .logo2 {
     margin-bottom: 20px;
     margin-right: 20px;
+    width: 10%;
+}
+
+.logo_mobile {
+    display: none;
+}
+
+.logo2_mobile {
+    display: none;
 }
 
 nav {
@@ -350,13 +359,28 @@ nav ul li ul li:hover {
 
     .menu-button {
         position: absolute;
-        top: 24px;
-        right: 310px;
+        bottom: 105px;
+        right: 342px;
         padding: 0;
+        scale: 1.4;
     }
 
     .menu-button a:hover::after{
         background-color: #fff!important;
         width: 0!important;
+    }
+
+    .logo_mobile {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 10%;
+        display: block;
+    }
+
+    .logo2_mobile {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 10%;
+        display: block;
     }
 }
