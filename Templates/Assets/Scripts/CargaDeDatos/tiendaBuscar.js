@@ -12,12 +12,10 @@ if (Container) {
 }
 
 
-fetch('http://localhost:3000/productos')
-    .then(response => response.json())
-    .then(data => {
-        const filtro = document.querySelector('.filtro');
+document.addEventListener('DOMContentLoaded', function() {
         async function ejecutarDespuesDeTiempo() {
-            await sleep(70); // Espera 2000 milisegundos (2 segundos)
+            await sleep(80); // Espera 2000 milisegundos (2 segundos)
+            const filtro = document.querySelector('.filtro');
             const opciones = ["Proteína", "Musculación", "Recuperación"];
             const opcion = filtro.querySelectorAll('.check');
             for (let i = 0; i < opciones.length; i++ ){
@@ -46,6 +44,7 @@ setTimeout(() => {
                 tarjetaProducto.querySelector('h2').innerText = producto.nombre_detallado;
                 tarjetaProducto.querySelector('p').innerText = producto.descripcion;
                 tarjetaProducto.querySelector('div').innerText = `${producto.precio}€`;
+                tarjetaProducto.querySelector('#id').innerText = producto.id;
 
                 // Agregar la tarjeta al contenedor de productos
                 contenedorProductos.appendChild(tarjetaProducto);
@@ -54,7 +53,68 @@ setTimeout(() => {
         .catch(error => {
             console.error('Error al obtener los datos de productos:', error);
         });
-}, 300); // 2000 milisegundos = 2 segundos
+}, 100); // 2000 milisegundos = 2 segundos
+
+
+
+function filtrarComponentes(etiquetas, precio){
+    fetch('http://localhost:3000/productos')
+        .then(response => response.json())
+        .then(data => {
+
+            if(etiquetas.length === 0){
+                etiquetas = ["Proteína", "Musculación", "Recuperación"];
+            }
+            const prodcutosFiltrados = [];
+            data.forEach(producto => {
+                if (etiquetas.includes(producto.etiqueta) && (producto.precio < precio[1] && producto.precio > precio[0])) {
+                    prodcutosFiltrados.push(producto.id);
+                }
+            });
+
+            const tarjetaProducto = document.querySelectorAll('.tarjetaProducto2');
+            for (let i = 0; i < tarjetaProducto.length; i++){
+
+                if(!prodcutosFiltrados.includes(tarjetaProducto[i].querySelector('#id').textContent)){
+                    tarjetaProducto[i].remove();
+                }
+            }
+
+
+        })
+        .catch(error => {
+            console.error('Error al obtener los productos:', error);
+        });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aplicar = document.querySelector('.aplicar');
+    const limpiar = document.querySelector('.limpiar');
+
+    aplicar.addEventListener("click", function () {
+        const filtro =  document.querySelector('.filtro');
+        const checkboxes = filtro.querySelectorAll('.filtro input[type="checkbox"]')
+        let etiquetas = [];
+        for(let i = 0; i < checkboxes.length; i++){
+            if(checkboxes[i].checked){
+                etiquetas.push(filtro.querySelectorAll('.text')[i].textContent);
+            }
+        }
+
+        const filtroPrecio = document.querySelector('.d-flex');
+        const minPrecio = filtroPrecio.querySelector('.input-min').value;
+        const maxPrecio = filtroPrecio.querySelector('.input-max').value;
+
+        const precio = [minPrecio, maxPrecio];
+        filtrarComponentes(etiquetas, precio);
+    })
+
+    limpiar.addEventListener("click", function () {
+        location.reload();
+    })
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
