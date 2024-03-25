@@ -50,6 +50,7 @@ function actualizarTarjetas(productos) {
             tarjetas[i].querySelector('.product-name').innerText = producto.nombre;
             tarjetas[i].querySelector('.product-price').innerText = `${producto.precio}€`;
             tarjetas[i].querySelector('#id').innerText = producto.id;
+            tarjetas[i].querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Tienda\\${producto.img}`;
         });
 
 
