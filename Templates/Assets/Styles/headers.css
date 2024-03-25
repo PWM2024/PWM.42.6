@@ -8,9 +8,31 @@ header {
     position: relative;
 }
 
+.logo {
+    position: absolute;
+    width: 50%;
+    right: 110%;
+}
+.footer-ico{
+    width: 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
 .logo2 {
-    margin-bottom: 20px;
-    margin-right: 20px;
+    position: absolute;
+    width: 40%;
+    right: 105%;
+}
+
+.logo_mobile {
+    display: none;
+}
+
+.logo2_mobile {
+    display: none;
 }
 
 nav {
@@ -229,6 +251,22 @@ nav ul li ul li:hover {
     display: none;
 }
 
+.logo3 {
+    width: 7em;
+    position: absolute;
+    top: 0%;
+    right: 130%;
+    user-select: none;
+}
+
+.logo_mobile_2{
+    width: 3em;
+    position: absolute;
+    top: 20%;
+    right: 110%;
+    user-select: none;
+}
+
 @media only screen and (max-width: 430px) {
     header{
         flex-direction: unset;
@@ -349,13 +387,34 @@ nav ul li ul li:hover {
 
     .menu-button {
         position: absolute;
-        top: 24px;
-        right: 310px;
+        top: 25px;
+        right: 322px;
         padding: 0;
+        scale: 1.4;
     }
 
     .menu-button a:hover::after{
         background-color: #fff!important;
         width: 0!important;
     }
+
+    .logo_mobile {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 10%;
+        display: block;
+    }
+
+    .logo2{
+        display: none;
+    }
+
+    .logo2_mobile {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 10%;
+        display: block;
+    }
+
+
 }

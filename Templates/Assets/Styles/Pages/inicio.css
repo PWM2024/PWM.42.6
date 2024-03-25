@@ -12,19 +12,17 @@ h1{
 
 .rutinas-completo{
     display: flex;
-
+    justify-content: center;
 }
 
 .rutinas-container {
-    width: 1350px;
+    width: 55%;
     display: flex;
     overflow-x: scroll;
-    margin-left: 2%;
     margin-right: 2%;
 }
 
 #left-btn{
-    margin-left: 8%;
     display: flex;
     align-items: center; 
 
@@ -73,6 +71,14 @@ h1{
 
 .rutinas-container::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.productos-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /*padding: 10%;*/
 }
 
 
