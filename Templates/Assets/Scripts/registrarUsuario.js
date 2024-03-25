@@ -34,7 +34,8 @@ document.addEventListener('click', function () {
                 imc: "",
                 kcal: "",
                 cesta: [],
-                listaDeseos: []
+                listaDeseos: [],
+                compras: []
             };
 
             fetch(`http://localhost:3000/users?email=${email}`)

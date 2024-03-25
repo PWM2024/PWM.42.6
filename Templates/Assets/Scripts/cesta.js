@@ -17,6 +17,16 @@ function obtenerUsuario() {
         });
 }
 
+function generateNumPedido() {
+    const characters = '0123456789';
+    const length = 12;
+    let code = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        code += characters.charAt(randomIndex);
+    }
+    return code;
+}
 
 
 function obtenerProducto(productId) {
@@ -36,8 +46,9 @@ function obtenerProducto(productId) {
 
 
 document.addEventListener("DOMContentLoaded", async function() {
+
+    await sleep(300);
     const container = document.querySelector('.product-list');
-    await sleep(200);
     const btnFinalizarCompra = document.querySelector('#boton-finalizarCompra');
     const btnVaciarCesta = document.querySelector('.botones-container button');
 
@@ -88,6 +99,54 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         })
 
+        btnFinalizarCompra.addEventListener('click', function(){
+
+            const fecha = new Date();
+            const numPedido = generateNumPedido();
+            const precio = document.querySelector('#precio-final').innerText.replace('€', '').trim()
+            const userID = localStorage.getItem('userID');
+
+
+
+            fetch(`http://localhost:3000/compras/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ fecha,  numPedido, precio})
+            });
+
+
+            obtenerUsuario().then(async usuario => {
+                const compras = usuario.compras || [];
+                compras.push(numPedido);
+                const cesta = [];
+                console.log(cesta)
+
+                return fetch(`http://localhost:3000/users/${userID}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ cesta, compras })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // La solicitud se completó exitosamente, puedes recargar la página aquí
+                            location.reload();
+                        } else {
+                            // Manejar el caso en que la solicitud no se completó exitosamente
+                            console.error('Error en la solicitud PATCH:', response.status);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al procesar la solicitud:', error);
+                    });
+
+            });
+            //
+        })
+
 
     });
 
@@ -114,11 +173,15 @@ function calcularCantidad(){
 
 
 function calcularPrecioFinal(){
+
     const productoCard = document.querySelectorAll('#tarjetaCesta');
     let totalCantidad = 0; // Variable para acumular las cantidades
 
+    console.log(productoCard);
     for (let i = 0; i < productoCard.length; i++) {
+
         const precioTexto = productoCard[i].querySelector('#precioProducto').textContent;
+        console.log(precioTexto);
         const precioSinEuro = precioTexto.replace('€', '').trim();
         const cantidad =  parseInt(productoCard[i].querySelector('#cantidad').textContent);
         const precioNumerico = parseFloat(precioSinEuro) *cantidad;
@@ -136,16 +199,16 @@ function calcularPrecioFinal(){
     document.querySelector('#precio-final').innerText = totalCantidad.toFixed(2) + "€";
 
 
+
 }
 
 
 document.addEventListener("DOMContentLoaded", async function() {
+    await sleep(400);
     const botonAplicarCodigoPromocional = document.querySelector(".input-button-container button");
-
+    console.log(botonAplicarCodigoPromocional);
 
     botonAplicarCodigoPromocional.addEventListener('click', function(){
-        const input = document.querySelector(".input-button-container input").value;
-
         fetch(`http://localhost:3000/users`)
             .then(response => {
                 if (!response.ok) {
@@ -154,6 +217,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 return response.json();
             })
             .then(usuarios => {
+                const input = document.querySelector(".input-button-container input").value;
                 // Verificar si alguno de los usuarios tiene el código promocional introducido
                 const usuarioConPromocion = usuarios.find(usuario => usuario.promoCode === input);
                 if (usuarioConPromocion) {
