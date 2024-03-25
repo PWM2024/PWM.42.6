@@ -414,5 +414,107 @@
       "descripcion": "La rutina de entrenamiento de plyometrics se enfoca en ejercicios explosivos diseñados para mejorar la potencia y la explosividad muscular. Incluye movimientos como saltos en caja, saltos de rana, saltos con cuerda y burpees, realizados en 3-4 series con un rango de repeticiones de 8-10. Este tipo de entrenamiento involucra estiramientos rápidos seguidos de contracciones musculares potentes, lo que mejora la capacidad de generar fuerza en un período corto de tiempo. Al incorporar esta rutina en tu entrenamiento, experimentarás mejoras significativas en la capacidad de salto, la velocidad y la fuerza explosiva.",
       "etiqueta": "Flexibilidad"
     }
+  ],
+  "alimentos": [
+    {
+      "id": "1",
+      "nombre": "Manzana",
+      "kcal_por_cada_100gr": 52
+    },
+    {
+      "id": "2",
+      "nombre": "Banana",
+      "kcal_por_cada_100gr": 89
+    },
+    {
+      "id": "3",
+      "nombre": "Arroz",
+      "kcal_por_cada_100gr": 130
+    },
+    {
+      "id": "4",
+      "nombre": "Pasta",
+      "kcal_por_cada_100gr": 131
+    },
+    {
+      "id": "5",
+      "nombre": "Pollo",
+      "kcal_por_cada_100gr": 165
+    },
+    {
+      "id": "6",
+      "nombre": "Carne de res",
+      "kcal_por_cada_100gr": 250
+    },
+    {
+      "id": "7",
+      "nombre": "Pescado",
+      "kcal_por_cada_100gr": 206
+    },
+    {
+      "id": "8",
+      "nombre": "Huevos",
+      "kcal_por_cada_100gr": 155
+    },
+    {
+      "id": "9",
+      "nombre": "Leche",
+      "kcal_por_cada_100gr": 42
+    },
+    {
+      "id": "10",
+      "nombre": "Queso",
+      "kcal_por_cada_100gr": 402
+    },
+    {
+      "id": "11",
+      "nombre": "Yogurt",
+      "kcal_por_cada_100gr": 59
+    },
+    {
+      "id": "12",
+      "nombre": "Espinacas",
+      "kcal_por_cada_100gr": 23
+    },
+    {
+      "id": "13",
+      "nombre": "Brócoli",
+      "kcal_por_cada_100gr": 34
+    },
+    {
+      "id": "14",
+      "nombre": "Zanahorias",
+      "kcal_por_cada_100gr": 41
+    },
+    {
+      "id": "15",
+      "nombre": "Tomates",
+      "kcal_por_cada_100gr": 18
+    },
+    {
+      "id": "16",
+      "nombre": "Fresas",
+      "kcal_por_cada_100gr": 32
+    },
+    {
+      "id": "17",
+      "nombre": "Naranjas",
+      "kcal_por_cada_100gr": 47
+    },
+    {
+      "id": "18",
+      "nombre": "Plátanos",
+      "kcal_por_cada_100gr": 89
+    },
+    {
+      "id": "19",
+      "nombre": "Almendras",
+      "kcal_por_cada_100gr": 579
+    },
+    {
+      "id": "20",
+      "nombre": "Papas",
+      "kcal_por_cada_100gr": 77
+    }
   ]
 }
