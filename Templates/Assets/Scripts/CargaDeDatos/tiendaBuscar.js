@@ -159,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const limpiar = document.querySelector('.limpiar');
 
     aplicar.addEventListener("click", function () {
+
+
         const filtro =  document.querySelector('.filtro');
         const checkboxes = filtro.querySelectorAll('.filtro input[type="checkbox"]')
         let etiquetas = [];
@@ -167,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 etiquetas.push(filtro.querySelectorAll('.text')[i].textContent);
             }
         }
+
 
         const filtroPrecio = document.querySelector('.d-flex');
         const minPrecio = filtroPrecio.querySelector('.input-min').value;
@@ -184,32 +187,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const ordenarMasAlto = document.getElementById('ordenarMasAlto');
-    const ordenarMasBajo = document.getElementById('ordenarMasBajo');
+    setTimeout(() => {
 
-    ordenarMasAlto.addEventListener('click', function() {
-        ordenarTarjetas(true);
-    });
+        const ordenarMasAlto = document.getElementById('ordenarMasAlto');
+        const ordenarMasBajo = document.getElementById('ordenarMasBajo');
 
-    ordenarMasBajo.addEventListener('click', function() {
-        ordenarTarjetas(false);
-    });
-
-    function ordenarTarjetas(descendente) {
-        const tarjetasProductos = document.querySelectorAll('.tarjetaProducto2');
-        const arrayTarjetasProductos = Array.from(tarjetasProductos);
-
-        arrayTarjetasProductos.sort(function(a, b) {
-            const precioA = parseFloat(a.querySelector('div').innerText);
-            const precioB = parseFloat(b.querySelector('div').innerText);
-            return descendente ? precioB - precioA : precioA - precioB;
+        ordenarMasAlto.addEventListener('click', function() {
+            ordenarTarjetas(true);
         });
 
-        const contenedorProductos = document.getElementById('productos');
-        contenedorProductos.innerHTML = '';
-
-        arrayTarjetasProductos.forEach(function(tarjeta) {
-            contenedorProductos.appendChild(tarjeta);
+        ordenarMasBajo.addEventListener('click', function() {
+            ordenarTarjetas(false);
         });
-    }
+
+        function ordenarTarjetas(descendente) {
+            const tarjetasProductos = document.querySelectorAll('.tarjetaProducto2');
+            const arrayTarjetasProductos = Array.from(tarjetasProductos);
+
+            arrayTarjetasProductos.sort(function(a, b) {
+                const precioA = parseFloat(a.querySelector('div').innerText);
+                const precioB = parseFloat(b.querySelector('div').innerText);
+                return descendente ? precioB - precioA : precioA - precioB;
+            });
+
+            const contenedorProductos = document.getElementById('productos');
+            contenedorProductos.innerHTML = '';
+
+            arrayTarjetasProductos.forEach(function(tarjeta) {
+                contenedorProductos.appendChild(tarjeta);
+            });
+        }
+    }, 300); // 2000 milisegundos = 2 segundos
 });
