@@ -73,8 +73,7 @@ h1{
     .promociones-container{
         display: block;
         height: 700px;
-        margin-top: 15%;
-        margin-bottom: 0%;
+        margin-top: 0;
     }
 
     h1{
@@ -87,15 +86,15 @@ h1{
         width: fit-content;
         height: 26%;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 80px;
     }
 
     .tarjetaProducto2 .producto-card {
-        width: 120%;
+        width: 100%;
         height: 120%;
         display: flex;
         text-align: center;
-        margin:0;
+        margin: 0;
         padding: 0;
     }
 
@@ -123,6 +122,9 @@ h1{
 
     .tarjetaProducto2 .producto-card .producto-details {
         text-align: center;
+        position: relative;
+        left: -3%;
+        top: 3%;
     }
 
     .tarjetaProducto2 .producto-card .producto-details p {
@@ -137,8 +139,42 @@ h1{
     .novedades-container {
         display: block;
         height: 600px;
+        margin-top: 0;
+    }
+
+    .tarjetaProducto2 .producto-card .producto-details h1{
+        font-size: 18px;
+    }
+
+    .tarjetaProducto2 .producto-card .producto-details h2{
+        font-size: 16px;
+    }
+
+    .novedades-container .producto-card .producto-details h1{
+        font-size: 16px;
+    }
+
+    .novedades-container .producto-card .producto-details h2{
+        font-size: 14px;
+    }
+
+    .novedades-container .producto-card .precio-y-botones .precio{
+        font-size: 16px;
+    }
+
+    .novedades-container .tarjetaProducto2 .producto-card {
+        width: 100%;
+        height: 136%;
+        display: flex;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .novedades-container .producto-card .precio-y-botones
+    .eliminar-btn{
+        position: relative;
+        margin-top: 5%;
     }
 
 }
-
-

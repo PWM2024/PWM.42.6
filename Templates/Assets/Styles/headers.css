@@ -272,13 +272,7 @@ nav ul li ul li:hover {
         flex-direction: unset;
         justify-content: flex-end;
         padding: 0;
-    }
-
-    .headerSinBuscarConLogin{
-        /*padding: 0;*/
-    }
-
-    .up-header-mobile {
+        margin-bottom: 10px;
     }
 
     .hideOnMobile, #hide-up-header {
@@ -288,6 +282,8 @@ nav ul li ul li:hover {
     .up-header-mobile {
         text-align: center;
         display: block;
+        position: relative;
+        left: -5%;
     }
     .up-header-mobile button{
         width: fit-content!important;
@@ -384,7 +380,7 @@ nav ul li ul li:hover {
 
     .menu-button {
         position: relative;
-        top: 0;
+        top: -2px;
         right: 375px;
         padding: 0;
         scale: 1.2;
@@ -419,6 +415,15 @@ nav ul li ul li:hover {
         position: relative;
         right: -65%;
         padding: 0;
+    }
+
+    .logo3-buscar{
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        right: -95%;
+        padding: 0;
+        z-index: 9999;
     }
 
 }

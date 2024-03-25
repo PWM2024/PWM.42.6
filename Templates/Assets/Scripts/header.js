@@ -4,11 +4,6 @@ menu.addEventListener('click', showSidebar)
 var close = document.querySelector('#hideSidebar');
 close.addEventListener('click', hideSidebar);
 
-var closeCesta = document.querySelector('#cesta-cerrar');
-if (closeCesta){
-    closeCesta.addEventListener('click', showButton);
-}
-
 var buttonCesta = document.querySelector('#cesta-btn-movil');
 if (buttonCesta){
     buttonCesta.addEventListener('click', hideSidebar);
