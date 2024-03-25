@@ -32,6 +32,7 @@ fetch('http://localhost:3000/productos')
                 tarjetaPromocion.querySelector('p').innerText = promocion.descripcion;
                 tarjetaPromocion.querySelector('div').innerText = `${promocion.precio}€`;
                 tarjetaPromocion.querySelector('#id').innerText = promocion.id;
+                tarjetaPromocion.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Tienda\\${promocion.img}`;
 
                 // Agregar la tarjeta al contenedor de productos
                 contenedorPromociones.appendChild(tarjetaPromocion);
@@ -61,7 +62,8 @@ fetch('http://localhost:3000/productos')
                 tarjetaNovedad.querySelector('p').innerText = novedad.descripcion;
                 tarjetaNovedad.querySelector('div').innerText = `${novedad.precio}€`;
                 tarjetaNovedad.querySelector('#id').innerText = novedad.id;
-
+                tarjetaNovedad.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Tienda\\${novedad.img}`;
+                
                 // Agregar la tarjeta al contenedor de productos
                 contenedorNovedades.appendChild(tarjetaNovedad);
             }

@@ -60,7 +60,8 @@ setTimeout(() => {
                 tarjetaProducto.querySelector('p').innerText = producto.descripcion;
                 tarjetaProducto.querySelector('div').innerText = `${producto.precio}€`;
                 tarjetaProducto.querySelector('#id').innerText = producto.id;
-
+                tarjetaProducto.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Tienda\\${producto.img}`;
+                
                 // Agregar la tarjeta al contenedor de productos
                 contenedorProductos.appendChild(tarjetaProducto);
             }

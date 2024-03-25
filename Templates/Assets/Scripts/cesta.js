@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             productoCard.innerHTML = `
 
-            <img src="../Source/default-img.png" alt="Producto">
+            <img src="../Source/Tienda/${producto.img}" alt="Producto">
             <section class="producto-details">
                 <h1>${producto.nombre}</h1>
                 <h2>${producto.description}</h2>

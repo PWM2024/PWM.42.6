@@ -13,7 +13,7 @@ fetch('http://localhost:3000/productos')
             tarjetaProducto.querySelector('h1').innerText = producto.nombre;
             tarjetaProducto.querySelector('h2').innerText = producto.nombre_detallado;
             tarjetaProducto.querySelector('p').innerText = producto.descripcion;
-
+            tarjetaProducto.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Tienda\\${producto.img}`;
 
             // Agregar la tarjeta al contenedor de productos
             contenedorProductos.appendChild(tarjetaProducto);
