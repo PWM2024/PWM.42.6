@@ -78,8 +78,12 @@ fetch('http://localhost:3000/rutinas')
                 fetch(`http://localhost:3000/rutinas/${id}`)
                     .then(response => response.json())
                     .then(data => {
-                        const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
-                        detallesTarjeta.querySelector('p').innerText = data.descripcion;
+                        setTimeout(function() {
+                            const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
+                            console.log(detallesTarjeta.querySelector('p'));
+                            detallesTarjeta.querySelector('p').innerText = data.descripcion;
+                        }, 20); // Cambia 1000 por el número de milisegundos que desees de retraso
+
 
                     })
             })
