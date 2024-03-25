@@ -51,19 +51,23 @@
     align-items: center;
     z-index: 10;
 }
+
 .body-cesta{
     margin: 1%;
 }
+
 .resumen-compra{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 5%;
     margin-top: 60px;
 }
+
 .resumen-compra span{
     position: absolute;
     right: 6%;
     font-weight: bold;
 }
+
 #precio-final{
     font-size: xx-large;
 }
@@ -71,19 +75,52 @@
 .cesta-container .producto-card{
     box-shadow: none;
     border: none;
-    border-radius: 0%;
+    border-radius: 0;
     border-bottom: 1px solid #f3efef;
+    height: 380px;
 }
+
+.producto-details{
+    position: relative;
+    left: 51%;
+    top: -35%;
+}
+
+.producto-details #precioProducto{
+    position: relative;
+    margin-top: 16%;
+    width: 15%;
+}
+
+.producto-details h1{
+    margin: 0;
+}
+
+.producto-details h2{
+    color: #999999;
+}
+
+.producto-card img{
+    width: 225px;
+    height: 225px;
+    position: relative;
+    top: 14%;
+    left: 5%;
+}
+
 .producto-unidades{
     position:absolute;
-    left: 40%;
+    left: 20%;
+    bottom: -61%;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
 }
+
 .producto-unidades h1 {
     font-size: 80% !important;
 }
+
 .operar-cantidad {
     width: 30px;
     height: 30px;
@@ -99,6 +136,7 @@
     box-shadow: 3px 3px 5px #b7b6b6, -1px -1px 2px #e8e8e8;
     user-select: none;
 }
+
 .operar-cantidad:hover{
     scale: 1.1;
     align-items: center;
@@ -131,6 +169,7 @@
 .cestaHeader{
     transform: translateX(110%);
 }
+
 .cestaHeader.open{
     transform: translateX(0);
 }
