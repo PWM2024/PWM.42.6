@@ -47,7 +47,7 @@ fetch('http://localhost:3000/dietas')
             const tarjetaDieta = document.querySelector('.tarjetaGeneral');
 
             // Llenar la tarjeta clonada con los datos del producto
-            tarjetaDieta.querySelector('img').innerText = dieta.img;
+            tarjetaDieta.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Dietas\\${dieta.img}`;
             tarjetaDieta.querySelector('p').innerText = dieta.nombre;
             tarjetaDieta.querySelector('#id').innerText = dieta.id;
 
@@ -78,6 +78,7 @@ fetch('http://localhost:3000/dietas')
                         setTimeout(function() {
                             const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
                             detallesTarjeta.querySelector('p').innerText = data.descripcion;
+                            detallesTarjeta.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Dietas\\${data.img}`;
                         }, 20); // Cambia 1000 por el número de milisegundos que desees de retraso
                     })
             })

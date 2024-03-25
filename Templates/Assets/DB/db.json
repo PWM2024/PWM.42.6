@@ -9,7 +9,10 @@
       "altura": "171",
       "imc": "",
       "kcal": "1500",
-      "cesta": [],
+      "cesta": [
+        "010",
+        "012"
+      ],
       "listaDeseos": [],
       "id": "1",
       "compras": [
@@ -25,7 +28,10 @@
       "altura": "",
       "imc": "",
       "kcal": "",
-      "cesta": [],
+      "cesta": [
+        "012",
+        "010"
+      ],
       "listaDeseos": [],
       "id": "2",
       "compras": []
@@ -46,7 +52,7 @@
       "nombre_detallado": "Proteína en Polvo de Suero de Leche",
       "descripcion": "Suplemento de proteína en polvo de suero de leche, ideal para la construcción muscular y la recuperación después del ejercicio.",
       "precio": 29.99,
-      "img": "proteina.jpg",
+      "img": "proteina.png",
       "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
@@ -57,7 +63,7 @@
       "nombre_detallado": "Barra Energética de Avena y Frutos Secos",
       "descripcion": "Barra energética hecha con ingredientes naturales como avena, almendras, nueces y pasas, perfecta como refrigerio antes o después del entrenamiento.",
       "precio": 2.99,
-      "img": "barra_energetica.jpg",
+      "img": "barra_energetica.png",
       "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
@@ -68,7 +74,7 @@
       "nombre_detallado": "Batido de Proteínas Sabor Vainilla",
       "descripcion": "Delicioso batido de proteínas con sabor a vainilla, perfecto para después del entrenamiento para recuperar energía y nutrir los músculos.",
       "precio": 24.99,
-      "img": "batido_proteinas.jpg",
+      "img": "batido_proteinas.png",
       "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": false
@@ -79,7 +85,7 @@
       "nombre_detallado": "Mezcla de Frutos Secos con Pasas",
       "descripcion": "Mezcla de frutos secos y pasas con un toque de sal, ideal como un snack saludable para cualquier momento del día.",
       "precio": 4.49,
-      "img": "snack_frutos_secos.jpg",
+      "img": "snack_frutos_secos.png",
       "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
@@ -90,7 +96,7 @@
       "nombre_detallado": "Pack de Barras de Proteínas Variadas",
       "descripcion": "Pack variado de barras de proteínas con sabores como chocolate, vainilla y fresa, perfectas para llevar como refrigerio después del ejercicio.",
       "precio": 12.99,
-      "img": "barras_proteinas.jpg",
+      "img": "barras_proteinas.png",
       "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
@@ -101,7 +107,7 @@
       "nombre_detallado": "Polvo de Creatina Monohidratada",
       "descripcion": "Suplemento en polvo de creatina monohidratada, ideal para mejorar el rendimiento deportivo y la recuperación muscular.",
       "precio": 17.99,
-      "img": "suplemento_creatina.jpg",
+      "img": "suplemento_creatina.png",
       "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": false
@@ -112,7 +118,7 @@
       "nombre_detallado": "Botella de Agua Deportiva de 1 litro",
       "descripcion": "Botella de agua deportiva resistente y reutilizable, con capacidad de 1 litro, perfecta para mantenerse hidratado durante el ejercicio.",
       "precio": 5.49,
-      "img": "botella_agua.jpg",
+      "img": "botella_agua.png",
       "etiqueta": "Proteína",
       "promocion": false,
       "novedad": false
@@ -123,7 +129,7 @@
       "nombre_detallado": "Mezcla de Frutos Secos con Trozos de Chocolate",
       "descripcion": "Mezcla de frutos secos como almendras, nueces y avellanas con trozos de chocolate negro, una combinación perfecta de energía y sabor.",
       "precio": 6.99,
-      "img": "mezcla_frutos_chocolate.jpg",
+      "img": "mezcla_frutos_chocolate.png",
       "etiqueta": "Musculación",
       "promocion": false,
       "novedad": false
@@ -134,7 +140,7 @@
       "nombre_detallado": "Polvo de Proteína Vegana Sabor a Chocolate",
       "descripcion": "Suplemento en polvo de proteína vegana con un delicioso sabor a chocolate, ideal para personas que siguen una dieta vegetariana o vegana.",
       "precio": 21.99,
-      "img": "proteina_vegana.jpg",
+      "img": "proteina_vegana.png",
       "etiqueta": "Recuperación",
       "promocion": false,
       "novedad": true
@@ -145,7 +151,7 @@
       "nombre_detallado": "Galletas de Avena y Plátano sin Azúcar",
       "descripcion": "Galletas saludables hechas con avena, plátano maduro y sin añadir azúcar, perfectas para un tentempié nutritivo y delicioso.",
       "precio": 3.99,
-      "img": "galletas_avena_platano.jpg",
+      "img": "galletas_avena_platano.png",
       "etiqueta": "Proteína",
       "promocion": true,
       "novedad": false
@@ -156,7 +162,7 @@
       "nombre_detallado": "Cápsulas de Omega-3 con Aceite de Pescado",
       "descripcion": "Suplemento en cápsulas de omega-3 con aceite de pescado de alta calidad, ideal para promover la salud del corazón y las articulaciones.",
       "precio": 14.99,
-      "img": "suplemento_omega3.jpg",
+      "img": "suplemento_omega3.png",
       "etiqueta": "Musculación",
       "promocion": false,
       "novedad": true
@@ -167,7 +173,7 @@
       "nombre_detallado": "Crema de Almendras 100% Natural",
       "descripcion": "Deliciosa crema de almendras sin añadir azúcar ni aceites añadidos, perfecta para untar en tostadas o agregar a batidos y recetas.",
       "precio": 9.99,
-      "img": "crema_almendras.jpg",
+      "img": "crema_almendras.png",
       "etiqueta": "Recuperación",
       "promocion": true,
       "novedad": false
@@ -178,7 +184,7 @@
       "nombre_detallado": "Pack de Muesli Variado para Desayunos",
       "descripcion": "Pack variado de muesli con ingredientes como copos de avena, frutos secos y semillas, perfecto para un desayuno nutritivo y saludable.",
       "precio": 11.49,
-      "img": "pack_muesli.jpg",
+      "img": "pack_muesli.png",
       "etiqueta": "Proteína",
       "promocion": false,
       "novedad": true
@@ -189,7 +195,7 @@
       "nombre_detallado": "Té Verde Matcha en Polvo Orgánico",
       "descripcion": "Té verde matcha en polvo de origen orgánico, rico en antioxidantes y energizante, ideal para preparar bebidas calientes o frías.",
       "precio": 18.99,
-      "img": "te_matcha.jpg",
+      "img": "te_matcha.png",
       "etiqueta": "Musculación",
       "promocion": true,
       "novedad": false
@@ -200,109 +206,127 @@
       "id": "1",
       "nombre": "Dieta Mediterránea",
       "descripcion": "Prepara un plato con una base de aceitunas, tomates y aceite de oliva. Acompaña con pescado grillado sazonado con hierbas mediterráneas como el romero y el tomillo. Sirve junto con una porción de verduras asadas o al vapor, como calabacín, berenjena y pimientos.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta1.png"
     },
     {
       "id": "2",
       "nombre": "Dieta Rica en Proteínas",
       "descripcion": "Prepara una pechuga de pollo a la parrilla sazonada con limón, ajo y hierbas. Acompaña con quinoa cocida al vapor y espárragos asados con aceite de oliva y sal. Sirve caliente y disfruta de una comida rica en proteínas y nutrientes.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta2.png"
     },
     {
       "id": "3",
       "nombre": "Dieta Cetogénica",
       "descripcion": "Desayuna con huevos revueltos con aguacate y bacon. Almuerza una ensalada de espinacas con salmón ahumado y adereza con aceite de oliva y limón. Cena una tortilla de espinacas y queso feta. Mantén la ingesta de carbohidratos baja y la de grasas y proteínas alta para entrar en cetosis.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta3.png"
     },
     {
       "id": "4",
       "nombre": "Dieta Vegetariana",
       "descripcion": "Prepara una ensalada fresca con una variedad de hojas verdes como lechuga, espinacas y rúcula. Agrega tomates cherry, nueces picadas y trozos de queso feta. Aliña con una vinagreta de aceite de oliva, vinagre balsámico y mostaza. Sirve con pan integral tostado y disfruta de una comida vegetariana y saludable.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta4.png"
     },
     {
       "id": "5",
       "nombre": "Dieta Rica en Grasas",
       "descripcion": "Cocina un filete de salmón al horno con rodajas de limón y hierbas frescas como el eneldo y el perejil. Acompaña con una guarnición de aguacate rebanado y almendras tostadas. Rocía con un chorrito de aceite de oliva extra virgen y salpica con semillas de sésamo. Disfruta de una comida rica en grasas saludables y omega-3.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta5.png"
     },
     {
       "id": "6",
       "nombre": "Dieta DASH",
       "descripcion": "Cocina un filete de pollo a la parrilla sazonado con hierbas como el tomillo y el romero. Acompaña con una guarnición de brócoli al vapor y batatas asadas al horno con una pizca de canela. Disfruta de una comida baja en sodio y rica en nutrientes.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta6.png"
     },
     {
       "id": "7",
       "nombre": "Dieta Atkins",
       "descripcion": "Prepara una hamburguesa casera con carne magra de res sazonada con especias como la pimienta negra y el ajo en polvo. Acompaña con lonchas de queso cheddar, rodajas de tomate, aguacate y hojas de lechuga. Sirve sin pan y disfruta de una comida baja en carbohidratos y rica en proteínas.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta7.png"
     },
     {
       "id": "8",
       "nombre": "Dieta Rica en Carbohidratos",
       "descripcion": "Cocina pasta integral al dente y sirve con una salsa casera de tomate, cebolla y champiñones. Acompaña con una ensalada fresca de hojas verdes, pepino y pimientos. Sirve con pan integral recién horneado y disfruta de una comida satisfactoria y llena de energía.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta8.png"
     },
     {
       "id": "9",
       "nombre": "Dieta de la Zona",
       "descripcion": "Prepara una porción equilibrada de pechuga de pollo a la plancha con arroz integral cocido y verduras al vapor como brócoli y zanahorias. Aliña con un chorrito de aceite de oliva y una pizca de sal. Disfruta de una comida que sigue la proporción adecuada de carbohidratos, proteínas y grasas.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta9.png"
     },
     {
       "id": "10",
       "nombre": "Dieta Flexitaria",
       "descripcion": "Marina cubos de tofu en una mezcla de salsa de soja, jengibre rallado y ajo picado. Asa en una sartén caliente hasta que estén dorados y crujientes. Acompaña con verduras asadas como pimientos, calabacín y champiñones, y una porción de quinoa cocida. Disfruta de una comida flexible y nutritiva.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta10.png"
     },
     {
       "id": "11",
       "nombre": "Dieta Rica en Fibras",
       "descripcion": "Prepara tacos de tortilla integral rellenos de frijoles cocidos, aguacate en rodajas, salsa de tomate fresco, cebolla picada y cilantro. Acompaña con una ensalada de col y zanahoria rallada aliñada con limón y aceite de oliva. Disfruta de una comida rica en fibras y nutrientes.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta11.png"
     },
     {
       "id": "12",
       "nombre": "Dieta de la Sopa de Col",
       "descripcion": "Prepara una sopa de col con cebolla, zanahoria, apio y col cortados en trozos. Cocina en caldo de verduras hasta que estén tiernos y sazona con hierbas aromáticas como el tomillo y el orégano. Sirve caliente y disfruta de una comida reconfortante y baja en calorías.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta12.png"
     },
     {
       "id": "13",
       "nombre": "Dieta Ornish",
       "descripcion": "Prepara una ensalada de garbanzos con tomates cherry cortados por la mitad, pepinos en rodajas y cebolla roja picada finamente. Aliña con una vinagreta de limón y mostaza. Sirve junto con pan integral tostado y disfruta de una comida deliciosa y saludable.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta13.png"
     },
     {
       "id": "14",
       "nombre": "Dieta de South Beach",
       "descripcion": "Cocina un filete de salmón a la parrilla con espárragos al vapor y puré de coliflor. Sazona el salmón con sal, pimienta y un chorrito de aceite de oliva. Sirve caliente y disfruta de una comida baja en carbohidratos y rica en nutrientes.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta14.png"
     },
     {
       "id": "15",
       "nombre": "Dieta de la Clínica Mayo",
       "descripcion": "Cocina un filete de ternera a la parrilla con una mezcla de especias como el comino, el pimentón y el ajo en polvo. Acompaña con quinoa cocida al vapor y una guarnición de verduras salteadas con espárragos. Sirve caliente y disfruta de una comida nutritiva y satisfactoria.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta15.png"
     },
     {
       "id": "16",
       "nombre": "Dieta Alcalina",
       "descripcion": "Prepara un batido verde con una base de espinacas frescas, pepino cortado en rodajas y apio picado. Agrega un puñado de hojas de menta fresca y agua de coco. Mezcla hasta obtener una consistencia suave y sirve frío. Disfruta de una bebida refrescante y alcalinizante.",
-      "etiqueta": "Mediterránea"
+      "etiqueta": "Mediterránea",
+      "img": "Dieta16.png"
     },
     {
       "id": "17",
       "nombre": "Dieta Macrobiótica",
       "descripcion": "Prepara un tazón de arroz integral cocido y sirve con una variedad de vegetales al vapor como brócoli, zanahorias y champiñones. Agrega cubos de tofu marinados en salsa de soja y jengibre rallado. Disfruta de una comida equilibrada y nutritiva.",
-      "etiqueta": "Rica en Proteínas"
+      "etiqueta": "Rica en Proteínas",
+      "img": "Dieta17.png"
     },
     {
       "id": "18",
       "nombre": "Dieta de la Avena",
       "descripcion": "Prepara porridge (o gacha) de avena cocida en leche de almendras con una pizca de canela y una cucharadita de miel. Decora con rodajas de plátano y un puñado de nueces picadas. Sirve caliente y disfruta de un desayuno reconfortante y lleno de energía.",
-      "etiqueta": "Sin Gluten"
+      "etiqueta": "Sin Gluten",
+      "img": "Dieta18.png"
     }
   ],
   "rutinas": [
@@ -333,25 +357,25 @@
     {
       "id": "5",
       "nombre": "Rutina de Entrenamiento Funcional",
-      "descripcion": "La rutina de entrenamiento funcional se centra en ejercicios que imitan los movimientos naturales del cuerpo, fortaleciendo los músculos necesarios para las actividades cotidianas. Incluye una variedad de ejercicios dinámicos como sentadillas con salto, flexiones de una pierna, levantamiento de pesas rusas y giros de torso. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite desarrollar fuerza, estabilidad y \u200B\u200Bcoordinación. Esta rutina es perfecta para mejorar tu rendimiento en la vida diaria y en actividades deportivas al fortalecer los músculos de manera funcional y equilibrada.",
+      "descripcion": "La rutina de entrenamiento funcional se centra en ejercicios que imitan los movimientos naturales del cuerpo, fortaleciendo los músculos necesarios para las actividades cotidianas. Incluye una variedad de ejercicios dinámicos como sentadillas con salto, flexiones de una pierna, levantamiento de pesas rusas y giros de torso. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite desarrollar fuerza, estabilidad y ​​coordinación. Esta rutina es perfecta para mejorar tu rendimiento en la vida diaria y en actividades deportivas al fortalecer los músculos de manera funcional y equilibrada.",
       "etiqueta": "En Casa"
     },
     {
       "id": "6",
       "nombre": "Rutina de Entrenamiento en Casa",
-      "descripcion": "Diseñada para ser realizada en la comodidad de tu hogar con poco o ningún equipamiento, esta rutina de entrenamiento te ofrece una variedad de ejercicios efectivos para fortalecer todo el cuerpo. Desde sentadillas y flexiones hasta abdominales, planchas y saltos, cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15. Esta rutina es ideal para aquellos que buscan mantenerse activos y en forma sin la necesidad de ir a un gimnasio. Al seguir este programa de manera consistente, desarrollarás fuerza, resistencia y \u200B\u200Bflexibilidad, mejorando tu salud y bienestar en general.",
+      "descripcion": "Diseñada para ser realizada en la comodidad de tu hogar con poco o ningún equipamiento, esta rutina de entrenamiento te ofrece una variedad de ejercicios efectivos para fortalecer todo el cuerpo. Desde sentadillas y flexiones hasta abdominales, planchas y saltos, cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15. Esta rutina es ideal para aquellos que buscan mantenerse activos y en forma sin la necesidad de ir a un gimnasio. Al seguir este programa de manera consistente, desarrollarás fuerza, resistencia y ​​flexibilidad, mejorando tu salud y bienestar en general.",
       "etiqueta": "Flexibilidad"
     },
     {
       "id": "7",
       "nombre": "Rutina de Entrenamiento de Peso Corporal",
-      "descripcion": "La rutina de entrenamiento de peso corporal se basa en ejercicios que utilizan el peso del propio cuerpo como resistencia. Incluye movimientos como flexiones, dominadas, sentadillas, planchas y zancadas, diseñados para fortalecer los músculos principales y mejorar la resistencia. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite adaptar la intensidad según tu nivel de condición física. Esta rutina es perfecta para aquellos que desean entrenar en cualquier lugar y en cualquier momento, sin necesidad de equipamiento adicional. Al seguir este programa de entrenamiento, notarás mejoras en tu fuerza, \u200B\u200Bestabilidad y \u200B\u200Btono muscular.",
+      "descripcion": "La rutina de entrenamiento de peso corporal se basa en ejercicios que utilizan el peso del propio cuerpo como resistencia. Incluye movimientos como flexiones, dominadas, sentadillas, planchas y zancadas, diseñados para fortalecer los músculos principales y mejorar la resistencia. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite adaptar la intensidad según tu nivel de condición física. Esta rutina es perfecta para aquellos que desean entrenar en cualquier lugar y en cualquier momento, sin necesidad de equipamiento adicional. Al seguir este programa de entrenamiento, notarás mejoras en tu fuerza, ​​estabilidad y ​​tono muscular.",
       "etiqueta": "Fuerza"
     },
     {
       "id": "8",
       "nombre": "Rutina de Entrenamiento de Resistencia",
-      "descripcion": "La rutina de entrenamiento de resistencia está diseñada para mejorar la resistencia muscular y cardiovascular, utilizando una variedad de ejercicios que desafían tu cuerpo de manera integral. Incluye movimientos como correr, nadar, montar en bicicleta y remar, realizados en sesiones de 30-60 minutos con intensidad moderada a alta. Esta rutina es ideal para aquellos que buscan mejorar su resistencia cardiovascular, quemar calorías y aumentar la capacidad aeróbica. Al incorporar este entrenamiento de manera regular en tu rutina de ejercicios, experimentarás una mejora significativa en tu resistencia y \u200B\u200Bcapacidad para realizar actividades físicas prolongadas con mayor facilidad.",
+      "descripcion": "La rutina de entrenamiento de resistencia está diseñada para mejorar la resistencia muscular y cardiovascular, utilizando una variedad de ejercicios que desafían tu cuerpo de manera integral. Incluye movimientos como correr, nadar, montar en bicicleta y remar, realizados en sesiones de 30-60 minutos con intensidad moderada a alta. Esta rutina es ideal para aquellos que buscan mejorar su resistencia cardiovascular, quemar calorías y aumentar la capacidad aeróbica. Al incorporar este entrenamiento de manera regular en tu rutina de ejercicios, experimentarás una mejora significativa en tu resistencia y ​​capacidad para realizar actividades físicas prolongadas con mayor facilidad.",
       "etiqueta": "En Casa"
     },
     {
