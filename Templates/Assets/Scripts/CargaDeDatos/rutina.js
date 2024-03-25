@@ -5,7 +5,7 @@ function sleep(ms) {
 
 
 function cambiarRutina(tarjetaRutina, rutina){
-    tarjetaRutina.querySelector('img').innerText = rutina.img;
+    tarjetaRutina.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Rutinas\\${rutina.img}`;
     tarjetaRutina.querySelector('p').innerText = rutina.nombre;
     tarjetaRutina.querySelector('#id').innerText = rutina.id;
 }
@@ -82,6 +82,7 @@ fetch('http://localhost:3000/rutinas')
                             const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
                             console.log(detallesTarjeta.querySelector('p'));
                             detallesTarjeta.querySelector('p').innerText = data.descripcion;
+                            detallesTarjeta.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Rutinas\\${data.img}`;
                         }, 20); // Cambia 1000 por el número de milisegundos que desees de retraso
 
 

@@ -36,7 +36,7 @@ fetch('http://localhost:3000/rutinas')
             const tarjetaRutina = document.querySelector('.tarjetaGeneral');
 
             // Llenar la tarjeta clonada con los datos del product
-            tarjetaRutina.querySelector('img').innerText = rutina.img;
+            tarjetaRutina.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Rutinas\\${rutina.img}`;
             tarjetaRutina.querySelector('p').innerText = rutina.nombre;
             tarjetaRutina.querySelector('#id').innerText = rutina.id;
 
@@ -66,7 +66,7 @@ fetch('http://localhost:3000/rutinas')
                     .then(data => {
                         const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
                         detallesTarjeta.querySelector('p').innerText = data.descripcion;
-
+                        detallesTarjeta.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Rutinas\\${data.img}`;
                     })
             })
         }
