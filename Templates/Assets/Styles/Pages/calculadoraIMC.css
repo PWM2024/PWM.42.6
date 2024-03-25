@@ -33,11 +33,19 @@ body {
 
     .imcInfo .imcDetalles{
         margin-bottom: 10%;
+        width: 95%;
+        position: relative;
+        left: -3%;
     }
 
     .imcDetalle{
         min-width: 385px;
         min-height: 115px
+    }
+
+    .formulario-imc{
+        position: relative;
+        margin-top: 20%;
     }
 
     .formulario-imc label{
@@ -58,6 +66,11 @@ body {
     }
 
     .calcular-imc{
+        position: relative;
+        left: -3%;
+    }
+
+    .formCalculadoraIMC button{
         position: relative;
         left: -3%;
     }
