@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             <img src="../Source/Tienda/${producto.img}" alt="Producto">
             <section class="producto-details">
                 <h1>${producto.nombre}</h1>
-                <h2>${producto.description}</h2>
+                <h2>${producto.nombre_detallado}</h2>
                 <h1 id="precioProducto">${producto.precio}€</h1>
                 <p id="id">${producto.id}<p>
                 <section class="producto-unidades">
