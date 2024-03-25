@@ -328,109 +328,127 @@
       "id": "1",
       "nombre": "Rutina de Fuerza",
       "descripcion": "Esta completa rutina de fuerza te guiará en la realización de ejercicios específicamente diseñados para desarrollar tu musculatura y mejorar tu fuerza general. Incorpora una variedad de movimientos clave como las sentadillas, el press de banca, las dominadas y el peso muerto, trabajando diferentes grupos musculares para lograr un equilibrio corporal óptimo. Cada sesión consta de 3-4 series con un rango de repeticiones entre 8 y 12, lo que te permite desafiar tus límites y progresar gradualmente en tus capacidades. Los descansos de 1-2 minutos entre series te permiten recuperarte adecuadamente y maximizar el rendimiento en cada ejercicio. Al seguir esta rutina de manera consistente, notarás mejoras significativas en tu fuerza y resistencia, lo que te ayudará a enfrentar cualquier desafío físico con confianza.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina1.png"
     },
     {
       "id": "2",
       "nombre": "Rutina de Cardio",
       "descripcion": "Esta rutina de entrenamiento cardiovascular te ofrece una variedad de opciones para mejorar tu salud cardíaca y pulmonar mientras quemas calorías y mejoras tu resistencia. Desde correr y andar en bicicleta estática hasta saltar la cuerda y utilizar la elíptica, cada ejercicio está diseñado para mantener una intensidad moderada a alta durante 20-30 minutos. Alternar entre intervalos de alta intensidad y períodos de recuperación te ayudará a mejorar tu resistencia cardiovascular y a aumentar la eficiencia de tu entrenamiento. Además, esta rutina es perfecta para quemar grasa y mejorar tu composición corporal, lo que te ayudará a alcanzar tus objetivos de condición física de manera efectiva.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina2.png"
     },
     {
       "id": "3",
       "nombre": "Rutina de HIIT",
       "descripcion": "La rutina de Entrenamiento de Intervalos de Alta Intensidad (HIIT) es una forma eficaz de quemar calorías y mejorar tu condición física en poco tiempo. Incorpora una serie de ejercicios explosivos como burpees, sprints, saltos y flexiones, realizados en intervalos de trabajo cortos seguidos de períodos de descanso activo. La intensidad variable de este entrenamiento desafía tu cuerpo de manera óptima, ayudándote a mejorar tu resistencia cardiovascular, quemar grasa y aumentar tu metabolismo incluso después de haber terminado el entrenamiento. Al realizar este circuito de 3-4 veces, experimentarás un aumento en tu fuerza, resistencia y capacidad aeróbica en un tiempo reducido.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina3.png"
     },
     {
       "id": "4",
       "nombre": "Rutina de Flexibilidad",
       "descripcion": "Esta rutina de flexibilidad está diseñada para mejorar tu amplitud de movimiento y reducir el riesgo de lesiones al realizar actividades físicas. Incorpora una combinación de ejercicios de estiramiento estático y dinámico, enfocándose en grupos musculares clave como las piernas, la espalda y los hombros. Movimientos como estocadas, estiramientos de espalda, flexiones de cadera y torsiones ayudarán a mejorar tu flexibilidad y movilidad articular. Mantén cada estiramiento durante 15-30 segundos y repite de 2 a 3 veces para obtener los mejores resultados. Al incorporar esta rutina en tu régimen de entrenamiento, notarás una mejora significativa en tu flexibilidad y una reducción en la rigidez muscular, lo que te permitirá realizar movimientos con mayor facilidad y eficacia.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina4.png"
     },
     {
       "id": "5",
       "nombre": "Rutina de Entrenamiento Funcional",
       "descripcion": "La rutina de entrenamiento funcional se centra en ejercicios que imitan los movimientos naturales del cuerpo, fortaleciendo los músculos necesarios para las actividades cotidianas. Incluye una variedad de ejercicios dinámicos como sentadillas con salto, flexiones de una pierna, levantamiento de pesas rusas y giros de torso. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite desarrollar fuerza, estabilidad y ​​coordinación. Esta rutina es perfecta para mejorar tu rendimiento en la vida diaria y en actividades deportivas al fortalecer los músculos de manera funcional y equilibrada.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina5.png"
     },
     {
       "id": "6",
       "nombre": "Rutina de Entrenamiento en Casa",
       "descripcion": "Diseñada para ser realizada en la comodidad de tu hogar con poco o ningún equipamiento, esta rutina de entrenamiento te ofrece una variedad de ejercicios efectivos para fortalecer todo el cuerpo. Desde sentadillas y flexiones hasta abdominales, planchas y saltos, cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15. Esta rutina es ideal para aquellos que buscan mantenerse activos y en forma sin la necesidad de ir a un gimnasio. Al seguir este programa de manera consistente, desarrollarás fuerza, resistencia y ​​flexibilidad, mejorando tu salud y bienestar en general.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina6.png"
     },
     {
       "id": "7",
       "nombre": "Rutina de Entrenamiento de Peso Corporal",
       "descripcion": "La rutina de entrenamiento de peso corporal se basa en ejercicios que utilizan el peso del propio cuerpo como resistencia. Incluye movimientos como flexiones, dominadas, sentadillas, planchas y zancadas, diseñados para fortalecer los músculos principales y mejorar la resistencia. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite adaptar la intensidad según tu nivel de condición física. Esta rutina es perfecta para aquellos que desean entrenar en cualquier lugar y en cualquier momento, sin necesidad de equipamiento adicional. Al seguir este programa de entrenamiento, notarás mejoras en tu fuerza, ​​estabilidad y ​​tono muscular.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina7.png"
     },
     {
       "id": "8",
       "nombre": "Rutina de Entrenamiento de Resistencia",
       "descripcion": "La rutina de entrenamiento de resistencia está diseñada para mejorar la resistencia muscular y cardiovascular, utilizando una variedad de ejercicios que desafían tu cuerpo de manera integral. Incluye movimientos como correr, nadar, montar en bicicleta y remar, realizados en sesiones de 30-60 minutos con intensidad moderada a alta. Esta rutina es ideal para aquellos que buscan mejorar su resistencia cardiovascular, quemar calorías y aumentar la capacidad aeróbica. Al incorporar este entrenamiento de manera regular en tu rutina de ejercicios, experimentarás una mejora significativa en tu resistencia y ​​capacidad para realizar actividades físicas prolongadas con mayor facilidad.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina8.png"
     },
     {
       "id": "9",
       "nombre": "Rutina de Entrenamiento de Intervalos de Alta Intensidad (HIIT)",
       "descripcion": "La rutina de entrenamiento de intervalos de alta intensidad (HIIT) es un método eficaz para quemar calorías, mejorar la resistencia y aumentar el metabolismo en un corto período de tiempo. Incorpora una serie de ejercicios explosivos como burpees, sprints, saltos y flexiones, realizados en intervalos de trabajo cortos seguidos de períodos de descanso. Esta rutina desafía tu cuerpo de manera óptima, mejorando la capacidad cardiovascular y ayudándote a quemar grasa de manera eficiente. Al realizar este circuito de 3-4 veces, experimentarás un aumento en tu fuerza, resistencia y capacidad aeróbica en un tiempo reducido, lo que te ayudará a alcanzar tus objetivos de condición física de manera efectiva.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina9.png"
     },
     {
       "id": "10",
       "nombre": "Rutina de Entrenamiento de Potencia",
       "descripcion": "La rutina de entrenamiento de potencia se enfoca en ejercicios explosivos diseñados para aumentar la fuerza y la potencia muscular. Incluye movimientos como saltos de caja, lanzamiento de balón medicinal, arrancadas y saltos con barra. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 6-8, permitiendo un descanso completo entre series para recuperarse adecuadamente. Esta rutina es ideal para aquellos que buscan mejorar su capacidad explosiva y su fuerza funcional, lo que se traduce en un mejor rendimiento atlético y una mayor eficiencia en la realización de movimientos rápidos y poderosos.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina10.png"
     },
     {
       "id": "11",
       "nombre": "Rutina de Entrenamiento de Estabilidad",
       "descripcion": "La rutina de entrenamiento de estabilidad se centra en ejercicios diseñados para mejorar el equilibrio y la estabilidad del núcleo y las articulaciones. Incluye movimientos como planchas, levantamiento de una pierna, equilibrio sobre fitball y rotaciones de torso. Cada ejercicio se realiza en 3-4 series con un rango de repeticiones de 10-15, lo que te permite fortalecer los músculos estabilizadores y mejorar la coordinación neuromuscular. Esta rutina es perfecta para aquellos que buscan mejorar su equilibrio y prevenir lesiones al realizar actividades físicas o deportivas.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina11.png"
     },
     {
       "id": "12",
       "nombre": "Rutina de Entrenamiento de Resistencia Muscular",
       "descripcion": "La rutina de entrenamiento de resistencia muscular está diseñada para aumentar la resistencia de los músculos a través de una serie de ejercicios desafiantes. Incluye movimientos como flexiones, sentadillas, zancadas, dominadas y abdominales, realizados en 3-4 series con un rango de repeticiones de 12-15. Al mantener un alto volumen de repeticiones y series, esta rutina te ayudará a mejorar la resistencia muscular y a aumentar la capacidad de realizar actividades físicas durante períodos prolongados. Además, fortalecerá los músculos principales de todo el cuerpo, lo que te permitirá enfrentar cualquier desafío físico con mayor facilidad.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina12.png"
     },
     {
       "id": "13",
       "nombre": "Rutina de Entrenamiento de Movilidad",
       "descripcion": "La rutina de entrenamiento de movilidad se centra en ejercicios diseñados para mejorar la movilidad y la flexibilidad de las articulaciones. Incluye movimientos como estiramientos dinámicos, movilizaciones articulares y ejercicios de yoga, realizados en 3-4 series con un rango de repeticiones de 10-12. Esta rutina es perfecta para aquellos que desean mejorar su rango de movimiento y prevenir lesiones al realizar actividades físicas o deportivas. Al incorporar esta rutina en tu régimen de entrenamiento, experimentarás una mejora significativa en tu flexibilidad y movilidad articular, lo que te permitirá moverte con mayor facilidad y eficacia en tu vida diaria.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina13.png"
     },
     {
       "id": "14",
       "nombre": "Rutina de Entrenamiento de Alta Intensidad y Baja Duración",
       "descripcion": "La rutina de entrenamiento de alta intensidad y baja duración se enfoca en ejercicios intensos durante períodos cortos de tiempo. Incluye movimientos como saltos, sprints, flexiones y sentadillas, realizados en intervalos de 20-30 segundos seguidos de 10-20 segundos de descanso. Este tipo de entrenamiento desafiante te permite maximizar el tiempo de entrenamiento y quemar calorías de manera efectiva. Al repetir el circuito de 3 a 4 veces, experimentarás mejoras significativas en tu resistencia cardiovascular, fuerza muscular y capacidad de trabajo anaeróbico.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina14.png"
     },
     {
       "id": "15",
       "nombre": "Rutina de Entrenamiento de Hipertrofia",
       "descripcion": "La rutina de entrenamiento de hipertrofia está diseñada específicamente para aumentar el tamaño y la fuerza de los músculos. Incluye ejercicios como press de banca, curls de bíceps, extensiones de tríceps y sentadillas, realizados en 3-4 series con un rango de repeticiones de 8-12. Este enfoque de entrenamiento de alta intensidad y volumen provoca microlesiones en las fibras musculares, lo que estimula el crecimiento muscular. Al seguir esta rutina de manera consistente y complementarla con una nutrición adecuada, experimentarás un aumento significativo en la masa muscular y la fuerza general.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina15.png"
     },
     {
       "id": "16",
       "nombre": "Rutina de Entrenamiento de Equilibrio",
       "descripcion": "La rutina de entrenamiento de equilibrio se centra en ejercicios diseñados para mejorar la estabilidad y la coordinación. Incluye movimientos como equilibrio sobre una pierna, ejercicios con bosu, saltos laterales y movimientos de brazos y piernas, realizados en 3-4 series con un rango de repeticiones de 10-15. Este tipo de entrenamiento ayuda a fortalecer los músculos estabilizadores y mejora la propriocepción, lo que reduce el riesgo de lesiones y mejora el rendimiento en actividades deportivas y cotidianas que requieren equilibrio y coordinación.",
-      "etiqueta": "Fuerza"
+      "etiqueta": "Fuerza",
+      "img": "Rutina16.png"
     },
     {
       "id": "17",
       "nombre": "Rutina de Entrenamiento de Agilidad",
       "descripcion": "La rutina de entrenamiento de agilidad se enfoca en ejercicios diseñados para mejorar la rapidez de movimientos y la capacidad de cambiar de dirección rápidamente. Incluye movimientos como cambios de dirección, saltos a una pierna, ejercicios de slalom y sprints cortos, realizados en 3-4 series con un rango de repeticiones de 10-15. Este tipo de entrenamiento ayuda a mejorar la capacidad de reacción, la coordinación y la velocidad, lo que es beneficioso tanto para atletas como para personas que buscan mejorar su agilidad en la vida diaria.",
-      "etiqueta": "En Casa"
+      "etiqueta": "En Casa",
+      "img": "Rutina17.png"
     },
     {
       "id": "18",
       "nombre": "Rutina de Entrenamiento de Plyometrics",
       "descripcion": "La rutina de entrenamiento de plyometrics se enfoca en ejercicios explosivos diseñados para mejorar la potencia y la explosividad muscular. Incluye movimientos como saltos en caja, saltos de rana, saltos con cuerda y burpees, realizados en 3-4 series con un rango de repeticiones de 8-10. Este tipo de entrenamiento involucra estiramientos rápidos seguidos de contracciones musculares potentes, lo que mejora la capacidad de generar fuerza en un período corto de tiempo. Al incorporar esta rutina en tu entrenamiento, experimentarás mejoras significativas en la capacidad de salto, la velocidad y la fuerza explosiva.",
-      "etiqueta": "Flexibilidad"
+      "etiqueta": "Flexibilidad",
+      "img": "Rutina18.png"
     }
   ],
   "alimentos": [
