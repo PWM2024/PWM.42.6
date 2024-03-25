@@ -154,7 +154,6 @@ h1{
         margin:0;
     }
 
-    
     #left-btn,
     #right-btn{
         display:none;
@@ -169,6 +168,26 @@ h1{
     }
     .producto-details h2{
         font-size: 0.8rem !important;
+    }
+
+    .producto-details-tarjeta1 h1{
+        font-size: 18px;
+    }
+
+    .producto-details-tarjeta1 h2{
+        font-size: 16px;
+    }
+
+    .producto-details-tarjeta1 p{
+        font-size: 14px;
+    }
+
+    .tarjeta p{
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        left: -4%;
     }
 
 }

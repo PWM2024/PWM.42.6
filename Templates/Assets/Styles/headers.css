@@ -254,7 +254,7 @@ nav ul li ul li:hover {
 .logo3 {
     width: 7em;
     position: absolute;
-    top: 0%;
+    top: 0;
     right: 130%;
     user-select: none;
 }
@@ -271,6 +271,7 @@ nav ul li ul li:hover {
     header{
         flex-direction: unset;
         justify-content: flex-end;
+        padding: 0;
     }
 
     .headerSinBuscarConLogin{
@@ -381,16 +382,12 @@ nav ul li ul li:hover {
         top: 51%;
     }
 
-    /*.right-sidebar .dropdown .dropdown-toggle{
-        background-color: #b2b1b1;
-    }*/
-
     .menu-button {
-        position: absolute;
-        top: 25px;
-        right: 322px;
+        position: relative;
+        top: 0;
+        right: 375px;
         padding: 0;
-        scale: 1.4;
+        scale: 1.2;
     }
 
     .menu-button a:hover::after{
@@ -416,5 +413,12 @@ nav ul li ul li:hover {
         display: block;
     }
 
+    .logo3 {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        right: -65%;
+        padding: 0;
+    }
 
 }

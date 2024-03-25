@@ -96,9 +96,9 @@
 
     .tarjetaGeneral .tarjeta{
         width: 225px;
-        height: 250px;
+        height: 266px;
         text-align: center;
-        margin:0;
+        margin: 0;
     }
 
     .descripcion {

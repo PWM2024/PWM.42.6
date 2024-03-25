@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             const producto = await obtenerProducto(productoId);
 
             const productoCard = document.createElement('section');
-            productoCard.classList.add('producto-card');
+            productoCard.classList.add('producto-card-cesta');
             productoCard.setAttribute('id', 'tarjetaCesta');
 
             productoCard.innerHTML = `
@@ -219,7 +219,6 @@ function calcularPrecioFinal(){
 
 }
 
-
 document.addEventListener("DOMContentLoaded", async function() {
     await sleep(400);
     const botonAplicarCodigoPromocional = document.querySelector(".input-button-container button");
@@ -252,7 +251,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 
 });
-
 
 document.addEventListener("DOMContentLoaded", async function() {
     // Agregamos un retraso de 1 segundo (1000 milisegundos) antes de ejecutar el código dentro de esta función
@@ -316,10 +314,3 @@ document.addEventListener("DOMContentLoaded", async function() {
         })
     }
 });
-
-
-
-
-
-
-

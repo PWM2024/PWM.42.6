@@ -68,7 +68,7 @@
     font-size: xx-large;
 }
 
-.cesta-container .producto-card{
+.cesta-container .producto-card-cesta{
     box-shadow: none;
     border: none;
     border-radius: 0%;
@@ -133,4 +133,113 @@
 }
 .cestaHeader.open{
     transform: translateX(0);
+}
+
+@media only screen and (max-width: 430px){
+    .cesta-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .body-cesta{
+        width: 100%;
+        height: 100%;
+    }
+
+    .producto-card-cesta{
+        width: 63%;
+        height: 177px;
+        margin: 0;
+        position: relative;
+        left: 26%;
+    }
+
+    .producto-details{
+        position: relative;
+        top: -45%;
+        left: 38%;
+    }
+
+    .producto-details #precioProducto{
+        position: relative;
+        left: 0;
+        margin-top: 8%;
+    }
+
+    .producto-card-cesta img{
+        width: 120px;
+        height: 120px;
+        position: relative;
+        top: 14%;
+    }
+
+    .producto-details h1{
+        font-size: 18px;
+        margin: 0;
+        text-align: unset;
+    }
+
+    .producto-details h2{
+        font-size: 16px;
+        color: #999999;
+    }
+
+    .producto-unidades{
+        position: relative;
+        left: 26%;
+        margin-top: -8%;
+    }
+
+    .operar-cantidad{
+        width: 1em;
+        height: 1em;
+    }
+
+    .resumen-compra-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: -10%;
+        left: -1%;
+        padding: 0;
+    }
+
+    .resumen-compra-container .resumen-compra{
+        width: 50%;
+    }
+
+    .aplicarCodigoPromocional{
+        margin: 0;
+    }
+
+    .codigo-promocional{
+        position: relative;
+        left: 7%;
+        margin-top: 3%;
+    }
+
+    .botonesCesta{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 9%;
+        margin-top: -4%;
+    }
+
+    .head-cesta h1{
+        position: relative;
+        left: 1%;
+    }
+
+    #cesta-ico{
+        position: relative;
+        left: -19%;
+    }
+
+    .aplicarCodigoPromocional .codigo-promocional
+    .input-button-container input{
+        width: 37%;
+        padding: 12px;
+    }
+
 }
