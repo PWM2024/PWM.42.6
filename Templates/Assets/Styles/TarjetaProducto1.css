@@ -59,30 +59,3 @@ body {
     font-weight: bold;
     color: #333;
 }
-
-@media only screen and (max-width: 430px) {
-
-    .producto-card{
-        position: relative;
-        left: 30%;
-        width: 110%;
-    }
-
-    .producto-card img{
-        width: 120px;
-        height: 120px;
-    }
-
-    .producto-details h1{
-        font-size: 20px;
-    }
-
-    .producto-details h2{
-        font-size: 16px;
-    }
-
-    .producto-details{
-        margin-top: 1%;
-    }
-
-}
