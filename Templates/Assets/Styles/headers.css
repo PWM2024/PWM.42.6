@@ -8,10 +8,23 @@ header {
     position: relative;
 }
 
+.logo {
+    position: absolute;
+    width: 50%;
+    right: 110%;
+}
+.footer-ico{
+    width: 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
 .logo2 {
-    margin-bottom: 20px;
-    margin-right: 20px;
-    width: 10%;
+    position: absolute;
+    width: 40%;
+    right: 105%;
 }
 
 .logo_mobile {
@@ -238,6 +251,22 @@ nav ul li ul li:hover {
     display: none;
 }
 
+.logo3 {
+    width: 7em;
+    position: absolute;
+    top: 0%;
+    right: 130%;
+    user-select: none;
+}
+
+.logo_mobile_2{
+    width: 3em;
+    position: absolute;
+    top: 20%;
+    right: 110%;
+    user-select: none;
+}
+
 @media only screen and (max-width: 430px) {
     header{
         flex-direction: unset;
@@ -359,8 +388,8 @@ nav ul li ul li:hover {
 
     .menu-button {
         position: absolute;
-        bottom: 105px;
-        right: 342px;
+        top: 25px;
+        right: 322px;
         padding: 0;
         scale: 1.4;
     }
@@ -377,10 +406,16 @@ nav ul li ul li:hover {
         display: block;
     }
 
+    .logo2{
+        display: none;
+    }
+
     .logo2_mobile {
         margin-bottom: 20px;
         margin-right: 20px;
         width: 10%;
         display: block;
     }
+
+
 }
