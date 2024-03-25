@@ -14,7 +14,7 @@ if (closeMenuRight){
     closeMenuRight.addEventListener('click', closeRightSidebar);
 }
 
-var buttonCesta = document.querySelector('#cesta-btn');
+var buttonCesta = document.querySelector('#cesta-btn-movil');
 if (buttonCesta){
     buttonCesta.addEventListener('click', closeRightSidebarAndButton);
 }
@@ -25,7 +25,6 @@ if (closeCesta){
 }
 
 var bocadilloMovil = document.querySelector('.bocadillo-movil');
-
 
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar');

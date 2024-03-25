@@ -221,13 +221,17 @@ nav ul li a:hover::after {
 
 
     .footer{
-        margin-top: 100%;
+        position: relative;
+        top: 8%;
+        margin: 0;
+        padding: 0;
     }
 
     .detalles-tarjetas{
         display: block;
-        width: 50%;
+        width: 100%;
         text-align: center;
+        height: 102%;
     }
 
     .menu-perfil-detalles{
