@@ -4,7 +4,9 @@ body {
 
 
 .imcDetalles{
-    border: 1px solid black;
+    border: 5px solid orange;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 
