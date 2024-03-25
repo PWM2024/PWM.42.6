@@ -5,7 +5,6 @@ function sleep(ms) {
 
 
 function filtrarComponentes(etiquetas){
-    console.log(etiquetas);
     fetch('http://localhost:3000/dietas')
         .then(response => response.json())
         .then(data => {
@@ -23,8 +22,6 @@ function filtrarComponentes(etiquetas){
                     tarjetaDieta[i].remove();
                 }
             }
-
-            console.log(tarjetaDieta.length);
 
 
 

@@ -102,12 +102,10 @@ fetch('http://localhost:3000/productos')
 
                     // Comprobación si el producto ya está en la lista
                     if (usuario[propiedad].includes(productId)) {
-                        console.log('El producto ya está en la lista.');
                         return; // No hace nada si el producto ya está en la lista
                     }
 
                     usuario[propiedad].push(productId);
-                    console.log(usuario[propiedad]);
                     return fetch(`http://localhost:3000/users/${userId}`, {
                         method: 'PATCH',
                         headers: {

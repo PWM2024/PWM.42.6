@@ -11,7 +11,6 @@ function cambiarRutina(tarjetaRutina, rutina){
 }
 
 function filtrarComponentes(etiquetas){
-    console.log(etiquetas);
     fetch('http://localhost:3000/rutinas')
         .then(response => response.json())
         .then(data => {
@@ -30,7 +29,6 @@ function filtrarComponentes(etiquetas){
                 }
             }
 
-            console.log(rutinasFiltradas.length);
 
 
 
@@ -80,7 +78,6 @@ fetch('http://localhost:3000/rutinas')
                     .then(data => {
                         setTimeout(function() {
                             const detallesTarjeta  = document.querySelector('#detalles-tarjeta');
-                            console.log(detallesTarjeta.querySelector('p'));
                             detallesTarjeta.querySelector('p').innerText = data.descripcion;
                             detallesTarjeta.querySelector('img').src = `\\PWM.42.6-main\\Templates\\Source\\Rutinas\\${data.img}`;
                         }, 20); // Cambia 1000 por el número de milisegundos que desees de retraso

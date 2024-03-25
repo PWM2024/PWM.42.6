@@ -70,6 +70,7 @@ h2{
 }
 
 .filtro {
+    width: 300px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;

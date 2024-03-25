@@ -124,44 +124,45 @@ document.addEventListener("DOMContentLoaded", async function() {
             const userID = localStorage.getItem('userID');
 
 
-
-            fetch(`http://localhost:3000/compras/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ fecha,  numPedido, precio})
-            });
-
-
-            obtenerUsuario().then(async usuario => {
-                const compras = usuario.compras || [];
-                compras.push(numPedido);
-                const cesta = [];
-                console.log(cesta)
-
-                return fetch(`http://localhost:3000/users/${userID}`, {
-                    method: 'PATCH',
+            if(precio > 0){
+                fetch(`http://localhost:3000/compras/`, {
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ cesta, compras })
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            // La solicitud se completó exitosamente, puedes recargar la página aquí
-                            location.reload();
-                        } else {
-                            // Manejar el caso en que la solicitud no se completó exitosamente
-                            console.error('Error en la solicitud PATCH:', response.status);
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error al procesar la solicitud:', error);
-                    });
+                    body: JSON.stringify({ fecha,  numPedido, precio})
+                });
 
-            });
-            //
+
+                obtenerUsuario().then(async usuario => {
+                    const compras = usuario.compras || [];
+                    compras.push(numPedido);
+                    const cesta = [];
+                    console.log(cesta)
+
+                    return fetch(`http://localhost:3000/users/${userID}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ cesta, compras })
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                // La solicitud se completó exitosamente, puedes recargar la página aquí
+                                location.reload();
+                            } else {
+                                // Manejar el caso en que la solicitud no se completó exitosamente
+                                console.error('Error en la solicitud PATCH:', response.status);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error al procesar la solicitud:', error);
+                        });
+
+                });
+            }
+
         })
 
 
