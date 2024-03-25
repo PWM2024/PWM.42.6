@@ -24,13 +24,41 @@ document.addEventListener("DOMContentLoaded", function() {
         await sleep(50); // Espera 1 segundo
 
         const tarjetas = document.querySelectorAll('.purchase-info');
-        console.log(tarjetas);
+
 
         for (let i = usuario.compras.length; i < tarjetas.length; i++){
             tarjetas[i].remove();
         }
 
         for (let i = 0; i < tarjetas.length; i++) {
+
+            const btn = tarjetas[i].querySelector('button');
+
+
+            btn.addEventListener('click', function(){
+                const id = tarjetas[i].querySelector('#numPedido').textContent;
+                tarjetas[i].remove();
+
+                obtenerUsuario().then(async usuario => {
+                    const userID = localStorage.getItem('userID');
+                    const compras = usuario.compras || [];
+                    const index = compras.indexOf(id);
+
+                    if (index !== -1) {
+                        compras.splice(index, 1);
+
+                    }
+
+                    return fetch(`http://localhost:3000/users/${userID}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ compras })
+                    });
+                });
+            });
+
             const numPedido = usuario.compras[i]; // Obtener el número de pedido de usuario.compras
             fetch(`http://localhost:3000/compras?numPedido=${numPedido}`)
                 .then(response => {
