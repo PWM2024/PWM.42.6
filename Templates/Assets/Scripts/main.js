@@ -129,24 +129,20 @@ function esconderBlur() {
     document.getElementById("fondoDesenfocado").style.display = "none";
 }
 
-function fetchComponentesCesta() {
-    fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
-}
 
-fetchComponenteConId('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+
+
 fetchComponenteconJSPropio('../Components/tarjetaProducto1.html', 'tarjetaProducto1');
 fetchComponente('../Components/tarjetaProducto2.html', 'tarjetaProducto2');
 fetchComponente('../Components/tarjetaProducto3.html', 'tarjetaProducto3');
 fetchComponente('../Components/tarjetaGeneral.html', 'tarjetaGeneral');
-fetchComponente('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta');
+
 fetchComponente('../Components/cesta.html', 'cestaHeader');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
 fetchComponente('../Components/tarjetaProductoListaDeseos.html', 'tarjetaProductoListaDeseos');
-//fetchComponente('../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
 fetchComponente('../Components/codigoPromocional.html', 'codigoPromocional');
 fetchComponente('../Components/resumenCompra.html', 'resumenCompra');
 fetchComponente('../Components/descripcion.html', 'descripcion');
-//fetchComponente('../Components/botonesCesta.html', 'botonesCesta');
 fetchComponente('../Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
 fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
 fetchComponente('../Components/listaKcal.html', 'listaKcal');
