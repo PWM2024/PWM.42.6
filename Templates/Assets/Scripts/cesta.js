@@ -101,7 +101,24 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         btnFinalizarCompra.addEventListener('click', function(){
 
-            const fecha = new Date();
+            var fecha = new Date();
+
+
+            var dia = fecha.getDate();
+            var mes = fecha.getMonth() + 1;
+            var year = fecha.getFullYear();
+
+
+            if (dia < 10) {
+                dia = '0' + dia;
+            }
+            if (mes < 10) {
+                mes = '0' + mes;
+            }
+
+
+            fecha = dia + '/' + mes + '/' + year;
+
             const numPedido = generateNumPedido();
             const precio = document.querySelector('#precio-final').innerText.replace('€', '').trim()
             const userID = localStorage.getItem('userID');
