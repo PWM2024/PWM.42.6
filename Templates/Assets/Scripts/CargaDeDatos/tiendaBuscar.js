@@ -29,7 +29,7 @@ if (Container) {
 
 document.addEventListener('DOMContentLoaded', function() {
         async function ejecutarDespuesDeTiempo() {
-            await sleep(80); // Espera 2000 milisegundos (2 segundos)
+            await sleep(100); // Espera 2000 milisegundos (2 segundos)
             const filtro = document.querySelector('.filtro');
             const opciones = ["Proteína", "Musculación", "Recuperación"];
             const opcion = filtro.querySelectorAll('.check');

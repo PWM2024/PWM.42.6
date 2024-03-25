@@ -98,7 +98,7 @@ fetch('http://localhost:3000/rutinas')
     .then(data => {
         const filtro = document.querySelector('.filtro');
         async function ejecutarDespuesDeTiempo() {
-            await sleep(50); // Espera 2000 milisegundos (2 segundos)
+            await sleep(100); // Espera 2000 milisegundos (2 segundos)
             const opciones = ["En Casa", "Fuerza", "Flexibilidad"];
             const opcion = filtro.querySelectorAll('.check');
             for (let i = 0; i < opciones.length; i++ ){
