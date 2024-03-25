@@ -59,3 +59,21 @@ form {
   width: 150px;
   height: 30px;
 }
+
+@media only screen and (max-width: 430px){
+  .formulario-alimentos .alimentos{
+    position: relative;
+    left: -4%;
+    width: 90%;
+  }
+
+  .tabla-alimentos ul{
+    height: 445px;
+  }
+
+  .formulario-alimentos{
+    position: relative;
+    margin-top: 4%;
+  }
+
+}
