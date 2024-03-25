@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Assets/Styles/cesta.css" />
+    <link rel="stylesheet" href="../Assets/Styles/components.css" />
     <title>Página Cesta</title>
     <script src="../Assets/Scripts/main.js"></script>
     <script>fetchComponentesCesta()</script>
@@ -34,17 +35,33 @@
             <!--<section class="producto-card"></section>-->
           </section>
 
-          <div class="aplicarCodigoPromocional"></div>
+          <div class="aplicarCodigoPromocional">
+            <section class="codigo-promocional">
+              <section class="input-button-container">
+                <input type="text" placeholder="Introduce tu código promocional">
+                <button>Aplicar</button>
+              </section>
+            </section>
+          </div>
           <div class="resumen-compra-container">
             <section class="resumen-compra">
               <p class="unidades">Unidades <span>2</span></p>
-              <p class="descuento">Descuento <span>XX%</span></p>
+              <p class="descuento">Descuento <span>0%</span></p>
               <p class="total">
                 Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
               </p>
             </section>
           </div>
-          <div class="botonesCesta"></div>
+          <div class="botonesCesta">
+            <section class="botones-container">
+              <button>Vaciar cesta</button>
+              <button id="boton-finalizarCompra">Finalizar compra</button>
+            </section>
+            <!--<section class="botones-container">
+              <button>Vaciar cesta</button>
+              <button id="boton-finalizarCompra">Finalizar compra</button>
+            </section>-->
+          </div>
         </div>
       </section>
     </section>

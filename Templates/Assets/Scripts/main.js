@@ -142,11 +142,11 @@ fetchComponente('../Components/tarjetaProductoCesta.html', 'tarjetaProductoCesta
 fetchComponente('../Components/cesta.html', 'cestaHeader');
 fetchComponente('../Components/tarjetaProductoHistorialCompras.html', 'tarjetaProductoHistorialCompras');
 fetchComponente('../Components/tarjetaProductoListaDeseos.html', 'tarjetaProductoListaDeseos');
-fetchComponente('../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
+//fetchComponente('../Components/aplicarCodigoPromocionalForm.html', 'aplicarCodigoPromocional');
 fetchComponente('../Components/codigoPromocional.html', 'codigoPromocional');
 fetchComponente('../Components/resumenCompra.html', 'resumenCompra');
 fetchComponente('../Components/descripcion.html', 'descripcion');
-fetchComponente('../Components/botonesCesta.html', 'botonesCesta');
+//fetchComponente('../Components/botonesCesta.html', 'botonesCesta');
 fetchComponente('../Components/formCalculadoraIMC.html', 'formCalculadoraIMC');
 fetchComponente('../Components/formCalculadoraKcal.html', 'formCalculadoraKcal');
 fetchComponente('../Components/listaKcal.html', 'listaKcal');
