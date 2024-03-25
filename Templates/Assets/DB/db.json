@@ -9,10 +9,7 @@
       "altura": "171",
       "imc": "",
       "kcal": "1500",
-      "cesta": [
-        "010",
-        "012"
-      ],
+      "cesta": [],
       "listaDeseos": [],
       "id": "1",
       "compras": [
@@ -28,10 +25,7 @@
       "altura": "",
       "imc": "",
       "kcal": "",
-      "cesta": [
-        "012",
-        "010"
-      ],
+      "cesta": [],
       "listaDeseos": [],
       "id": "2",
       "compras": []
