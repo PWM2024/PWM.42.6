@@ -26,12 +26,13 @@ document.addEventListener("DOMContentLoaded", async function(){
     cargarOpciones();
 
 
+
     const addBtn = document.querySelector('#addBtn');
     addBtn.addEventListener('click', function(){
-        const input = document.querySelector('#cantidad').value;
+        const formCalculador = document.querySelector('.formCalculadoraKcal');
+        const input = formCalculador.querySelector('input').value;
         const alimentoID = document.querySelector('.alimentos').value;
         const list = document.querySelector('#listaAlimentos');
-
 
         if(input > 0){
             fetch(`http://localhost:3000/alimentos/${alimentoID}`)
