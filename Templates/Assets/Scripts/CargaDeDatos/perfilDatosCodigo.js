@@ -76,11 +76,32 @@ document.addEventListener("DOMContentLoaded", function() {
         await sleep(50); // Espera 1 segundo
         if (usuario) {
 
+
+
             let tarjetaPromoCode = document.querySelector('.codigoPromocional');
+
+
 
             if(tarjetaPromoCode){
                 const PromoCode = tarjetaPromoCode.querySelector('.promo-container');
                 PromoCode.querySelector('p').innerText = usuario.promoCode;
+
+                let btnPromoCode = document.querySelector('.codigoPromocional button');
+
+                btnPromoCode.addEventListener('click', () => {
+                    const codigoPromocional = usuario.promoCode;
+
+                    const tempTextArea = document.createElement('textarea');
+                    tempTextArea.value = codigoPromocional;
+
+                    document.body.appendChild(tempTextArea);
+
+                    tempTextArea.select();
+                    document.execCommand('copy');
+
+                    document.body.removeChild(tempTextArea);
+
+                });
             }
 
             if (usuario.nickname) {
