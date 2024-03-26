@@ -128,8 +128,11 @@ setTimeout(() => {
                 obtenerUsuarioPorId(userId)
                     .then(usuario => {
                         usuario[propiedad] = usuario[propiedad] || [];
-                        usuario[propiedad].push(productId);
-                        console.log(usuario[propiedad]);
+
+                        if(productId.length > 0){
+                            usuario[propiedad].push(productId);
+                        }
+
                         return fetch(`http://localhost:3000/users/${userId}`, {
                             method: 'PATCH',
                             headers: {
@@ -219,5 +222,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 contenedorProductos.appendChild(tarjeta);
             });
         }
-    }, 300); // 300 milisegundos = 0.3 segundos
+    }, 300); // 2000 milisegundos = 2 segundos
 });

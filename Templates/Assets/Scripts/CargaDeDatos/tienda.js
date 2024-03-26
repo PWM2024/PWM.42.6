@@ -105,7 +105,10 @@ fetch('http://localhost:3000/productos')
                         return; // No hace nada si el producto ya está en la lista
                     }
 
-                    usuario[propiedad].push(productId);
+                    if(productId.length > 0){
+                        usuario[propiedad].push(productId);
+                    }
+
                     return fetch(`http://localhost:3000/users/${userId}`, {
                         method: 'PATCH',
                         headers: {
