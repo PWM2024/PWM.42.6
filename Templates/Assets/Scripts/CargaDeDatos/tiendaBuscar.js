@@ -142,6 +142,7 @@ setTimeout(() => {
                         if (!response.ok) {
                             throw new Error('La solicitud de actualización del usuario falló.');
                         }
+                        location.reload();
                     })
                     .catch(error => {
                         console.error('Error al actualizar el usuario:', error);
@@ -218,5 +219,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 contenedorProductos.appendChild(tarjeta);
             });
         }
-    }, 300); // 2000 milisegundos = 2 segundos
+    }, 300); // 300 milisegundos = 0.3 segundos
 });

@@ -1,42 +1,32 @@
 {
   "users": [
     {
-      "nickname": "pepe",
-      "email": "aca@gmail.com",
-      "password": "aca",
-      "promoCode": "BlLsdT3w",
-      "peso": "59",
-      "altura": "171",
-      "imc": "",
-      "kcal": "1500",
-      "cesta": [],
-      "listaDeseos": [],
-      "id": "1",
-      "compras": [
-        "751501640078"
-      ]
-    },
-    {
-      "nickname": "prueba",
-      "email": "prueba@gmail.com",
-      "password": "prueba",
-      "promoCode": "T46Ksxux",
+      "id": "462f",
+      "nickname": "Ernestina",
+      "email": "ernestina@gmail.com",
+      "password": "ernestina",
+      "promoCode": "UVEVP3lA",
       "peso": "",
       "altura": "",
       "imc": "",
       "kcal": "",
-      "cesta": [],
-      "listaDeseos": [],
-      "id": "2",
-      "compras": []
+      "cesta": [
+        "001"
+      ],
+      "listaDeseos": [
+        "013"
+      ],
+      "compras": [
+        "118836354182"
+      ]
     }
   ],
   "compras": [
     {
-      "id": "e3d0",
-      "fecha": "25/03/2024",
-      "numPedido": "751501640078",
-      "precio": "12.58"
+      "id": "253d",
+      "fecha": "26/03/2024",
+      "numPedido": "118836354182",
+      "precio": "24.99"
     }
   ],
   "productos": [
