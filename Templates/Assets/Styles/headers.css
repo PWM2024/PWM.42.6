@@ -268,6 +268,10 @@ nav ul li ul li:hover {
 }
 
 @media only screen and (max-width: 430px) {
+    .login-btn {
+        margin-right: 0;
+    }
+
     header{
         flex-direction: unset;
         justify-content: flex-end;
@@ -280,34 +284,33 @@ nav ul li ul li:hover {
     }
 
     .up-header-mobile {
+        margin-top: 5%;
         text-align: center;
-        display: block;
+        display: flex;
         position: relative;
-        left: -5%;
+        left: 12%;
     }
     .up-header-mobile button{
         width: fit-content!important;
-        height: fit-content!important;
         scale: 0.9!important;
         font-size: 0.6rem;
     }
 
     .up-header-mobile input {
-        height: 26px;
+        height: 40px;
         width: 125px;
-        margin-top: 4%;
     }
 
     .up-header-mobile .login-btn,
     .up-header-mobile .register-btn {
         width: 128px;
         height: 45px;
-        margin-top: 4%;
     }
 
     .up-header-mobile .submit {
         height: 43px;
         width: 55px;
+        margin-right: 0;
     }
 
     .menu-button, .dropdown-mobile {
@@ -404,11 +407,10 @@ nav ul li ul li:hover {
     }
 
     .logo2_mobile {
-        width: 5rem;
-        height: 5rem;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 10%;
         display: block;
-        position: relative;
-        right: -77%;
     }
 
     .logo3 {
@@ -428,22 +430,11 @@ nav ul li ul li:hover {
         z-index: 9999;
     }
 
-    .logo_mobile_2{
-        width: 5rem;
-        height: 5rem;
-        position: relative;
-        right: -63%;
-        padding: 0;
-    }
+}
 
-    .botones-login-register{
-        margin-left: -25%;
-        display: flex;
-        margin-top: -41%;
-    }
 
-    .botones-login-register-buscar{
-        margin-left: -15%;
+@media only screen and (max-width: 1024px) {
+    .logo{
+        display: none;
     }
-
 }

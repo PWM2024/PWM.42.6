@@ -62,3 +62,21 @@ body {
     }
 
 }
+
+@media only screen and (max-width: 430px) {
+
+    .filtros-container {
+        display: none;
+    }
+
+    .ordenarPor{
+        position: absolute;
+        margin-left: 50%;
+    }
+
+    .productos-container{
+        margin-top: 10%;
+    }
+
+
+}
