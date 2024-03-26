@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
                 producto.remove();
 
+                location.reload();
                 return fetch(`http://localhost:3000/users/${userId}`, {
                     method: 'PATCH',
                     headers: {
