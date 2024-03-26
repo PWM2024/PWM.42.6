@@ -200,11 +200,6 @@
         left: 26%;
     }
 
-    .producto-details{
-        position: relative;
-        top: -45%;
-        left: 38%;
-    }
 
     .producto-details #precioProducto{
         position: relative;
@@ -215,8 +210,6 @@
     .producto-card-cesta img{
         width: 120px;
         height: 120px;
-        position: relative;
-        top: 14%;
     }
 
     .producto-details h1{
