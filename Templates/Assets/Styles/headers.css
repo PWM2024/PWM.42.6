@@ -293,8 +293,9 @@ nav ul li ul li:hover {
     }
 
     .up-header-mobile input {
-        height: 40px;
+        height: 26px;
         width: 125px;
+        margin-top: 4%;
     }
 
     .up-header-mobile .login-btn,
@@ -403,10 +404,11 @@ nav ul li ul li:hover {
     }
 
     .logo2_mobile {
-        margin-bottom: 20px;
-        margin-right: 20px;
-        width: 10%;
+        width: 5rem;
+        height: 5rem;
         display: block;
+        position: relative;
+        right: -77%;
     }
 
     .logo3 {
@@ -424,6 +426,24 @@ nav ul li ul li:hover {
         right: -95%;
         padding: 0;
         z-index: 9999;
+    }
+
+    .logo_mobile_2{
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        right: -63%;
+        padding: 0;
+    }
+
+    .botones-login-register{
+        margin-left: -25%;
+        display: flex;
+        margin-top: -41%;
+    }
+
+    .botones-login-register-buscar{
+        margin-left: -15%;
     }
 
 }
