@@ -308,6 +308,7 @@ nav ul li ul li:hover {
     }
 
     .up-header-mobile .submit {
+        z-index: 9999;
         height: 43px;
         width: 55px;
         margin-right: 0;
