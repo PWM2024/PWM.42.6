@@ -437,4 +437,8 @@ nav ul li ul li:hover {
     .logo{
         display: none;
     }
+
+    .logo2 {
+        display: none;
+    }
 }
