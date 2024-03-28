@@ -8,7 +8,9 @@ FitByte es un proyecto web para la asignatura Programación Web y Móvil (PWM) e
 - **Logos**: Aquí se encuentran los logos para FitByte
 - **Templates**: Es aquí donde se encuentra todo el código del proyecto
     - **Assets**: Aquí se encuentran los scripts y archivos css
+        - **DB**: Directorio donde se encuentra el archivo JSON usado para la carga de datos
         - **Scripts**: Archivos .js necesarios para la carga de los componentes (main.js) y scripts para componentes personalizados
+            - **CargaDeDatos**: Archivos .js centrados en la carga dinámica de datos
         - **Styles**: Archivos css
     - **Components**: Los elementos individuales o componentes que forman cada una de las vistas de la web
     - **Forms**: Formularios para el inicio de sesión y registro de usuarios
@@ -16,8 +18,15 @@ FitByte es un proyecto web para la asignatura Programación Web y Móvil (PWM) e
         - **HeaderConLoginAndRegister**: Encabezados de página para usuarios no registrados/sin la sesión iniciada
         - **HeaderSinLoginAndRegister**: Encabezados de página para usuarios con la sesión iniciada
     - **Pages**: Aquí se encuentran las vistas de la página web, montadas mediante los componentes en ./Components
-    - **Source**: El logo elegido para representar a FitByte y las imágenes por defecto tanto del carrusel como de los elementos de la página están aquí
-        - **slider-img**: Imágenes para el carrusel
+    - **Source**: Bajo esta carpeta se encuentran las diversas imágenes usadas durante la carga de datos
+        - **Dietas**: Carpeta con las imágenes de dietas
+        - **Rutinas**: Carpeta con las imágenes de rutinas
+        - **slider-img**: Carpeta con las imágenes del carrusel
+        - **social-networks**: Carpeta con los logos de redes sociales
+        - default-img.png: Imagen por defecto
+        - logo.jpg: Una de las varientes del logo de FitByte
+        - logo-bg.png: Una de las varientes del logo de FitByte
+        - logo-letras.png: Una de las varientes del logo de FitByte
 
 # Estado del proyecto: ***En desarrollo (Sprint 2)***
 - ***Sprint 1 finalizado***
