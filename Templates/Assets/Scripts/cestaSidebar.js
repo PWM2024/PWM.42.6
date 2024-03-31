@@ -2,6 +2,8 @@ const overlay = document.getElementById('overlay');
 const cart = document.getElementById('cesta-container');
 
 function openCesta(){
+    let prueba = document.querySelector('.sidebar');
+    prueba.style.transform = 'translateX(-110%)';
     cart.classList.add('open');
     overlay.style.display = 'block'
     setTimeout(()=> {

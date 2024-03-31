@@ -219,7 +219,7 @@ nav ul li ul li:hover {
     background-color: #f0f0f0;
 }*/
 
-.menu-button {
+.prueba .menu-button {
     display: none;
 }
 
@@ -288,7 +288,7 @@ nav ul li ul li:hover {
         text-align: center;
         display: flex;
         position: relative;
-        left: 12%;
+        left: -17%;
     }
     .up-header-mobile button{
         width: fit-content!important;
@@ -308,13 +308,13 @@ nav ul li ul li:hover {
     }
 
     .up-header-mobile .submit {
-        z-index: 9999;
+        /*z-index: 9999;*/
         height: 43px;
         width: 55px;
         margin-right: 0;
     }
 
-    .menu-button, .dropdown-mobile {
+    .prueba .menu-button, .dropdown-mobile {
         display: block;
     }
 
@@ -383,17 +383,21 @@ nav ul li ul li:hover {
         top: 51%;
     }
 
-    .menu-button {
+    .prueba .menu-button {
         position: relative;
-        top: -2px;
-        right: 375px;
+        top: 10px;
+        right: 395px;
         padding: 0;
         scale: 1.2;
     }
 
-    .menu-button a:hover::after{
+    .prueba .menu-button a:hover::after{
         background-color: #fff!important;
         width: 0!important;
+    }
+
+    .prueba .menu-button a{
+        color: black;
     }
 
     .logo_mobile {
@@ -429,6 +433,21 @@ nav ul li ul li:hover {
         right: -95%;
         padding: 0;
         z-index: 9999;
+    }
+
+    .up-header-mobile-input{
+        position: relative;
+        left: 20%;
+        display: flex;
+    }
+
+    .up-header-mobile-input input{
+        height: 40px;
+        width: 100px;
+    }
+
+    .up-header-mobile .botones-login-register{
+        margin-left: -38%;
     }
 
 }

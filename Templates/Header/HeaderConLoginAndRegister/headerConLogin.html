@@ -20,10 +20,12 @@
             </section>
                 <!--<img src="/PWM.42.6-main/Templates/Source/logo-bg.png" class="logo2_mobile" />-->
             <section class="up-header-mobile">
-                <input type="text" class="search-input" placeholder="Buscar..." />
-                <button class="submit" onclick="window.location.href = '../Pages/tiendaBuscarNotLoggedIn.html'"><i class="fas fa-search fa-sm"></i></button>
-                <button class="login-btn" onclick="fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv')">Login</button>
-                <button class="register-btn" onclick="fetchAndInsertHTML('../Forms/registrarUsuario.html', 'miDiv')"> Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+                <section class="up-header-mobile-input">
+                    <input type="text" class="search-input" placeholder="Buscar..." />
+                    <button class="submit" onclick="window.location.href = '../Pages/tiendaBuscarNotLoggedIn.html'"><i class="fas fa-search fa-sm"></i></button>
+                    <button class="login-btn" onclick="fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv')">Login</button>
+                    <button class="register-btn" onclick="fetchAndInsertHTML('../Forms/registrarUsuario.html', 'miDiv')"> Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+                </section>
             </section>
             <div id="miDiv"></div>
 
@@ -63,9 +65,11 @@
                     </li>
                     <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/dietaNotLoggedIn.html"><i class="fas fa-utensils"></i> Dieta</a></li>
                     <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/rutinaNotLoggedIn.html"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
-                    <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar"></i></a></li>
                 </ul>
             </nav>
+            <div class="prueba">
+                <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar"></i></a></li>
+            </div>
             <script src="/PWM.42.6-main/Templates/Assets/Scripts/header.js"></script>
         </header>
     </body>

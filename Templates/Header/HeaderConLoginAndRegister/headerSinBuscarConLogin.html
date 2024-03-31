@@ -19,8 +19,10 @@
 
             <section class="up-header-mobile">
                 <!--<img src="/PWM.42.6-main/Templates/Source/logo-bg.png" class="logo_mobile_2" />-->
-                <button class="login-btn" id="showLogin" onclick="fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv')">Login</button>
-                <button class="register-btn" id="showRegister" onclick="fetchAndInsertHTML('../Forms/registrarUsuario.html', 'miDiv')">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+                <div class="botones-login-register">
+                    <button class="login-btn" id="showLogin" onclick="fetchAndInsertHTML('../Forms/iniciarSesion.html', 'miDiv')">Login</button>
+                    <button class="register-btn" id="showRegister" onclick="fetchAndInsertHTML('../Forms/registrarUsuario.html', 'miDiv')">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+                </div>
             </section>
 
             <div id="miDiv"></div>
@@ -61,10 +63,12 @@
                     </li>
                     <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/dietaNotLoggedIn.html"><i class="fas fa-utensils"></i> Dieta</a></li>
                     <li class="hideOnMobile"><a href="/PWM.42.6-main/Templates/Pages/rutinaNotLoggedIn.html"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
-                    <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar"></i></a></li>
                 </ul>
             </nav>
         </header>
+        <div class="prueba">
+            <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar"></i></a></li>
+        </div>
         <script src="/PWM.42.6-main/Templates/Assets/Scripts/header.js"></script>
     </body>
 </html>
