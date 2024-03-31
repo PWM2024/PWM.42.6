@@ -100,3 +100,10 @@
     height:fit-content;
   }
 }
+
+@media only screen and (max-width: 1024px){
+  .centered-container{
+    width: 80%;
+    height: fit-content;
+  }
+}
