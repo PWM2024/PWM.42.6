@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Componente de Descripción</title>
-    </head>
-    <body>
-        <article class="descripcion">
-            <section class="imagen-texto">
-                <img src="imagen.jpg" id="imagen">
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet libero at leo viverra, vel eleifend est sagittis. Donec consequat ultricies velit, non placerat lectus blandit sed.</p>-->
-            </section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ex non risus eleifend, at congue mauris scelerisque. Vestibulum ut bibendum metus. Ut rhoncus metus sit amet augue porta, ut congue velit fringilla. Sed efficitur est et lorem tincidunt, a pretium mauris tincidunt. Donec ultrices, metus sed rutrum dapibus, lectus sapien volutpat quam, in tristique leo nunc eget est. Nullam convallis eros sed neque suscipit, sit amet aliquet neque laoreet. Aliquam ac massa at sapien dapibus efficitur. Morbi nec libero a est gravida varius. Nam eu aliquet purus. Curabitur interdum velit ac libero condimentum condimentum. Mauris id quam malesuada, consectetur enim non, ullamcorper justo. Aliquam vitae lorem nec eros iaculis pharetra eget ac quam. Integer volutpat purus in sapien dignissim, vel commodo tortor volutpat. Nullam sodales enim non turpis scelerisque fermentum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ex non risus eleifend, at congue mauris scelerisque. Vestibulum ut bibendum metus. Ut rhoncus metus sit amet augue porta, ut congue velit fringilla. Sed efficitur est et lorem tincidunt, a pretium mauris tincidunt. Donec ultrices, metus sed rutrum dapibus, lectus sapien volutpat quam, in tristique leo nunc eget est. Nullam convallis eros sed neque suscipit, sit amet aliquet neque laoreet. Aliquam ac massa at sapien dapibus efficitur. Morbi nec libero a est gravida varius. Nam eu aliquet purus. Curabitur interdum velit ac libero condimentum condimentum. Mauris id quam malesuada, consectetur enim non, ullamcorper justo. Aliquam vitae lorem nec eros iaculis pharetra eget ac quam. Integer volutpat purus in sapien dignissim, vel commodo tortor volutpat. Nullam sodales enim non turpis scelerisque fermentum.
-            </p>
-            <button onclick="clearElementContent('detalles-tarjeta');esconderBlur();">Volver</button>
-        </article>
-    </body>
-</html>
+<div class="descripcion">
+  <!-- Contenido de tu componente de descripción -->
+  <section class="imagen-texto">
+    <img src="imagen.jpg" id="imagen">
+  </section>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ex non risus eleifend, at congue mauris
+    scelerisque...
+  </p>
+  <button (click)="volverClick()">Volver</button>
+</div>
