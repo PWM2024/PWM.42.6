@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-card {
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#id{
+    display:none
+}
+
+.product-card img{
+    width: 100%;
+}
+
+.tarjetaProductoHistorialCompras .purchase-info{
+    height: 230px;
+}
+.miPerfilDetalles{
+    width: fit-content;
+    margin-left: 5%;
+}
+
+.historialCompras-list{
+    margin-left: 10%;
+    width: 700px;
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 1%;
+    height: 900px;
+}
+
+.footer{
+    margin-top: 5%;
+}
+
+
+.detalles-tarjetas{
+    display: flex;
+    margin-top: 3%;
+    height: 1000px;
+}
+
+.codigoPromocional{
+    margin-left: 20%;
+}
+
+
+.tarjetaProductoListaDeseos{
+    margin:1%;
+
+}
+
+.tarjetaProductoListaDeseos button{
+    margin-top: 3%;
+    width: 180px;
+}
+
+.tarjetas{
+    justify-content: center;
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 1000px;
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.perfilForm{
+    width: 57%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .tarjetaProductoHistorialCompras .purchase-info{
+        width: 90%;
+        margin:2%;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .comprar-boton button{
+        width: 80%;
+    }
+
+    .historialCompras-list{
+        margin-left: 1%;
+        width: 60%;
+        border: 0.5px solid rgb(172, 172, 172);
+        border-radius: 1%;
+        height: 87%;
+    }
+
+    .codigoPromocional{
+        margin-left: 10%;
+    }
+
+    .tarjetas{
+        justify-content: center;
+        margin-left: 5%;
+        margin-bottom: 20%;
+        width: 55%;
+        height: 1480px;
+        border: 1px solid black;
+        border-radius: 1%;
+    }
+
+    .footer{
+        margin-top: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+    .tarjetaProductoHistorialCompras .purchase-info{
+        width: 86%;
+        display: block;
+        margin:2%;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .pruchase-details{
+        display: block;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .pruchase-details div{
+        display: flex;
+        width: 100%;
+        margin-bottom: 0%;
+    }
+    .tarjetaProductoHistorialCompras .purchase-info .pruchase-details div p{
+        margin-left: 5%;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .comprar-boton button{
+        width: 80%;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .comprar-boton{
+        display: flex;
+        position: revert;
+        width: 100%;
+    }
+
+    .tarjetaProductoHistorialCompras .purchase-info .comprar-boton button{
+        width: 60%;
+    }
+    .tarjetaProductoHistorialCompras .purchase-info .comprar-boton p{
+        margin: 0%;
+    }
+
+    .historialCompras-list{
+        margin-left: 1%;
+        width: 420px;
+        border: 0.5px solid rgb(172, 172, 172);
+        border-radius: 1%;
+        height: 87%;
+    }
+
+    .codigoPromocional{
+        margin-left: 10%;
+    }
+
+    .tarjetas{
+        display: flex;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 2px;
+        width: 405px;
+        height: 135%;
+    }
+    .tarjetaProductoListaDeseos{
+        width: 45%;
+    }
+    .tarjetaProductoListaDeseos button{
+        width: 95%;
+    }
+
+
+    .footer{
+        margin-top: 100%;
+    }
+
+    .detalles-tarjetas{
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Cesta</title>
+    <script>fetchComponentesCesta()</script>
+  </head>
+  <body>
+    <section class="cesta-container">
+      <div class="head-cesta">
+        <img
+          width="48"
+          height="48"
+          id="cesta-ico"
+          src="https://img.icons8.com/sf-regular/48/shopping-cart.png"
+          alt="shopping-cart"
+        />
+        <h1>Mi cesta</h1>
+        <img
+          width="25"
+          height="25"
+          id="cesta-cerrar"
+          src="https://img.icons8.com/sf-ultralight/25/delete-sign.png"
+          alt="delete-sign"
+          onclick="closeCesta()"
+        />
+      </div>
+      <section class="body-cesta">
+        <div id="tarjetaProductoCesta">
+          <section class="product-list">
+            <!--<section class="producto-card"></section>-->
+          </section>
+
+          <div class="aplicarCodigoPromocional">
+            <section class="codigo-promocional">
+              <section class="input-button-container">
+                <input type="text" placeholder="Introduce tu código promocional">
+                <button>Aplicar</button>
+              </section>
+            </section>
+          </div>
+          <div class="resumen-compra-container">
+            <section class="resumen-compra">
+              <p class="unidades">Unidades <span>2</span></p>
+              <p class="descuento">Descuento <span>0%</span></p>
+              <p class="total">
+                Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
+              </p>
+            </section>
+          </div>
+          <div class="botonesCesta">
+            <section class="botones-container">
+              <button>Vaciar cesta</button>
+              <button id="boton-finalizarCompra">Finalizar compra</button>
+            </section>
+            <!--<section class="botones-container">
+              <button>Vaciar cesta</button>
+              <button id="boton-finalizarCompra">Finalizar compra</button>
+            </section>-->
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

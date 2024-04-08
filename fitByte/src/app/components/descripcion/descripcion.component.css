@@ -1,0 +1,30 @@
+.descripcion{
+    width: 800px;
+    height: 750px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.descripcion .imagen-texto{
+    display: flex;
+    align-items: center;
+}
+
+.descripcion .imagen-texto #imagen{
+    margin-right: 50px;
+}
+
+.descripcion button{
+    margin-top: 20px;
+    margin-left: 700px;
+}
+
+@media only screen and (max-width: 1024px){
+    .descripcion button{
+        margin-left: 600px;
+    }
+}

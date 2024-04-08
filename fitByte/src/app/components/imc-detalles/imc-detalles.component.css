@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imcDetalle{
+    background: white;
+    width: 460px;
+    height: 180px;
+    text-align: center;
+}
+
+.imcDetalle label{
+    font-weight: normal;    
+}
+
+@media only screen and (max-width: 430px) {
+    .imcDetalle{
+        background: white;
+        width: auto;
+        height: auto;
+        text-align: justify;
+    }
+
+    .imcDetalle label{
+        font-size: 14px;
+        position: relative;
+        left: -2%;
+    }
+
+    .imcDetalle label strong{
+        font-size: 14px;
+    }
+}

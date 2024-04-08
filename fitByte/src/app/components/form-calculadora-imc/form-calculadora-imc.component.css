@@ -1,0 +1,10 @@
+.formulario-imc-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 35px;
+    margin-bottom: 20px;
+}
+
+.formulario-imc{
+    text-align: center;
+}

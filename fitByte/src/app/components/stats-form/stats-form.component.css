@@ -1,0 +1,44 @@
+
+.stats-card {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #f7992d;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.stats-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    margin-right: 20px;
+    text-align: center;
+    border: 1px solid #f7992d;
+}
+
+.stats-card > section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.stats-card section > section {
+    margin-top: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-card span {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
