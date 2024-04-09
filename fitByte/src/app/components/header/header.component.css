@@ -437,7 +437,7 @@ nav ul li ul li:hover {
 
   .up-header-mobile-input{
     position: relative;
-    left: 20%;
+    left: 14%;
     display: flex;
   }
 
@@ -447,7 +447,7 @@ nav ul li ul li:hover {
   }
 
   .up-header-mobile .botones-login-register{
-    margin-left: -38%;
+    margin-left: -25%;
   }
 
 }
