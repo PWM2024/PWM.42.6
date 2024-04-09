@@ -1,2 +1,24 @@
-<p>inicio works!</p>
-<tarjeta-producto/>
+
+
+<h1>Productos</h1>
+<section class="productosContainerParentIndex">
+    <div class="productsContainerChildIndex">
+        @for (producto of productos; track producto.id) {
+            <tarjeta-producto/>
+            }
+    </div>
+</section>
+
+
+<h1>Rutinas</h1>
+<section class="rutinasContainerParentIndex">
+    <div class="rutinasContainerChildIndex">
+        @for (rutina of rutinas; track rutina.id) {
+            <tarjeta-general/>
+            }    
+    </div>
+</section>
+
+<app-footer/>
+
+
