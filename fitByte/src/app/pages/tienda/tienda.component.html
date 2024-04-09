@@ -1,1 +1,16 @@
-<tarjeta-producto />
+<div class="contenedor-slider">
+    <slider/>
+</div>
+<h1>Promociones</h1>
+<div class="productos-tienda">
+    @for (producto of productos; track producto.id){
+        <tarjeta-producto class="tarjeta-tienda" />
+    }
+</div>
+<h1>Novedades</h1>
+<div class="productos-tienda">
+    @for (producto of productos; track producto.id){
+        <tarjeta-producto class="tarjeta-tienda" />
+    }
+</div>
+<app-footer/>

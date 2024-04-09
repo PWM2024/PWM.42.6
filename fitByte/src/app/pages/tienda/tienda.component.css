@@ -1,0 +1,12 @@
+.productos-tienda{
+    display: flex;
+}
+
+.tarjeta-tienda{
+    width: fit-content;
+    margin: 40px
+}
+
+h1{
+    text-align: center;
+}
