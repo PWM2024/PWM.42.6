@@ -15,7 +15,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequatur dolorem, placeat dolor, quos doloremque consectetur eum magnam modi delectus aut explicabo reprehenderit consequuntur quaerat debitis doloribus tempore! Iusto, quidem!.</p>
             @if (router.url === '/') {
                 <section class="precio-y-botones">
-                    <button class="eliminar-btn">Ir a tienda</button>
+                    <button class="eliminar-btn" routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page">Ir a tienda</button>
                 </section>
             }
             @else if (router.url === '/tienda') {
