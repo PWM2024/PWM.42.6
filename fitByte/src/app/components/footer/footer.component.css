@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Merriweather:ital,wght@1,700&family=Raleway:wght@500&family=Roboto+Slab:wght@100..900&display=swap");
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-footer {
   background-color: #ff8520;
+  width: 100%;
   color: #fff;
   text-align: center;
   padding: 10px;

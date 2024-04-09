@@ -1,0 +1,195 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
+  
+
+h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size:xx-large;
+}
+
+/*Productos*/
+
+.productosContainerParentIndex{
+    display: flex;
+    justify-content: center;
+}
+
+.productsContainerChildIndex{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+
+
+
+
+/*Rutinas*/
+
+.rutinasContainerParentIndex{
+    display: flex;
+    justify-content: center;
+}
+
+
+.rutinasContainerChildIndex {
+    width: 55%;
+    display: flex;
+    overflow-x: scroll;
+    margin-right: 2%;
+}
+
+/*
+#left-btn{
+    display: flex;
+    align-items: center; 
+
+}
+
+#right-btn{
+    display: flex; 
+    align-items: center; 
+}
+
+*/
+/*
+.rutinas-container{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.rutinas-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.rutinas-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.rutinas-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.rutinas-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+*/
+
+
+
+
+/*
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: x-large;
+        margin-bottom: 4%;
+    }
+
+
+    .tarjetaProducto1 {
+        width: 400px;
+    }
+
+    #left-btn,
+    #right-btn{
+        display:none;
+    }
+    .rutinas-container {
+        width: 100%;
+        overflow-x: auto;
+        margin: 0;
+    }
+
+    .scroll-button scroll-right {
+        display: none;
+    }
+
+    .footer {
+        margin-top: 5%;
+    }
+}
+
+
+@media only screen and (max-width: 430px) {
+
+    .productos-container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+
+    #productos-bar{
+        margin-bottom: 0;
+        margin-top: 44px;
+    }
+
+    .tarjetaProducto1{
+        text-align: center;
+        scale: 0.8;
+        margin:0;
+    }
+
+    .tarjetaProducto1 .producto-card{
+        display: block;
+        text-align: center;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .precio-y-botones{
+        position: relative;
+        right: 23px;
+    }
+
+    .producto-card{
+        margin: 0;
+    }
+
+    .tarjetaProducto1 .producto-card img{
+        margin:0;
+    }
+
+    #left-btn,
+    #right-btn{
+        display:none;
+    }
+
+    .rutinas-container{
+        overflow-y: hidden;
+    }
+
+    .producto-details h1{
+        font-size: 18px !important;
+    }
+    .producto-details h2{
+        font-size: 0.8rem !important;
+    }
+
+    .producto-details-tarjeta1 h1{
+        font-size: 18px;
+    }
+
+    .producto-details-tarjeta1 h2{
+        font-size: 16px;
+    }
+
+    .producto-details-tarjeta1 p{
+        font-size: 14px;
+    }
+
+    .tarjeta p{
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        left: -4%;
+    }
+
+}*/
