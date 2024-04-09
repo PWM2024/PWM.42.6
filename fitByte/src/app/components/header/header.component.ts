@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+  constructor(private renderer: Renderer2, private elementRef: ElementRef,protected router: Router) {}
 
   showSidebar() {
     const sidebar = this.elementRef.nativeElement.querySelector('.sidebar');
