@@ -8,9 +8,16 @@
 </head>
 <body>
 <header>
+  @if (router.url === '/tienda') {
+    <section class="up-header-mobile-input">
+      <input type="text" class="search-input" placeholder="Buscar..." />
+      <button class="submit" routerLink="/tiendabuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
+      <!--- Añadir registro e inicio sesion--->
+    </section>
+  }
   <nav>
     <ul class="sidebar">
-      <li><a href="#"><img width="25" height="25" id="hideSidebar" (click)="hideSidebar()" src="https://img.icons8.com/sf-ultralight/25/delete-sign.png" alt="delete-sign"></a></li>
+      <li><img width="25" height="25" id="hideSidebar" (click)="hideSidebar()" src="https://img.icons8.com/sf-ultralight/25/delete-sign.png" alt="delete-sign"></li>
       <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
       <li><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
       <li>
@@ -27,6 +34,13 @@
 
   <nav>
     <ul>
+      @if (router.url === '/tienda') {
+        <section class="up-header" id="hide-up-header">
+          <input type="text" class="search-input" placeholder="Buscar..." />
+          <button class="submit" routerLink="/tiendabuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
+        <!--- Añadir registro e inicio sesion--->
+        </section>
+      }
       <li class="hideOnMobile"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
       <li class="hideOnMobile"><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
       <li class="hideOnMobile">
@@ -41,8 +55,9 @@
     </ul>
   </nav>
   <div class="prueba">
-    <li class="menu-button"><a href="#"><i class="fas fa-bars" id="showSidebar" (click)="showSidebar()"></i></a></li>
+    <li class="menu-button"><a  class="fas fa-bars" id="showSidebar" (click)="showSidebar()"></a></li>
   </div>
 </header>
+<div id="miDiv"></div>
 </body>
 </html>
