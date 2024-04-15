@@ -1,0 +1,14 @@
+<app-header class="header"/>
+<section class="filtros-container">
+    <filtro-opciones class="filtroOpciones"/>
+    <filtro-precios class="filtroPrecio"/>
+    <button class="aplicar">Aplicar Filtros</button>
+    <button class="limpiar">Limpiar Filtros</button>
+</section>
+<ordenar-por-desplegable class="ordenarPor"/>
+<section class="productos-container" id="productos">
+    @for (producto of productos; track producto.id){
+        <tarjeta-producto class="tarjeta-tienda" />
+    }
+</section>
+<app-footer class="footer"/>
