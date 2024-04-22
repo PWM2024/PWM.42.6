@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './form-calculadora-kcal.component.html',
-  styleUrl: './form-calculadora-kcal.component.css'
+  styleUrls: ['./form-calculadora-kcal.component.css', '../component.css']
 })
 export class FormCalculadoraKcalComponent {
 

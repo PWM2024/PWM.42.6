@@ -2,16 +2,13 @@ import { Component } from '@angular/core';
 import { TarjetaProductoComponent } from '../../components/tarjeta-producto/tarjeta-producto.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetageneralComponent } from '../../components/tarjetageneral/tarjetageneral.component';
-<<<<<<< HEAD
 import { HeaderComponent } from '../../components/header/header.component'
-=======
-import {HeaderComponent} from "../../components/header/header.component";
->>>>>>> be05255331923556fb9d2c31aaa77c0f9511c9d8
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [TarjetaProductoComponent, FooterComponent, TarjetageneralComponent, HeaderComponent],
+  imports: [TarjetaProductoComponent, FooterComponent, TarjetageneralComponent, HeaderComponent, SliderComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
