@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './perfil-form.component.html',
-  styleUrls: ['../forms.css', '../component.css']
+  styleUrls: ['./perfil-form.component.css', '../component.css']
 })
 export class PerfilFormComponent {
 
