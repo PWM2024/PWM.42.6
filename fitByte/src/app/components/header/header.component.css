@@ -8,6 +8,10 @@ header {
   position: relative;
 }
 
+.up-header-mobile-input{
+  display: none;
+}
+
 .logo {
   position: absolute;
   width: 50%;
