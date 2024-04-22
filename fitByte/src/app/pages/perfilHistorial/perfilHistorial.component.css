@@ -18,12 +18,14 @@
     border: 1px solid #f7992d;
     text-align: center;
     justify-content: center;
-    width: 70%;
+    width: 55%;
+    height: fit-content;
+    border-radius: 1%;
 }
 
 
 @media only screen and (max-width: 1024px) {
- 
+
 
 }
 
