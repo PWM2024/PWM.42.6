@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './cesta.component.html',
-  styleUrls: ['./cesta.component.css', '../componenet.css']
+  styleUrls: ['./cesta.component.css', '../component.css']
 })
 export class CestaComponent {
 

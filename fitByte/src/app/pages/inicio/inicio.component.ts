@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { TarjetaProductoComponent } from '../../components/tarjeta-producto/tarjeta-producto.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetageneralComponent } from '../../components/tarjetageneral/tarjetageneral.component';
+import { HeaderComponent } from '../../components/header/header.component'
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [TarjetaProductoComponent, FooterComponent, TarjetageneralComponent],
+  imports: [TarjetaProductoComponent, FooterComponent, TarjetageneralComponent, HeaderComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

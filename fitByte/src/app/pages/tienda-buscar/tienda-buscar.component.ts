@@ -9,7 +9,7 @@ import { OrdenarPorDesplegableComponent } from '../../components/ordenar-por-des
 @Component({
   selector: 'app-tienda-buscar',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, FiltroOpcionesComponent, FiltroPreciosComponent, TarjetaProductoComponent, OrdenarPorDesplegableComponent],
+  imports: [HeaderComponent, FooterComponent, FiltroOpcionesComponent, FiltroPreciosComponent, TarjetaProductoComponent, OrdenarPorDesplegableComponent, HeaderComponent],
   templateUrl: './tienda-buscar.component.html',
   styleUrls: ['./tienda-buscar.component.css', '../../components/component.css']
 })

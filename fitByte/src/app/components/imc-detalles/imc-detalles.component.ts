@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './imc-detalles.component.html',
-  styleUrl: ['./imc-detalles.component.css', '../conponent.css']
+  styleUrls: ['./imc-detalles.component.css', '../component.css']
 })
 export class ImcDetallesComponent {
 

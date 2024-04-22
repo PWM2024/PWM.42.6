@@ -251,6 +251,10 @@ nav ul li ul li:hover {
   display: none;
 }
 
+.up-header-mobile-input {
+  display: none;
+}
+
 .logo3 {
   width: 7em;
   position: absolute;
