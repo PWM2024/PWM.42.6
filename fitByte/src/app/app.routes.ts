@@ -5,6 +5,8 @@ import { TiendaBuscarComponent } from './pages/tienda-buscar/tienda-buscar.compo
 import { DietasPage } from './pages/dietas/dietas.component';
 import { PerfilDatosPage } from './pages/perfilDatos/perfilDatos.component';
 import {perfilHistorial} from './pages/perfilHistorial/perfilHistorial.component';
+import {perfilListaDeseos} from './pages/perfilListaDeseos/perfilListaDeseos.component';
+import {perfilMiCodigo} from './pages/perfilMiCodigo/perfilMiCodigo.component';
 import { RutinasPage } from './pages/rutinas/rutinas.component';
 import { CalculadoraIMCComponent } from './pages/calculadora-imc/calculadora-imc.component';
 import { CalculadoraKcalComponent } from './pages/calculadora-kcal/calculadora-kcal.component';
@@ -19,7 +21,7 @@ export const routes: Routes = [
   { path: 'dietas', component: DietasPage },
   { path: 'perfil/mis-datos', component: PerfilDatosPage },
   { path: 'perfil/historial-de-compras', component: perfilHistorial },
-  { path: 'perfil/lista-de-deseos', component: PerfilDatosPage },
-  { path: 'perfil/codigo-promocional', component: PerfilDatosPage },
+  { path: 'perfil/lista-de-deseos', component: perfilListaDeseos },
+  { path: 'perfil/codigo-promocional', component: perfilMiCodigo },
   { path: 'rutinas', component: RutinasPage },
 ];
