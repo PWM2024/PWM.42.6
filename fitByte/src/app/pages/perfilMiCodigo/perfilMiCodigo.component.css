@@ -17,22 +17,35 @@
 .right-zone-card-codigo{
     border: 1px solid #f7992d;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 55%;
+    width: 50%;
     height: fit-content;
     border-radius: 1%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 430px) {
+  .left-zone-codigo{
+    display: none;
+  }
 
+  .right-zone-codigo{
+    width: 100%;
+  }
+
+  .right-zone-card-codigo{
+    width: 90%;
+    height: fit-content;
+    border-radius: 1%;
+  }
 
 }
 
 
 
-@media only screen and (max-width: 430px) {
-
+@media only screen and (max-width: 1024px) {
+  .right-zone-card-codigo{
+    width: 70%;
+    height: fit-content;
+    border-radius: 1%;
+  }
 
 }

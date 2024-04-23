@@ -15,6 +15,7 @@
 }
 
 .right-zone-card-datos{
+    padding: 2%;
     border: 1px solid #f7992d;
     text-align: center;
     justify-content: center;
@@ -23,14 +24,47 @@
 }
 
 
-@media only screen and (max-width: 1024px) {
- 
+@media only screen and (max-width: 430px) {
+  .left-zone-datos{
+    display: none;
+  }
+
+  .right-zone-datos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-zone-card-datos{
+    border: 1px solid #f7992d;
+    text-align: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+  }
 
 }
 
 
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 1024px) {
+  .perfil-body-datos{
+    display: flex;
+  }
+
+  .right-zone-datos{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+  .right-zone-card-datos{
+      border: 1px solid #f7992d;
+      text-align: center;
+      justify-content: center;
+      height: fit-content;
+      width: 60%;
+  }
 
 
 }
