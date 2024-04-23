@@ -1,17 +1,12 @@
 
 
 .promo-container{
-    width: 375px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 5%;
     padding: 30px;
     text-align: center;
-}
-
-.promo-container h1{
-    width: 390px;
 }
 
 .promo-container p{

@@ -1,37 +1,52 @@
-.perfil-body{
+.perfil-body-historial{
     display: flex;
 }
 
-.left-zone{
+.left-zone-historial{
     width: 30%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone{
+.right-zone-historial{
     width: 70%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone-card{
+.right-zone-card-historial{
+    padding: 1%;
     border: 1px solid #f7992d;
     text-align: center;
     justify-content: center;
-    width: 55%;
+    width: fit-content;
     height: fit-content;
     border-radius: 1%;
 }
 
 
-@media only screen and (max-width: 1024px) {
-
-
-}
-
-
-
 @media only screen and (max-width: 430px) {
 
+  .left-zone-historial{
+    display: none;
+  }
 
+  .right-zone-historial{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-zone-card-historial{
+    padding: 1%;
+    border: 1px solid #f7992d;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1%;
+  }
 }
+
+
+
