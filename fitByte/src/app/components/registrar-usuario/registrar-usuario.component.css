@@ -48,6 +48,10 @@
     font-size: 2.2rem;
 }
 
+.buttons button {
+    margin-right: 20px;
+}
+
 .centered-container input{
     margin-top: 15px;
     padding: 7px;

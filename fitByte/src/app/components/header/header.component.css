@@ -8,6 +8,11 @@ header {
   position: relative;
 }
 
+.container-btnlogin{
+  width: 75%;
+  text-align: end;
+}
+
 .up-header-mobile-input{
   display: none;
 }
@@ -278,6 +283,11 @@ nav ul li ul li:hover {
 @media only screen and (max-width: 430px) {
   .login-btn {
     margin-right: 0;
+  }
+
+  .register-btn{
+    margin-top: 10%;
+    margin-left: 2%;
   }
 
   header{

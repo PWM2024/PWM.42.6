@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./registrar-usuario.component.css', '../component.css']
 })
 export class RegistrarUsuarioComponent {
+
+  @Output() volver = new EventEmitter<void>();
+
+  volverClick() {
+    this.volver.emit();
+  }
 
 }
