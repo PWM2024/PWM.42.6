@@ -1,24 +1,24 @@
-.perfil-body{
+.perfil-body-codigo{
     display: flex;
 }
 
-.left-zone{
+.left-zone-codigo{
     width: 30%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone{
+.right-zone-codigo{
     width: 70%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone-card{
+.right-zone-card-codigo{
     border: 1px solid #f7992d;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     width: 55%;
     height: fit-content;

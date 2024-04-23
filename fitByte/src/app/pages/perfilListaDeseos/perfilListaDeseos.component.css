@@ -1,20 +1,20 @@
-.perfil-body{
+.perfil-body-deseos{
     display: flex;
 }
 
-.left-zone{
+.left-zone-deseos{
     width: 30%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone{
+.right-zone-deseos{
     width: 70%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone-card{
+.right-zone-card-deseos{
     border: 1px solid #f7992d;
     text-align: center;
     display: flex;

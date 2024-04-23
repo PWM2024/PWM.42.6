@@ -6,71 +6,71 @@
   <title>Header sin CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
-  <header>
-    @if (router.url === '/tienda') {
-      <section class="up-header-mobile-input">
-        <input type="text" class="search-input" placeholder="Buscar..." />
-        <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
-      </section>
-    }
+
+<header>
+  @if (router.url === '/tienda') {
+    <section class="up-header-mobile-input">
+      <input type="text" class="search-input" placeholder="Buscar..." />
+      <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
+    </section>
+  }
 
 
 
-    <nav>
-      <ul class="sidebar">
-        <li><img width="25" height="25" id="hideSidebar" (click)="hideSidebar()" src="https://img.icons8.com/sf-ultralight/25/delete-sign.png" alt="delete-sign"></li>
-        <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
-        <li><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
-        <li>
-          <a><i class="fas fa-calculator"></i> Calculadoras</a>
-          <ul>
-            <li><a routerLink="/imc" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora IMC</a></li>
-            <li><a routerLink="/kcal" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora Kcal</a></li>
-          </ul>
-        </li>
-        <li><a routerLink="/dietas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-utensils"></i> Dietas</a></li>
-        <li><a routerLink="/rutinas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
-      </ul>
-    </nav>
-    <!-- Poner aquí el @if del inicio de sesion y si s true poner micuenta si es false los botones que hay abajo-->
-    <div class="container-btnlogin">
-      <button class="login-btn" id="showLogin" (click)="toggleMostrarLogin()">Login</button>
-      <button class="register-btn" id="showRegister" (click)="toggleMostrarRegister()">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
-    </div>
+  <nav>
+    <ul class="sidebar">
+      <li><img width="25" height="25" id="hideSidebar" (click)="hideSidebar()" src="https://img.icons8.com/sf-ultralight/25/delete-sign.png" alt="delete-sign"></li>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
+      <li>
+        <a><i class="fas fa-calculator"></i> Calculadoras</a>
+        <ul>
+          <li><a routerLink="/imc" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora IMC</a></li>
+          <li><a routerLink="/kcal" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora Kcal</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/dietas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-utensils"></i> Dietas</a></li>
+      <li><a routerLink="/rutinas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
+    </ul>
+  </nav>
+  <!-- Poner aquí el @if del inicio de sesion y si s true poner micuenta si es false los botones que hay abajo-->
+  <div class="container-btnlogin">
+    <button class="login-btn" id="showLogin" (click)="toggleMostrarLogin()">Login</button>
+    <button class="register-btn" id="showRegister" (click)="toggleMostrarRegister()">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+  </div>
 
-    <nav>
-      <ul>
-        @if (router.url === '/tienda') {
-          <section class="up-header" id="hide-up-header">
-            <input type="text" class="search-input" placeholder="Buscar..." />
-            <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
-          </section>
-        }
-        <li class="hideOnMobile"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
-        <li class="hideOnMobile"><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
-        <li class="hideOnMobile">
-          <a href="#"><i class="fas fa-calculator" id="calc-menu"></i> Calculadoras</a>
-          <ul class="submenu">
-            <li><a routerLink="/imc" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora IMC</a></li>
-            <li><a routerLink="/kcal" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora Kcal</a></li>
-          </ul>
-        </li>
-        <li class="hideOnMobile"><a routerLink="/dietas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-utensils"></i> Dietas</a></li>
-        <li class="hideOnMobile"><a routerLink="/rutinas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
+  <nav>
+    <ul>
+      @if (router.url === '/tienda') {
+        <section class="up-header" id="hide-up-header">
+          <input type="text" class="search-input" placeholder="Buscar..." />
+          <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
+        </section>
+      }
+      <li class="hideOnMobile"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-home"></i> Inicio</a></li>
+      <li class="hideOnMobile"><a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-store"></i> Tienda</a></li>
+      <li class="hideOnMobile">
+        <a href="#"><i class="fas fa-calculator" id="calc-menu"></i> Calculadoras</a>
+        <ul class="submenu">
+          <li><a routerLink="/imc" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora IMC</a></li>
+          <li><a routerLink="/kcal" routerLinkActive="active" ariaCurrentWhenActive="page">Calculadora Kcal</a></li>
+        </ul>
+      </li>
+      <li class="hideOnMobile"><a routerLink="/dietas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-utensils"></i> Dietas</a></li>
+      <li class="hideOnMobile"><a routerLink="/rutinas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
 
-      </ul>
-    </nav>
-    <div class="prueba">
-      <li class="menu-button"><a  class="fas fa-bars" id="showSidebar" (click)="showSidebar()"></a></li>
-    </div>
-  </header>
-  <div id="miDiv"></div>
-    @if (mostrarLogin) {
-      <app-iniciar-sesion  (volver)="toggleMostrarLogin()"></app-iniciar-sesion>
-    }
-    @else if (mostrarRegister) {
-      <app-registrar-usuario  (volver)="toggleMostrarRegister()"></app-registrar-usuario>
-    }
-</body>
+    </ul>
+  </nav>
+  <div class="prueba">
+    <li class="menu-button"><a  class="fas fa-bars" id="showSidebar" (click)="showSidebar()"></a></li>
+  </div>
+</header>
+<div id="miDiv"></div>
+  @if (mostrarLogin) {
+    <app-iniciar-sesion  (volver)="toggleMostrarLogin()"></app-iniciar-sesion>
+  }
+  @else if (mostrarRegister) {
+    <app-registrar-usuario  (volver)="toggleMostrarRegister()"></app-registrar-usuario>
+  }
+
 </html>
