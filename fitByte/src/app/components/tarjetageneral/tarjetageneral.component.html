@@ -1,15 +1,14 @@
 
-<body>
-  <div class="fondo-desenfocado" id="fondoDesenfocado"></div>
-    <article class="tarjeta" (click)="toggleMostrarDescripcion()">
-      <a >
-        <img src="" alt="Imagen">
-        <p>Lorem</p>
-        <p id="id"></p>
-      </a>
-    </article>
-    @if (mostrarDescripcion) {
-      <app-descripcion  (volver)="ocultarDescripcion()"></app-descripcion>
-    }
-</body>
+<div class="fondo-desenfocado" id="fondoDesenfocado"></div>
+  <article class="tarjeta" (click)="toggleMostrarDescripcion()">
+    <a >
+      <img src="" alt="Imagen">
+      <p>Lorem</p>
+      <p id="id"></p>
+    </a>
+  </article>
+  @if (mostrarDescripcion) {
+    <app-descripcion  (volver)="ocultarDescripcion()"></app-descripcion>
+  }
+
 

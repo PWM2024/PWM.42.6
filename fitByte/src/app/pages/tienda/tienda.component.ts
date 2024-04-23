@@ -14,7 +14,6 @@ import { HeaderComponent } from '../../components/header/header.component'
 export class TiendaPage {
   productos = [
     {id:1},
-    {id:2},
-    {id:3}
+    {id:2}
   ]
 }
