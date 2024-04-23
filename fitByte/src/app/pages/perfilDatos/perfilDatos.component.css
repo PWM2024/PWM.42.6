@@ -1,24 +1,25 @@
-.perfil-body{
+.perfil-body-datos{
     display: flex;
 }
 
-.left-zone{
+.left-zone-datos{
     width: 30%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone{
+.right-zone-datos{
     width: 70%;
     display: flex;
     justify-content: center;
 }
 
-.right-zone-card{
+.right-zone-card-datos{
     border: 1px solid #f7992d;
     text-align: center;
     justify-content: center;
-    width: 70%;
+    height: fit-content;
+    width: 60%;
 }
 
 
