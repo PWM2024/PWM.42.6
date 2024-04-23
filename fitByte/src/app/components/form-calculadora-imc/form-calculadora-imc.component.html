@@ -9,16 +9,16 @@
     <form class="formulario-imc">
       <label for="peso">Peso</label>
       <div class="formulario-imc-container">
-        <input type="number" id="peso" name="peso" step="0.01" min="1" required />
+        <input type="number" id="peso" name="peso" step="0.01" min="1" (input)="getPesoUser($event)" required />
         <span>Kg</span>
       </div>
       <label for="peso">Altura</label>
       <div class="formulario-imc-container">
-        <input type="number" id="altura" name="altura" step="0.01" min="100" required />
+        <input type="number" id="altura" name="altura" step="0.01" min="100" (input)="getAlturaUser($event)" required />
         <span>cm</span>
       </div>
       <br />
-      <button type="submit">Calcular IMC</button>
+      <button type="submit" (click)="calcularIMC($event)">Calcular IMC</button>
     </form>
   </body>
 </html>

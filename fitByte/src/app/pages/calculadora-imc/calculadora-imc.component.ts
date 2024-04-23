@@ -4,11 +4,12 @@ import { ImcDetallesComponent } from '../../components/imc-detalles/imc-detalles
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CestaComponent } from '../../components/cesta/cesta.component';
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-calculadora-imc',
   standalone: true,
-  imports: [FormCalculadoraIMCComponent, ImcDetallesComponent, HeaderComponent, FooterComponent, CestaComponent],
+  imports: [FormCalculadoraIMCComponent, ImcDetallesComponent, HeaderComponent, FooterComponent, CestaComponent, SliderComponent],
   templateUrl: './calculadora-imc.component.html',
   styleUrl: './calculadora-imc.component.css'
 })

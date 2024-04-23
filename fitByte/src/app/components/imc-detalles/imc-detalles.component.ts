@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'imc-detalles',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./imc-detalles.component.css', '../component.css']
 })
 export class ImcDetallesComponent {
-
+  @Input() imc: any
 }

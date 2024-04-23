@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-calculadora-imc',
@@ -8,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-calculadora-imc.component.css', '../component.css']
 })
 export class FormCalculadoraIMCComponent {
+  pesoUsuario = "";
+  alturaUsuario = "";
+  @Input() imc: any;
+
+  getPesoUser(event:any){
+    this.pesoUsuario = event.target.value;
+  }
+
+  getAlturaUser(event:any){
+    this.alturaUsuario = event.target.value;
+  }
+
+  calcularIMC(event:any){
+    event.preventDefault()
+    let peso = parseFloat(this.pesoUsuario);
+    let altura = parseFloat(this.alturaUsuario);
+
+    console.log(peso);
+    console.log(altura);
+
+    this.imc = (peso/(altura/100)**2);
+  }
 
 }
