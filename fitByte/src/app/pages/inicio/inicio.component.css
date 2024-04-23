@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
   }
-  
+
 
 h1{
     text-align: center;
@@ -46,13 +46,13 @@ h1{
 /*
 #left-btn{
     display: flex;
-    align-items: center; 
+    align-items: center;
 
 }
 
 #right-btn{
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 */
@@ -83,113 +83,27 @@ h1{
 
 
 
-/*
-@media only screen and (max-width: 1024px) {
-    h1 {
-        font-size: x-large;
-        margin-bottom: 4%;
-    }
 
+@media only screen and (max-width: 430px) {
+  .productosContainerParentIndex{
+    display: inline;
+  }
 
-    .tarjetaProducto1 {
-        width: 400px;
-    }
-
-    #left-btn,
-    #right-btn{
-        display:none;
-    }
-    .rutinas-container {
-        width: 100%;
-        overflow-x: auto;
-        margin: 0;
-    }
-
-    .scroll-button scroll-right {
-        display: none;
-    }
-
-    .footer {
-        margin-top: 5%;
-    }
+  .rutinasContainerChildIndex {
+    width: 90%;
+    display: flex;
+    overflow-x: scroll;
+  }
 }
 
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 1024px) {
 
-    .productos-container {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding: 10%;
-    }
 
-    #productos-bar{
-        margin-bottom: 0;
-        margin-top: 44px;
-    }
+  .rutinasContainerChildIndex {
+    width: 90%;
+    display: flex;
+    overflow-x: scroll;
+  }
 
-    .tarjetaProducto1{
-        text-align: center;
-        scale: 0.8;
-        margin:0;
-    }
-
-    .tarjetaProducto1 .producto-card{
-        display: block;
-        text-align: center;
-        margin: 0;
-        height: fit-content;
-    }
-
-    .precio-y-botones{
-        position: relative;
-        right: 23px;
-    }
-
-    .producto-card{
-        margin: 0;
-    }
-
-    .tarjetaProducto1 .producto-card img{
-        margin:0;
-    }
-
-    #left-btn,
-    #right-btn{
-        display:none;
-    }
-
-    .rutinas-container{
-        overflow-y: hidden;
-    }
-
-    .producto-details h1{
-        font-size: 18px !important;
-    }
-    .producto-details h2{
-        font-size: 0.8rem !important;
-    }
-
-    .producto-details-tarjeta1 h1{
-        font-size: 18px;
-    }
-
-    .producto-details-tarjeta1 h2{
-        font-size: 16px;
-    }
-
-    .producto-details-tarjeta1 p{
-        font-size: 14px;
-    }
-
-    .tarjeta p{
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        left: -4%;
-    }
-
-}*/
+}
