@@ -1,13 +1,9 @@
-body {
-    background-color: white;
-}
-
-
 .imcDetalles{
     border: 5px solid orange;
     border-radius: 20px;
     padding: 20px;
     height: 170px;
+    width: 40%;
 }
 
 
@@ -15,7 +11,7 @@ body {
     margin-top: 5%;
     height: 300px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content:space-around;
     margin-bottom: 10%;
 }
@@ -24,57 +20,45 @@ body {
     margin-bottom: 15%;
 }
 
+@media only screen and (max-width: 1024px) {
+  .imcInfo {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: 3%;
+    height: 40%
+  }
+
+  .imcDetalles{
+    width: 40%;
+  }
+
+  .imcDetalle{
+    width: auto;
+  }
+
+}
+
 @media only screen and (max-width: 430px) {
     .imcInfo {
-        margin-top: 5%;
-        display: block;
-        align-items: center;
-        width: 90%;
-        margin-left: 4%;
+      margin-top: 10%;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin-left: 5%;
+      flex-direction: column;
+      height: 40%
     }
 
     .imcInfo .imcDetalles{
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         width: 95%;
-        position: relative;
-        left: -3%;
     }
 
     .imcDetalle{
         min-width: 385px;
         min-height: 115px
-    }
-
-    .formulario-imc{
-        position: relative;
-        margin-top: 20%;
-    }
-
-    .formulario-imc label{
-        display: block;
-        margin-bottom: 10px;
-        position: relative;
-        left: -3%;
-    }
-
-    .formulario-imc input{
-        position: relative;
-        left: 8%;
-    }
-
-    .formulario-imc span{
-        position: relative;
-        left: 12%;
-    }
-
-    .calcular-imc{
-        position: relative;
-        left: -3%;
-    }
-
-    .formCalculadoraIMC button{
-        position: relative;
-        left: -3%;
     }
 
 }
