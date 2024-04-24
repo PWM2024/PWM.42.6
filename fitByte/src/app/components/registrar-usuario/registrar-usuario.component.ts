@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms'; // Importa ValidatorFn y AbstractControl
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/auth.services';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './registrar-usuario.component.html',
   styleUrls: ['./registrar-usuario.component.css', '../component.css'],
 })
+
 export class RegistrarUsuarioComponent {
   form: FormGroup;
 

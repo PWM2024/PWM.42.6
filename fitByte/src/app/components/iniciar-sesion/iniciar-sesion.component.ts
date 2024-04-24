@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/auth.services';
 import { Router } from '@angular/router';
 import { catchError, of, switchMap } from 'rxjs';
 
