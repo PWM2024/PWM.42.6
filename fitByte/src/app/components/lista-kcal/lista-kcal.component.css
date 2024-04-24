@@ -1,0 +1,49 @@
+.lista-alimentos{
+    border: 3px solid rgb(233, 120, 28);
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .lista-alimentos li{
+    margin-top: 3%;
+  }
+  
+  .lista-alimentos span{
+    margin-right: 5%;
+  }
+  
+  .calcular-kcal{
+    text-align: center;
+    margin-top: 3%;
+  }
+  
+  @media only screen and (max-width: 430px){
+  
+    .lista-alimentos{
+      border: 3px solid rgb(233, 120, 28);
+      border-radius: 20px;
+      width: 100%;
+      justify-content: start;
+    }
+  
+    .lista-alimentos li{
+      margin-top: 21%;
+      width: 75%;
+    }
+  
+    .lista-alimentos button{
+      margin-top: 10%;
+      width: fit-content;
+    }
+  
+    .lista-alimentos span{
+      margin-right: 2%;
+    }
+  
+    .calcular-kcal{
+      text-align: center;
+      margin-top: 3%;
+      width: 100%;
+    }
+  }
+  
