@@ -7,12 +7,12 @@
     <slider/>
 </div>
 <section class="imcInfo" id="detallesIMC">
-    @for (detalle of detalles; track detalles) {
-        <imc-detalles class="imcDetalles"/>
-    }  
+    @for (detalle of detalles; track detalles){
+        <imc-detalles class="imcDetalles" imc="{{ imc }}"/>
+    }
 </section>
 <div class="formCalculadoraIMC">
-    <app-form-calculadora-imc/>
+    <app-form-calculadora-imc (imcCalculado)="getIMC($event)"/>
 </div>
 
 <app-footer class="footer"/>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form-calculadora-imc',
@@ -10,7 +10,8 @@ import { Component, Input } from '@angular/core';
 export class FormCalculadoraIMCComponent {
   pesoUsuario = "";
   alturaUsuario = "";
-  @Input() imc: any;
+  imc = 0;
+  @Output() imcCalculado = new EventEmitter<number>();
 
   getPesoUser(event:any){
     this.pesoUsuario = event.target.value;
@@ -29,6 +30,7 @@ export class FormCalculadoraIMCComponent {
     console.log(altura);
 
     this.imc = (peso/(altura/100)**2);
+    this.imcCalculado.emit(this.imc);
   }
 
 }

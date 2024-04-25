@@ -14,8 +14,14 @@ import { SliderComponent } from '../../components/slider/slider.component';
   styleUrl: './calculadora-imc.component.css'
 })
 export class CalculadoraIMCComponent {
+  imc = "";
+
   detalles = [
     { id: "id1", content: []},
     { id: "id2", content: []},
   ]
+
+  getIMC(calculoIMC:number){
+    this.imc = calculoIMC.toFixed(2);
+  }
 }
