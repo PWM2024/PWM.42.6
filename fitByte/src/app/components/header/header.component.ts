@@ -1,5 +1,6 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import { AuthService } from '../../../services/auth.services';
 import {IniciarSesionComponent} from '../iniciar-sesion/iniciar-sesion.component';
 import {RegistrarUsuarioComponent} from '../registrar-usuario/registrar-usuario.component';
 import {DescripcionComponent} from "../descripcion/descripcion.component";
@@ -12,7 +13,7 @@ import {DescripcionComponent} from "../descripcion/descripcion.component";
     RouterLinkActive,
     DescripcionComponent,
     IniciarSesionComponent,
-    RegistrarUsuarioComponent
+    RegistrarUsuarioComponent,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css', '../component.css']
@@ -20,8 +21,16 @@ import {DescripcionComponent} from "../descripcion/descripcion.component";
 export class HeaderComponent {
   mostrarRegister: boolean = false;
   mostrarLogin: boolean = false;
+  isLoggedIn: boolean = false;
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef,protected router: Router) {}
+  constructor(private renderer: Renderer2, private elementRef: ElementRef,protected router: Router,
+              private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.eventoLogged.subscribe(
+      this.toggleMostrarPerfil()
+    );
+  }
 
   showSidebar() {
     const sidebar = this.elementRef.nativeElement.querySelector('.sidebar');
@@ -36,9 +45,13 @@ export class HeaderComponent {
   toggleMostrarLogin() {
     this.mostrarLogin = !this.mostrarLogin;
   }
-  
+
   toggleMostrarRegister() {
     this.mostrarRegister = !this.mostrarRegister;
+  }
+
+  toggleMostrarPerfil() {
+    this.isLoggedIn = !this.isLoggedIn;
   }
 
 }

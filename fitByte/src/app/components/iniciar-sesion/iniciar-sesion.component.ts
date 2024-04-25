@@ -4,7 +4,7 @@ import { AuthService } from '../../../services/auth.services';
 import { Router } from '@angular/router';
 import { catchError, of, switchMap } from 'rxjs';
 
-@Injectable()
+
 @Component({
   selector: 'app-iniciar-sesion',
   standalone: true,
@@ -36,6 +36,8 @@ export class IniciarSesionComponent {
           switchMap((response) => {
             console.log('Inicio de sesión exitoso');
             this.volverClick();
+            this.authService.eventoLogged.emit()
+            window.location.reload();
             return of(response);
           }),
           catchError((error) => {

@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import {Injectable, inject, EventEmitter} from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
@@ -7,6 +7,7 @@ import { Observable, from } from 'rxjs';
 })
 export class AuthService {
   firebaseAuth = inject(Auth);
+  eventoLogged = new EventEmitter<any>()
 
   register(email: string, username: string, password: string): Observable<void> {
     console.log('Registrando usuario...');
@@ -19,6 +20,7 @@ export class AuthService {
       })
       .then(() => {
         console.log('Perfil actualizado exitosamente.');
+        this.login(email, password);
       })
       .catch((error) => {
         console.error('Error al registrar usuario:', error);
@@ -42,5 +44,5 @@ export class AuthService {
     return from(promise);
   }
 
-  
+
 }

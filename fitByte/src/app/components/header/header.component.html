@@ -33,11 +33,23 @@
       <li><a routerLink="/rutinas" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-dumbbell"></i> Rutinas</a></li>
     </ul>
   </nav>
-  <!-- Poner aquí el @if del inicio de sesion y si s true poner micuenta si es false los botones que hay abajo-->
-  <div class="container-btnlogin">
-    <button class="login-btn" id="showLogin" (click)="toggleMostrarLogin()">Login</button>
-    <button class="register-btn" id="showRegister" (click)="toggleMostrarRegister()">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
-  </div>
+
+  @if (isLoggedIn) {
+    <!--Añadir cesta cuando se haga toda la carga de datos -->
+    <div class="dropdown">
+      <button class="dropdown-toggle">Mi Cuenta<i class="fas fa-bars"></i></button>
+      <div class="dropdown-content">
+        <a routerLink="perfil/mis-datos"><i class="fas fa-user"></i>Perfil</a>
+        <a id="cesta-btn-movil" ><i class="fas fa-shopping-basket"></i>Cesta</a>
+        <a (click)="toggleMostrarPerfil()"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+      </div>
+    </div>
+  } @else{
+    <div class="container-btnlogin">
+      <button class="login-btn" id="showLogin" (click)="toggleMostrarLogin()">Login</button>
+      <button class="register-btn" id="showRegister" (click)="toggleMostrarRegister()">Register <i class="fas fa-chevron-right fa-sm" style="color:white;"></i></button>
+    </div>
+  }
 
   <nav>
     <ul>
