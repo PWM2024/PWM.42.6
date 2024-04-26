@@ -1,32 +1,41 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
+
 import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../../services/fire.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+
 @Injectable()
 @Component({
   selector: 'app-registrar-usuario',
   standalone: true,
+
   imports: [ReactiveFormsModule, CommonModule],
+
   templateUrl: './registrar-usuario.component.html',
   styleUrls: ['./registrar-usuario.component.css', '../component.css'],
 })
+
 export class RegistrarUsuarioComponent {
   form: FormGroup;
+
   errorMessage: string = '';
+
 
   @Output() volver = new EventEmitter<void>();
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.form = this.fb.group({
       username: ['', Validators.required],
+
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(5)]], // Mínimo 5 caracteres
       password2: ['', Validators.required]
     });
     this.form.setValidators(this.passwordMatchValidator());
     this.form.setValidators(this.requiredFieldsValidator());
+
   }
 
   volverClick() {
@@ -36,6 +45,7 @@ export class RegistrarUsuarioComponent {
   onSubmit(): void {
     if (this.form.valid) {
       const rawForm = this.form.getRawValue();
+
       this.authService.register(rawForm.email, rawForm.username, rawForm.password)
         .subscribe(() => {
           this.volverClick();
@@ -48,6 +58,7 @@ export class RegistrarUsuarioComponent {
         });
     } else {
       this.errorMessage = 'Por favor, complete todos los campos correctamente.';
+
     }
   }
 
@@ -64,6 +75,7 @@ export class RegistrarUsuarioComponent {
     };
   }
 
+
   private requiredFieldsValidator(): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} | null => {
       const username = control.get('username');
@@ -78,5 +90,5 @@ export class RegistrarUsuarioComponent {
       return null;
     };
   }
-  
+
 }

@@ -1,5 +1,4 @@
-
-<form class="formulario-imc">
+<div class="formulario-imc">
   <label for="peso">Peso</label>
   <div class="formulario-imc-container">
     <input type="number" id="peso" name="peso" step="0.01" min="1" required />
@@ -11,5 +10,5 @@
     <span>cm</span>
   </div>
   <br />
-  <button type="submit">Calcular IMC</button>
-</form>
+  <button class="calculoIMC" (click)=calculoIMC()>Calcular IMC</button>
+</div>

@@ -156,6 +156,9 @@ nav ul li ul li:hover {
   outline: none;
   transition: background-color 0.3s;
 }
+.dropdown{
+  margin-left: 70%;
+}
 
 .dropdown-toggle:active {
   background-color: #f2f2f2;
@@ -479,4 +482,9 @@ nav ul li ul li:hover {
   .logo2 {
     display: none;
   }
+
+  .dropdown{
+    margin-left: 80%;
+  }
+
 }

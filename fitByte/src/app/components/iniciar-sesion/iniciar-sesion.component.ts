@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms';
+
 import { AuthService } from '../../../services/fire.service';
 import { Router } from '@angular/router';
 import { catchError, of, switchMap } from 'rxjs';
+
 
 @Injectable()
 @Component({
@@ -36,6 +38,7 @@ export class IniciarSesionComponent {
           switchMap((response) => {
             console.log('Inicio de sesión exitoso');
             this.volverClick();
+
             return of(response);
           }),
           catchError((error) => {
@@ -46,4 +49,6 @@ export class IniciarSesionComponent {
         .subscribe();
     }
   }
+
 }
+

@@ -1,38 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Componente de Selección de Alimentos</title>
-  </head>
-  <body>
-    <form class="formulario-alimentos">
-      <select class="alimentos" name="alimentos">
-      </select>
-      <br />
+<div class="formulario-alimentos">
+  <select class="alimentos" name="alimentos">
+  </select>
+  <br />
 
-      <div class="input-container">
-        <input
-          type="number"
-          id="cantidad"
-          name="cantidad"
-          placeholder="Cantidad"
-          required
-        />
-        <span>gr</span>
-      </div>
+  <div class="input-container">
+    <input
+      type="number"
+      id="cantidad"
+      name="cantidad"
+      placeholder="Cantidad"
+      required
+    />
+    <span>gr</span>
+  </div>
 
-      <br />
-      <button type="button" id="addBtn">Añadir</button>
-    </form>
-
-    <div class="tabla-alimentos">
-      <ul id="listaAlimentos">
-
-      </ul>
-
-
-      <button class="kcalTotales">Calcular Kcal totales</button>
-    </div>
-  </body>
-</html>
+  <br />
+  <button type="button" id="addBtn">Añadir</button>
+</div>
