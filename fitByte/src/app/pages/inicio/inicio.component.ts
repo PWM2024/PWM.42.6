@@ -49,23 +49,6 @@ export class InicioPage implements OnInit {
       console.error('Error fetching productos:', error);
     });
   }
-  
-  // async getRutinas(): Promise<void> {
-  //   this.rutinas = await this.authService.getRutinas();
-  //   console.log('Rutinas obtenidas:', this.rutinas);
-  // }
 
-  productos = [
-    { id: "id1", content: []},
-    { id: "id2", content: []},
-  ]
 
-  rutinas = [
-    { id: "id1", content: []},
-    { id: "id2", content: []},
-    { id: "id3", content: []},
-    { id: "id4", content: []},
-    { id: "id5", content: []},
-    { id: "id6", content: []},
-  ]
 }

@@ -4,8 +4,8 @@
   <button class="aplicar">Aplicar Filtros</button>
   <button class="limpiar">Limpiar Filtros</button>
   <section class="tarjetas" id="tarjetasDieta-container">
-    @for (producto of productos; track producto.id){
-      <tarjeta-general class="tarjetas" />
+    @for (dieta of dietasArray; track dieta.id){
+      <tarjeta-general class="tarjetas" [nombre]="dieta.nombre"/>
     }
   </section>
 </section>

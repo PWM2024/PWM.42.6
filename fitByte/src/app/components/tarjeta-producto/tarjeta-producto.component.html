@@ -7,23 +7,24 @@
               <i class="fas fa-star" id="icono-estrella" (click)="toggleClicked($event)"></i>
             </section>
           }
-        <h1>Producto</h1>
-        <h2>SKU</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequatur dolorem, placeat dolor, quos doloremque consectetur eum magnam modi delectus.</p>
+        <h1>{{nombre}}</h1>
+        <h2>{{nombreDetallado}}</h2>
+        <p>{{descripcion}}</p>
+
         @if (router.url === '/') {
             <section class="precio-y-botones">
                 <button class="eliminar-btn" routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page">Ir a tienda</button>
             </section>
         }
-        @else if (router.url === '/tienda') {
+        @else if (router.url === '/tienda' || router.url === '/tiendaBuscar') {
             <section class="precio-y-botones">
-                <div class="precio">XX.XX€</div>
+                <div class="precio">{{precio}}€</div>
                 <button class="eliminar-btn">Añadir</button>
             </section>
         }
         @else if (router.url === '/perfil') {
             <section class="precio-y-botones">
-                <div class="precio">XX.XX€</div>
+                <div class="precio">{{precio}}€</div>
                 <button class="eliminar-btn">Eliminar</button>
             </section>
         }

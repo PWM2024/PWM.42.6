@@ -3,8 +3,9 @@
 <h1>Productos</h1>
 <section class="productosContainerParentIndex">
     <div class="productsContainerChildIndex">
-        @for (producto of productos; track producto.id) {
-            <tarjeta-producto/>
+        @for (producto of productosArray.slice(0, 2); track producto.id) {
+            <tarjeta-producto [nombre]="producto.nombre" [id]="producto.id" [nombreDetallado]="producto.nombre_detallado"
+            [descripcion]="producto.descripcion"/>
         }
     </div>
 </section>
@@ -12,9 +13,9 @@
 <h1>Rutinas</h1>
 <section class="rutinasContainerParentIndex">
     <div class="rutinasContainerChildIndex">
-        @for (rutina of rutinas; track rutina.id) {
-            <tarjeta-general/>
-        }    
+        @for (rutina of rutinasArray.slice(0, 6); track rutina.id) {
+            <tarjeta-general [nombre]="rutina.nombre" [id]="rutina.id"/>
+        }
     </div>
 </section>
 

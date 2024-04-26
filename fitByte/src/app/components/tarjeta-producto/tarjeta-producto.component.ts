@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Router, NavigationEnd, RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
@@ -23,6 +23,14 @@ export class TarjetaProductoComponent implements OnInit {
     const iconoEstrella = event.target as HTMLElement;
     iconoEstrella.classList.toggle("clicked");
   }
+
+  @Input() nombre: any;
+  @Input() nombreDetallado: any;
+  @Input() id: any;
+  @Input() precio: any;
+  @Input() descripcion: any;
+
+
 }
 
-//@input() producto
+
