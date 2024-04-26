@@ -24,3 +24,5 @@ export class TarjetaProductoComponent implements OnInit {
     iconoEstrella.classList.toggle("clicked");
   }
 }
+
+//@input() producto

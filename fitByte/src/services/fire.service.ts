@@ -11,12 +11,9 @@ export class AuthService {
   private firestore = inject(Firestore);
 
   register(email: string, username: string, password: string): Observable<void> {
-    console.log('Registrando usuario...');
 
     const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
       .then((response) => {
-        console.log('Usuario creado exitosamente.');
-        console.log('Actualizando perfil...');
         return updateProfile(response.user, { displayName: username });
       })
       .then(() => {
@@ -34,8 +31,6 @@ export class AuthService {
 
     const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password)
       .then(() => {
-        console.log('Usuario iniciado sesión exitosamente.');
-        console.log('Actualizando perfil...');
       })
       .catch((error) => {
         console.error('Error al iniciar sesión:', error);
@@ -45,11 +40,10 @@ export class AuthService {
     return from(promise);
   }
 
-  async getRutinas(): Promise<any> {
-    console.log('Iniciando sesión...');
-    const rutinas = collection(this.firestore, "rutinas");
+  async getData(collection_data: string): Promise<any> {
+    const data = collection(this.firestore, collection_data);
     try {
-      const docRef = await getDocs(rutinas);
+      const docRef = await getDocs(data);
       return docRef;
     } catch (e) {
       console.error("Error adding document: ", e);
