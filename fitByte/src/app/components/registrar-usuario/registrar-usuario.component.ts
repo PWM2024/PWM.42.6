@@ -1,13 +1,18 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms'; // Importa ValidatorFn y AbstractControl
-import { AuthService } from '../../../services/auth.services';
+
+import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../../../services/fire.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @Injectable()
 @Component({
   selector: 'app-registrar-usuario',
   standalone: true,
-  imports: [ReactiveFormsModule],
+
+  imports: [ReactiveFormsModule, CommonModule],
+
   templateUrl: './registrar-usuario.component.html',
   styleUrls: ['./registrar-usuario.component.css', '../component.css'],
 })
@@ -15,16 +20,22 @@ import { Router } from '@angular/router';
 export class RegistrarUsuarioComponent {
   form: FormGroup;
 
+  errorMessage: string = '';
+
+
   @Output() volver = new EventEmitter<void>();
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.form = this.fb.group({
       username: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(5)]], // Mínimo 5 caracteres
       password2: ['', Validators.required]
     });
     this.form.setValidators(this.passwordMatchValidator());
+    this.form.setValidators(this.requiredFieldsValidator());
+
   }
 
   volverClick() {
@@ -34,11 +45,20 @@ export class RegistrarUsuarioComponent {
   onSubmit(): void {
     if (this.form.valid) {
       const rawForm = this.form.getRawValue();
-      this.authService
-        .register(rawForm.email, rawForm.username, rawForm.password)
+
+      this.authService.register(rawForm.email, rawForm.username, rawForm.password)
         .subscribe(() => {
           this.volverClick();
+        }, (error) => {
+          if (error.code === 'auth/email-already-in-use') {
+            this.errorMessage = 'El correo electrónico ya está en uso.';
+          } else {
+            this.errorMessage = 'Ha ocurrido un error al registrar el usuario.';
+          }
         });
+    } else {
+      this.errorMessage = 'Por favor, complete todos los campos correctamente.';
+
     }
   }
 
@@ -54,4 +74,21 @@ export class RegistrarUsuarioComponent {
       return null;
     };
   }
+
+
+  private requiredFieldsValidator(): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} | null => {
+      const username = control.get('username');
+      const email = control.get('email');
+      const password = control.get('password');
+      const password2 = control.get('password2');
+  
+      if (!username?.value || !email?.value || !password?.value || !password2?.value) {
+        return { 'requiredFields': true };
+      }
+      
+      return null;
+    };
+  }
+
 }
