@@ -8,9 +8,7 @@
 
         <div class="right-zone-codigo">
             <div class="right-zone-card-codigo">
-                @for (tarjeta of tarjetas; track tarjeta.id) {
-                    <app-codigo-promocional/>
-                }    
+              <app-codigo-promocional [promoCode]="usuarioEncontrado.promoCode"/>
             </div>
         </div>
     </div>

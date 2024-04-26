@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-lista-deseos',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./tarjeta-lista-deseos.component.css', '../component.css']
 })
 export class TarjetaListaDeseosComponent {
-
+  @Input() nombre: any;
+  @Input() id: any;
+  @Input() precio: any;
 }
