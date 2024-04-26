@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/mi-perfil-detalles.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-perfil',
@@ -13,8 +14,36 @@ import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-histo
 
 export class perfilHistorial {
 
-  tarjetas = [
-    { id: "id1", content: []},
-    { id: "id2", content: []},
-  ]
+  comprasId: any[] = [];
+  comprasArray: any[] = [];
+
+
+  constructor(private authService: AuthService) {}
+  ngOnInit(): void {
+    this.authService.getUserByID("462f").then((usuario) => {
+      if (usuario) {
+        this.comprasId = usuario.compras;
+
+        this.comprasId.forEach(compraId => {
+          this.authService.getPurchasesByID(compraId).then((compra) => {
+            if (compra) {
+              this.comprasArray.push(compra);
+              console.log(compra)
+            } else {
+              console.log('Compra no encontrado.');
+            }
+
+          }).catch(error => {
+            console.error('Error al obtener compra:', error);
+          });
+        });
+
+      } else {
+        console.log('Usuario no encontrado.');
+      }
+    }).catch(error => {
+      console.error('Error al obtener usuario:', error);
+    });
+
+  }
 }

@@ -8,9 +8,10 @@
 
         <div class="right-zone-deseos">
             <div class="right-zone-card-deseos">
-                @for (tarjeta of tarjetas; track tarjeta.id) {
-                    <app-tarjeta-lista-deseos/>
-                }    
+                @for (producto of productosArray; track producto.id) {
+                    <app-tarjeta-lista-deseos [id]="producto.id" [nombre]="producto.nombre"
+                    [precio]="producto.precio"/>
+                }
             </div>
         </div>
     </div>

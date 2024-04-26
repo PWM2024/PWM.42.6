@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-codigo-promocional',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./codigo-promocional.component.css', '../component.css']
 })
 export class CodigoPromocionalComponent {
-
+  @Input() promoCode: any;
 }

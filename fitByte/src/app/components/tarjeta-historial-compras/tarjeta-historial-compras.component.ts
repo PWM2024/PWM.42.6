@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-historial-compras',
@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class TarjetaHistorialComprasComponent {
 
+
+  @Input() precio: any;
+  @Input() id: any;
+  @Input() numPedido: any;
+  @Input() fecha: any;
 }

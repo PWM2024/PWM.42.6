@@ -50,13 +50,13 @@ export class AuthService {
     }
   }
 
-  async getUserByID(id: string): Promise<any> {
+  async getUserByID(userId: string): Promise<any> {
     const data = collection(this.firestore, "usuarios");
     try {
       const docRef = await getDocs(data);
       let userFound = null;
       docRef.forEach((doc: any) => {
-        if (doc.data().id === id) {
+        if (doc.data().id === userId) {
           userFound = doc.data();
         }
       });
@@ -66,6 +66,47 @@ export class AuthService {
       throw e;
     }
   }
+
+  async getProductByID(productId: string): Promise<any> {
+    const data = collection(this.firestore, "productos");
+    try {
+      const docRef = await getDocs(data);
+      let productFound = null;
+      docRef.forEach((doc: any) => {
+        if (doc.data().id === productId) {
+          productFound = doc.data();
+        }
+      });
+      return productFound;
+    } catch (e) {
+      console.error("Error al obtener producto: ", e);
+      throw e;
+    }
+  }
+
+
+  async getPurchasesByID(purchaseId: string): Promise<any> {
+    const data = collection(this.firestore, "compras");
+    try {
+
+      const docRef = await getDocs(data);
+      let purchaseFound = null;
+
+      docRef.forEach((doc: any) => {
+        if (doc.data().numPedido === purchaseId) {
+          purchaseFound = doc.data();
+        }
+
+      });
+      return purchaseFound;
+    } catch (e) {
+      console.error("Error al obtener compra: ", e);
+      throw e;
+    }
+  }
+
+
+
 
 
 }
