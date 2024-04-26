@@ -4,14 +4,16 @@
 </div>
 <h1>Promociones</h1>
 <div class="productos-tienda">
-    @for (producto of productos; track producto.id){
-        <tarjeta-producto class="tarjeta-tienda" />
+    @for (producto of promocionesArray; track producto.id){
+      <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
+      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
     }
 </div>
 <h1>Novedades</h1>
 <div class="productos-tienda">
-    @for (producto of productos; track producto.id){
-        <tarjeta-producto class="tarjeta-tienda" />
+    @for (producto of novedadesArray; track producto.id){
+        <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
+        [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
     }
 </div>
 <app-footer/>

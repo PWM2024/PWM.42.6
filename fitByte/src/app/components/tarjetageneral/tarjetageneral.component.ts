@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, Input  } from '@angular/core';
 import {DescripcionComponent} from "../descripcion/descripcion.component";
 
 @Component({
@@ -46,5 +46,7 @@ export class TarjetageneralComponent {
     this.esconderBlur();
   }
 
+  @Input() nombre: any;
+  @Input() id: any;
 
 }

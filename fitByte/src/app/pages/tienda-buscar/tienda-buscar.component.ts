@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { FiltroOpcionesComponent } from '../../components/filtro-opciones/filtro-opciones.component';
 import { FiltroPreciosComponent } from '../../components/filtro-precios/filtro-precios.component';
 import { TarjetaProductoComponent } from '../../components/tarjeta-producto/tarjeta-producto.component';
 import { OrdenarPorDesplegableComponent } from '../../components/ordenar-por-desplegable/ordenar-por-desplegable.component';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-tienda-buscar',
@@ -13,21 +14,24 @@ import { OrdenarPorDesplegableComponent } from '../../components/ordenar-por-des
   templateUrl: './tienda-buscar.component.html',
   styleUrls: ['./tienda-buscar.component.css', '../../components/component.css']
 })
-export class TiendaBuscarComponent {
-  productos = [
-    {id: 1},
-    {id: 2},
-    {id: 3},
-    {id: 4},
-    {id: 5},
-    {id: 6},
-    {id: 7},
-    {id: 8},
-    {id: 9},
-    {id: 10},
-    {id: 11},
-    {id: 12},
-    {id: 13},
-    {id: 14}
-  ];
+export class TiendaBuscarComponent implements OnInit{
+  productosArray: any[] = [];
+
+  constructor(private authService: AuthService) {}
+  ngOnInit(): void {
+
+    this.authService.getData("productos").then(productos => {
+      productos.forEach((doc: { id: any; data: () => any; }) => {
+        const productosIndex = this.productosArray.findIndex(productos => productos.id === doc.id);
+        if (productosIndex === -1) {
+          this.productosArray.push(doc.data());
+        } else {
+          console.warn(`No se encontró el producto con ID ${doc.id}`);
+        }
+      });
+      console.log(this.productosArray);
+    }).catch(error => {
+      console.error('Error fetching productos:', error);
+    });
+  }
 }

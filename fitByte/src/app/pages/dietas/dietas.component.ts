@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HeaderComponent, } from "../../components/header/header.component";
 import {TarjetageneralComponent} from "../../components/tarjetageneral/tarjetageneral.component";
 import {FooterComponent} from "../../components/footer/footer.component";
 import {TarjetaProductoComponent} from "../../components/tarjeta-producto/tarjeta-producto.component";
 import {FiltroOpcionesComponent} from "../../components/filtro-opciones/filtro-opciones.component";
+
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-dietas',
@@ -17,25 +19,23 @@ import {FiltroOpcionesComponent} from "../../components/filtro-opciones/filtro-o
   templateUrl: './dietas.component.html',
   styleUrl: './dietas.component.css'
 })
-export class DietasPage {
-  productos = [
-    {id:1},
-    {id:2},
-    {id:3},
-    {id:4},
-    {id:5},
-    {id:6},
-    {id:7},
-    {id:8},
-    {id:9},
-    {id:10},
-    {id:11},
-    {id:12},
-    {id:13},
-    {id:14},
-    {id:15},
-    {id:16},
-    {id:17},
-    {id:18},
-  ]
+export class DietasPage implements OnInit{
+
+  dietasArray: any[] = [];
+
+  constructor(private authService: AuthService) {}
+  ngOnInit(): void {
+    this.authService.getData("dietas").then(dietas => {
+      dietas.forEach((doc: { id: any; data: () => any; }) => {
+        const rutinaIndex = this.dietasArray.findIndex(dieta => dieta.id === doc.id);
+        if (rutinaIndex === -1) {
+          this.dietasArray.push(doc.data());
+        } else {
+          console.warn(`No se encontró el producto con ID ${doc.id}`);
+        }
+      });
+    }).catch(error => {
+      console.error('Error fetching dietas:', error);
+    });
+  }
 }

@@ -7,8 +7,9 @@
 </section>
 <ordenar-por-desplegable class="ordenarPor"/>
 <section class="productos-container" id="productos">
-    @for (producto of productos; track producto.id){
-        <tarjeta-producto class="tarjeta-tienda" />
+    @for (producto of productosArray; track producto.id){
+      <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
+      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
     }
 </section>
 <app-footer class="footer"/>
