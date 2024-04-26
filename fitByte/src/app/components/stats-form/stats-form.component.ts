@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stats-form',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./stats-form.component.css', '../component.css']
 })
 export class StatsFormComponent {
+
+  @Input() nickName: any;
+  @Input() kcals: any;
+  @Input() imc: any;
 
 }

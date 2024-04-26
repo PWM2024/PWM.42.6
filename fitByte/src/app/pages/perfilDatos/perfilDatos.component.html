@@ -5,10 +5,10 @@
         <div class="left-zone-datos">
             <mi-perfil-detalles/>
         </div>
-        
+
         <div class="right-zone-datos">
             <div class="right-zone-card-datos">
-                <app-stats-form/>
+                <app-stats-form [nickName]="usuarioEncontrado.nickname" [kcals]="usuarioEncontrado.kcal" [imc]="usuarioEncontrado.imc"/>
                 <perfil-form/>
             </div>
         </div>

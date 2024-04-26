@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore } from "@angular/fire/firestore"; 
+import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore } from "@angular/fire/firestore";
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
@@ -50,5 +50,22 @@ export class AuthService {
     }
   }
 
-  
+  async getUserByID(id: string): Promise<any> {
+    const data = collection(this.firestore, "usuarios");
+    try {
+      const docRef = await getDocs(data);
+      let userFound = null;
+      docRef.forEach((doc: any) => {
+        if (doc.data().id === id) {
+          userFound = doc.data();
+        }
+      });
+      return userFound;
+    } catch (e) {
+      console.error("Error al obtener usuario: ", e);
+      throw e;
+    }
+  }
+
+
 }
