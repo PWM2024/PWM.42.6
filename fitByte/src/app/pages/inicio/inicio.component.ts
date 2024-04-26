@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TarjetaProductoComponent } from '../../components/tarjeta-producto/tarjeta-producto.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetageneralComponent } from '../../components/tarjetageneral/tarjetageneral.component';
 import { HeaderComponent } from '../../components/header/header.component'
 import { SliderComponent } from '../../components/slider/slider.component';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-inicio',
@@ -13,8 +14,23 @@ import { SliderComponent } from '../../components/slider/slider.component';
   styleUrl: './inicio.component.css'
 })
 
+export class InicioPage implements OnInit {
 
-export class InicioPage {
+  constructor(private authService: AuthService) {}
+  ngOnInit(): void {
+    this.authService.getRutinas().then(rutinas => {
+      rutinas.forEach((doc: { id: any; data: () => any; }) => {
+        console.log(doc.id, " => ", doc.data());
+      });
+    }).catch(error => {
+      console.error('Error fetching rutinas:', error);
+    });
+  }
+  // async getRutinas(): Promise<void> {
+  //   this.rutinas = await this.authService.getRutinas();
+  //   console.log('Rutinas obtenidas:', this.rutinas);
+  // }
+
   productos = [
     { id: "id1", content: []},
     { id: "id2", content: []},
