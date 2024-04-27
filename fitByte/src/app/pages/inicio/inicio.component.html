@@ -14,7 +14,7 @@
 <section class="rutinasContainerParentIndex">
     <div class="rutinasContainerChildIndex">
         @for (rutina of rutinasArray.slice(0, 6); track rutina.id) {
-            <tarjeta-general [nombre]="rutina.nombre" [id]="rutina.id"/>
+            <tarjeta-general [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"/>
         }
     </div>
 </section>

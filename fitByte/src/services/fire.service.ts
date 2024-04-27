@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore } from "@angular/fire/firestore";
+import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore, updateDoc } from "@angular/fire/firestore";
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
@@ -105,6 +105,31 @@ export class AuthService {
     }
   }
 
+
+  async updateValueUser(userId: string, newValue: string, parameter: string): Promise<any> {
+    const data = collection(this.firestore, "usuarios");
+
+    try {
+      const querySnapshot = await getDocs(data);
+
+      querySnapshot.forEach(async (doc) => {
+        if (doc.data()['id'] === userId) {
+          try {
+            const updateObject = { [parameter]: newValue };
+            await updateDoc(doc.ref, updateObject);
+            console.log(parameter, "actualizado correctamente.");
+          } catch (error) {
+            console.error("Error al actualizar el apodo del usuario:", error);
+            throw error;
+          }
+        }
+      });
+
+    } catch (e) {
+      console.error("Error al obtener usuarios: ", e);
+      throw e;
+    }
+  }
 
 
 
