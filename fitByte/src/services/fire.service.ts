@@ -149,6 +149,40 @@ export class AuthService {
     }
   }
 
+  async addUserProduct(userID: string, productID: string, fieldToAdd: string): Promise<any> {
+    const data = collection(this.firestore, "usuarios");
+
+    try {
+      const querySnapshot = await getDocs(data);
+
+      querySnapshot.forEach(async (doc) => {
+        if (doc.data()['id'] === userID) {
+          try {
+            const currentCesta = doc.data()[fieldToAdd] ||[];
+
+            if (currentCesta.includes(productID)) {
+              console.log("El producto ya está en la cesta.");
+              return;
+            }
+
+            const newCesta = [...currentCesta, productID];
+            const updateObject = { [fieldToAdd]: newCesta};
+
+            await updateDoc(doc.ref, updateObject);
+            console.log(fieldToAdd, "actualizado correctamente.");
+          } catch (error) {
+            console.error("Error al actualizar el apodo del usuario:", error);
+            throw error;
+          }
+        }
+      });
+
+    } catch (e) {
+      console.error("Error al obtener usuarios: ", e);
+      throw e;
+    }
+  }
+
 
 
 

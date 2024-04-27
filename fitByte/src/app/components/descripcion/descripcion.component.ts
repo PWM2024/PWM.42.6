@@ -20,6 +20,7 @@ export class DescripcionComponent implements OnInit{
   }
 
   @Input() descripcion: any;
+  @Input() linkImage: any;
 }
 
 

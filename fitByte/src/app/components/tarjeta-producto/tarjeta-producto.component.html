@@ -19,7 +19,7 @@
         @else if (router.url === '/tienda' || router.url === '/tiendaBuscar') {
             <section class="precio-y-botones">
                 <div class="precio">{{precio}}€</div>
-                <button class="eliminar-btn">Añadir</button>
+                <button (click)="addClick()" class="eliminar-btn">Añadir</button>
             </section>
         }
         @else if (router.url === '/perfil') {

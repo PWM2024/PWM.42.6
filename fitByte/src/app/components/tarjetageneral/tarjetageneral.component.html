@@ -8,7 +8,8 @@
     </a>
   </article>
   @if (mostrarDescripcion) {
-    <app-descripcion  [descripcion] = descripcion (volver)="ocultarDescripcion()"></app-descripcion>
+    <app-descripcion  [descripcion] = descripcion (volver)="ocultarDescripcion()"
+    [linkImage]="linkImages"/>
   }
 
 
