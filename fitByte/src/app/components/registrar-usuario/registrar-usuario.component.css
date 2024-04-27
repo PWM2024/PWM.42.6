@@ -97,6 +97,10 @@
     }
 }
 
+.error-message{
+    margin-top: 10px;
+    color: #f44336;
+}
 
 @media only screen and (max-width: 430px) {
     .centered-container{
