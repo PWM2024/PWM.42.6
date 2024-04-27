@@ -16,6 +16,7 @@ import { catchError, of, switchMap } from 'rxjs';
 })
 export class IniciarSesionComponent {
   form: FormGroup;
+  enviado = false;
 
   @Output() volver = new EventEmitter<void>();
 
@@ -48,6 +49,7 @@ export class IniciarSesionComponent {
         )
         .subscribe();
     }
+    this.enviado = true;
   }
 
 }
