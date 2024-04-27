@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Router, NavigationEnd, RouterLink, RouterLinkActive} from '@angular/router';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
     selector: 'tarjeta-producto',
@@ -13,10 +14,16 @@ import {Router, NavigationEnd, RouterLink, RouterLinkActive} from '@angular/rout
 })
 export class TarjetaProductoComponent implements OnInit {
 
-  constructor(protected router: Router) { }
+  constructor(protected router: Router, private authService: AuthService) { }
+  linkImages: string = '';
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.authService.getImageUrl(this.pathImages).subscribe(url => {
+      console.log('URL de la imagen:', url);
+      this.linkImages = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
   }
 
   toggleClicked(event: MouseEvent): void {
@@ -29,6 +36,7 @@ export class TarjetaProductoComponent implements OnInit {
   @Input() id: any;
   @Input() precio: any;
   @Input() descripcion: any;
+  @Input() pathImages: any;
 
 
 }

@@ -6,14 +6,16 @@
 <div class="productos-tienda">
     @for (producto of promocionesArray; track producto.id){
       <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
-      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
+      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"
+      [pathImages] = "'Source/Tienda/' + producto.img"/>
     }
 </div>
 <h1>Novedades</h1>
 <div class="productos-tienda">
     @for (producto of novedadesArray; track producto.id){
         <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
-        [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
+        [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"
+        [pathImages] = "'Source/Tienda/' + producto.img"/>
     }
 </div>
 <app-footer/>

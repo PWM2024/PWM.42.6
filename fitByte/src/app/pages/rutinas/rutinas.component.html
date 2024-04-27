@@ -5,7 +5,8 @@
   <button class="limpiar">Limpiar Filtros</button>
   <section class="tarjetas" id="tarjetasRutina-container">
     @for (rutina of rutinasArray; track rutina.id){
-      <tarjeta-general class="tarjetas" [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"/>
+      <tarjeta-general class="tarjetas" [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"
+      [pathImages] = "'Source/Rutinas/' + rutina.img"/>
     }
   </section>
 </section>

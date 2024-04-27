@@ -5,7 +5,7 @@
     <div class="productsContainerChildIndex">
         @for (producto of productosArray.slice(0, 2); track producto.id) {
             <tarjeta-producto [nombre]="producto.nombre" [id]="producto.id" [nombreDetallado]="producto.nombre_detallado"
-            [descripcion]="producto.descripcion"/>
+            [descripcion]="producto.descripcion" [pathImages] = "'Source/Tienda/' + producto.img"/>
         }
     </div>
 </section>
@@ -14,7 +14,8 @@
 <section class="rutinasContainerParentIndex">
     <div class="rutinasContainerChildIndex">
         @for (rutina of rutinasArray.slice(0, 6); track rutina.id) {
-            <tarjeta-general [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"/>
+            <tarjeta-general [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"
+            [pathImages] = "'Source/Rutinas/' + rutina.img"/>
         }
     </div>
 </section>
