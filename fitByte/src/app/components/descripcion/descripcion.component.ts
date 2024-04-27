@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter, OnInit} from '@angular/core';
+import {Component, Output, EventEmitter, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-descripcion',
@@ -18,6 +18,8 @@ export class DescripcionComponent implements OnInit{
   volverClick() {
     this.volver.emit();
   }
+
+  @Input() descripcion: any;
 }
 
 

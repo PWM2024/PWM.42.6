@@ -5,7 +5,7 @@
   <button class="limpiar">Limpiar Filtros</button>
   <section class="tarjetas" id="tarjetasDieta-container">
     @for (dieta of dietasArray; track dieta.id){
-      <tarjeta-general class="tarjetas" [nombre]="dieta.nombre"/>
+      <tarjeta-general class="tarjetas" [nombre]="dieta.nombre" [descripcion]="dieta.descripcion"/>
     }
   </section>
 </section>

@@ -48,5 +48,6 @@ export class TarjetageneralComponent {
 
   @Input() nombre: any;
   @Input() id: any;
+  @Input() descripcion: any;
 
 }
