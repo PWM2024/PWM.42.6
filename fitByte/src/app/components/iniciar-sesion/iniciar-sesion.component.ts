@@ -38,8 +38,9 @@ export class IniciarSesionComponent {
         .pipe(
           switchMap((response) => {
             console.log('Inicio de sesión exitoso');
+            this.authService.eventoLogged.emit();
             this.volverClick();
-
+            window.location.reload();
             return of(response);
           }),
           catchError((error) => {

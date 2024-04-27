@@ -8,14 +8,12 @@
 </head>
 
 <header>
-  @if (router.url === '/tienda') {
+  @if (router.url === '/tienda' || router.url === '/tiendaBuscar') {
     <section class="up-header-mobile-input">
       <input type="text" class="search-input" placeholder="Buscar..." />
       <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
     </section>
   }
-
-
 
   <nav>
     <ul class="sidebar">
@@ -53,7 +51,7 @@
 
   <nav>
     <ul>
-      @if (router.url === '/tienda') {
+      @if (router.url === '/tienda' || router.url === '/tiendaBuscar') {
         <section class="up-header" id="hide-up-header">
           <input type="text" class="search-input" placeholder="Buscar..." />
           <button class="submit" routerLink="/tiendaBuscar" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-search fa-sm"></i></button>
