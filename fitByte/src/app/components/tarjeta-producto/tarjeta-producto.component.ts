@@ -16,6 +16,7 @@ export class TarjetaProductoComponent implements OnInit {
 
   constructor(protected router: Router, private authService: AuthService) { }
   linkImages: string = '';
+  userID: string = "462f";
 
   ngOnInit() {
     this.authService.getImageUrl(this.pathImages).subscribe(url => {
@@ -29,6 +30,9 @@ export class TarjetaProductoComponent implements OnInit {
   toggleClicked(event: MouseEvent): void {
     const iconoEstrella = event.target as HTMLElement;
     iconoEstrella.classList.toggle("clicked");
+  }
+  addClick(){
+    this.authService.addUserProduct(this.userID, this.id, 'cesta');
   }
 
   @Input() nombre: any;
