@@ -9,7 +9,8 @@
 <section class="productos-container" id="productos">
     @for (producto of productosArray; track producto.id){
       <tarjeta-producto class="tarjeta-tienda" [nombre]="producto.nombre" [id]="producto.id"
-      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"/>
+      [nombreDetallado]="producto.nombre_detallado" [descripcion]="producto.descripcion" [precio]="producto.precio"
+      [pathImages] = "'Source/Tienda/' + producto.img"/>
     }
 </section>
 <app-footer class="footer"/>

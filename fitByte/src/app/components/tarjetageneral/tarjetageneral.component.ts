@@ -1,5 +1,6 @@
 import { Component, Renderer2, Input  } from '@angular/core';
 import {DescripcionComponent} from "../descripcion/descripcion.component";
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'tarjeta-general',
@@ -12,7 +13,8 @@ import {DescripcionComponent} from "../descripcion/descripcion.component";
 })
 export class TarjetageneralComponent {
   mostrarDescripcion: boolean = false;
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private authService: AuthService) {}
+  linkImages: string = '';
 
 
   toggleMostrarDescripcion() {
@@ -46,8 +48,19 @@ export class TarjetageneralComponent {
     this.esconderBlur();
   }
 
+  ngOnInit() {
+    this.authService.getImageUrl(this.pathImages).subscribe(url => {
+      console.log('URL de la imagen:', url);
+      this.linkImages = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
+  }
+
+
   @Input() nombre: any;
   @Input() id: any;
   @Input() descripcion: any;
+  @Input() pathImages: any;
 
 }

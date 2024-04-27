@@ -1,6 +1,6 @@
 
 <section class="producto-card">
-    <img src="../Source/default-img.png" alt="Producto">
+    <img [src]="linkImages" alt="Producto">
     <section class="producto-details">
         @if (router.url == '/tienda' || router.url == '/tiendaBuscar'){
             <section class="contenedor-estrella" id="contenedor-estrella">

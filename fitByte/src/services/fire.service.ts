@@ -3,6 +3,9 @@ import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore, updateDoc
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -46,6 +49,14 @@ export class AuthService {
 
     return from(promise);
   }
+
+  getImageUrl(imagePath: string): Observable<string> {
+    const storage = getStorage();
+    const imageRef = ref(storage, imagePath);
+
+    return from(getDownloadURL(imageRef));
+}
+
 
   async getData(collection_data: string): Promise<any> {
     const data = collection(this.firestore, collection_data);

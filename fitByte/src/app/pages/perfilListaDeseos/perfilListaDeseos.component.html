@@ -10,7 +10,7 @@
             <div class="right-zone-card-deseos">
                 @for (producto of productosArray; track producto.id) {
                     <app-tarjeta-lista-deseos [id]="producto.id" [nombre]="producto.nombre"
-                    [precio]="producto.precio"/>
+                    [precio]="producto.precio" [pathImages] = "'Source/Tienda/' + producto.img"/>
                 }
             </div>
         </div>
