@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, EventEmitter} from '@angular/core';
 import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore, updateDoc } from "@angular/fire/firestore";
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
@@ -9,15 +9,20 @@ import { Observable, from } from 'rxjs';
 export class AuthService {
   private firebaseAuth = inject(Auth);
   private firestore = inject(Firestore);
+  eventoLogged = new EventEmitter<any>()
 
   register(email: string, username: string, password: string): Observable<void> {
+    console.log('Registrando usuario...');
 
     const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
       .then((response) => {
+        console.log('Usuario creado exitosamente.');
+        console.log('Actualizando perfil...');
         return updateProfile(response.user, { displayName: username });
       })
       .then(() => {
         console.log('Perfil actualizado exitosamente.');
+        this.login(email, password);
       })
       .catch((error) => {
         console.error('Error al registrar usuario:', error);
@@ -31,6 +36,8 @@ export class AuthService {
 
     const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password)
       .then(() => {
+        console.log('Usuario iniciado sesión exitosamente.');
+        console.log('Actualizando perfil...');
       })
       .catch((error) => {
         console.error('Error al iniciar sesión:', error);
