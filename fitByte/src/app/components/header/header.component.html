@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header sin CSS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <header>
   @if (router.url === '/tienda' || router.url === '/tiendaBuscar') {
     <section class="up-header-mobile-input">
@@ -33,12 +25,11 @@
   </nav>
 
   @if (isLoggedIn) {
-    <!--Añadir cesta cuando se haga toda la carga de datos -->
     <div class="dropdown">
       <button class="dropdown-toggle">Mi Cuenta<i class="fas fa-bars"></i></button>
       <div class="dropdown-content">
-        <a routerLink="perfil/mis-datos"><i class="fas fa-user"></i>Perfil</a>
-        <a id="cesta-btn-movil" ><i class="fas fa-shopping-basket"></i>Cesta</a>
+        <a routerLink="perfil/mis-datos" routerLinkActive="active" ><i class="fas fa-user"></i>Perfil</a>
+        <a id="cesta-btn-movil" (click)="toggleMostrarCesta()"><i class="fas fa-shopping-basket"></i>Cesta</a>
         <a (click)="toggleMostrarPerfil()"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
       </div>
     </div>
@@ -76,11 +67,12 @@
   </div>
 </header>
 <div id="miDiv"></div>
-  @if (mostrarLogin) {
-    <app-iniciar-sesion  (volver)="toggleMostrarLogin()"></app-iniciar-sesion>
-  }
-  @else if (mostrarRegister) {
-    <app-registrar-usuario  (volver)="toggleMostrarRegister()"></app-registrar-usuario>
-  }
-
-</html>
+@if (mostrarLogin) {
+  <app-iniciar-sesion  (volver)="toggleMostrarLogin()"></app-iniciar-sesion>
+}
+@else if (mostrarRegister) {
+  <app-registrar-usuario  (volver)="toggleMostrarRegister()"></app-registrar-usuario>
+}
+@else if(mostrarCesta){
+  <app-cesta (volver)="toggleMostrarCesta()"> </app-cesta>
+}

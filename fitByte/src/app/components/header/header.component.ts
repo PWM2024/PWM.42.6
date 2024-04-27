@@ -4,6 +4,7 @@ import { AuthService } from '../../../services/auth.services';
 import {IniciarSesionComponent} from '../iniciar-sesion/iniciar-sesion.component';
 import {RegistrarUsuarioComponent} from '../registrar-usuario/registrar-usuario.component';
 import {DescripcionComponent} from "../descripcion/descripcion.component";
+import {CestaComponent} from "../cesta/cesta.component";
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,7 @@ import {DescripcionComponent} from "../descripcion/descripcion.component";
     DescripcionComponent,
     IniciarSesionComponent,
     RegistrarUsuarioComponent,
+    CestaComponent
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css', '../component.css']
@@ -21,6 +23,7 @@ import {DescripcionComponent} from "../descripcion/descripcion.component";
 export class HeaderComponent {
   mostrarRegister: boolean = false;
   mostrarLogin: boolean = false;
+  mostrarCesta: boolean = false;
   isLoggedIn: boolean = false;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef,protected router: Router,
@@ -53,5 +56,28 @@ export class HeaderComponent {
   toggleMostrarPerfil() {
     this.isLoggedIn = !this.isLoggedIn;
   }
+
+  toggleMostrarCesta() {
+    this.mostrarCesta = !this.mostrarCesta;
+    const prueba = document.querySelector('.sidebar') as HTMLDivElement;
+    const cart = document.getElementById('cesta-container') as HTMLDivElement;
+    const overlay = document.getElementById('overlay') as HTMLDivElement;
+
+    if (this.mostrarCesta){
+      prueba.style.transform = 'translateX(-110%)';
+      cart.classList.add('open');
+      overlay.style.display = 'block';
+      setTimeout(()=> {
+        overlay.classList.add('active');
+      }, 0);
+    } else {
+      cart.classList.remove('open');
+      overlay.classList.remove('active');
+      setTimeout(()=>{
+        overlay.style.display = 'none';
+      }, 500);
+    }
+  }
+
 
 }

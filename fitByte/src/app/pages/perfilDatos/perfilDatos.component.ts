@@ -4,11 +4,12 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { PerfilFormComponent } from '../../components/perfil-form/perfil-form.component';
 import { StatsFormComponent } from '../../components/stats-form/stats-form.component';
 import { AuthService } from '../../../services/fire.service'
+import {HeaderComponent} from "../../components/header/header.component";
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, StatsFormComponent, PerfilFormComponent, FooterComponent],
+  imports: [MiPerfilDetallesComponent, StatsFormComponent, PerfilFormComponent, FooterComponent, HeaderComponent],
   templateUrl: './perfilDatos.component.html',
   styleUrl: './perfilDatos.component.css'
 })

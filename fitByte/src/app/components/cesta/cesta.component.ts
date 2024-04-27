@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class CestaComponent {
 
+
+  @Output() volver = new EventEmitter<void>();
+
+  volverClick() {
+    this.volver.emit();
+  }
+  
 }

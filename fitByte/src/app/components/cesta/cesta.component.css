@@ -3,6 +3,15 @@
     margin-bottom: 40px;
 }
 
+#boton-finalizarCompra{
+  margin-left: 3%;
+}
+.input-button-container input{
+  width: 37%;
+  padding: 12px;
+  margin-right: 5%;
+}
+
 .head-cesta {
     padding: 1rem;
     border-bottom: 1px solid #d0cdcd;
@@ -279,5 +288,11 @@
     .input-button-container input{
         width: 37%;
         padding: 12px;
+        margin-right: 5%;
+    }
+
+    #boton-finalizarCompra{
+     margin-left: 1%;
+      margin-top: 3%;
     }
 }
