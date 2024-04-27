@@ -4,6 +4,7 @@
     <section class="input-container">
       <label for="nicknameInput">Nickname:</label> <br />
       <input
+        [(ngModel)]="newNickname"
         type="text"
         id="nicknameInput"
         name="nickname"
@@ -12,25 +13,26 @@
       />
     </section>
     <br />
-    <button type="button" id="nickNameButton">Guardar</button>
+    <button (click)="handleClickNickName()" type="button" id="nickNameButton">Guardar</button>
   </form>
 
   <form class="passwordForm">
     <section class="password">
       <section class="password-container">
-        <input id="antiguaContrasena" type="password" placeholder="Antigua Contraseña" />
-        <input id="nuevaContrasena" type="password" placeholder="Nueva Contraseña" />
-        <input id="repetirContrasena" type="password" placeholder="Repetir Contraseña" />
+        <input id="antiguaContrasena" name="antiguaContrasena" type="password" placeholder="Antigua Contraseña" [(ngModel)]="prevPassWord" />
+        <input id="nuevaContrasena" name="nuevaContrasena" type="password" placeholder="Nueva Contraseña" [(ngModel)]="newPassWord" />
+        <input id="repetirContrasena" name="repetirContrasena" type="password" placeholder="Repetir Contraseña" [(ngModel)]="repPassWord" />
       </section>
     </section>
     <br />
-    <button type="button" id="passwordButton">Guardar</button>
+    <button (click)="handleClickPassword()" type="button" id="passwordButton">Guardar</button>
   </form>
 
   <form id="kcalForm">
     <section class="input-container">
       <label for="kcalInput">Kcal Consumidas:</label><br />
       <input
+        [(ngModel)]="consumedKcals"
         type="number"
         id="kcalInput"
         name="kcal"
@@ -40,13 +42,14 @@
       <span>Kcal</span>
     </section>
     <br />
-    <button type="button" id="KcalButton">Guardar</button>
+    <button (click)="handleClickKcals()" type="button" id="KcalButton">Guardar</button>
   </form>
 
   <form class="pesoForm">
     <section class="input-container">
       <label for="pesoInput">Peso:</label><br />
       <input
+        [(ngModel)]="newWeight"
         type="number"
         id="pesoInput"
         name="peso"
@@ -56,13 +59,14 @@
       <span>Kg</span>
     </section>
     <br />
-    <button type="button" id="pesoButton">Guardar</button>
+    <button (click)="handleClickWeight()" type="button" id="pesoButton">Guardar</button>
   </form>
 
   <form class="alturaForm">
     <section class="input-container">
       <label for="alturaInput">Altura:</label><br />
       <input
+        [(ngModel)]="newHeight"
         type="number"
         id="alturaInput"
         class="alturaInput"
@@ -73,5 +77,5 @@
       <span>cm</span>
     </section>
     <br />
-    <button type="button" id="alturaButton">Guardar</button>
+    <button (click)="handleClickHeight()" type="button" id="alturaButton">Guardar</button>
   </form>
