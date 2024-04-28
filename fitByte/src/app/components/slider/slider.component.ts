@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild, OnDestroy, ViewChildren, QueryList } from '@angular/core';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'slider',
@@ -15,8 +16,31 @@ export class SliderComponent implements AfterViewInit, OnDestroy {
   sliderInterval: any;
   interval = 3000;
   width = 0;
+  linkImage1 ='';
+  linkImage2 ='';
+  linkImage3 ='';
   
-  constructor (private renderer: Renderer2){}
+  constructor(private renderer: Renderer2, private authService: AuthService) { }
+
+
+  ngOnInit() {
+    this.authService.getImageUrl('Source/slider-img/banner1.png').subscribe(url => {
+      this.linkImage1 = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
+    this.authService.getImageUrl('Source/slider-img/banner2.png').subscribe(url => {
+      this.linkImage2 = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
+    this.authService.getImageUrl('Source/slider-img/banner3.png').subscribe(url => {
+      this.linkImage3 = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
+  }
+
 
   ngAfterViewInit() {
     console.log(this.sliderItems.length)
@@ -36,7 +60,9 @@ export class SliderComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(){
     clearInterval(this.sliderInterval);
   }
-  
+
+
+
   showSlides() {
     if (this.sliderItems.length === 0) {
       return; // Evitar errores si no hay elementos con la clase
