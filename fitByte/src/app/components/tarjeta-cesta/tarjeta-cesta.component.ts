@@ -6,7 +6,7 @@ import { AuthService } from '../../../services/fire.service'
   standalone: true,
   imports: [],
   templateUrl: './tarjeta-cesta.component.html',
-  styleUrls: ['./tarjeta-cesta.component.css', '../component.css']
+  styleUrls: ['./tarjeta-cesta.component.css']
 })
 export class TarjetaCestaComponent {
   @Input() precio: any;
