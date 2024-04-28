@@ -1,7 +1,8 @@
 <div class="formulario-alimentos">
-  <select class="alimentos" name="alimentos">
+  <select class="alimentos" name="alimentos" #select>
+    <option disabled selected>Alimentos</option>
   </select>
-  <br />
+  <br/>
 
   <div class="input-container">
     <input
@@ -10,10 +11,13 @@
       name="cantidad"
       placeholder="Cantidad"
       required
+      #cantidad
+      (input)="updateFactor()"
     />
     <span>gr</span>
   </div>
 
-  <br />
-  <button type="button" id="addBtn">Añadir</button>
+  <div class="boton-añadir-a-lista">
+    <button type="button" id="addBtn" (click)="addAlimento()">Añadir</button>
+  </div>
 </div>

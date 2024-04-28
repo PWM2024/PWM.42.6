@@ -7,8 +7,8 @@
     <slider/>
 </div>
 <div class="form-y-lista-kcal">
-    <form-calculadora-kcal class="formCalculadoraKcal"/>
-    <lista-kcal class="listaKcal"/>
+    <form-calculadora-kcal class="formCalculadoraKcal" [alimentos]="alimentos" (alimentoElegido)="getAlimentoElegido($event)"/>
+    <lista-kcal class="listaKcal" [alimentoElegido]="alimentoElegido"/>
 </div>
 <!--<div class="popup" id="popup">
     <div class="popup-content">

@@ -16,6 +16,7 @@ import { AuthService } from '../../../services/fire.service'
 export class CalculadoraKcalComponent {
   /*LISTA DE ALIMENTOS CON ID, Kcal_por_cada_100gr y nombre*/
   alimentos: any[] = [];
+  alimentoElegido = {nombre: '', kcal: 0};
 
   constructor(private authService: AuthService) { }
 
@@ -26,5 +27,9 @@ export class CalculadoraKcalComponent {
     }).catch((error) => {
       console.error("Error al obtener alimentos: ", error);
     });
+  }
+
+  getAlimentoElegido(event: any){
+    this.alimentoElegido = event;
   }
 }

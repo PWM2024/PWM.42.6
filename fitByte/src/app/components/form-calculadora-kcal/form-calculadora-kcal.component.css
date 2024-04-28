@@ -4,6 +4,28 @@
     justify-content: center;
 }
 
+.alimentos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 205px;
+    border: 1px solid #d3d3d3;
+}
+
+#cantidad{
+    padding: 5px;
+    width: 195px;
+    margin-right: 10px;
+}
+
+.boton-añadir-a-lista{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: -35px;
+}
+
 .footer{
     margin-top: 5%;
 }
@@ -28,24 +50,24 @@
     cursor: pointer;
 }
   
-  @media only screen and (max-width: 430px){
+@media only screen and (max-width: 430px){
     .formCalculadoraKcal{
         width: 100%;
         height: 100%;
         margin: 0;
     }
-  
+
     .tabla-alimentos{
         position: relative;
         left: -3%;
     }
-  
+
     .tabla-alimentos ul{
         width: 100%;
         position: relative;
         left: -5%;
     }
-  
+
     .tabla-alimentos button{
         position: relative;
         left: -9%;
@@ -54,16 +76,16 @@
         top: -5%;
         font-size: 18px;
     }
-  
+
     .formulario-alimentos{
         position: relative;
         left: -2%;
     }
-  
+
     .formulario-alimentos .input-container {
         display: flex;
     }
-  
+
     .formulario-alimentos .input-container
     span{
         position: relative;
