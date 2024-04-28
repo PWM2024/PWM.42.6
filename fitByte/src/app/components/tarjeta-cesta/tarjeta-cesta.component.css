@@ -11,6 +11,19 @@
     align-items: center;
 }
 
+button.operar-cantidad {
+    border-radius: 50%;
+}
+  
+section.producto-unidades {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.producto-unidades h2{
+    margin-top: 3%;
+}
+
 .producto-card img {
     width: 150px;
     height: 150px;
