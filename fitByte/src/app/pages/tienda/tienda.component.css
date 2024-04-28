@@ -5,6 +5,7 @@
 
 .productos-tienda{
     display: flex;
+    justify-content: center;
 }
 
 .tarjeta-tienda{

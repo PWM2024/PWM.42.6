@@ -6,9 +6,9 @@
         <h2>{{nombreDetallado}}</h2>
         <h1>{{precio}} €</h1>
         <section class="producto-unidades">
-            <button class="operar-cantidad">-</button>
-            <h2>1</h2>
-            <button class="operar-cantidad">+</button>
+            <button (click)="removeQuantity()" class="operar-cantidad">-</button>
+            <h2>{{cantidad}}</h2>
+            <button (click)="addQuantity()" class="operar-cantidad">+</button>
         </section>
     </section>
 </section>
