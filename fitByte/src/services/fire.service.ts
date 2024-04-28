@@ -146,6 +146,21 @@ export class AuthService {
   }
 
 
+  async getFood(): Promise<any[]> {
+    const data = collection(this.firestore, "alimentos");
+    try {
+      const querySnapshot = await getDocs(data);
+      const alimentos: any[] = [];
+      querySnapshot.forEach((doc) => {
+        alimentos.push(doc.data());
+      });
+      return alimentos;
+    } catch (e) {
+      console.error("Error al obtener alimentos: ", e);
+      throw e;
+    }
+  }
+
   async updateValueUser(userId: string, newValue: string, parameter: string): Promise<any> {
     const data = collection(this.firestore, "usuarios");
 
@@ -297,6 +312,7 @@ export class AuthService {
       throw e;
     }
   }
+
 }
 function generarCadenaAleatoria(): string {
   const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
