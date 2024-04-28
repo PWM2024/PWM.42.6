@@ -21,7 +21,8 @@
     <div id="tarjetaProductoCesta">
       <section class="product-list">
         @for( producto of cesta; track producto.id){
-          <tarjeta-cesta (componentDeleted)="deleteChild($event)" [id]="producto.id" [precio]="producto.precio" [nombre]="producto.nombre"
+          <tarjeta-cesta (componentDeleted)="deleteChild($event)" (unit)="editQuantity($event)" (price)="editPrice($event)" [id]="producto.id"
+          [precio]="producto.precio" [nombre]="producto.nombre"
           [nombreDetallado]="producto.nombre_detallado" [pathImages] = "'Source/Tienda/' + producto.img"/>
         }
       </section>
@@ -36,10 +37,10 @@
       </div>
       <div class="resumen-compra-container">
         <section class="resumen-compra">
-          <p class="unidades">Unidades <span>2</span></p>
-          <p class="descuento">Descuento <span>0%</span></p>
+          <p class="unidades">Unidades <span>{{unidades}}</span></p>
+          <p class="descuento">Descuento <span>{{descuento}}%</span></p>
           <p class="total">
-            Total (IGIC incluido) <span id="precio-final">XX.XX€</span>
+            Total (IGIC incluido) <span id="precio-final">{{precio}}€</span>
           </p>
         </section>
       </div>

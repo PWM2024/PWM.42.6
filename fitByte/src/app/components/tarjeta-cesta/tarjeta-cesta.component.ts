@@ -24,9 +24,13 @@ export class TarjetaCestaComponent {
   constructor(private authService: AuthService, private appRef: ApplicationRef) { }
 
   @Output() componentDeleted = new EventEmitter<string>();
+  @Output() unit = new EventEmitter<number>();
+  @Output() price = new EventEmitter<number>();
 
   addQuantity(){
     this.cantidad++;
+    this.unit.emit(1);
+    this.price.emit(this.precio);
   }
 
 
@@ -34,9 +38,13 @@ export class TarjetaCestaComponent {
     if(this.cantidad === 1){
       this.authService.deleteProduct(this.userId, this.id, 'cesta').then(() => {
         this.componentDeleted.emit(this.id);
+        this.unit.emit(-1);
+        this.price.emit(this.precio*-1);
         this.cantidad--;
       });
     }else{
+      this.unit.emit(-1);
+      this.price.emit(this.precio*-1);
       this.cantidad--;
     }
 
