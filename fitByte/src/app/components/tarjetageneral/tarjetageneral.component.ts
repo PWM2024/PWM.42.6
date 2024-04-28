@@ -27,7 +27,6 @@ export class TarjetageneralComponent {
   }
 
   mostrarBlur() {
-    console.log("Blur añadido");
     const fondoDesenfocado = document.getElementById("fondoDesenfocado");
 
     if (fondoDesenfocado) {
@@ -36,7 +35,6 @@ export class TarjetageneralComponent {
   }
 
   esconderBlur() {
-    console.log("Blur quitado");
     const fondoDesenfocado = document.getElementById("fondoDesenfocado");
     if (fondoDesenfocado) {
       this.renderer.setStyle(fondoDesenfocado, 'display', 'none');
@@ -50,7 +48,6 @@ export class TarjetageneralComponent {
 
   ngOnInit() {
     this.authService.getImageUrl(this.pathImages).subscribe(url => {
-      console.log('URL de la imagen:', url);
       this.linkImages = url;
     }, error => {
       console.error('Error al obtener la URL de la imagen:', error);

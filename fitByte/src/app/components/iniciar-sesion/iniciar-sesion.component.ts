@@ -1,10 +1,8 @@
 import { Component, EventEmitter, Output, Injectable } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ReactiveFormsModule } from '@angular/forms';
-
+import { FormBuilder, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../../services/fire.service';
 import { Router } from '@angular/router';
-import { catchError, of, switchMap } from 'rxjs';
-
+import { UserI } from '../../models';
 
 @Injectable()
 @Component({
@@ -35,23 +33,23 @@ export class IniciarSesionComponent {
     if (this.form.valid) {
       const rawForm = this.form.getRawValue();
       this.authService.login(rawForm.email, rawForm.password)
-        .pipe(
-          switchMap((response) => {
-            console.log('Inicio de sesión exitoso');
-            this.authService.eventoLogged.emit();
-            this.volverClick();
-            window.location.reload();
-            return of(response);
-          }),
-          catchError((error) => {
-            console.error('Error durante el inicio de sesión:', error);
-            return of(error);
-          })
-        )
-        .subscribe();
+        .then((uid) => {
+          const datosUser: UserI = {
+            nombre: rawForm.username,
+            correo: rawForm.email,
+            uid: String(uid),
+          };
+          sessionStorage.setItem('datosUser', JSON.stringify(datosUser));
+          console.log('Inicio de sesión exitoso');
+          this.authService.eventoLogged.emit();
+          this.volverClick();
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.error('Error durante el inicio de sesión:', error);
+        });
     }
     this.enviado = true;
   }
 
 }
-

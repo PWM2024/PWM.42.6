@@ -30,7 +30,6 @@ export class InicioPage implements OnInit {
           console.warn(`No se encontró la rutina con ID ${doc.id}`);
         }
       });
-      console.log(this.rutinasArray);
     }).catch(error => {
       console.error('Error fetching rutinas:', error);
     });
@@ -44,7 +43,6 @@ export class InicioPage implements OnInit {
           console.warn(`No se encontró el producto con ID ${doc.id}`);
         }
       });
-      console.log(this.productosArray);
     }).catch(error => {
       console.error('Error fetching productos:', error);
     });

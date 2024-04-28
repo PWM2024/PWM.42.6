@@ -2,52 +2,50 @@ import { Injectable, inject, EventEmitter} from '@angular/core';
 import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore, updateDoc } from "@angular/fire/firestore";
 import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
-
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
-
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthService {
   private firebaseAuth = inject(Auth);
   private firestore = inject(Firestore);
   eventoLogged = new EventEmitter<any>()
 
-  register(email: string, username: string, password: string): Observable<void> {
+  async register(email: string, username: string, password: string): Promise<void> {
     console.log('Registrando usuario...');
 
-    const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
+    return createUserWithEmailAndPassword(this.firebaseAuth, email, password)
       .then((response) => {
         console.log('Usuario creado exitosamente.');
         console.log('Actualizando perfil...');
-        return updateProfile(response.user, { displayName: username });
-      })
-      .then(() => {
-        console.log('Perfil actualizado exitosamente.');
         this.login(email, password);
+        updateProfile(response.user, { displayName: username }).then(() => {
+          this.setData(response.user.uid, email, username);
+          console.log('Perfil actualizado exitosamente.');
+          return response.user.uid;
+        });
       })
       .catch((error) => {
         console.error('Error al registrar usuario:', error);
       });
 
-    return from(promise);
   }
 
-  login(email: string, password: string): Observable<void> {
+  async login(email: string, password: string): Promise<any> {
     console.log('Iniciando sesión...');
 
-    const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password)
-      .then(() => {
+    return signInWithEmailAndPassword(this.firebaseAuth, email, password)
+      .then((response) => {
         console.log('Usuario iniciado sesión exitosamente.');
         console.log('Actualizando perfil...');
+        return response.user.uid;
       })
       .catch((error) => {
         console.error('Error al iniciar sesión:', error);
         throw error;
       });
-
-    return from(promise);
   }
 
   getImageUrl(imagePath: string): Observable<string> {
@@ -65,6 +63,30 @@ export class AuthService {
       return docRef;
     } catch (e) {
       console.error("Error adding document: ", e);
+    }
+  }
+  async setData(uid: string, email: string, username: string): Promise<any> {
+    const collect = collection(this.firestore, "usuarios");
+    try {
+      await addDoc(collect, {
+        altura: 0,
+        cesta: {},
+        compras: {
+          email: email,
+          id: uid,
+          imc: 0,
+          kcal: 0,
+        },
+        listaDeseos: {},
+        nickname: username,
+        peso: 0,
+        promocode: generarCadenaAleatoria(),
+        
+      });
+      return true;
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      return false;
     }
   }
 
@@ -209,9 +231,13 @@ export class AuthService {
       throw e;
     }
   }
-
-
-
-
-
+}
+function generarCadenaAleatoria(): string {
+  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let cadenaAleatoria = '';
+  for (let i = 0; i < 8; i++) {
+    const indice = Math.floor(Math.random() * caracteres.length);
+    cadenaAleatoria += caracteres.charAt(indice);
+  }
+  return cadenaAleatoria;
 }

@@ -20,7 +20,6 @@ export class TarjetaProductoComponent implements OnInit {
 
   ngOnInit() {
     this.authService.getImageUrl(this.pathImages).subscribe(url => {
-      console.log('URL de la imagen:', url);
       this.linkImages = url;
     }, error => {
       console.error('Error al obtener la URL de la imagen:', error);
