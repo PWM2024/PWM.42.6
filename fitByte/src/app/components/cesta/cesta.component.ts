@@ -13,6 +13,9 @@ export class CestaComponent {
 
   userId: string = '462f';
   cesta : any[] = [];
+  descuento: number = 0;
+  precio: number = 0;
+  unidades: number = 0;
 
   @Output() volver = new EventEmitter<void>();
   constructor(private authService: AuthService) {}
@@ -20,18 +23,26 @@ export class CestaComponent {
   ngOnInit(): void {
     this.authService.getUserByID(this.userId).then((usuario) => {
       if (usuario) {
-        usuario.cesta.forEach((productoID: any) => {
-          this.authService.getProductByID(productoID).then((producto) => {
+        let promises = usuario.cesta.map((productoID: any) => {
+          return this.authService.getProductByID(productoID).then((producto) => {
             if (producto) {
               this.cesta.push(producto);
+              this.precio += producto.precio;
             }
           }).catch((error) => {
             console.error('Error al obtener producto por ID:', error);
           });
         });
+
+        Promise.all(promises).then(() => {
+          this.unidades = this.cesta.length;
+        });
+
       } else {
         console.log('Usuario no encontrado.');
       }
+
+      console.log(this.cesta.length);
     }).catch(error => {
       console.error('Error al obtener usuario:', error);
     });
@@ -40,6 +51,14 @@ export class CestaComponent {
 
   deleteChild(eventData: any){
     this.cesta = this.cesta.filter((producto) => producto.id !== eventData);
+  }
+
+  editQuantity(eventData: any){
+    this.unidades += eventData;
+  }
+
+  editPrice(eventData: any){
+    this.precio += Math.round(eventData);
   }
 
   volverClick() {
