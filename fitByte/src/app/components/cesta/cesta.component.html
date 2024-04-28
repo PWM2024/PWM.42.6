@@ -21,7 +21,7 @@
     <div id="tarjetaProductoCesta">
       <section class="product-list">
         @for( producto of cesta; track producto.id){
-          <tarjeta-cesta [id]="producto.id" [precio]="producto.precio" [nombre]="producto.nombre"
+          <tarjeta-cesta (componentDeleted)="deleteChild($event)" [id]="producto.id" [precio]="producto.precio" [nombre]="producto.nombre"
           [nombreDetallado]="producto.nombre_detallado" [pathImages] = "'Source/Tienda/' + producto.img"/>
         }
       </section>

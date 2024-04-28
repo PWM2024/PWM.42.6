@@ -29,7 +29,6 @@ export class CestaComponent {
             console.error('Error al obtener producto por ID:', error);
           });
         });
-        console.log(this.cesta)
       } else {
         console.log('Usuario no encontrado.');
       }
@@ -39,10 +38,12 @@ export class CestaComponent {
 
   }
 
+  deleteChild(eventData: any){
+    this.cesta = this.cesta.filter((producto) => producto.id !== eventData);
+  }
+
   volverClick() {
     this.volver.emit();
   }
-
-
 
 }
