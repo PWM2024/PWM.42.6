@@ -12,6 +12,7 @@ export class TarjetaListaDeseosComponent {
 
   constructor(private authService: AuthService) {}
   linkImages: string = '';
+  userId: string = '462f';
 
   ngOnInit() {
     this.authService.getImageUrl(this.pathImages).subscribe(url => {
@@ -20,6 +21,17 @@ export class TarjetaListaDeseosComponent {
     }, error => {
       console.error('Error al obtener la URL de la imagen:', error);
     });
+  }
+
+  addToCesta() {
+    this.authService.deleteProduct(this.userId, this.id, 'listaDeseos')
+      .then(() => {
+        this.authService.addUserProduct(this.userId, this.id, 'cesta');
+      })
+  }
+
+  eliminate(){
+    this.authService.deleteProduct(this.userId, this.id, 'listaDeseos');
   }
 
 

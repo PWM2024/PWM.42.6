@@ -48,12 +48,4 @@ export class perfilListaDeseos {
 
   }
 
-  tarjetas = [
-    { id: "id1", content: []},
-    { id: "id2", content: []},
-    { id: "id3", content: []},
-    { id: "id4", content: []},
-    { id: "id5", content: []},
-    { id: "id6", content: []},
-  ]
 }

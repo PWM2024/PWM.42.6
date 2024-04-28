@@ -183,6 +183,34 @@ export class AuthService {
     }
   }
 
+  async deleteProduct(userId: string, valueToDelete: string, parameter: string): Promise<any> {
+    const data = collection(this.firestore, "usuarios");
+
+    try {
+      const querySnapshot = await getDocs(data);
+
+      querySnapshot.forEach(async (doc) => {
+        if (doc.data()['id'] === userId) {
+          try {
+            const currentList = doc.data()[parameter] || [];
+            const updatedList = currentList.filter((value: string) => value !== valueToDelete);
+            const updateObject = { [parameter]: updatedList };
+            await updateDoc(doc.ref, updateObject);
+            console.log(valueToDelete, "eliminado correctamente de la lista en el campo", parameter);
+          } catch (error) {
+            console.error("Error al eliminar el valor:", error);
+            throw error;
+          }
+        }
+      });
+
+    } catch (e) {
+      console.error("Error al obtener usuarios: ", e);
+      throw e;
+    }
+  }
+
+
 
 
 

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-tarjeta-historial-compras',
@@ -9,6 +10,13 @@ import { Component, Input } from '@angular/core';
 })
 export class TarjetaHistorialComprasComponent {
 
+  constructor(private authService: AuthService) {}
+  userId: string = '462f';
+
+  eliminate(){
+    console.log(this.id);
+    this.authService.deleteProduct(this.userId, this.numPedido, 'compras');
+  }
 
   @Input() precio: any;
   @Input() id: any;
