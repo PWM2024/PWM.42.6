@@ -81,7 +81,7 @@ export class AuthService {
         nickname: username,
         peso: 0,
         promocode: generarCadenaAleatoria(),
-        
+
       });
       return true;
     } catch (e) {
@@ -133,7 +133,7 @@ export class AuthService {
       let purchaseFound = null;
 
       docRef.forEach((doc: any) => {
-        if (doc.data().numPedido === purchaseId) {
+        if (doc.data().id === purchaseId) {
           purchaseFound = doc.data();
         }
 
@@ -171,6 +171,28 @@ export class AuthService {
     }
   }
 
+
+  async checkDiscountCode(discountCode: string) {
+    const data = collection(this.firestore, "usuarios");
+
+    try {
+      const querySnapshot = await getDocs(data);
+
+      for (const doc of querySnapshot.docs) {
+        if (doc.data()['promocode'] === discountCode) {
+          return true;
+        }
+      }
+
+      return false;
+
+    } catch (e) {
+      console.error("Error al obtener los codigos: ", e);
+      throw e;
+    }
+  }
+
+
   async addUserProduct(userID: string, productID: string, fieldToAdd: string): Promise<any> {
     const data = collection(this.firestore, "usuarios");
 
@@ -204,6 +226,50 @@ export class AuthService {
       throw e;
     }
   }
+
+  async createPurchase(id: string, fecha: string, numPedido: string, precio: string): Promise<void> {
+    try {
+      const comprasRef = collection(this.firestore, 'compras');
+
+      await addDoc(comprasRef, {
+        id: id,
+        fecha: fecha,
+        numPedido: numPedido,
+        precio: precio
+      });
+
+      console.log('Compra creada exitosamente.');
+    } catch (error) {
+      console.error('Error al crear la compra:', error);
+      throw error;
+    }
+  }
+
+  async vaciarCesta(userId: string): Promise<any> {
+    const data = collection(this.firestore, "usuarios");
+
+    try {
+      const querySnapshot = await getDocs(data);
+
+      querySnapshot.forEach(async (doc) => {
+        if (doc.data()['id'] === userId) {
+          try {
+            const updateObject = { ['cesta']: [] };
+            await updateDoc(doc.ref, updateObject);
+          } catch (error) {
+            console.error("Error al eliminar el valor:", error);
+            throw error;
+          }
+        }
+      });
+
+    } catch (e) {
+      console.error("Error al obtener usuarios: ", e);
+      throw e;
+    }
+  }
+
+
 
   async deleteProduct(userId: string, valueToDelete: string, parameter: string): Promise<any> {
     const data = collection(this.firestore, "usuarios");
