@@ -22,6 +22,7 @@ export class perfilHistorial {
   ngOnInit(): void {
     this.authService.getUserByID("462f").then((usuario) => {
       if (usuario) {
+        console.log(usuario);
         this.comprasId = usuario.compras;
 
         this.comprasId.forEach(compraId => {

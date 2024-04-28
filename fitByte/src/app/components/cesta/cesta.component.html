@@ -30,8 +30,8 @@
       <div class="aplicarCodigoPromocional">
         <section class="codigo-promocional">
           <section class="input-button-container">
-            <input type="text" placeholder="Introduce tu código promocional">
-            <button>Aplicar</button>
+            <input name="promocionalCodeInput" type="text" placeholder="Introduce tu código promocional"  [(ngModel)]="promocionalCode">
+            <button (click)="applyDisccount()">Aplicar</button>
           </section>
         </section>
       </div>
@@ -46,8 +46,8 @@
       </div>
       <div class="botonesCesta">
         <section class="botones-container">
-          <button>Vaciar cesta</button>
-          <button id="boton-finalizarCompra">Finalizar compra</button>
+          <button (click)="emptyCesta()">Vaciar cesta</button>
+          <button (click)="finishPurchase()"id="boton-finalizarCompra">Finalizar compra</button>
         </section>
       </div>
     </div>
