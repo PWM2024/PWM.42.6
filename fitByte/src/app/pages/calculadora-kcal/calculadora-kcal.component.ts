@@ -4,6 +4,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ListaKcalComponent } from '../../components/lista-kcal/lista-kcal.component';
 import { SliderComponent } from '../../components/slider/slider.component';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'app-calculadora-kcal',
@@ -13,5 +14,17 @@ import { SliderComponent } from '../../components/slider/slider.component';
   styleUrls: ['./calculadora-kcal.component.css']
 })
 export class CalculadoraKcalComponent {
+  /*LISTA DE ALIMENTOS CON ID, Kcal_por_cada_100gr y nombre*/
+  alimentos: any[] = [];
 
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {
+    this.authService.getFood().then((data) => {
+      this.alimentos = data;
+      console.log(this.alimentos)
+    }).catch((error) => {
+      console.error("Error al obtener alimentos: ", error);
+    });
+  }
 }
