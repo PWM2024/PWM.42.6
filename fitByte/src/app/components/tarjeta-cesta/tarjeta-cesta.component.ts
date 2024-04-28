@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from '../../../services/fire.service'
 
 @Component({
   selector: 'tarjeta-cesta',
@@ -12,8 +13,18 @@ export class TarjetaCestaComponent {
   @Input() id: any;
   @Input() nombre: any;
   @Input() nombreDetallado: any;
+  @Input() pathImages: any;
 
-  ngOnInit(): void {
+  linkImages: string = '';
 
+
+  constructor(private authService: AuthService) { }
+  ngOnInit() {
+    this.authService.getImageUrl(this.pathImages).subscribe(url => {
+      console.log('URL de la imagen:', url);
+      this.linkImages = url;
+    }, error => {
+      console.error('Error al obtener la URL de la imagen:', error);
+    });
   }
 }
