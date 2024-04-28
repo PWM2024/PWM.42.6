@@ -20,7 +20,10 @@
   <section class="body-cesta">
     <div id="tarjetaProductoCesta">
       <section class="product-list">
-        <!--<section class="producto-card"></section>-->
+        @for( producto of cesta; track producto.id){
+          <tarjeta-cesta [id]="producto.id" [precio]="producto.precio" [nombre]="producto.nombre"
+          [nombreDetallado]="producto.nombre_detallado"/>
+        }
       </section>
 
       <div class="aplicarCodigoPromocional">
