@@ -11,6 +11,7 @@ export class ListaKcalComponent {
   @Input() alimentoElegido: any = {nombre: '', kcal: 0};
   @ViewChild('listaAlimentos') listaAlimentos: any;
   totalKcal = 0
+  kcalcalculadas = false;
 
   constructor(private renderer:Renderer2) { }
 
@@ -22,7 +23,14 @@ export class ListaKcalComponent {
       const text = this.renderer.createText(`${this.alimentoElegido.nombre} - ${this.alimentoElegido.kcal} kcal`);
       const textButton = this.renderer.createText('Eliminar');
       this.renderer.listen(button, 'click', () => {
-        this.eliminarAlimento(this.alimentoElegido.nombre, this.alimentoElegido.kcal);
+        this.renderer.removeChild(this.listaAlimentos.nativeElement, li);
+        if (this.kcalcalculadas && this.listaAlimentos.nativeElement.querySelectorAll('li').length > 0){
+          this.calcularKcal();
+        }
+        else{
+          this.totalKcal = 0;
+          this.kcalcalculadas = false;
+        }
       });
 
       this.renderer.appendChild(span, text);
@@ -35,27 +43,15 @@ export class ListaKcalComponent {
 
 
   calcularKcal() {
+    this.totalKcal = 0;
     const li = this.listaAlimentos.nativeElement.querySelectorAll('li');
     for (let i = 0; i < li.length; i++) {
       const span = li[i].querySelector('span');
       const texto = span.textContent?.split(' - ');
       if (texto) {
         this.totalKcal += parseInt(texto[1]);
+        this.kcalcalculadas = true;
       }
     }
   }
-
-  eliminarAlimento(nombre:string, kcal:number): void {
-    const li = this.listaAlimentos.nativeElement.querySelectorAll('li');
-    for (let i = 0; i < li.length; i++) {
-      const span = li[i].querySelector('span');
-      const texto = span.textContent?.split(' - ');
-      if (texto && texto[0] === nombre && parseInt(texto[1]) === kcal) {
-        this.renderer.removeChild(this.listaAlimentos.nativeElement, li[i]);
-        break;
-      }
-    }
-  }
-
-
 }
