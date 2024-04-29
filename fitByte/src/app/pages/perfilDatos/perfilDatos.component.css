@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 .perfil-body-datos{
     display: flex;
 }
@@ -21,6 +23,16 @@
     justify-content: center;
     height: fit-content;
     width: 60%;
+}
+.mensaje-inicio-sesion{
+  flex: 1 1;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

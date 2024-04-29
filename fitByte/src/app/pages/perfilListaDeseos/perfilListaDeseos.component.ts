@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/mi-perfil-detalles.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
@@ -13,15 +13,24 @@ import { AuthService } from '../../../services/fire.service'
   styleUrl: './perfilListaDeseos.component.css'
 })
 
-export class perfilListaDeseos {
+export class perfilListaDeseos implements OnInit {
 
   deseosId: any[] = [];
   productosArray: any[] = [];
-
+  userId: string = '';
 
   constructor(private authService: AuthService) {}
+
   ngOnInit(): void {
-    this.authService.getUserByID("462f").then((usuario) => {
+    const datosUserStr = sessionStorage.getItem('datosUser');
+    if (datosUserStr !== null) {
+      const datosUser = JSON.parse(datosUserStr);
+      if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
+        this.userId = datosUser.uid;
+      }
+    }
+    
+    this.authService.getUserByID(this.userId).then((usuario) => {
       if (usuario) {
         this.deseosId = usuario.listaDeseos;
 

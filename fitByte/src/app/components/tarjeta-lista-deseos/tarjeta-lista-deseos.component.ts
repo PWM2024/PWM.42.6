@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/fire.service'
 
 @Component({
@@ -8,13 +8,21 @@ import { AuthService } from '../../../services/fire.service'
   templateUrl: './tarjeta-lista-deseos.component.html',
   styleUrls: ['./tarjeta-lista-deseos.component.css', '../component.css']
 })
-export class TarjetaListaDeseosComponent {
+export class TarjetaListaDeseosComponent implements OnInit {
+
+  linkImages: string = '';
+  userId: string = '';
 
   constructor(private authService: AuthService) {}
-  linkImages: string = '';
-  userId: string = '462f';
 
   ngOnInit() {
+    const datosUserStr = sessionStorage.getItem('datosUser');
+    if (datosUserStr !== null) {
+      const datosUser = JSON.parse(datosUserStr);
+      if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
+        this.userId = datosUser.uid;
+      }
+    }
     this.authService.getImageUrl(this.pathImages).subscribe(url => {
       console.log('URL de la imagen:', url);
       this.linkImages = url;
@@ -30,10 +38,9 @@ export class TarjetaListaDeseosComponent {
       })
   }
 
-  eliminate(){
+  eliminate() {
     this.authService.deleteProduct(this.userId, this.id, 'listaDeseos');
   }
-
 
   @Input() nombre: any;
   @Input() id: any;

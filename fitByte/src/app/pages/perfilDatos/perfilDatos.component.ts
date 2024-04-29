@@ -5,16 +5,18 @@ import { StatsFormComponent } from '../../components/stats-form/stats-form.compo
 import { PerfilFormComponent } from '../../components/perfil-form/perfil-form.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from "../../components/header/header.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, StatsFormComponent, PerfilFormComponent, FooterComponent, HeaderComponent],
+  imports: [MiPerfilDetallesComponent, StatsFormComponent, PerfilFormComponent, FooterComponent, HeaderComponent, CommonModule],
   templateUrl: './perfilDatos.component.html',
   styleUrl: './perfilDatos.component.css'
 })
 export class PerfilDatosPage {
   usuarioEncontrado: any;
+  isLoggedIn: boolean = false;
 
   constructor(private authService: AuthService) {}
 
@@ -26,6 +28,7 @@ export class PerfilDatosPage {
         const userUid = datosUser.id;
         this.authService.getUserByID(userUid).then((usuario) => {
           if (usuario) {
+            this.isLoggedIn = true;
             this.usuarioEncontrado = usuario;
           } else {
             console.log('Usuario no encontrado.');
