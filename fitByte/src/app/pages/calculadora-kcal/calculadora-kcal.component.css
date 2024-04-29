@@ -74,4 +74,21 @@ form {
         width: fit-content;
     }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    .listaKcal{
+        width: 100%;
+    }
+
+    .form-y-lista-kcal {
+        display: flex;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 10%;
+    }
+
+    .formCalculadoraKcal{
+        width: 100%;
+    }
+}
   
