@@ -46,8 +46,7 @@
 }
 
 
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 431px) and (max-width: 1024px) {
   .perfil-body-datos{
     display: flex;
   }
@@ -56,7 +55,7 @@
     width: 70%;
     display: flex;
     justify-content: center;
-}
+  }
 
   .right-zone-card-datos{
       border: 1px solid #f7992d;
@@ -68,3 +67,4 @@
 
 
 }
+
