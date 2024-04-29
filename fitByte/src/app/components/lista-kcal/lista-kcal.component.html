@@ -2,4 +2,4 @@
     <ul #listaAlimentos></ul>
 </section>
 <button id="calcular-kcal" class="calcular-kcal" (click)="calcularKcal()">Calcular Kcal Totales</button>
-<div class="total-kcal">Total de Kcal: {{ totalKcal }}</div>
+<div class="total-kcal" (click)="calcularKcal()">Total de Kcal: {{ totalKcal }}</div>

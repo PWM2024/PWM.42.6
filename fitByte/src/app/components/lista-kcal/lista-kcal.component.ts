@@ -10,7 +10,7 @@ import { Component, Input, Renderer2, ViewChild } from '@angular/core';
 export class ListaKcalComponent {
   @Input() alimentoElegido: any = {nombre: '', kcal: 0};
   @ViewChild('listaAlimentos') listaAlimentos: any;
-  alimentosElegidos: any[] = [];
+  totalKcal = 0
 
   constructor(private renderer:Renderer2) { }
 
@@ -35,10 +35,14 @@ export class ListaKcalComponent {
 
 
   calcularKcal() {
-    this.totalKcal = 0;
-    this.alimentosElegidos.forEach(alimento => {
-      this.totalKcal += alimento.kcal;
-    });
+    const li = this.listaAlimentos.nativeElement.querySelectorAll('li');
+    for (let i = 0; i < li.length; i++) {
+      const span = li[i].querySelector('span');
+      const texto = span.textContent?.split(' - ');
+      if (texto) {
+        this.totalKcal += parseInt(texto[1]);
+      }
+    }
   }
 
   eliminarAlimento(nombre:string, kcal:number): void {
