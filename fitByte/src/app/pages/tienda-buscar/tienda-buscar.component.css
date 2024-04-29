@@ -4,14 +4,13 @@ body {
 
 .filtroOpciones{
     width: 400px;
-    margin-top: 30%;
 }
 
 .productos-container{
     width: fit-content;
     margin: 0 auto;
     margin-left: 40%;
-    margin-top: -25%;
+    margin-top: -37%;
 }
 
 .filtros-container{
@@ -27,29 +26,25 @@ body {
 .ordenarPor{
     position: absolute;
     margin-left: 82%;
-    margin-top: -25%;
+    margin-top: -36%;
 }
 
 
 @media only screen and (max-width: 1024px) {
     .productos-container{
-        width: fit-content;
-        margin-left: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin-top: 5%;
+        margin-left: 7%;
     }
 
     .filtros-container {
         width: 35%;
-    }
-    .filtroOpciones {
-        margin-top: 20%;
-        width: 90%;
+        display: none;
     }
 
-    .filtros-container button{
-        margin-top: 8%;
-        margin-left: 25%;
-    }
 
     .filtroPrecio .d-flex .wrapper{
         width: 90%;

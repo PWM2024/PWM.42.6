@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'filtro-opciones',
@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class FiltroOpcionesComponent {
 
+  @Input() opciones: any[] = [];
 }

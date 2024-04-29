@@ -13,7 +13,13 @@ body {
   }
 
   .filtroTarjeta{
+    text-align: center;
     display: flex;
+    justify-content: center;
+
+  }
+  #tarjetasRutina-container{
+    width: 80%;
   }
 
   .limpiar{
