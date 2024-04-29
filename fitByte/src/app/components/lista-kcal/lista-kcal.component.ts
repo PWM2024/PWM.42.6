@@ -33,14 +33,14 @@ export class ListaKcalComponent {
     }
   }
 
-<<<<<<< HEAD
+
   calcularKcal() {
     this.totalKcal = 0;
     this.alimentosElegidos.forEach(alimento => {
       this.totalKcal += alimento.kcal;
     });
   }
-=======
+
   eliminarAlimento(nombre:string, kcal:number): void {
     const li = this.listaAlimentos.nativeElement.querySelectorAll('li');
     for (let i = 0; i < li.length; i++) {
@@ -53,5 +53,5 @@ export class ListaKcalComponent {
     }
   }
 
->>>>>>> 1a24fc13c8abd38bb16898ea120b0e5b17c0fb39
+
 }
