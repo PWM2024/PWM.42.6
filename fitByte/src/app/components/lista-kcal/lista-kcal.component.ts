@@ -21,12 +21,27 @@ export class ListaKcalComponent {
       const button = this.renderer.createElement('button');
       const text = this.renderer.createText(`${this.alimentoElegido.nombre} - ${this.alimentoElegido.kcal} kcal`);
       const textButton = this.renderer.createText('Eliminar');
+      this.renderer.listen(button, 'click', () => {
+        this.eliminarAlimento(this.alimentoElegido.nombre, this.alimentoElegido.kcal);
+      });
 
       this.renderer.appendChild(span, text);
       this.renderer.appendChild(button, textButton);
       this.renderer.appendChild(li, span);
       this.renderer.appendChild(li, button);
       this.renderer.appendChild(this.listaAlimentos.nativeElement, li);
+    }
+  }
+
+  eliminarAlimento(nombre:string, kcal:number): void {
+    const li = this.listaAlimentos.nativeElement.querySelectorAll('li');
+    for (let i = 0; i < li.length; i++) {
+      const span = li[i].querySelector('span');
+      const texto = span.textContent?.split(' - ');
+      if (texto && texto[0] === nombre && parseInt(texto[1]) === kcal) {
+        this.renderer.removeChild(this.listaAlimentos.nativeElement, li[i]);
+        break;
+      }
     }
   }
 
