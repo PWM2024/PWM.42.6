@@ -79,17 +79,26 @@
 
     .formulario-alimentos{
         position: relative;
-        left: -2%;
+        left: 3%;
+    }
+
+    .formulario-alimentos select{
+        padding: 8px;
+        width: 85%;
     }
 
     .formulario-alimentos .input-container {
         display: flex;
     }
 
+    #cantidad{
+        width: 144px;
+    }
+
     .formulario-alimentos .input-container
     span{
         position: relative;
-        left: 6%;
-        margin-top: 3%;
+        left: 1%;
+        margin-top: 1%;
     }
 }

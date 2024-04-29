@@ -7,6 +7,10 @@
   .lista-alimentos li{
     margin-top: 3%;
   }
+
+  .lista-alimentos ul li{
+    list-style-type: none;
+  }
   
   .lista-alimentos span{
     margin-right: 5%;
@@ -27,7 +31,22 @@
       border: 3px solid rgb(233, 120, 28);
       border-radius: 20px;
       width: 100%;
-      justify-content: start;
+      margin-left: 10%;
+    }
+
+    .lista-alimentos ul{
+      padding: 0 5px;
+    }
+
+    .lista-alimentos ul li{
+      list-style-type: none;
+      margin-left: 10%;
+    }
+
+    .lista-alimentos ul li button{
+      display: block;
+      padding: 5px;
+      margin-left: 10%;
     }
   
     .lista-alimentos li{
@@ -46,8 +65,15 @@
   
     .calcular-kcal{
       text-align: center;
-      margin-top: 3%;
-      width: 100%;
+      margin-top: 8%;
+      width: 91%;
+      padding: 3%;
+      margin-right: -22%;
+    }
+
+    .total-kcal{
+      margin-top: 8%;
+      margin-right: -23%;
     }
   }
   

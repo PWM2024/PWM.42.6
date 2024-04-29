@@ -2,17 +2,19 @@
 
 .container {
   background-color: #ff8520;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+
   margin: 0 auto;
 }
 
 .footer-content {
+  max-width: 180%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-main {
+  text-align: center;
 }
 
 .social-icons {
@@ -36,6 +38,7 @@
 .footer-main h1 {
   font-family: "Roboto Slab", serif;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .decorative-line {
@@ -49,6 +52,8 @@
 
 .column-left, .column-right {
   color: #fff;
+  width: 20%;
+  text-align: center;
 }
 
 .column-left a, .column-right a {
@@ -74,17 +79,6 @@
 
 
 @media only screen and (max-width: 430px) {
-
-  body {
-    background-color: #ff8520;
-    width: 105%;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-left: -5%;
-  }
-
-
   .column-left, .column-right{
     width: 100%;
     display: flex;
@@ -124,5 +118,5 @@
     justify-content: start;
     width: 100%;
   }
- 
+
 }
