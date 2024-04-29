@@ -16,6 +16,7 @@ import { AuthService } from '../../../services/fire.service'
 })
 export class TiendaBuscarComponent implements OnInit{
   productosArray: any[] = [];
+  opciones: any[] = ['Alto en proteínas', 'Sin Gluten', 'Alto en Fibras'];
 
   constructor(private authService: AuthService) {}
   ngOnInit(): void {

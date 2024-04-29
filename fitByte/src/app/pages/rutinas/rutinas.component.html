@@ -1,8 +1,5 @@
 <app-header/>
 <section class="filtroTarjeta">
-  <filtro-opciones/>
-  <button class="aplicar">Aplicar Filtros</button>
-  <button class="limpiar">Limpiar Filtros</button>
   <section class="tarjetas" id="tarjetasRutina-container">
     @for (rutina of rutinasArray; track rutina.id){
       <tarjeta-general class="tarjetas" [nombre]="rutina.nombre" [id]="rutina.id" [descripcion]="rutina.descripcion"
