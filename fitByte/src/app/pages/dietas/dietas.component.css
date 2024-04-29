@@ -9,7 +9,13 @@
 }
 
 .filtroTarjeta{
+  text-align: center;
   display: flex;
+  justify-content: center;
+
+}
+#tarjetasDieta-container{
+  width: 80%;
 }
 
 .limpiar{

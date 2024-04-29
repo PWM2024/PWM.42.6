@@ -52,6 +52,7 @@ h2{
 .checkbox-wrapper-65 label {
     display: inline-block;
     cursor: pointer;
+    margin-left: 10%;
 }
 
 .checkbox-wrapper-65 input[type="checkbox"] {
@@ -84,5 +85,5 @@ h2{
   .filtro{
     display: none;
   }
-  
+
 }
