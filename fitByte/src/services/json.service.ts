@@ -1,4 +1,5 @@
-import { Injectable} from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +10,52 @@ export class JsonService {
   compras: any[] = [];
   productos: any[] = [];
   alimentos: any[] = [];
+  private jsonUrl = '/src/app/services/db.json';
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+
+  ngOnInit(): void {
+    this.initializeJson()
+      .catch(error => {
+        console.error('Error al inicializar JSON en ngOnInit:', error);
+      });
+  }
+
+  initializeJson(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.http.get(this.jsonUrl).subscribe({
+        next: (data: any) => {
+          this.users = data.users || [];
+          this.compras = data.compras || [];
+          this.productos = data.productos || [];
+          this.alimentos = data.alimentos || [];
+          console.log('JSON inicializado correctamente.');
+          resolve();
+        },
+        error: (error) => {
+          console.error('Error al inicializar el JSON:', error);
+          reject(error);
+        }
+      });
+    });
+  }
+
+  async updateJson(): Promise<void> {
+    try {
+      const updatedData = {
+        users: this.users,
+        compras: this.compras,
+        productos: this.productos,
+        alimentos: this.alimentos,
+      };
+      await this.http.put(this.jsonUrl, updatedData).toPromise();
+      console.log('JSON actualizado correctamente.');
+    } catch (error) {
+      console.error('Error al actualizar el JSON:', error);
+      throw error;
+    }
+  }
 
   generarCadenaAleatoria(): string {
     const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -40,6 +85,7 @@ export class JsonService {
     };
 
     this.users.push(newUser);
+    await this.updateJson();
     console.log('Usuario creado exitosamente.');
     return Promise.resolve();
   }
@@ -49,6 +95,7 @@ export class JsonService {
     const user = this.users.find(user => user.email === email && user.password === password);
     if (user) {
       console.log('Usuario iniciado sesión exitosamente.');
+      await this.updateJson();
       return user.id;
     } else {
       throw new Error('Credenciales incorrectas');
@@ -78,6 +125,7 @@ export class JsonService {
       const userIndex = this.users.findIndex(user => user.id === userId);
       if (userIndex !== -1) {
         this.users[userIndex][parameter] = newValue;
+        await this.updateJson();
         console.log(parameter, "actualizado correctamente.");
       } else {
         throw new Error('Usuario no encontrado');
@@ -111,6 +159,7 @@ export class JsonService {
 
       user[fieldToAdd] = [...currentField, productID];
       console.log(fieldToAdd, "actualizado correctamente.");
+      await this.updateJson();
     } catch (error) {
       console.error("Error al agregar producto al usuario:", error);
       throw error;
@@ -126,6 +175,7 @@ export class JsonService {
         precio: precio
       };
       this.compras.push(newPurchase);
+      await this.updateJson();
       console.log('Compra creada exitosamente.');
     } catch (error) {
       console.error('Error al crear la compra:', error);
@@ -139,6 +189,7 @@ export class JsonService {
       if (!user) throw new Error('Usuario no encontrado');
 
       user.cesta = [];
+      await this.updateJson();
       console.log('Cesta vaciada correctamente.');
     } catch (error) {
       console.error("Error al vaciar la cesta del usuario:", error);
@@ -151,6 +202,7 @@ export class JsonService {
       const userIndex = this.users.findIndex(user => user.id === userId);
       if (userIndex !== -1) {
         this.users[userIndex][parameter] = this.users[userIndex][parameter].filter((value: string) => value !== valueToDelete);
+        await this.updateJson();
         console.log(valueToDelete, "eliminado correctamente de la lista en el campo", parameter);
       } else {
         throw new Error('Usuario no encontrado');
