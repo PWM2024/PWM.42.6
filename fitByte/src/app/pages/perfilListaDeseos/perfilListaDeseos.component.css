@@ -1,28 +1,33 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
 .perfil-body-deseos{
-    display: flex;
+  display: flex;
 }
 
 .left-zone-deseos{
-    width: 30%;
-    display: flex;
-    justify-content: center;
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .right-zone-deseos{
-    width: 70%;
-    display: flex;
-    justify-content: center;
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 .right-zone-card-deseos{
-    border: 1px solid #f7992d;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 70%;
-    height: fit-content;
-    border-radius: 1%;
+  border: 1px solid #f7992d;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  height: fit-content;
+  border-radius: 1%;
 }
 
 @media only screen and (max-width: 1024px) {
