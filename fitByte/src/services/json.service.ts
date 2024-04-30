@@ -10,7 +10,7 @@ export class JsonService {
   compras: any[] = [];
   productos: any[] = [];
   alimentos: any[] = [];
-  private jsonUrl = '/src/app/services/db.json';
+  private jsonUrl = '/src/assets/db.json';
 
   constructor(private http: HttpClient) {}
 
