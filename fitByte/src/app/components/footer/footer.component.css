@@ -39,6 +39,11 @@
   font-size: 18px;
 }
 
+.social-icons img {
+  width: 2rem;
+  height: 2rem;
+}
+
 .footer-main h1 {
   font-family: "Roboto Slab", serif;
   margin-bottom: 30px;

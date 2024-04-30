@@ -43,7 +43,6 @@ export class SliderComponent implements AfterViewInit, OnDestroy {
 
 
   ngAfterViewInit() {
-    console.log(this.sliderItems.length)
     let slideWidth = (this.sliderItems.length > 0) ? this.sliderItems.first.nativeElement.clientWidth : 0;
     this.width = slideWidth;
 
