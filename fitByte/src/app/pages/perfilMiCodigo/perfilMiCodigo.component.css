@@ -48,11 +48,15 @@
   .perfil-body-codigo{
     margin-bottom: 16px;
   }
-  
+
   .right-zone-card-codigo{
     width: 70%;
     height: fit-content;
     border-radius: 1%;
+  }
+
+  .right-zone-codigo{
+    margin-bottom: 90%;
   }
 }
 

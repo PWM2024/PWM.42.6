@@ -8,12 +8,12 @@
     width: 30%;
     margin-left: 20%;
 }
-  
+
 .alimentoEnLista, span{
     padding: 10px;
     list-style: none;
 }
-  
+
 .tabla-alimentos button {
     scale: 80%;
 }
@@ -63,7 +63,7 @@ form {
     width: 150px;
     height: 30px;
 }
-  
+
 @media only screen and (max-width: 430px){
     .listaKcal{
         margin-left: 1%;
@@ -88,11 +88,10 @@ form {
         display: flex;
         margin: 0 auto;
         width: fit-content;
-        margin-bottom: 10%;
+        margin-bottom: 50%;
     }
 
     .formCalculadoraKcal{
         width: 100%;
     }
 }
-  

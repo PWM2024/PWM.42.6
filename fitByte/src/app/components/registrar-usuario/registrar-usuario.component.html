@@ -10,7 +10,7 @@
     <div *ngIf="form.get('email')?.errors?.['email'] && form.get('email')?.touched" class="error-message">Debe introducir una dirección de correo válida, ejemplo: {{"nombre@dominio.com"}}</div>
     <input type="password" formControlName="password" placeholder="Contraseña"><br>
     <div *ngIf="form.get('password')?.errors?.['required'] && form.get('password')?.touched" class="error-message">Debe rellenar este campo</div>
-    <div *ngIf="form.get('password')?.errors?.['minlength'] && form.get('password')?.touched" class="error-message">La contraseña debe tener al menos 5 caracteres</div>
+    <div *ngIf="form.get('password')?.errors?.['minlength'] && form.get('password')?.touched" class="error-message">La contraseña debe tener al menos 6 caracteres</div>
     <input type="password" formControlName="password2" placeholder="Repetir contraseña"><br>
     <div *ngIf="form.get('password2')?.errors?.['required'] && form.get('password2')?.touched" class="error-message">Debe rellenar este campo</div>
     <div *ngIf="form.hasError('passwordMismatch') && (form.get('password')?.touched || form.get('password2')?.touched)" class="error-message">Las contraseñas no coinciden.</div>
