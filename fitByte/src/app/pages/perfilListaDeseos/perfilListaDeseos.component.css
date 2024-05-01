@@ -40,11 +40,11 @@
 
 
 @media only screen and (max-width: 430px) {
-
   .perfil-body-deseos{
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-bottom: 16px;
   }
 
   .right-zone-card-deseos{
@@ -53,5 +53,11 @@
 
   .left-zone-deseos{
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+  .perfil-body-deseos{
+    margin-bottom: 16px;
   }
 }

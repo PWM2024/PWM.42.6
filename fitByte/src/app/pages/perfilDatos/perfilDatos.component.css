@@ -30,6 +30,10 @@
 
 
 @media only screen and (max-width: 430px) {
+  .perfil-body-datos{
+    margin-bottom: 16px;
+  }
+
   .left-zone-datos{
     display: none;
   }
@@ -51,7 +55,7 @@
 }
 
 
-@media only screen and (min-width: 431px) and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .perfil-body-datos{
     display: flex;
   }

@@ -31,6 +31,9 @@
 
 
 @media only screen and (max-width: 430px) {
+  .perfil-body-historial{
+    margin-bottom: 16px;
+  }
 
   .left-zone-historial{
     display: none;
@@ -53,5 +56,9 @@
   }
 }
 
-
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+  .perfil-body-historial{
+    margin-bottom: 16px;
+  }
+}
 
