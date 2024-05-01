@@ -3,6 +3,7 @@
   font-size: 1.1rem;
 }
 
+
 .imcDetalles{
   border: 5px solid orange;
   border-radius: 20px;
@@ -25,7 +26,7 @@
   margin-bottom: 15%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 431px) and (max-width: 1025px) {
   .imcInfo {
     margin-top: 10%;
     display: flex;
@@ -35,6 +36,10 @@
     height: 40%
   }
 
+  .formCalculadoraIMC{
+    margin-bottom: 70%;
+  }
+
   .imcDetalles{
     width: 40%;
   }
@@ -42,7 +47,6 @@
   .imcDetalle{
     width: auto;
   }
-
 }
 
 @media only screen and (max-width: 430px) {

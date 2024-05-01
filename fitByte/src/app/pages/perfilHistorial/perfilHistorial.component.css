@@ -56,9 +56,13 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px){
+@media only screen and (min-width: 431px) and (max-width: 1024px){
   .perfil-body-historial{
     margin-bottom: 16px;
+  }
+
+  .right-zone-historial{
+    margin-bottom: 20%;
   }
 }
 
