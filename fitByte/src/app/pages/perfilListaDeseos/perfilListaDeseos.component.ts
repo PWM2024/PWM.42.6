@@ -4,11 +4,12 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
 import { TarjetaListaDeseosComponent } from '../../components/tarjeta-lista-deseos/tarjeta-lista-deseos.component';
 import { AuthService } from '../../../services/fire.service'
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, TarjetaListaDeseosComponent, FooterComponent],
+  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, TarjetaListaDeseosComponent, FooterComponent, HeaderComponent],
   templateUrl: './perfilListaDeseos.component.html',
   styleUrl: './perfilListaDeseos.component.css'
 })

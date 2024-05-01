@@ -3,11 +3,12 @@ import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/m
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CodigoPromocionalComponent } from '../../components/codigo-promocional/codigo-promocional.component';
 import { AuthService } from '../../../services/fire.service'
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, CodigoPromocionalComponent, FooterComponent],
+  imports: [MiPerfilDetallesComponent, CodigoPromocionalComponent, FooterComponent, HeaderComponent],
   templateUrl: './perfilMiCodigo.component.html',
   styleUrl: './perfilMiCodigo.component.css'
 })

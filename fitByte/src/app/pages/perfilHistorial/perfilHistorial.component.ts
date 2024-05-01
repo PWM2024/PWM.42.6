@@ -3,11 +3,12 @@ import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/m
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
 import { AuthService } from '../../../services/fire.service'
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent],
+  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent, HeaderComponent],
   templateUrl: './perfilHistorial.component.html',
   styleUrl: './perfilHistorial.component.css'
 })
