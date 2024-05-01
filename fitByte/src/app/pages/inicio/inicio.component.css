@@ -80,10 +80,6 @@ h1{
 }
 */
 
-
-
-
-
 @media only screen and (max-width: 430px) {
   .productosContainerParentIndex{
     display: inline;
@@ -97,8 +93,10 @@ h1{
 }
 
 
-@media only screen and (min-width: 431px) and (max-width: 1024px) {
-
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .productosContainerParentIndex tarjeta-producto{
+        margin-right: 25px;
+    }
 
   .rutinasContainerChildIndex {
     width: 90%;
