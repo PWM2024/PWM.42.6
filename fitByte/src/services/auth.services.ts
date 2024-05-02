@@ -1,5 +1,5 @@
 import {Injectable, inject, EventEmitter} from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, onAuthStateChanged } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,22 @@ import { Observable, from } from 'rxjs';
 })
 export class AuthService {
   firebaseAuth = inject(Auth);
+  
   eventoLogged = new EventEmitter<any>()
+  async isLoggedIn(userId: string): Promise<boolean> {
+    if (!userId || userId === '') {
+      return false;
+    }
+    return new Promise((resolve, reject) => {
+      onAuthStateChanged(this.firebaseAuth, (user) => {
+        if (user && user.uid === userId) {
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      }, reject);
+    });
+  }
 
   register(email: string, username: string, password: string): Observable<void> {
     console.log('Registrando usuario...');

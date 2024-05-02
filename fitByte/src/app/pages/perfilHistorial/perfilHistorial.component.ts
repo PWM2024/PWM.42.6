@@ -1,26 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/mi-perfil-detalles.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
 import { AuthService } from '../../../services/fire.service'
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent],
+  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent, CommonModule],
   templateUrl: './perfilHistorial.component.html',
   styleUrl: './perfilHistorial.component.css'
 })
 
-export class perfilHistorial {
+export class perfilHistorial implements OnInit {
 
   comprasId: any[] = [];
   comprasArray: any[] = [];
-
+  userId: string = '';
+  error: any;
 
   constructor(private authService: AuthService) {}
+
   ngOnInit(): void {
-    this.authService.getUserByID("462f").then((usuario) => {
+    const datosUserStr = sessionStorage.getItem('datosUser');
+    if (datosUserStr !== null) {
+      const datosUser = JSON.parse(datosUserStr);
+      if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
+        this.userId = datosUser.uid;
+      }
+    }
+    this.authService.getUserByID(this.userId).then((usuario) => {
       if (usuario) {
         console.log(usuario);
         this.comprasId = usuario.compras;
@@ -33,7 +43,6 @@ export class perfilHistorial {
             } else {
               console.log('Compra no encontrado.');
             }
-
           }).catch(error => {
             console.error('Error al obtener compra:', error);
           });

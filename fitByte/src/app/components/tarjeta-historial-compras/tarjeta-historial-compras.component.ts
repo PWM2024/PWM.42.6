@@ -22,7 +22,6 @@ export class TarjetaHistorialComprasComponent implements OnInit {
       if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
         this.userUid = datosUser.uid;
       }
-      console.log(this.userUid);
       this.authService.getUserByID(this.userUid).then((usuario) => {
         if (usuario) {
           this.usuarioEncontrado = usuario;

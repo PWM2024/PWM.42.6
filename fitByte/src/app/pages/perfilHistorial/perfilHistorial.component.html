@@ -1,23 +1,28 @@
-
 <div class="perfil-page-historial">
     <div class="perfil-body-historial">
-
         <div class="left-zone-historial">
-            <mi-perfil-detalles/>
+            <mi-perfil-detalles></mi-perfil-detalles>
         </div>
 
         <div class="right-zone-historial">
             <div class="right-zone-card-historial">
-                @for (compra of comprasArray; track compra.numPedido) {
-                    <app-tarjeta-historial-compras [precio]="compra.precio"
-                    [id]="compra.id" [numPedido]="compra.numPedido"
-                    [fecha]="compra.fecha"/>
-                }
-
+                <ng-container *ngIf="error; else noUserMessage">
+                    <h2>Por favor, inicia sesión para ver esta sección.</h2>
+                </ng-container>
+                <ng-template #noUserMessage>
+                    <ng-container *ngIf="comprasArray.length > 0; else noComprasMessage">
+                        <app-tarjeta-historial-compras *ngFor="let compra of comprasArray"
+                            [precio]="compra.precio" [id]="compra.id" [numPedido]="compra.numPedido"
+                            [fecha]="compra.fecha">
+                        </app-tarjeta-historial-compras>
+                    </ng-container>
+                    <ng-template #noComprasMessage>
+                        <h2>No hay compras disponibles.</h2>
+                    </ng-template>
+                </ng-template>
             </div>
         </div>
     </div>
 
-    <app-footer/>
+    <app-footer></app-footer>
 </div>
-

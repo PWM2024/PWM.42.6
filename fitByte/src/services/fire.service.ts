@@ -1,17 +1,29 @@
 import { Injectable, inject, EventEmitter} from '@angular/core';
-import { Firestore, addDoc, collection, getDoc, getDocs, getFirestore, updateDoc } from "@angular/fire/firestore";
-import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Firestore, addDoc, collection, getDocs, updateDoc } from "@angular/fire/firestore";
+import { Auth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, onAuthStateChanged } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class AuthService {
   private firebaseAuth = inject(Auth);
   private firestore = inject(Firestore);
   eventoLogged = new EventEmitter<any>()
+
+  async isLoggedIn(userId: string): Promise<boolean> {
+    return new Promise((resolve, reject) => {
+      onAuthStateChanged(this.firebaseAuth, (user) => {
+        if (user && user.uid === userId) {
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      }, reject);
+    });
+  }
+  
 
   async register(email: string, username: string, password: string): Promise<void> {
     console.log('Registrando usuario...');
@@ -91,6 +103,8 @@ export class AuthService {
   }
 
   async getUserByID(userId: string): Promise<any> {
+    if (!this.isLoggedIn(userId)) return -1;
+    console.log('Obteniendo usuario...');
     const data = collection(this.firestore, "usuarios");
     try {
       const docRef = await getDocs(data);
@@ -102,8 +116,8 @@ export class AuthService {
       });
       return userFound;
     } catch (e) {
-      console.error("Error al obtener usuario: ", e);
-      throw e;
+      console.error("Error al obtener historial: ", e);
+      return -2;
     }
   }
 
