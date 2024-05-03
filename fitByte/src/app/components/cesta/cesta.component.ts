@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from '../../../services/fire.service'
 import { FormsModule } from '@angular/forms';
 import { TarjetaCestaComponent } from '../../components/tarjeta-cesta/tarjeta-cesta.component';
@@ -10,9 +10,9 @@ import { TarjetaCestaComponent } from '../../components/tarjeta-cesta/tarjeta-ce
   templateUrl: './cesta.component.html',
   styleUrls: ['./cesta.component.css', '../component.css']
 })
-export class CestaComponent {
+export class CestaComponent implements OnInit {
 
-  userId: string = '462f';
+  userId: string = '';
   cesta : any[] = [];
   descuento: number = 0;
   precio: number = 0;
@@ -22,7 +22,6 @@ export class CestaComponent {
 
   @Output() volver = new EventEmitter<void>();
   constructor(private authService: AuthService) {}
-
 
 
   /*Generador datos de compra*/
@@ -63,8 +62,8 @@ export class CestaComponent {
     if (datosUserStr !== null) {
       const datosUser = JSON.parse(datosUserStr);
       if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
-        const userUid = datosUser.id;
-        this.authService.getUserByID('462f').then((usuario) => {
+        this.userId = datosUser.id;
+        this.authService.getUserByID(this.userId).then((usuario) => {
           if (usuario) {
             let promises = usuario.cesta.map((productoID: any) => {
               return this.authService.getProductByID(productoID).then((producto) => {
