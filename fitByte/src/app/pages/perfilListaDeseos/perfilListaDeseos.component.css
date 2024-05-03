@@ -1,28 +1,33 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
 .perfil-body-deseos{
-    display: flex;
+  display: flex;
 }
 
 .left-zone-deseos{
-    width: 30%;
-    display: flex;
-    justify-content: center;
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .right-zone-deseos{
-    width: 70%;
-    display: flex;
-    justify-content: center;
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 .right-zone-card-deseos{
-    border: 1px solid #f7992d;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 70%;
-    height: fit-content;
-    border-radius: 1%;
+  border: 1px solid #f7992d;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  height: fit-content;
+  border-radius: 1%;
 }
 .cont-message-lista-deseos {
   width: 100vh;
@@ -35,9 +40,13 @@
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 431px) and (max-width: 1024px) {
   .right-zone-card-deseos{
     width: 85%;
+  }
+
+  .right-zone-deseos{
+    margin-bottom: 120%;
   }
 
 }
@@ -45,11 +54,11 @@
 
 
 @media only screen and (max-width: 430px) {
-
   .perfil-body-deseos{
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-bottom: 16px;
   }
 
   .right-zone-card-deseos{
@@ -58,5 +67,11 @@
 
   .left-zone-deseos{
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+  .perfil-body-deseos{
+    margin-bottom: 16px;
   }
 }

@@ -3,6 +3,7 @@ import { MiPerfilDetallesComponent } from '../../components/mi-perfil-detalles/m
 import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
 import { AuthService } from '../../../services/fire.service'
+
 import { CommonModule, NgIf } from '@angular/common';
 import { HeaderComponent } from "../../components/header/header.component";
 
@@ -12,6 +13,7 @@ import { HeaderComponent } from "../../components/header/header.component";
     templateUrl: './perfilHistorial.component.html',
     styleUrl: './perfilHistorial.component.css',
     imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent, CommonModule, HeaderComponent]
+
 })
 
 export class perfilHistorial implements OnInit {

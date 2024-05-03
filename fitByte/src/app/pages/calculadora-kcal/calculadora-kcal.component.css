@@ -1,95 +1,97 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
 
 .listaKcal  {
     text-align: center;
     width: 30%;
     margin-left: 20%;
-  }
-  
-  
-  .alimentoEnLista, span{
-      padding: 10px;
-      list-style: none;
-  }
-  
-  
-  .tabla-alimentos button {
-      scale: 80%;
-  }
-  
-  input {
-      width: 120px;
-      height: 30px;
-  }
-  
-  form {
-      text-align: center;
-      margin: 20px;
-  }
-  
-  .input-container span {
-      padding: 0;
-  }
-  
-  .input-container{
-      margin-top: 10px;
-  }
-  
-  .kcalTotales{
-      margin-top: 7%;
-  }
-  
-  .slider{
-      margin-bottom: 5%;
-  }
-  
-  .form-y-lista-kcal{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10%;
-  
-  }
-  
-  .formCalculadoraKcal{
-      margin-right: 7%;
-  }
-  
-  .form-y-lista-kcal .listaKcal button{
-      align-content: center;
-  }
-  
-  .alimentos{
-      width: 150px;
-      height: 30px;
-  }
-  
-  @media only screen and (max-width: 430px){
-      .formulario-alimentos .alimentos{
-          position: relative;
-          left: -4%;
-          width: 90%;
-      }
-  
-      .tabla-alimentos ul{
-          height: 445px;
-      }
-  
-      .formulario-alimentos{
-          position: relative;
-          margin-top: 4%;
-      }
-  
+}
+
+.alimentoEnLista, span{
+    padding: 10px;
+    list-style: none;
+}
+
+.tabla-alimentos button {
+    scale: 80%;
+}
+
+input {
+    width: 120px;
+    height: 30px;
+}
+
+form {
+    text-align: center;
+    margin: 20px;
+}
+
+.input-container span {
+    padding: 0;
+}
+
+.input-container{
+    margin-top: 10px;
+}
+
+.kcalTotales{
+    margin-top: 7%;
+}
+
+.slider{
+    margin-bottom: 5%;
+}
+
+.form-y-lista-kcal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.formCalculadoraKcal{
+    margin-right: 7%;
+}
+
+.form-y-lista-kcal .listaKcal button{
+    align-content: center;
+}
+
+.alimentos{
+    width: 150px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 430px){
     .listaKcal{
-      margin-left: 1%;
-      width: 80%;
+        margin-left: 1%;
+        width: 70%;
     }
-  
+
     .form-y-lista-kcal {
-      display: flex;
-      justify-content: center;
-      align-items: start;
-      margin-bottom: 10%;
-      width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-bottom: 90%;
+        width: fit-content;
     }
-  }
-  
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    .listaKcal{
+        width: 100%;
+    }
+
+    .form-y-lista-kcal {
+        display: flex;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 50%;
+    }
+
+    .formCalculadoraKcal{
+        width: 100%;
+    }
+}

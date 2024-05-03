@@ -79,17 +79,88 @@
 
     .formulario-alimentos{
         position: relative;
-        left: -2%;
+        left: 3%;
+    }
+
+    .formulario-alimentos select{
+        padding: 8px;
+        width: 85%;
     }
 
     .formulario-alimentos .input-container {
         display: flex;
     }
 
+    #cantidad{
+        width: 144px;
+    }
+
     .formulario-alimentos .input-container
     span{
         position: relative;
-        left: 6%;
-        margin-top: 3%;
+        left: 1%;
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    .formCalculadoraKcal{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .tabla-alimentos{
+        position: relative;
+        left: -3%;
+    }
+
+    .tabla-alimentos ul{
+        width: 100%;
+        position: relative;
+        left: -5%;
+    }
+
+    .tabla-alimentos button{
+        position: relative;
+        left: -9%;
+        width: 111%;
+        height: 8%;
+        top: -5%;
+        font-size: 18px;
+    }
+
+    .formulario-alimentos{
+        position: relative;
+        left: 3%;
+    }
+
+    .formulario-alimentos select{
+        padding: 25px;
+        width: 85%;
+        font-size: 22px;
+    }
+
+    .formulario-alimentos .input-container {
+        display: flex;
+    }
+
+    #cantidad{
+        width: 160px;
+        padding: 22px;
+        font-size: larger;
+    }
+
+    .formulario-alimentos .input-container
+    span{
+        position: relative;
+        left: 4%;
+        margin-top: 10%;
+        font-size: 30px;
+    }
+
+    #addBtn{
+        padding: 10px;
+        font-size: larger;
     }
 }

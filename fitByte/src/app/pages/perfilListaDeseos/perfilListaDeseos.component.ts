@@ -13,6 +13,7 @@ import { HeaderComponent } from "../../components/header/header.component";
     templateUrl: './perfilListaDeseos.component.html',
     styleUrls: ['./perfilListaDeseos.component.css'],
     imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, TarjetaListaDeseosComponent, FooterComponent, CommonModule, HeaderComponent]
+
 })
 
 export class perfilListaDeseos implements OnInit {

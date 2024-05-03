@@ -1,92 +1,95 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
 body {
-    background-color: white ;
+  background-color: white ;
+}
+
+
+.filtro-precios{
+  margin-left: 1%;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtroTarjeta{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+#tarjetasRutina-container{
+  width: 80%;
+}
+
+.limpiar{
+  position: absolute;
+  margin-left: 4%;
+  margin-top: 20%;
+}
+
+.aplicar{
+  position: absolute;
+  margin-left: 4%;
+  margin-top: 17%;
+}
+
+.container footer-content{
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .filtro-precios {
+    max-width: 100%;
+    margin-right: 10%;
   }
 
-
-  .filtro-precios{
-    margin-left: 1%;
-  }
-
-  .tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .filtroTarjeta{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-
-  }
-  #tarjetasRutina-container{
-    width: 80%;
-  }
-
-  .limpiar{
+  .limpiar {
     position: absolute;
-    margin-left: 4%;
-    margin-top: 20%;
+    margin-left: 2%;
+    margin-top: 35%;
+  }
+
+  .aplicar {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 30%;
+  }
+
+  .filtro-precios .filtro {
+    width: 100%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+
+
+  .filtro-precios {
+    display: none;
+  }
+
+  .limpiar {
+    display: none;
   }
 
   .aplicar{
-    position: absolute;
-    margin-left: 4%;
-    margin-top: 17%;
+    display: none;
   }
 
-  .container footer-content{
-    margin-top: 10%;
+  .filtroTarjeta {
+    display: flex;
   }
 
-
-
-  @media only screen and (max-width: 1024px) {
-    .filtro-precios {
-      max-width: 100%;
-      margin-right: 10%;
-    }
-
-    .limpiar {
-      position: absolute;
-      margin-left: 2%;
-      margin-top: 35%;
-    }
-
-    .aplicar {
-      position: absolute;
-      margin-left: 2%;
-      margin-top: 30%;
-    }
-
-    .filtro-precios .filtro {
-      width: 100%;
-      margin-right: 10%;
-    }
+  .tarjetas{
+    width: fit-content;
+    justify-content: center;
+    justify-items: center;
   }
 
-  @media only screen and (max-width: 430px) {
-
-
-    .filtro-precios {
-      display: none;
-    }
-
-    .limpiar {
-      display: none;
-    }
-
-    .aplicar{
-      display: none;
-    }
-
-    .filtroTarjeta {
-      display: flex;
-    }
-
-    .tarjetas{
-      width: fit-content;
-      justify-content: center;
-      justify-items: center;
-    }
-
-  }
+}
