@@ -1,21 +1,36 @@
-<app-header/>
+<app-header></app-header>
 <div class="perfil-page-deseos">
     <div class="perfil-body-deseos">
 
         <div class="left-zone-deseos">
-            <mi-perfil-detalles/>
+            <div class="left-zone-historial">
+                <mi-perfil-detalles></mi-perfil-detalles>
+            </div>
         </div>
+        <ng-template #noUserMessage>
+            <div class="cont-message-lista-deseos">
+                <h2 id="message-lista-deseos">Por favor, inicia sesión para ver esta sección.</h2>
+            </div>
+        </ng-template>
 
-        <div class="right-zone-deseos">
+        <div class="right-zone-deseos" *ngIf="!error && isLoggedIn">
             <div class="right-zone-card-deseos">
-                @for (producto of productosArray; track producto.id) {
-                    <app-tarjeta-lista-deseos [id]="producto.id" [nombre]="producto.nombre"
-                    [precio]="producto.precio" [pathImages] = "'Source/Tienda/' + producto.img"/>
-                }
+                <ng-container *ngIf="productosArray.length > 0; else noProductsMessage">
+                    <ng-container *ngFor="let producto of productosArray;">
+                        <app-tarjeta-lista-deseos [id]="producto.id" [nombre]="producto.nombre"
+                          [precio]="producto.precio" [pathImages]="'Source/Tienda/' + producto.img">
+                        </app-tarjeta-lista-deseos>
+                    </ng-container>                  
+                </ng-container>
+                <ng-template #noProductsMessage>
+                    <h2>No hay productos en tu lista de deseos.</h2>
+                </ng-template>
+                <ng-template #errorMessage>
+                    <h2>Se produjo un error al cargar los datos. Por favor, inténtalo de nuevo más tarde.</h2>
+                </ng-template>
             </div>
         </div>
     </div>
 
-    <app-footer/>
+    <app-footer></app-footer>
 </div>
-

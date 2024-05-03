@@ -29,6 +29,16 @@
   height: fit-content;
   border-radius: 1%;
 }
+.cont-message-lista-deseos {
+  width: 100vh;
+  position: absolute;
+  left: 10%;
+}
+
+#message-lista-deseos {
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 431px) and (max-width: 1024px) {
   .right-zone-card-deseos{
