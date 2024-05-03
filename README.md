@@ -3,30 +3,16 @@
 FitByte es un proyecto web para la asignatura Programación Web y Móvil (PWM) en el que se plantea el desarrollo de una página web, cuya temática será decidida por los alumnos. En este caso, FitByte es una web orientada al gimnasio que tiene como objetivo ofrecer a los usuarios un sistema de tienda, a través del cual comprar productos orientados al entrenamiento. También dispone de una sección de rutinas y dietas que el usuario puede consultar, para así, obtener información valiosa que podrá mejorar su experiencia en el gimnasio. Finalmente, mencionar el punto fuerte de la página, las calculadoras de kilocalorías e Índice de Masa Corporal (IMC). Estas serían la funcionalidad estrella del proyecto, a través de los alimentos disponibles en nuestra base de datos, el usuario podrá calcular las calorías consumidas por cantidad de alimento, lo que le permitirá llevar un seguimiento de su ingesta calórica, facilitando así el alcance de sus metas en el gimnasio de una manera más cómoda y asequible. En cuanto a la calculadora de IMC, basándose en el peso y altura del usuario, dará como resultado el valor correspondiente de IMC, además de una serie de recomendaciones a partir de este resultado, que podrán ser beneficiosas a la hora de elegir en qué debería centrar el entrenamiento el usuario.
 
 # Estructura del directorio:
-
-- **Boceto**: En esta carpeta residen los bocetos generales de la página, es decir, su estructura
-- **Logos**: Aquí se encuentran los logos para FitByte
-- **Templates**: Es aquí donde se encuentra todo el código del proyecto
-    - **Assets**: Aquí se encuentran los scripts y archivos css
-        - **DB**: Directorio donde se encuentra el archivo JSON usado para la carga de datos
-        - **Scripts**: Archivos .js necesarios para la carga de los componentes (main.js) y scripts para componentes personalizados
-            - **CargaDeDatos**: Archivos .js centrados en la carga dinámica de datos
-        - **Styles**: Archivos css
+- **Src**: Directorio raíz del proyecto Angular, contiene todos los archivos fuente de la aplicación.
+  - **App**: En esta carpeta residen la lógica y los componentes de la aplicación Angular.
+    - **Pages**: Aquí se almacenan las diferentes vistas de la aplicación, cada una compuesta por componentes.
     - **Components**: Los elementos individuales o componentes que forman cada una de las vistas de la web
-    - **Forms**: Formularios para el inicio de sesión y registro de usuarios
-    - **Header**: Las diferentes versiones del encabezado de la página
-        - **HeaderConLoginAndRegister**: Encabezados de página para usuarios no registrados/sin la sesión iniciada
-        - **HeaderSinLoginAndRegister**: Encabezados de página para usuarios con la sesión iniciada
-    - **Pages**: Aquí se encuentran las vistas de la página web, montadas mediante los componentes en ./Components
-    - **Source**: Bajo esta carpeta se encuentran las diversas imágenes usadas durante la carga de datos
-        - **Dietas**: Carpeta con las imágenes de dietas
-        - **Rutinas**: Carpeta con las imágenes de rutinas
-        - **slider-img**: Carpeta con las imágenes del carrusel
-        - **social-networks**: Carpeta con los logos de redes sociales
-        - default-img.png: Imagen por defecto
-        - logo.jpg: Una de las varientes del logo de FitByte
-        - logo-bg.png: Una de las varientes del logo de FitByte
-        - logo-letras.png: Una de las varientes del logo de FitByte
+  - **Assets**: Contiene recursos estáticos como el archivo JSON (json-service)
+    - **db.json**: Archivo JSON usado para cargar datos en el json.service.ts
+  - **Environments**: Contiene configuraciones específicas para diferentes entornos, como acceso a Firebase.
+  - **Services**: Almacena los servicios de la aplicación que manejan la lógica de negocio y la interacción con bases de datos.
+      - **json.service.ts**: Servicio para manejar datos provenientes de db.json.
+      - **fire.service.ts**: Servicio para interactuar con los datos de la colección de Firebase.
 
 # Estado del proyecto: ***En desarrollo (Sprint 3)***
 - ***Sprint 1 finalizado***
