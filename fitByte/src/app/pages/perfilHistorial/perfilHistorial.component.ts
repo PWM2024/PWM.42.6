@@ -35,7 +35,6 @@ export class perfilHistorial implements OnInit {
     }
     this.authService.getUserByID(this.userId).then((usuario) => {
       if (usuario) {
-        console.log(usuario);
         this.comprasId = usuario.compras;
 
         this.comprasId.forEach(compraId => {
