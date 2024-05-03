@@ -20,6 +20,7 @@ export class TarjetaProductoComponent implements OnInit {
   userId: string = '';
 
   ngOnInit() {
+    console.log('URL de la imagen:');
     const datosUserStr = sessionStorage.getItem('datosUser');
     if (datosUserStr !== null) {
       const datosUser = JSON.parse(datosUserStr);
@@ -27,15 +28,18 @@ export class TarjetaProductoComponent implements OnInit {
       if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
         this.userId = datosUser.uid;
       }
-      this.authService.getImageUrl(this.pathImages).subscribe(
-        (url) => {
-          this.linkImages = url;
-        },
-        (error) => {
-          console.error('Error al obtener la URL de la imagen:', error);
-        }
-      );
     }
+
+    this.authService.getImageUrl(this.pathImages).subscribe(
+      (url) => {
+        this.linkImages = url;
+
+      },
+      (error) => {
+        console.error('Error al obtener la URL de la imagen:', error);
+      }
+    );
+
   }
 
   toggleClicked(event: MouseEvent): void {
@@ -43,7 +47,6 @@ export class TarjetaProductoComponent implements OnInit {
     iconoEstrella.classList.toggle('clicked');
   }
   addClick() {
-    console.log('Añadiendo producto a la cesta' + this.id + ' ' + this.userId + ' ' + this.nombre + ' ');
     this.authService.addUserProduct(this.userId, this.id, 'cesta');
   }
 
