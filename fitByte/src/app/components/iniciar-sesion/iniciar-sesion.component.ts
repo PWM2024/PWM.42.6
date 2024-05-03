@@ -39,6 +39,7 @@ export class IniciarSesionComponent {
             correo: rawForm.email,
             uid: String(uid),
           };
+          console.log('datosUser:', datosUser);
           sessionStorage.setItem('datosUser', JSON.stringify(datosUser));
           console.log('Inicio de sesión exitoso');
           this.authService.eventoLogged.emit();

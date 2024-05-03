@@ -25,25 +25,21 @@ export class AuthService {
   }
   
 
-  async register(email: string, username: string, password: string): Promise<void> {
+  async register(email: string, username: string, password: string): Promise<String> {
     console.log('Registrando usuario...');
-
-    return createUserWithEmailAndPassword(this.firebaseAuth, email, password)
-      .then((response) => {
-        console.log('Usuario creado exitosamente.');
-        console.log('Actualizando perfil...');
-        this.login(email, password);
-        updateProfile(response.user, { displayName: username }).then(() => {
-          this.setData(response.user.uid, email, username);
-          console.log('Perfil actualizado exitosamente.');
-          return response.user.uid;
-        });
-      })
-      .catch((error) => {
-        console.error('Error al registrar usuario:', error);
-      });
-
+  
+    try {
+      const response = await createUserWithEmailAndPassword(this.firebaseAuth, email, password);
+      await this.login(email, password);
+      await updateProfile(response.user, { displayName: username });
+      this.setData(response.user.uid, email, username);
+      return response.user.uid;
+    } catch (error) {
+      console.error('Error al registrar usuario:', error);
+      throw error;
+    }
   }
+  
 
   async login(email: string, password: string): Promise<any> {
     console.log('Iniciando sesión...');
@@ -83,11 +79,11 @@ export class AuthService {
       await addDoc(collect, {
         altura: 0,
         cesta: {},
+        email: email,
+        id: uid,
+        imc: 0,
+        kcal: 0,
         compras: {
-          email: email,
-          id: uid,
-          imc: 0,
-          kcal: 0,
         },
         listaDeseos: {},
         nickname: username,
@@ -180,9 +176,11 @@ export class AuthService {
     const data = collection(this.firestore, "usuarios");
 
     try {
+      console.log('Actualizando valor...' + parameter + ' ' + newValue);
       const querySnapshot = await getDocs(data);
 
       querySnapshot.forEach(async (doc) => {
+        console.log(doc.data()['id']);
         if (doc.data()['id'] === userId) {
           try {
             const updateObject = { [parameter]: newValue };
@@ -231,6 +229,7 @@ export class AuthService {
 
       querySnapshot.forEach(async (doc) => {
         if (doc.data()['id'] === userID) {
+          console.log('Añadiendo producto a la cesta...' + productID + ' ' + fieldToAdd);
           try {
             const currentCesta = doc.data()[fieldToAdd] ||[];
 

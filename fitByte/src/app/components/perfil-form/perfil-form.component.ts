@@ -25,8 +25,9 @@ export class PerfilFormComponent {
     const datosUserStr = sessionStorage.getItem('datosUser');
     if (datosUserStr !== null) {
       const datosUser = JSON.parse(datosUserStr);
-      if (typeof datosUser === 'object' && datosUser.id !== undefined) {
-        this.userUid = datosUser.id;
+      if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
+        this.userUid = datosUser.uid;
+        console.log('Buscando usuario con ID:', this.userUid);
         this.authService.getUserByID(this.userUid).then((usuario) => {
           if (usuario) {
             this.user = usuario;

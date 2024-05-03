@@ -25,7 +25,8 @@ export class PerfilDatosPage {
     if (datosUserStr !== null) {
       const datosUser = JSON.parse(datosUserStr);
       if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
-        const userUid = datosUser.id;
+        const userUid = datosUser.uid;
+        console.log('Buscando usuario con ID:', userUid);
         this.authService.getUserByID(userUid).then((usuario) => {
           if (usuario) {
             this.isLoggedIn = true;
