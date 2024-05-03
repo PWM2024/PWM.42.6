@@ -110,10 +110,11 @@ export class AuthService {
       const docRef = await getDocs(data);
       let userFound = null;
       docRef.forEach((doc: any) => {
-        if (doc.data().id === userId) {
+        if (doc.data().compras.id === userId) {
           userFound = doc.data();
         }
       });
+      console.log('Usuario obtenido:', userFound);
       return userFound;
     } catch (e) {
       console.error("Error al obtener historial: ", e);

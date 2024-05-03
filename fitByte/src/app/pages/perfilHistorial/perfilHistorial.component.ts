@@ -4,13 +4,14 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { TarjetaHistorialComprasComponent } from '../../components/tarjeta-historial-compras/tarjeta-historial-compras.component';
 import { AuthService } from '../../../services/fire.service'
 import { CommonModule, NgIf } from '@angular/common';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
-  selector: 'app-perfil',
-  standalone: true,
-  imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent, CommonModule],
-  templateUrl: './perfilHistorial.component.html',
-  styleUrl: './perfilHistorial.component.css'
+    selector: 'app-perfil',
+    standalone: true,
+    templateUrl: './perfilHistorial.component.html',
+    styleUrl: './perfilHistorial.component.css',
+    imports: [MiPerfilDetallesComponent, TarjetaHistorialComprasComponent, FooterComponent, CommonModule, HeaderComponent]
 })
 
 export class perfilHistorial implements OnInit {
