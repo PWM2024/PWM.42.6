@@ -46,7 +46,7 @@ export class RegistrarUsuarioComponent {
             uid: String(uid),
           };
           sessionStorage.setItem('datosUser', JSON.stringify(datosUser));
-          this.volverClick();
+          location.reload();
         })
         .catch((error) => {
           if (error.code === 'auth/email-already-in-use') {
