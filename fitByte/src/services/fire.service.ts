@@ -23,11 +23,11 @@ export class AuthService {
       }, reject);
     });
   }
-  
+
 
   async register(email: string, username: string, password: string): Promise<String> {
     console.log('Registrando usuario...');
-  
+
     try {
       const response = await createUserWithEmailAndPassword(this.firebaseAuth, email, password);
       await this.login(email, password);
@@ -39,7 +39,7 @@ export class AuthService {
       throw error;
     }
   }
-  
+
 
   async login(email: string, password: string): Promise<any> {
     console.log('Iniciando sesión...');
@@ -78,14 +78,13 @@ export class AuthService {
     try {
       await addDoc(collect, {
         altura: 0,
-        cesta: {},
+        cesta: [],
         email: email,
         id: uid,
         imc: 0,
         kcal: 0,
-        compras: {
-        },
-        listaDeseos: {},
+        compras: [],
+        listaDeseos: [],
         nickname: username,
         peso: 0,
         promocode: generarCadenaAleatoria(),
@@ -102,11 +101,12 @@ export class AuthService {
     if (!this.isLoggedIn(userId)) return -1;
     console.log('Obteniendo usuario...');
     const data = collection(this.firestore, "usuarios");
+
     try {
       const docRef = await getDocs(data);
       let userFound = null;
       docRef.forEach((doc: any) => {
-        if (doc.data().compras.id === userId) {
+        if (doc.data().id === userId) {
           userFound = doc.data();
         }
       });
@@ -229,26 +229,27 @@ export class AuthService {
 
       querySnapshot.forEach(async (doc) => {
         if (doc.data()['id'] === userID) {
-          console.log('Añadiendo producto a la cesta...' + productID + ' ' + fieldToAdd);
-          try {
-            const currentCesta = doc.data()[fieldToAdd] ||[];
+            console.log('Añadiendo producto a la cesta...' + productID + ' ' + fieldToAdd);
+            try {
+                const currentCesta = doc.data()[fieldToAdd] || [];
 
-            if (currentCesta.includes(productID)) {
-              console.log("El producto ya está en la cesta.");
-              return;
+                if (Array.isArray(currentCesta) && currentCesta.includes(productID)) {
+                    console.log("El producto ya está en la cesta.");
+                    return;
+                }
+
+                const newCesta = [...currentCesta, productID];
+                const updateObject = { [fieldToAdd]: newCesta };
+
+                await updateDoc(doc.ref, updateObject);
+                console.log(fieldToAdd, "actualizado correctamente.");
+            } catch (error) {
+                console.error("Error al actualizar el apodo del usuario:", error);
+                throw error;
             }
-
-            const newCesta = [...currentCesta, productID];
-            const updateObject = { [fieldToAdd]: newCesta};
-
-            await updateDoc(doc.ref, updateObject);
-            console.log(fieldToAdd, "actualizado correctamente.");
-          } catch (error) {
-            console.error("Error al actualizar el apodo del usuario:", error);
-            throw error;
-          }
         }
-      });
+    });
+
 
     } catch (e) {
       console.error("Error al obtener usuarios: ", e);

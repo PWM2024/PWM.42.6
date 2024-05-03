@@ -62,7 +62,7 @@ export class CestaComponent implements OnInit {
     if (datosUserStr !== null) {
       const datosUser = JSON.parse(datosUserStr);
       if (typeof datosUser === 'object' && datosUser.uid !== undefined) {
-        this.userId = datosUser.id;
+        this.userId = datosUser.uid;
         this.authService.getUserByID(this.userId).then((usuario) => {
           if (usuario) {
             let promises = usuario.cesta.map((productoID: any) => {

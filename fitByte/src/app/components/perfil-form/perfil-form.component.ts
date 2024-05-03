@@ -31,6 +31,7 @@ export class PerfilFormComponent {
         this.authService.getUserByID(this.userUid).then((usuario) => {
           if (usuario) {
             this.user = usuario;
+            console.log(this.user)
           } else {
             console.log('Usuario no encontrado.');
           }
@@ -44,7 +45,7 @@ export class PerfilFormComponent {
       console.error('No se encontraron datos de usuario en sessionStorage');
     }
   }
-  
+
 
 
   handleClickNickName() {
