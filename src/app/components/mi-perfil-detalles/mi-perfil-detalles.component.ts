@@ -10,4 +10,8 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 })
 export class MiPerfilDetallesComponent {
   title = 'routing-app';
+
+  cerrarSesion() {
+    sessionStorage.clear();
+  }
 }

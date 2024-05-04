@@ -27,6 +27,12 @@
   border-radius: 1%;
 }
 
+#app-footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
 @media only screen and (max-width: 430px) {
   .left-zone-codigo{
     display: none;
