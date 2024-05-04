@@ -34,11 +34,11 @@ export class RegistrarUsuarioComponent {
     this.volver.emit();
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.form.valid) {
       const rawForm = this.form.getRawValue();
-
-      this.authService.register(rawForm.email, rawForm.username, rawForm.password)
+  
+      await this.authService.register(rawForm.email, rawForm.username, rawForm.password)
         .then((uid) => {
           const datosUser: UserI = {
             nombre: rawForm.username,
@@ -46,7 +46,11 @@ export class RegistrarUsuarioComponent {
             uid: String(uid),
           };
           sessionStorage.setItem('datosUser', JSON.stringify(datosUser));
-          location.reload();
+          console.log('Usuario registrado correctamente. Finalizando registro...');
+          
+          setTimeout(() => {
+            location.reload();
+          }, 1500);
         })
         .catch((error) => {
           if (error.code === 'auth/email-already-in-use') {
@@ -59,6 +63,7 @@ export class RegistrarUsuarioComponent {
       this.errorMessage = 'Por favor, complete todos los campos correctamente.';
     }
   }
+  
 
   private passwordMatchValidator(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
