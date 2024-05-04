@@ -1,5 +1,5 @@
 <div class="centered-container">
-  <img class="logo1" src="../Source/logo.jpg" />
+  <img src="assets/logo.png" alt="Logo" id="logo-auth">
   <h1>Registro de Usuario</h1>
   <div id="errorMessage" *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
