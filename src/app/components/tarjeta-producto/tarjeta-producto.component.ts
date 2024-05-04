@@ -45,6 +45,7 @@ export class TarjetaProductoComponent implements OnInit {
   toggleClicked(event: MouseEvent): void {
     const iconoEstrella = event.target as HTMLElement;
     iconoEstrella.classList.toggle('clicked');
+    this.authService.addUserProduct(this.userId, this.id, 'listaDeseos');
   }
   addClick() {
     this.authService.addUserProduct(this.userId, this.id, 'cesta');
