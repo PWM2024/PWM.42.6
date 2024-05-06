@@ -147,8 +147,8 @@ export class DatabaseService {
           values: [
             animal.id,
             animal.nombre,
-            animal.description,
-            animal.imageUrl
+            animal.descripcion,
+            animal.img
           ]
         }
       ]

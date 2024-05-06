@@ -10,7 +10,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let animal of animals ">
+    <ion-item-sliding *ngFor="let animal of animals; let i = index ">
       <ion-item
         [routerLink]="['/animals', animal.id]"
         class="ion-no-padding"
@@ -18,7 +18,7 @@
 
 
         <ion-thumbnail slot="start">
-          <img [src]="animal.imageUrl" alt="{{ animal.description }} " />
+          <img [src]="linkImages[i]" alt="{{ animal.descripcion }}" />
         </ion-thumbnail>
 
         <ion-label>{{ animal.nombre }}</ion-label>

@@ -12,6 +12,9 @@ export class AnimalListPage implements OnInit {
 
   animals: Animal[] = [];
   favorites: Animal[] = [];
+  linkImages: string[] = [];
+
+  allImagesLoaded = false;
 
   constructor(
     private sqlite: DatabaseService,
@@ -39,6 +42,8 @@ export class AnimalListPage implements OnInit {
       this.favorites = animals;
       this.getAnimals();
 
+      console.log("All Animals", this.getAnimals());
+
     }).catch(err => {
       console.error(err);
     })
@@ -59,11 +64,21 @@ export class AnimalListPage implements OnInit {
     this.animalService.getAllAnimals()
       .subscribe((animals) => {
         this.animals = animals;
-        console.log("animales:", this.animals);
+
+        this.animals.forEach(animal => {
+          this.animalService.getImageUrl(`Source/Tienda/${animal.img}`).subscribe(
+            (url) => {
+              this.linkImages.push(url);
+              console.log("URL de la imagen:", url);
+            },
+            (error) => {
+              console.error('Error al obtener la URL de la imagen:', error);
+            }
+          );
+        });
+
       });
   }
-
-
 
   createFavorite(animal: Animal) {
     // Creamos un elemento en la base de datos
@@ -83,7 +98,6 @@ export class AnimalListPage implements OnInit {
     // Borramos el elemento
     this.sqlite.delete(animal.id)
       .then((changes) => {
-        //console.log(changes);
         console.log("deleteFavorite");
 
         this.readFavorites(); // Volvemos a leer
