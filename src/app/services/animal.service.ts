@@ -13,7 +13,7 @@ export class AnimalService {
   private animalsCollection: AngularFirestoreCollection<Animal>;
 
   constructor(private afs: AngularFirestore) {
-    this.animalsCollection = afs.collection<Animal>("animals");
+    this.animalsCollection = afs.collection<Animal>("productos");
   }
 
   getAllAnimals() {

@@ -146,7 +146,7 @@ export class DatabaseService {
           statement: sql,
           values: [
             animal.id,
-            animal.name,
+            animal.nombre,
             animal.description,
             animal.imageUrl
           ]

@@ -59,6 +59,7 @@ export class AnimalListPage implements OnInit {
     this.animalService.getAllAnimals()
       .subscribe((animals) => {
         this.animals = animals;
+        console.log("animales:", this.animals);
       });
   }
 
