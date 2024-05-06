@@ -14,6 +14,7 @@ export class AnimalDetailPage implements OnInit {
   animal?: Animal;
   favorite = false;
   favorites: Animal[] = [];
+  linkImages: string = "";
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +25,9 @@ export class AnimalDetailPage implements OnInit {
   ngOnInit() {
     console.log("ngOnInit");
     //this.getAnimal();
+
+
+
   }
 
   // Al entrar, leemos la base de datos
@@ -54,6 +58,17 @@ export class AnimalDetailPage implements OnInit {
         .getAnimalById(id)
         .subscribe((animal) => {
           this.animal = animal;
+
+          this.animalService.getImageUrl(`Source/Tienda/${this.animal.img}`).subscribe(
+            (url) => {
+              console.log("Este es el link, ", url);
+              this.linkImages = url;
+            },
+            (error) => {
+              console.error('Error al obtener la URL de la imagen:', error);
+            }
+          );
+
           //this.favorite = animal.favorite;
 
           let item =
@@ -95,6 +110,7 @@ export class AnimalDetailPage implements OnInit {
       console.error(err);
     })
   }
+
 
 
   toggleFavorite(): void {
