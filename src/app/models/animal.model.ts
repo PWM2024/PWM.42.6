@@ -4,4 +4,5 @@ export interface Animal {
   descripcion: string;
   img: string;
   favorite: boolean;
+  userId: string;
 }

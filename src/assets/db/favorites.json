@@ -22,6 +22,10 @@
         {
           "column": "imageUrl",
           "value": "TEXT NOT NULL"
+        },
+        {
+          "column": "userID",
+          "value": "TEXT NOT NULL"
         }
       ]
     }

@@ -15,6 +15,7 @@ export class AnimalDetailPage implements OnInit {
   favorite = false;
   favorites: Animal[] = [];
   linkImages: string = "";
+  userID: string = "2";
 
   constructor(
     private route: ActivatedRoute,
@@ -24,23 +25,16 @@ export class AnimalDetailPage implements OnInit {
 
   ngOnInit() {
     console.log("ngOnInit");
-    //this.getAnimal();
-
-
-
   }
 
   // Al entrar, leemos la base de datos
   ionViewWillEnter() {
-    console.log("ionViewWillEnter");
     this.readFavorites();
   }
 
   readFavorites() {
     // Leemos los datos de la base de datos
-    this.sqlite.read().then((animals: Animal[]) => {
-      console.log("readFavorites");
-      console.log(JSON.stringify(animals));
+    this.sqlite.read(this.userID).then((animals: Animal[]) => {
 
       this.favorites = animals;
       this.getAnimal();
@@ -61,7 +55,6 @@ export class AnimalDetailPage implements OnInit {
 
           this.animalService.getImageUrl(`Source/Tienda/${this.animal.img}`).subscribe(
             (url) => {
-              console.log("Este es el link, ", url);
               this.linkImages = url;
             },
             (error) => {
@@ -69,7 +62,6 @@ export class AnimalDetailPage implements OnInit {
             }
           );
 
-          //this.favorite = animal.favorite;
 
           let item =
             this.favorites.find(elem => elem.id === animal.id);
@@ -85,10 +77,8 @@ export class AnimalDetailPage implements OnInit {
 
   createFavorite() {
     // Creamos un elemento en la base de datos
-    this.sqlite.create(this.animal)
+    this.sqlite.create(this.animal, this.userID)
       .then((changes) => {
-        //console.log(changes);
-        console.log("createFavorite");
 
         this.readFavorites(); // Volvemos a leer
 
@@ -98,10 +88,8 @@ export class AnimalDetailPage implements OnInit {
   }
 
   deleteFavorite() {
-    // Borramos el elemento
-    this.sqlite.delete(this.animal.id)
+    this.sqlite.delete(this.animal.id, this.userID)
       .then((changes) => {
-        //console.log(changes);
         console.log("deleteFavorite");
 
         this.readFavorites(); // Volvemos a leer
@@ -115,12 +103,8 @@ export class AnimalDetailPage implements OnInit {
 
   toggleFavorite(): void {
     if (this.animal) {
-      //this.animal.favorite = this.favorite;
-      //this.animalService.toggleFavorite(this.animal);
-
       if(this.favorite) this.createFavorite();
       else this.deleteFavorite();
-
     }
   }
 }
