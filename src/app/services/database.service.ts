@@ -63,17 +63,41 @@ export class DatabaseService {
 
   }
 
+  async deleteDatabase() {
+    // Obtenemos el nombre de la base de datos
+    const dbName = await this.getDbName();
+    console.log("Deleting database", dbName);
+
+
+    /*ry {
+      // Cerramos la base de datos
+      await CapacitorSQLite.closeConnection({database: dbName});
+    } catch (error) {
+      console.error("Error al cerrar la base de datos", error)
+    }*/
+    //await CapacitorSQLite.createConnection({database: this.dbName});
+    // Eliminamos la base de datos si existe
+    //await CapacitorSQLite.deleteDatabase({database: dbName});
+
+
+}
+
+
   async setupDatabase() {
 
     // Obtenemos si ya hemos creado la base de datos
     const dbSetup = await Preferences.get({key: 'first_setup'})
 
+    /*if (dbSetup.value) {
+      console.log(dbSetup)
+      console.log("Database deleted");
+      //await this.deleteDatabase();
+    }*/
+
     // Sino la hemos creado, descargamos y creamos la base de datos
     if (!dbSetup.value) {
       this.downloadDatabase();
-
     } else {
-      // Nos volvemos a conectar
       this.dbName = await this.getDbName();
       await CapacitorSQLite.createConnection({database: this.dbName});
       await CapacitorSQLite.open({database: this.dbName})
@@ -131,10 +155,10 @@ export class DatabaseService {
     return this.dbName;
   }
 
-  async create(animal: Animal) {
+  async create(animal: Animal, userID: string) {
     // Sentencia para insertar un registro
     let sql =
-      'insert into animals(id, name, description, imageUrl) VALUES(?, ?, ?, ?)';
+      'insert into animals(id, name, description, imageUrl, userID) VALUES(?, ?, ?, ?, ?)';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
@@ -148,7 +172,8 @@ export class DatabaseService {
             animal.id,
             animal.nombre,
             animal.descripcion,
-            animal.img
+            animal.img,
+            userID
           ]
         }
       ]
@@ -162,9 +187,9 @@ export class DatabaseService {
     }).catch(err => Promise.reject(err))
   }
 
-  async read() {
+  async read(userID: string) {
     // Sentencia para leer todos los registros
-    let sql = 'SELECT * FROM animals';
+    let sql = 'SELECT * FROM animals WHERE userID=?';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
@@ -172,7 +197,7 @@ export class DatabaseService {
     return CapacitorSQLite.query({
       database: dbName,
       statement: sql,
-      values: [] // necesario para android
+      values: [userID] // necesario para android
     }).then((response: capSQLiteValues) => {
       let animals: Animal[] = [];
 
@@ -193,9 +218,9 @@ export class DatabaseService {
   }
 
 
-  async delete(id: string) {
+  async delete(id: string, userID: string) {
     // Sentencia para eliminar un registro
-    let sql = 'DELETE FROM animals WHERE id=?';
+    let sql = 'DELETE FROM animals WHERE id=? AND userID=?';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
@@ -206,7 +231,8 @@ export class DatabaseService {
         {
           statement: sql,
           values: [
-            id
+            id,
+            userID
           ]
         }
       ]

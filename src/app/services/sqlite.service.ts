@@ -64,6 +64,7 @@ export class SqliteService {
 
   async setupDatabase() {
 
+
     // Obtenemos si ya hemos creado la base de datos
     const dbSetup = await Preferences.get({key: 'first_setup_key'})
 
