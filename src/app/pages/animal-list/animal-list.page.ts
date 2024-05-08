@@ -13,7 +13,7 @@ export class AnimalListPage implements OnInit {
   animals: Animal[] = [];
   favorites: Animal[] = [];
   linkImages: string[] = [];
-  userID: string = "2";
+  userID: string = '';
 
   allImagesLoaded = false;
 
@@ -23,6 +23,8 @@ export class AnimalListPage implements OnInit {
   ) {}
 
   ngOnInit() {
+
+    this.userID = sessionStorage.getItem('uid');
     console.log("ngOnInit");
   }
 

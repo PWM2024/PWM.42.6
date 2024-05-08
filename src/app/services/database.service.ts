@@ -69,7 +69,7 @@ export class DatabaseService {
     console.log("Deleting database", dbName);
 
 
-    /*ry {
+    /*try {
       // Cerramos la base de datos
       await CapacitorSQLite.closeConnection({database: dbName});
     } catch (error) {

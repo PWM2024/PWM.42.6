@@ -15,7 +15,7 @@ export class AnimalDetailPage implements OnInit {
   favorite = false;
   favorites: Animal[] = [];
   linkImages: string = "";
-  userID: string = "2";
+  userID: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +25,7 @@ export class AnimalDetailPage implements OnInit {
 
   ngOnInit() {
     console.log("ngOnInit");
+    this.userID = sessionStorage.getItem('uid');
   }
 
   // Al entrar, leemos la base de datos
