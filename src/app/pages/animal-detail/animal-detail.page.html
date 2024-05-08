@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-card *ngIf="animal" class="ion-no-margin" style="margin: 4px !important">
-    <img [src]="linkImages" />
+    <img [src]="animal.url" />
 
     <ion-card-header>
       <ion-card-title>{{ animal.nombre }}</ion-card-title>

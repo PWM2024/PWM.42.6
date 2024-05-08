@@ -54,16 +54,6 @@ export class AnimalDetailPage implements OnInit {
         .subscribe((animal) => {
           this.animal = animal;
 
-          this.animalService.getImageUrl(`Source/Tienda/${this.animal.img}`).subscribe(
-            (url) => {
-              this.linkImages = url;
-            },
-            (error) => {
-              console.error('Error al obtener la URL de la imagen:', error);
-            }
-          );
-
-
           let item =
             this.favorites.find(elem => elem.id === animal.id);
 
