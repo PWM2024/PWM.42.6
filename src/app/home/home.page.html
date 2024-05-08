@@ -6,9 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!--<ion-content [fullscreen]="true">
 
-  <!-- Formulario para añadir un elemento -->
+   Formulario para añadir un elemento
   <ion-item>
     <ion-input label="Lenguaje de programacion: "
                [(ngModel)]="language" name="language"></ion-input>
@@ -17,16 +17,16 @@
     </ion-button>
   </ion-item>
 
-  <!-- Lista de todos los elementos -->
+   Lista de todos los elementos
   <ion-list>
     <ion-item-sliding *ngFor="let language of languages">
 
-      <!-- elemento -->
+
       <ion-item>
         <ion-label>{{language}}</ion-label>
       </ion-item>
 
-      <!-- opciones -->
+
       <ion-item-options>
         <ion-item-option color="warning" (click)="update(language)">
           <ion-icon name="pencil-outline" slot="icon-only"></ion-icon>
@@ -46,7 +46,7 @@
 
 
 
-<!--<ion-header [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Blank

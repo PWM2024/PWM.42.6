@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {SqliteService} from "../services/sqlite.service";
+//import {SqliteService} from "../services/sqlite.service";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomePage {
   public languages: string[];
 
   constructor(
-    private sqlite: SqliteService
+    //private sqlite: SqliteService
   ) {
     this.language = '';
     this.languages = [];
@@ -20,12 +20,12 @@ export class HomePage {
 
   // Al entrar, leemos la base de datos
   ionViewWillEnter() {
-    this.read();
+    //this.read();
   }
 
   create() {
     // Creamos un elemento en la base de datos
-    this.sqlite.create(this.language.toUpperCase())
+    /*this.sqlite.create(this.language.toUpperCase())
       .then((changes) => {
         console.log(changes);
         console.log("Creado");
@@ -34,10 +34,10 @@ export class HomePage {
       }).catch(err => {
       console.error(err);
       console.error("Error al crear");
-    })
+    })*/
   }
 
-  read() {
+  /*read() {
     // Leemos los datos de la base de datos
     this.sqlite.read().then((languages: string[]) => {
       this.languages = languages;
@@ -74,6 +74,6 @@ export class HomePage {
       console.error(err);
       console.error("Error al borrar");
     })
-  }
+  }*/
 
 }
