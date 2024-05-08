@@ -172,7 +172,7 @@ export class DatabaseService {
             animal.id,
             animal.nombre,
             animal.descripcion,
-            animal.img,
+            animal.url,
             userID
           ]
         }

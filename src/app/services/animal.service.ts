@@ -1,7 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Animal } from "../models/animal.model";
-import { getStorage, ref, getDownloadURL } from 'firebase/storage';
-import { Observable, from } from 'rxjs';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -35,15 +33,6 @@ export class AnimalService {
   }
 
 
-  getImageUrl(imagePath: string): Observable<string> {
-    const storage = getStorage();
-    const imageRef = ref(storage, imagePath);
-
-    return from(getDownloadURL(imageRef));
-  }
-
-
-
   getFavorites() {
     return this.afs
       .collection<Animal>("productos", (ref) =>
@@ -51,20 +40,6 @@ export class AnimalService {
       )
       .valueChanges({ idField: "id" });
 
-    /*
-    return this.afs
-      .collection<Animal>('animals', ref => ref.where('isFavorite', '==', true))
-      .snapshotChanges()
-      .pipe(
-        map(actions => {
-          return actions.map(a => {
-            const data = a.payload.doc.data() as Animal;
-            const id = a.payload.doc.id;
-            return { id, ...data };
-          });
-        })
-      );
-    */
   }
 
 }

@@ -60,17 +60,6 @@ export class AnimalListPage implements OnInit {
       .subscribe((animals) => {
         this.animals = animals;
 
-        this.animals.forEach(animal => {
-          this.animalService.getImageUrl(`Source/Tienda/${animal.img}`).subscribe(
-            (url) => {
-              this.linkImages.push(url);
-            },
-            (error) => {
-              console.error('Error al obtener la URL de la imagen:', error);
-            }
-          );
-        });
-
       });
   }
 
