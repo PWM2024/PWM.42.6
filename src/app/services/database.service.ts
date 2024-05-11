@@ -75,9 +75,9 @@ export class DatabaseService {
     } catch (error) {
       console.error("Error al cerrar la base de datos", error)
     }*/
-    //await CapacitorSQLite.createConnection({database: this.dbName});
+    await CapacitorSQLite.createConnection({database: this.dbName});
     // Eliminamos la base de datos si existe
-    //await CapacitorSQLite.deleteDatabase({database: dbName});
+    await CapacitorSQLite.deleteDatabase({database: dbName});
 
 
 }
@@ -91,13 +91,14 @@ export class DatabaseService {
     /*if (dbSetup.value) {
       console.log(dbSetup)
       console.log("Database deleted");
-      //await this.deleteDatabase();
+      await this.deleteDatabase();
     }*/
 
     // Sino la hemos creado, descargamos y creamos la base de datos
     if (!dbSetup.value) {
       this.downloadDatabase();
     } else {
+      console.log("Database already exists");
       this.dbName = await this.getDbName();
       await CapacitorSQLite.createConnection({database: this.dbName});
       await CapacitorSQLite.open({database: this.dbName})
@@ -106,7 +107,9 @@ export class DatabaseService {
 
 
   }
+  
 
+  
   downloadDatabase() {
 
     // Obtenemos el fichero assets/db/db.json
@@ -162,6 +165,8 @@ export class DatabaseService {
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
+
+    console.log(animal.id+userID)
     // Ejecutamos la sentencia
     return CapacitorSQLite.executeSet({
       database: dbName,

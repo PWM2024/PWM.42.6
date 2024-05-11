@@ -2,14 +2,14 @@
   "database": "favorites.db",
   "version": 1,
   "encrypted": false,
-
+  "mode": "full",
   "tables": [
     {
       "name": "animals",
       "schema": [
         {
           "column": "id",
-          "value": "TEXT NOT NULL"
+          "value": "TEXT NOT NULL PRIMARY KEY"
         },
         {
           "column": "name",
