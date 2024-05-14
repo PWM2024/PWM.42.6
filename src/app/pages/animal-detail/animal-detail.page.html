@@ -9,14 +9,14 @@
 
 <ion-content>
   <ion-card *ngIf="animal" class="ion-no-margin" style="margin: 4px !important">
-    <img [src]="animal.imageUrl" />
+    <img [src]="animal.url" class="Imagendetalle"/>
 
     <ion-card-header>
-      <ion-card-title>{{ animal.name }}</ion-card-title>
+      <ion-card-title>{{ animal.nombre }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p>{{ animal.description }}</p>
+      <p>{{ animal.descripcion }}</p>
     </ion-card-content>
 
     <ion-item lines="none">
