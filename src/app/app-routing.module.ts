@@ -3,32 +3,37 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'products',
+    loadChildren: () =>
+      import('./pages/animal-list/animal-list.module').then( m => m.ProductListPageModule)
   },
   {
-    path: 'animals',
+    path: 'products/:id',
     loadChildren: () =>
-      import('./pages/animal-list/animal-list.module').then( m => m.AnimalListPageModule)
-  },
-  {
-    path: 'animals/:id',
-    loadChildren: () =>
-      import('./pages/animal-detail/animal-detail.module').then( m => m.AnimalDetailPageModule)
+      import('./pages/animal-detail/animal-detail.module').then( m => m.ProductDetailPageModule)
   },
   {
     path: '',
-    redirectTo: 'registro',
+    redirectTo: 'register',
     pathMatch: 'full'
   },
   {
-    path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'profile/profile-edit',
+    loadChildren: () => import('./pages/profile-edit/profile-edit.module').then( m => m.ProfileEditPageModule)
+  },
+
 
 ];
 

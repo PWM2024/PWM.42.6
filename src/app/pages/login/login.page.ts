@@ -4,8 +4,8 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
 
@@ -13,23 +13,31 @@ export class LoginPage implements OnInit {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router){}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+    ) { }
 
-  ngOnInit(){}
+  ngOnInit() {
+
+  }
 
   async login() {
+
+
     try {
       const credential = await this.authService.signIn(this.email, this.password);
       console.log('Usuario iniciado exitosamente:', credential);
-      this.router.navigate(['/animals']);
-    }
-    catch (error) {
+      this.router.navigate(['/products']);
+    } catch (error) {
+      // Maneja el error aquí
       console.error('Error al iniciar sesion de usuario:', error);
     }
   }
 
-  goToRegisterPage(){
-    this.router.navigate(['/registro']);
+
+  goToRegisterPage() {
+    this.router.navigate(['/register']); // Redirige al usuario a la página de inicio de sesión
   }
 
 }

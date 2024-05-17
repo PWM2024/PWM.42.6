@@ -1,76 +1,76 @@
 import { Component, OnInit } from "@angular/core";
-import { Animal } from "../../models/animal.model";
-import { AnimalService } from "../../services/animal.service";
+import { Product } from "../../models/product.model";
+import { ProductService } from "../../services/product.service";
 import {DatabaseService} from "../../services/database.service";
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-animal-list",
   templateUrl: "./animal-list.page.html",
   styleUrls: ["./animal-list.page.scss"],
 })
-export class AnimalListPage implements OnInit {
+export class ProductListPage implements OnInit {
 
-  animals: Animal[] = [];
-  favorites: Animal[] = [];
+  
+  products: Product[] = [];
+  favorites: Product[] = [];
+  linkImages: string[] = [];
+  userID: string = '';
+  refresh: boolean = false;
 
   constructor(
     private sqlite: DatabaseService,
-    private animalService: AnimalService
+    private productService: ProductService,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
-  ngOnInit() {
+  ngOnInit() {    
+    this.userID = sessionStorage.getItem('uid');
     console.log("ngOnInit");
-    //this.getAnimals();
   }
 
   // Al entrar, leemos la base de datos
   ionViewWillEnter() {
-    console.log("ionViewWillEnter");
     this.readFavorites();
   }
 
 
   readFavorites() {
     // Leemos los datos de la base de datos
-    this.sqlite.read().then((animals: Animal[]) => {
-      console.log("readFavorites");
-      console.log(JSON.stringify(animals));
+    this.sqlite.read(this.userID).then((products: Product[]) => {
 
-      this.favorites = animals;
-      this.getAnimals();
+      this.favorites = products;
+      this.getProducts();
 
     }).catch(err => {
       console.error(err);
     })
   }
 
-  isFavorite(animal): boolean {
+  isFavorite(product): boolean {
     let item =
-      this.favorites.find(elem => elem.id === animal.id);
+      this.favorites.find(elem => elem.id === product.id);
 
     let favorite: boolean = !!item;
-
-    if(favorite) console.log("isFavorite");
 
     return favorite;
   }
 
-  getAnimals(): void {
-    this.animalService.getAllAnimals()
-      .subscribe((animals) => {
-        this.animals = animals;
+  getProducts(): void {
+    this.productService.getAllProducts()
+      .subscribe((products) => {
+        this.products = products;
+        console.log(this.products)
+
       });
   }
 
-
-
-  createFavorite(animal: Animal) {
+  createFavorite(product: Product) {
     // Creamos un elemento en la base de datos
-    this.sqlite.create(animal)
+    this.sqlite.create(product, this.userID)
       .then((changes) => {
-        //console.log(changes);
-        console.log("createFavorite");
-
         this.readFavorites(); // Volvemos a leer
 
       }).catch(err => {
@@ -78,11 +78,10 @@ export class AnimalListPage implements OnInit {
     })
   }
 
-  deleteFavorite(animal: Animal) {
+  deleteFavorite(product: Product) {
     // Borramos el elemento
-    this.sqlite.delete(animal.id)
+    this.sqlite.delete(product.id, this.userID)
       .then((changes) => {
-        //console.log(changes);
         console.log("deleteFavorite");
 
         this.readFavorites(); // Volvemos a leer
@@ -93,11 +92,17 @@ export class AnimalListPage implements OnInit {
   }
 
 
-  toggleFavorite(animal: Animal): void {
-    //animal.favorite = !animal.favorite;
-    //this.animalService.toggleFavorite(animal);
+  toggleFavorite(product: Product): void {
+    if(this.isFavorite(product)) this.deleteFavorite(product);
+    else this.createFavorite(product);
+  }
 
-    if(this.isFavorite(animal)) this.deleteFavorite(animal);
-    else this.createFavorite(animal);
+  signOut() {
+    this.authService.signOut();
+    this.router.navigate(['/login']);
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([page]);
   }
 }

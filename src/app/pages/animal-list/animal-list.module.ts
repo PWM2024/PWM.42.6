@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AnimalListPageRoutingModule } from './animal-list-routing.module';
+import { ProductPageRoutingModule } from './animal-list-routing.module';
 
-import { AnimalListPage } from './animal-list.page';
+import { ProductListPage } from './animal-list.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AnimalListPageRoutingModule
+    ProductPageRoutingModule
   ],
-  declarations: [AnimalListPage]
+  declarations: [ProductListPage]
 })
-export class AnimalListPageModule {}
+export class ProductListPageModule {}

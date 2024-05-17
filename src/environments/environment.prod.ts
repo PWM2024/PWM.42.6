@@ -7,6 +7,6 @@ export const environment = {
     storageBucket: "fitbyte-pwm-42-6.appspot.com",
     messagingSenderId: "719921702961",
     appId: "1:719921702961:web:fc15b796309834bc014d10",
-    measurementId: "G-D9525ZZHSL"
+    measurementId: "G-D9525ZZHSL"
   }
 };

@@ -1,8 +1,7 @@
-export interface Animal {
+export interface Product {
   id: string;
   nombre: string;
-  nombre_detallado: string;
   descripcion: string;
-  url: string;
   favorite: boolean;
+  url: string;
 }

@@ -4,10 +4,11 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.scss'],
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class RegistroPage implements OnInit {
+export class RegisterPage implements OnInit {
+
   name: string;
   email: string;
   password: string;
@@ -15,26 +16,31 @@ export class RegistroPage implements OnInit {
   birthdate: string;
   gender: string;
   selectedFile: File;
-  pfp: string;
+  fileUrl: string;
 
-  constructor(private authService: AuthService,private router: Router){}
 
-  ngOnInit(){}
+  constructor(
+  private authService: AuthService,
+  private router: Router
+  ) { }
 
-  async registro() {
+  ngOnInit() {
+  }
+
+  async register() {
     try {
+
       if (this.password !== this.repeatPassword) {
         console.error('Las contraseñas no coinciden');
         return;
       }
 
-      const credential = await this.authService.signUp(this.name, this.email, this.password, this.pfp, this.birthdate, this.gender);
+      const credential = await this.authService.signUp(this.name, this.email, this.password, this.fileUrl, this.birthdate, this.gender);
 
-      console.log('URL del archivo:', this.pfp);
+      console.log('URL del archivo:', this.fileUrl);
       console.log('Usuario creado exitosamente:', credential);
       this.router.navigate(['/products']);
-    }
-    catch (error) {
+    } catch (error) {
       console.error('Error al registrar usuario:', error);
     }
 
@@ -46,13 +52,16 @@ export class RegistroPage implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  onFileSelected(event){
+
+  onFileSelected(event) {
+    // Manejar la selección de archivo
     this.selectedFile = event.target.files[0];
 
+    // Convertir el archivo a una URL
     if (this.selectedFile) {
       const reader = new FileReader();
       reader.onload = () => {
-        this.pfp = reader.result as string;
+        this.fileUrl = reader.result as string;
       };
       reader.readAsDataURL(this.selectedFile);
     }
