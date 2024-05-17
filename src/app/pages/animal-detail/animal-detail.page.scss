@@ -1,0 +1,59 @@
+img{
+  width: 100%;
+}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+
+// Estilos específicos para la página de detalles del producto
+
+
+.product-image {
+  width: 100%; // La imagen ocupa todo el ancho del card
+  border-radius: 8px; // Bordes redondeados para la imagen
+}
+
+.product-title {
+  font-size: 1.5rem; // Tamaño del título del producto
+  font-weight: bold; // Texto en negrita
+}
+
+.product-description {
+  font-size: 1.2rem; // Tamaño del texto de la descripción del producto
+}
+
+ion-item {
+  margin-top: 20px; // Espacio superior entre el interruptor de favorito y el contenido
+}
+
+ion-toggle {
+  --background: #4CAF50; // Color de fondo del interruptor cuando está activado
+  --handle-background: #fff; // Color de fondo del asa del interruptor
+}
+
