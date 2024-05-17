@@ -86,7 +86,7 @@ export class DatabaseService {
   async setupDatabase() {
 
     // Obtenemos si ya hemos creado la base de datos
-    const dbSetup = await Preferences.get({key: 'first_setup'})
+    const dbSetup = await Preferences.get({key: 'first_setup878787'})
 
     /*if (dbSetup.value) {
       console.log(dbSetup)
@@ -134,7 +134,7 @@ export class DatabaseService {
           await CapacitorSQLite.open({database: this.dbName})
 
           // Marco que ya hemos descargado la base de datos
-          await Preferences.set({key: 'first_setup', value: '1'})
+          await Preferences.set({key: 'first_setup878787', value: '1'})
           // Guardo el nombre de la base de datos
           await Preferences.set({key: 'db_name', value: this.dbName})
 
