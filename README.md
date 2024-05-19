@@ -6,3 +6,7 @@ FitByte es un proyecto web para la asignatura Programación Web y Móvil (PWM) e
 
 - **Correo**: pruebademo@gmail.com
 - **Contraseña**: pruebademo
+
+# Registro de Usuarios
+
+Es necesario cumplimentar todos los campos (nombre, correo electrónico, contraseñas, fecha de nacimiento, género y seleccionar una imagen de perfil), para un correcto registro del usuario.
